@@ -1,0 +1,367 @@
+body
+{
+	font-family: "Karla", "lucida grande", sans-serif;
+	overflow-x: hidden;
+	color: #666;
+	padding: 5px 10px 5px 10px;
+}
+
+footer
+{
+	font-size: 14px;
+	color: #666;
+	height: 50px;
+	margin-top: 20px;
+}
+
+.title
+{
+	color: #333; 
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-top: 150px;
+}
+
+.meta-outer
+{
+	border-left: solid 10px #ccc;
+	font-size: 25px;
+	text-transform: none;
+	line-height: 1.5;
+	color: #555;
+
+}
+
+.content
+{
+	margin-top: 20px;
+	font-size: 18px;
+	color: #666666;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: justify;
+	line-height: 1.5em;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+.meta-inner
+{
+	font-size: 16px;
+	color: #555;
+}
+
+.navbar
+{
+	background-color: white;
+	border-color: #e7e7e7;
+	height: 90px;
+	float: bottom;
+	line-height: 2;
+	padding-top: 20px;
+	opacity: 0.95;
+}
+
+
+footer ul
+{
+	list-style: none;
+	display: flex;
+}
+
+a.navbar-brand
+{
+	font-size: 50px;
+	padding-left: 25px;
+	color: #00a3f4;
+}
+
+.navbar-default .navbar-brand {
+color: #00a3f4;
+}
+
+ul.nav.navbar-nav
+{
+	float: right;
+	font-size: 20px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: #00a3f4;  /*Sets the text hover color on navbar*/
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+ a:hover, .navbar-default .navbar-nav > .active > a:focus {
+color: #00a3f4; /*BACKGROUND color for active*/
+background-color: white;
+}
+
+.navbar-default {
+    background-color: white;
+    border-color: #e7e7e7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+  .dropdown-menu > li > a:hover,
+   .dropdown-menu > li > a:focus {
+    color: #262626;
+   text-decoration: none;
+  background-color: #66CCFF;  /*change color of links in drop down here*/
+   }
+
+ .nav > li > a:hover,
+ .nav > li > a:focus {
+    text-decoration: none;
+    background-color: silver; /*Change rollover cell color here*/
+  }
+
+
+  .navbar-default .navbar-nav > li > a {
+   color: #777; /*Change active text color here*/
+    }
+
+a.social
+{
+	color: grey;
+	text-decoration: none;
+}
+
+a.social:link
+{
+	color: grey;
+	text-decoration: none;
+}
+
+a.social:visited 
+{
+	color: grey;
+    text-decoration: none;
+}
+
+a.social:hover
+{
+	color: #00a3f4;
+	text-decoration: none;
+	transition: color 0.5s linear; 
+}
+
+a.social:active 
+{
+	color: grey;
+    text-decoration: none;
+}
+
+.social
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	float: right;
+	margin-right: 50px;
+	font-size: 18px;
+}
+
+.copyright
+{
+	padding-left: 50px;
+	font-size: 18px;
+}
+
+::selection {
+background-color: #666;
+color: white;
+}
+
+a
+{
+	color: #00a3f4;
+	text-decoration: none;
+}
+
+a:link
+{
+	color: #00a3f4;
+	text-decoration: none;
+}
+
+a:visited 
+{
+	color: #00a3f4;
+    text-decoration: none;
+}
+
+a:hover
+{
+	color: #f03838;
+	text-decoration: none;
+	transition: color 0.25s linear; 
+}
+
+a:active 
+{
+	color: #00a3f4;
+    text-decoration: none;
+}
+
+
+span.language
+{
+	float: right;
+	font-size: 16px;
+}
+
+.posts
+{
+	margin-top: 35px;
+	line-height: 2;
+	font-size: 20px;
+}
+
+.bg
+{
+	background-image: url('../images/bg.jpg');
+	height: 175px;
+	width: 100%; 
+	margin-top: 65px;
+}
+
+.sivPic
+{
+	margin-top: 90px;
+	width: 70%;
+
+}
+
+.name
+{
+	font-size: 24px;
+	font-weight: 300;
+	text-align: center;
+	margin-right: 45px;
+	letter-spacing: 2px;
+}
+
+.centerText
+{
+	color: #666;
+	text-align: center;
+	margin-right: 40px;
+	font-size: 16px;
+}
+
+.aboutSiva
+{
+	color: #666;
+	font-size: 18px;
+	line-height: 1.5em;
+	margin-top: 20px;
+	opacity: 0.8;
+	text-align: justify;
+}
+
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse
+{
+	background-color: white;
+}
+
+.pln
+{
+	color: #666666 !important;
+}
+
+.sidebar
+{
+	position: fixed;
+}
+
+.HelloWorld
+{
+	margin-top: 65px;
+}
+
+.hello
+{
+	color: rgb(0, 163, 244); 
+	margin-top: 15%; 
+	font-size: 4em;
+	line-height: 1;
+}
+
+.IntroText
+{
+	font-size: 43px;
+	color: rgb(102, 102, 102); 
+	margin-top: 100px; 
+	margin-bottom: 120px; 
+	line-height: 1.5em;
+}
+
+button.btn.btn-info 
+{
+	background-color: #00a3f4;
+	margin-bottom: 10px;
+}
+
+button a
+{
+	color: white;
+	text-decoration: none;
+}
+
+button a:link
+{
+	color: white;
+	text-decoration: none;
+}
+
+button a:visited 
+{
+	color: white;
+        text-decoration: none;
+}
+
+button a:hover
+{
+	color: white;
+	text-decoration: none;
+}
+
+button a:active 
+{
+    color: white;
+    text-decoration: none;
+}
+
+.taglist 
+{
+	margin-top: 125px;
+}
+
+.taglistem
+{
+	color: #00a3f4;
+}
+
+.language a 
+{
+	color: #f03838;
+}
+
+.language a:link
+{
+	color: #f03838;
+}
+
+.language a:visited
+{
+	color: #f03838;
+}
+
+.language a:hover
+{
+	color: #00a3f4;
+}
+
+.language a:active
+{
+	color: #f03838;
+}
