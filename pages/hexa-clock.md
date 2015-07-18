@@ -6,7 +6,7 @@ order: 4
 
 A small fun project using Javascript that changes the document's background color every second by converting the current time to color codes.
 
-<object data="http://www.sivasubramanyam.me/timeColor.html" width="600" height="400"><embed src="http://www.sivasubramanyam.me/timeColor.html" width="600" height="400">Error: Embedded data could not be displayed.</object>
+<object data="../templates/timeColor.html" width="600" height="400"><embed src="../templates/timeColor.html" width="600" height="400">Error: Embedded data could not be displayed.</object>
 
 Source here:
 
