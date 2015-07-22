@@ -2,7 +2,7 @@ title: Browser History Analyser
 date: June, 2015
 description: Fetch your most visited sites and plot a graph.  
 tags: Python, matplotlib  
-order: 1    
+order: 13    
 
 I wanted to write a Python script to analyse my browsing history and view the most visited sites.
 

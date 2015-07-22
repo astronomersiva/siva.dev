@@ -2,7 +2,7 @@ title: Facebook friends heatmap
 date: May, 2014
 description: A Graph API based Python script to plot your friends' locations as a heatmap.
 tags: Python, GraphAPI, Javascript  
-order: 8
+order: 6
 
 <object data="../static/FBHeatMap.html" width="600" height="400"><embed src="../static/FBHeatMap.html" width="600" height="400">Error: Embedded data could not be displayed.</object>
 
