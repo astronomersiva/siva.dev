@@ -4,7 +4,7 @@ description: A Graph API based Python script to plot your friends' locations as 
 tags: Python, GraphAPI, Javascript  
 order: 8
 
-<object data="http://sivasubramanyam.me/old/FBHeatMap.html" width="600" height="400"><embed src="http://sivasubramanyam.me/old/FBHeatMap.html" width="600" height="400">Error: Embedded data could not be displayed.</object>
+<object data="../static/FBHeatMap.html" width="600" height="400"><embed src="../static/FBHeatMap.html" width="600" height="400">Error: Embedded data could not be displayed.</object>
 
 Update: Recent changes in Facebook's Graph API have made it impossible to do this now.
 
