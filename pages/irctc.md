@@ -2,7 +2,7 @@ title: IRCTC redefines CAPTCHA
 date: July, 2014
 description: Apparently, IRCTC does not know what CAPTCHA is.
 tags: General, IRCTC
-order: 6
+order: 2
 
 
 Update: IRCTC has fixed this now.
