@@ -25,12 +25,16 @@ def about():
 @a.route('/<path:path>/')
 def page(path):
     page = pages.get_or_404(path)
-    return render_template("page.html", page=page)	
+    return render_template("page.html", page=page, pages=pages)	
 
 @a.route('/tag/<string:tag>')
 @a.route('/tag/<string:tag>/')
 def tag(tag):
     return render_template('tag.html', pages=pages, tag=tag)
+
+@a.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
     
 if __name__ == "__main__":
 	a.run(debug = True)
