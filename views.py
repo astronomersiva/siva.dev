@@ -32,10 +32,6 @@ def page(path):
 def tag(tag):
     return render_template('tag.html', pages=pages, tag=tag)
 
-@a.route('/asd')
-def tag():
-    return render_template('404.html')
-
 @a.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
