@@ -33,7 +33,7 @@ def tag(tag):
     return render_template('tag.html', pages=pages, tag=tag)
 
 @a.route('/asd')
-def tag(tag):
+def tag():
     return render_template('404.html')
 
 @a.errorhandler(404)
