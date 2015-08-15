@@ -7,13 +7,13 @@
 </head>
 
 <body>
-    {% include "navbar.html" %}
+        {% include "navbar.html" %}
     <div class = "row title">
         <div class = "col-md-8 col-md-offset-3 meta-outer">
             {{ page.title }}
             <div class = "meta-inner">
                 {% for t in page.tags.split(',') %}
-                    <a href = "/tag/{{ t.strip() }}">&nbsp;&nbsp;{{ t }}</a>            
+                    <a href = "/tag/{{ t.strip() }}">&nbsp;&nbsp;{{ t }}</a>    
                 {% endfor %}
             </div>
         </div>
@@ -23,9 +23,9 @@
             {% block content %}
                 <p>Default content to be displayed</p>
             {% endblock content %}
-	       {% include "disqus.html" %}
+               {% include "disqus.html" %}
         </div>
     </div>
-	{% include "footer.html" %} 
+        {% include "footer.html" %}
 </body>
 </html>
