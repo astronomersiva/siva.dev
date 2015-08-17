@@ -1,13 +1,41 @@
-var app = angular.module('app', []);
+//Courtest Marius Craciunoiu, medium.com
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('nav').outerHeight();
 
-app.controller('related', function($scope) {
-    $scope.filters = { };
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
     
-    $scope.links = [
-        {name: 'Apple', category: 'Fruit'},
-        {name: 'Pear', category: 'Fruit'},
-        {name: 'Almond', category: 'Nut'},
-        {name: 'Mango', category: 'Fruit'},
-        {name: 'Cashew', category: 'Nut'}
-    ];
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('nav').addClass('nav-up');
+    } else {
+        if(st + $(window).height() < $(document).height()) {
+            $('nav').removeClass('nav-up');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+
+$("document").ready(function() {
+    $("img").addClass("img-responsive");
 });

@@ -3,55 +3,9 @@ body
 	font-family: "Karla", "lucida grande", sans-serif;
 	overflow-x: hidden;
 	color: #666;
-	padding: 5px 10px 5px 10px;
 }
 
-footer
-{
-	font-size: 14px;
-	color: #666;
-	height: 50px;
-	margin-top: 20px;
-}
-
-.title
-{
-	color: #333; 
-	font-size: 20px;
-	text-transform: uppercase;
-	margin-top: 150px;
-}
-
-.meta-outer
-{
-	border-left: solid 10px #ccc;
-	font-size: 25px;
-	text-transform: none;
-	line-height: 1.5;
-	color: #555;
-
-}
-
-.content
-{
-	margin-top: 20px;
-	font-size: 18px;
-	color: #666666;
-	padding-left: 5px;
-	padding-right: 5px;
-	text-align: justify;
-	line-height: 1.5em;
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	letter-spacing: -0.02em;
-}
-
-.meta-inner
-{
-	font-size: 16px;
-	color: #555;
-}
+/* Navbar */
 
 .navbar
 {
@@ -62,13 +16,11 @@ footer
 	line-height: 2;
 	padding-top: 20px;
 	opacity: 0.95;
+	transition: top 0.2s ease-in-out;
 }
 
-
-footer ul
-{
-	list-style: none;
-	display: flex;
+.nav-up {
+    top: -90px;
 }
 
 a.navbar-brand
@@ -104,10 +56,10 @@ background-color: white;
     box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }
 
-  .dropdown-menu > li > a:hover,
-   .dropdown-menu > li > a:focus {
-    color: #262626;
-   text-decoration: none;
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #262626;
+  text-decoration: none;
   background-color: #66CCFF;  /*change color of links in drop down here*/
    }
 
@@ -120,7 +72,218 @@ background-color: white;
 
   .navbar-default .navbar-nav > li > a {
    color: #777; /*Change active text color here*/
-    }
+}
+
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse
+{
+	background-color: white;
+}
+
+/* Contents */
+
+.content
+{
+	margin-top: 20px;
+	font-size: 18px;
+	color: #666666;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: justify;
+	line-height: 1.5em;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	letter-spacing: -0.02em;
+}
+
+.HelloWorld
+{
+	margin-top: 65px;
+}
+
+.hello
+{
+	color: rgb(0, 163, 244); 
+	margin-top: 15%; 
+	font-size: 4em;
+	line-height: 1;
+}
+
+.IntroText
+{
+	font-size: 43px;
+	color: rgb(102, 102, 102); 
+	margin-top: 100px; 
+	margin-bottom: 120px; 
+	line-height: 1.5em;
+}
+
+span.language
+{
+	float: right;
+	font-size: 16px;
+}
+
+.posts
+{
+	margin-top: 35px;
+	line-height: 2;
+	font-size: 20px;
+}
+
+.title
+{
+	color: #333; 
+	font-size: 20px;
+	text-transform: uppercase;
+	margin-top: 150px;
+}
+
+.meta-outer
+{
+	border-left: solid 10px #ccc;
+	font-size: 25px;
+	text-transform: none;
+	line-height: 1.5;
+	color: #555;
+
+}
+
+.meta-inner
+{
+	font-size: 16px;
+	color: #555;
+}
+
+button.btn.btn-info 
+{
+	background-color: #00a3f4;
+	margin-bottom: 10px;
+}
+
+button a
+{
+	color: white;
+	text-decoration: none;
+}
+
+button a:link
+{
+	color: white;
+	text-decoration: none;
+}
+
+button a:visited 
+{
+	color: white;
+        text-decoration: none;
+}
+
+button a:hover
+{
+	color: white;
+	text-decoration: none;
+}
+
+button a:active 
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* About Me */
+
+.sivPic
+{
+	margin-top: 95px;
+	width: 70%;
+
+}
+
+.name
+{
+	font-size: 24px;
+	font-weight: 300;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.centerText
+{
+	color: #666;
+	text-align: center;
+	font-size: 16px;
+}
+
+.aboutSiva
+{
+	color: #666;
+	font-size: 18px;
+	line-height: 1.5em;
+	margin-top: 20px;
+	opacity: 0.8;
+	text-align: justify;
+}
+
+/* Tag List */
+
+.taglist 
+{
+	margin-top: 125px;
+}
+
+.taglistem
+{
+	color: #00a3f4;
+}
+
+.language a 
+{
+	color: #f03838;
+}
+
+.language a:link
+{
+	color: #f03838;
+}
+
+.language a:visited
+{
+	color: #f03838;
+}
+
+.language a:hover
+{
+	color: #00a3f4;
+}
+
+.language a:active
+{
+	color: #f03838;
+}
+
+
+/* Footer */
+
+footer
+{
+	font-size: 14px;
+	color: #666;
+	height: 50px;
+	margin-top: 20px;
+}
+
+.footer-contents
+{
+	padding-top: 15px;
+}
+
+footer ul
+{
+	list-style: none;
+	display: flex;
+}
+
 
 a.social
 {
@@ -168,6 +331,8 @@ a.social:active
 	font-size: 18px;
 }
 
+/* Miscellaneous */
+
 ::selection {
 background-color: #666;
 color: white;
@@ -205,165 +370,3 @@ a:active
 }
 
 
-span.language
-{
-	float: right;
-	font-size: 16px;
-}
-
-.posts
-{
-	margin-top: 35px;
-	line-height: 2;
-	font-size: 20px;
-}
-
-.bg
-{
-	background-image: url('../images/bg.jpg');
-	height: 175px;
-	width: 100%; 
-	margin-top: 65px;
-}
-
-.sivPic
-{
-	margin-top: 90px;
-	width: 70%;
-
-}
-
-.name
-{
-	font-size: 24px;
-	font-weight: 300;
-	text-align: center;
-	margin-right: 45px;
-	letter-spacing: 2px;
-}
-
-.centerText
-{
-	color: #666;
-	text-align: center;
-	margin-right: 40px;
-	font-size: 16px;
-}
-
-.aboutSiva
-{
-	color: #666;
-	font-size: 18px;
-	line-height: 1.5em;
-	margin-top: 20px;
-	opacity: 0.8;
-	text-align: justify;
-}
-
-.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse
-{
-	background-color: white;
-}
-
-.pln
-{
-	color: #666666 !important;
-}
-
-.sidebar
-{
-	position: fixed;
-}
-
-.HelloWorld
-{
-	margin-top: 65px;
-}
-
-.hello
-{
-	color: rgb(0, 163, 244); 
-	margin-top: 15%; 
-	font-size: 4em;
-	line-height: 1;
-}
-
-.IntroText
-{
-	font-size: 43px;
-	color: rgb(102, 102, 102); 
-	margin-top: 100px; 
-	margin-bottom: 120px; 
-	line-height: 1.5em;
-}
-
-button.btn.btn-info 
-{
-	background-color: #00a3f4;
-	margin-bottom: 10px;
-}
-
-button a
-{
-	color: white;
-	text-decoration: none;
-}
-
-button a:link
-{
-	color: white;
-	text-decoration: none;
-}
-
-button a:visited 
-{
-	color: white;
-        text-decoration: none;
-}
-
-button a:hover
-{
-	color: white;
-	text-decoration: none;
-}
-
-button a:active 
-{
-    color: white;
-    text-decoration: none;
-}
-
-.taglist 
-{
-	margin-top: 125px;
-}
-
-.taglistem
-{
-	color: #00a3f4;
-}
-
-.language a 
-{
-	color: #f03838;
-}
-
-.language a:link
-{
-	color: #f03838;
-}
-
-.language a:visited
-{
-	color: #f03838;
-}
-
-.language a:hover
-{
-	color: #00a3f4;
-}
-
-.language a:active
-{
-	color: #f03838;
-}
