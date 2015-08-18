@@ -2,7 +2,7 @@ body
 {
 	font-family: "Karla", "lucida grande", sans-serif;
 	overflow-x: hidden;
-	color: #666;
+	color: #565656;
 }
 
 /* Navbar */
@@ -85,7 +85,7 @@ background-color: white;
 {
 	margin-top: 20px;
 	font-size: 18px;
-	color: #666666;
+	color: #565656;
 	padding-left: 5px;
 	padding-right: 5px;
 	text-align: justify;
@@ -93,7 +93,7 @@ background-color: white;
 	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
-	letter-spacing: -0.02em;
+	letter-spacing: 0.01rem;
 }
 
 .HelloWorld
@@ -210,19 +210,19 @@ button a:active
 
 .centerText
 {
-	color: #666;
+	color: #565656;
 	text-align: center;
 	font-size: 16px;
 }
 
 .aboutSiva
 {
-	color: #666;
+	color: #565656;
 	font-size: 18px;
 	line-height: 1.5em;
 	margin-top: 20px;
-	opacity: 0.8;
 	text-align: justify;
+	letter-spacing: 0.01rem;
 }
 
 /* Tag List */
