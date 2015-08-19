@@ -2,7 +2,7 @@ body
 {
 	font-family: "Karla", "lucida grande", sans-serif;
 	overflow-x: hidden;
-	color: #565656;
+	color: white;
 }
 
 /* Navbar */
@@ -85,7 +85,7 @@ background-color: white;
 {
 	margin-top: 20px;
 	font-size: 18px;
-	color: #565656;
+	color: white;
 	padding-left: 5px;
 	padding-right: 5px;
 	text-align: justify;
@@ -210,14 +210,14 @@ button a:active
 
 .centerText
 {
-	color: #565656;
+	color: white;
 	text-align: center;
 	font-size: 16px;
 }
 
 .aboutSiva
 {
-	color: #565656;
+	color: white;
 	font-size: 18px;
 	line-height: 1.5em;
 	margin-top: 20px;
