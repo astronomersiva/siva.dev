@@ -3,6 +3,10 @@
 <html lang="en">
 <head>
     <title>{{ page.title }}</title>
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:site_name" content="@siva"/>
+    <meta property="og:url" content="https://sivasubramanyam.me/{{ page.path }}" />
+    <meta property="og:description" content="{{ page.description }}" />
     {% include "head.html" %}
 </head>
 
