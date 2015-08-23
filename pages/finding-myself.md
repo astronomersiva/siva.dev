@@ -110,9 +110,8 @@ a glimpse of the peak. Boy, we knew it was tall, but now it looked like a monste
 again.
 
 
-###Life lesson 2: **It's okay if you fail. You can't always win everything. Sometimes, you have to fail so that more important things are 
-not lost**.
+###Life lesson 2: **It's okay if you fail. You can't always win everything. Sometimes, you have to fail so that more important things are not lost**.
 
 
-######Will be continued.
+###Will be continued.
 
