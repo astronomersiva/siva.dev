@@ -113,16 +113,35 @@ again.
 ###Life lesson 2: **It's okay if you fail. You can't always win everything. Sometimes, you have to fail so that more important things are not lost**.
 
 
-###Will be continued.
+June 2014. We were attempting Meesapulimala again. This time, we were climbing from the Kerala side after getting the necessary permissions from the Kerala Forest Development Corporation. The weather was bad and it looked like the heavens were going to open up anytime. This made us trek as fast as possible and our guide took us through numerous shortcuts and by noon, we were at the base of the final ridge to the Meesapulimala peak. It was a steep incline and we took one step at a time knowing that something that we had been chasing for a long time was finally here, literally just steps away. When we set foot on the peak we were all just smiling at each other and didn't talk much to each other. Each of us had something driving us to climb this peak. I guess that is what unites us. 
 
-<script type="text/javascript">
-		/* * * CONFIGURATION VARIABLES * * */
-		var disqus_shortname = 'sivasubramanyama';
-		/* * * DON'T EDIT BELOW THIS LINE * * */
-		(function() {
-    	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		})();
-	</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>	</noscript>
+
+Things got interesting when we noticed a peak just to the north of Meesapulimala. Our guide told us that it was 20 meters shorter than Meesapulimala and appeared taller because of the way it was position relative to us. We all believed him because,
+1. He was the guide.
+2. This was Meesapulimala according to Google Maps.
+3. We were tired to climb further.
+
+
+After I got back home, I analysed photos that I had taken from a trek in a mountain range opposite to Meesapulimala and also checked Google Earth for further topographic details. All of them pointed out that the peak that I had seen to the north of Meesapulimala was in fact taller. I finally chanced upon an old US Army topographic map and it had that peak named as Mannamalai at 2659 meters. This was shocking as most people often argue about the height of Meesapulimala. Some claim that it is 2640 meters(this was what my GPS said as well) but some say that it is 2659 meters based on the maps. This difference now made sense to me. People have been climbing the wrong mountain all this time and nobody checked it because,
+1. The guide said so.
+2. This was Meesapulimala according to Google Maps.
+3. They were tired to climb further.
+
+
+###Life lesson 3: **Do not compromise on your goals just because you are tired or someone else asks you to. Fight for your goals even if it means fighting yourself**.
+
+
+I told about this to my team and we planned for another attempt at climbing Meesapulimala. When we called the KFDC office in Munnar to ask about permits, they told us that they no longer give permits for one day treks and if we had to climb Meesapulimala, we had to camp at the Rhodo Valley and then attempt the peak on day 2. Even though it sounded glamorous, we did not take it as it was way too costly(a single day permit for one person would have costed the entire budget of the previous climb). We now had two options: 
+1. Pay the cash and climb the peak.
+2. Climb what is possibly the toughest trail in Tamil Nadu.
+
+
+We chose option 2. We would now be climbing from the Kolukkumalai estate in Tamil Nadu, a route filled with steep ascents and descents. To make matters worse, we had less than 10 meters of visibility during the trek and there was frost getting collected in our hair thanks to the extreme winter cold. We huffed and puffed on the trail and when I measured the northern peak with my GPS, it read 2659 meters and finally I had climbed my dream peak. When we got down to Kolukkumalai later that evening, I was thinking about all that the peak had done to me.
+
+
+It gave me strength and taught me so many life lessons that I live by. It made me stronger and more important than that, it gave me awesome friends with whom I still continue to climb. Mountains forge people and they also forge friendships. Those friendships are seldom broken and as I write this towards the end of my college life, looking back I have had almost all memorable moments only with my climbing buddies. 
+
+
+All those silly jokes sitting inside wet and leaking makeshift tents in the rains, all those nasty falls and slips when we saved each other, all the trust that we have among us, I think the mountains have given us so much and I will forever be grateful to them. Whenever I face problems these days, I have the courage to face them because I have seen worse in the mountains. 
+
+###Life lesson 4: **All of us have our own Meesapulimalas. It is upto us to face them or run away from them.**.
