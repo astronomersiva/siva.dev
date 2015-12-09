@@ -13,7 +13,7 @@
 <body>
         {% include "navbar.html" %}
     <div class = "row title">
-        <div class = "col-md-8 col-md-offset-3 meta-outer">
+        <div class = "col-md-8 col-md-offset-2 meta-outer">
             {{ page.title }}
             <div class = "meta-inner">
                 {% for t in page.tags.split(',') %}
@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class = "row content">
-        <div class = "col-md-6 col-md-offset-3">
+        <div class = "col-md-8 col-md-offset-2">
             {% block content %}
                 <p>Default content to be displayed</p>
             {% endblock content %}
