@@ -2,7 +2,7 @@
 
 
 $("document").ready(function() {
-    $("img").addClass("img-responsive");
+    $("img").addClass("img-responsive center-block");
 
     var didScroll;
     var lastScrollTop = 0;
