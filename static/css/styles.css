@@ -3,6 +3,7 @@ body
 	font-family: "Karla", "lucida grande", sans-serif;
 	overflow-x: hidden;
 	color: #565656;
+	padding: 20px;
 }
 
 /* Navbar */
