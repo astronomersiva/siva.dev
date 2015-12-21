@@ -1,6 +1,6 @@
 body
 {
-	font-family: "Karla", "lucida grande", sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	overflow-x: hidden;
 	color: #565656;
 	padding: 20px;
@@ -85,7 +85,7 @@ background-color: white;
 .content
 {
 	margin-top: 20px;
-	font-size: 16px;
+	font-size: 17.5px;
 	color: #565656;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -93,7 +93,7 @@ background-color: white;
 	font-weight: normal;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
-	letter-spacing: 0.01rem;
+	line-height: 1.5;
 }
 
 .HelloWorld
