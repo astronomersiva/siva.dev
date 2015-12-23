@@ -374,4 +374,16 @@ a:active
     text-decoration: none;
 }
 
+.navbar-collapse {
+    border: hidden;
+}
+
+.navbar-collapse.collapse.in {
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	padding-right: 25px;
+}
+
+.navbar-toggle {
+	margin-right: 25px;
+}
 
