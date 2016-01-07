@@ -45,7 +45,7 @@ ul.nav.navbar-nav
 color: #00a3f4;  /*Sets the text hover color on navbar*/
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
  a:hover, .navbar-default .navbar-nav > .active > a:focus {
 color: #00a3f4; /*BACKGROUND color for active*/
 background-color: white;
@@ -103,8 +103,8 @@ background-color: white;
 
 .hello
 {
-	color: rgb(0, 163, 244); 
-	margin-top: 10%; 
+	color: rgb(0, 163, 244);
+	margin-top: 10%;
 	font-size: 4em;
 	line-height: 1;
 }
@@ -112,9 +112,9 @@ background-color: white;
 .IntroText
 {
 	font-size: 43px;
-	color: rgb(102, 102, 102); 
-	margin-top: 100px; 
-	margin-bottom: 120px; 
+	color: rgb(102, 102, 102);
+	margin-top: 100px;
+	margin-bottom: 120px;
 	line-height: 1.5em;
 }
 
@@ -134,7 +134,7 @@ span.language
 
 .title
 {
-	color: #333; 
+	color: #333;
 	font-size: 20px;
 	text-transform: uppercase;
 	margin-top: 150px;
@@ -160,7 +160,7 @@ p {
 	color: #555;
 }
 
-button.btn.btn-info 
+button.btn.btn-info
 {
 	background-color: #00a3f4;
 	margin-bottom: 10px;
@@ -178,7 +178,7 @@ button a:link
 	text-decoration: none;
 }
 
-button a:visited 
+button a:visited
 {
 	color: white;
         text-decoration: none;
@@ -190,7 +190,7 @@ button a:hover
 	text-decoration: none;
 }
 
-button a:active 
+button a:active
 {
     color: white;
     text-decoration: none;
@@ -232,7 +232,7 @@ button a:active
 
 /* Tag List */
 
-.taglist 
+.taglist
 {
 	margin-top: 125px;
 }
@@ -242,7 +242,7 @@ button a:active
 	color: #00a3f4;
 }
 
-.language a 
+.language a
 {
 	color: #f03838;
 }
@@ -302,7 +302,7 @@ a.social:link
 	text-decoration: none;
 }
 
-a.social:visited 
+a.social:visited
 {
 	color: grey;
     text-decoration: none;
@@ -312,10 +312,10 @@ a.social:hover
 {
 	color: #00a3f4;
 	text-decoration: none;
-	transition: color 0.5s linear; 
+	transition: color 0.5s linear;
 }
 
-a.social:active 
+a.social:active
 {
 	color: grey;
     text-decoration: none;
@@ -355,7 +355,7 @@ a:link
 	text-decoration: none;
 }
 
-a:visited 
+a:visited
 {
 	color: #00a3f4;
     text-decoration: none;
@@ -365,10 +365,10 @@ a:hover
 {
 	color: #f03838;
 	text-decoration: none;
-	transition: color 0.25s linear; 
+	transition: color 0.25s linear;
 }
 
-a:active 
+a:active
 {
 	color: #00a3f4;
     text-decoration: none;
@@ -386,4 +386,3 @@ a:active
 .navbar-toggle {
 	margin-right: 25px;
 }
-
