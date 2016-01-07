@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>A coder&#39;s tribute to the country</title>
+    <meta property="og:title" content="A coder&#39;s tribute to the country" />
+    <meta property="og:site_name" content="@siva" />
+    <meta property="og:url" content="https://sivasubramanyam.me/independence-day" />
+    <meta property="og:description" content="A real time Twitter streamer to celebrate India&#39;s independence day" />
+    	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="sivasubramanyam,sivasubramanyam.me" name="keywords">
+	<meta content="Sivasubramanyam A" name="author">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	
+	    <title>@siva</title>
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  type="text/css">
+	<link rel="stylesheet" href="/static/font-awesome.selected/css/font-awesome.selected.css" type="text/css">
+	<link rel="stylesheet" href="/static/css/styles.css"  type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js" type="text/javascript"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+        <nav class="navbar navbar-default navbar-fixed-top upper row" id="opacityNav">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://sivasubramanyam.me/">@siva</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="https://www.sivasubramanyam.me/index/">Home</a></li>
+        <li><a href="https://www.sivasubramanyam.me/about/">About</a></li>
+        <li><a href="http://blog.sivasubramanyam.me/">Travel Blog</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class = "row title">
+        <div class = "col-md-8 col-md-offset-2 meta-outer">
+            A coder&#39;s tribute to the country
+            <div class = "meta-inner">
+                
+                    <a href = "/tag/Python">&nbsp;&nbsp;Python</a>    
+                
+                    <a href = "/tag/Flask">&nbsp;&nbsp; Flask</a>    
+                
+                    <a href = "/tag/Twitter">&nbsp;&nbsp; Twitter</a>    
+                
+                    <a href = "/tag/MongoDB">&nbsp;&nbsp; MongoDB</a>    
+                
+                    <a href = "/tag/Redis">&nbsp;&nbsp; Redis</a>    
+                
+            </div>
+        </div>
+    </div>
+    <div class = "row content">
+        <div class = "col-md-8 col-md-offset-2">
+            
+    <p>I wanted to write some piece of code dedicated to the country on the eve of India's independence day and thought of doing something with Twitter and maps. </p>
+<p>I came across <a href="http://blog.comsysto.com/2012/07/10/real-time-twitter-heat-map-with-mongodb/">this blog post</a> and it was pretty close to what I was planning to do. The code had to be cleaned up a little though.</p>
+<p>I modified the tstream.py file so that it saved only the tweets containing location info into the MongoDB collection instead of the original code that saved every tweet into the collection and then let the server process all of it when the map is loaded.</p>
+<p>Also, I had to use geocoding to convert the place names to coordinates so that they could be plotted on the map. This was because, I could find very few geotagged tweets but there were a lot more tweets that came with city information.</p>
+<p>I then modified the JS code in the map so that it displayed a normal map instead of a heatmap. It was then that the idea of using tricolored markers came into my mind. I approximately divided India into three parts and gave each marker the corresponding tricolor based on the latitude.</p>
+<p>After that, all I had to do was run the mongo server using <code>sudo service mongod start</code> and then start the Redis server using <code>redis-server</code>. I then ran the tstream.py and also ran the tweet_service.py.</p>
+<p>When I then opened <code>localhost:5000/static/map.html</code> in my browser, I could see this cool map getting plotted by markers one by one. Here is a small GIF to give an idea.</p>
+<p><img alt="" src="../static/images/india.gif" /></p>
+<p><button type="button" class="btn btn-info "><a href="https://github.com/astronomersiva/twitter-independence-day-heatmap">View on Github</a></button></p>
+
+        </div>
+    </div>
+        
+<footer>
+    <div class="row footer-contents">
+        <div class="col-md-6 copyright">
+            Sivasubramanyam A &copy;2015 
+        </div>
+        <div class="col-md-6">  
+            <a href="https://plus.google.com/u/0/+SivasubramanyamA/" class="social"><i class="icon-gplus"></i></a>
+            <a href="http://facebook.com/astronomersiva" class="social"><i class="icon-facebook"></i></a>
+            <a href="http://twitter.com/astronomersiva" class="social"><i class="icon-twitter"></i></a>
+            <a href="mailto:contact@sivasubramanyam.me" class="social"><i class="icon-mail-alt"></i></a>
+            <a href="http://github.com/astronomersiva" class="social"><i class="icon-github-circled"></i></a>
+        </div>
+    </div>
+</footer>
+<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../static/js/main.js"></script>
+</body>
+</html>

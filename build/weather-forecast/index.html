@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Weather Forecast</title>
+    <meta property="og:title" content="Weather Forecast" />
+    <meta property="og:site_name" content="@siva" />
+    <meta property="og:url" content="https://sivasubramanyam.me/weather-forecast" />
+    <meta property="og:description" content="A Javascript based webapp to fetch your location using the W3C Geolocation API and display relevant weather data." />
+    	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="sivasubramanyam,sivasubramanyam.me" name="keywords">
+	<meta content="Sivasubramanyam A" name="author">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	
+	    <title>@siva</title>
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  type="text/css">
+	<link rel="stylesheet" href="/static/font-awesome.selected/css/font-awesome.selected.css" type="text/css">
+	<link rel="stylesheet" href="/static/css/styles.css"  type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js" type="text/javascript"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+        <nav class="navbar navbar-default navbar-fixed-top upper row" id="opacityNav">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://sivasubramanyam.me/">@siva</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="https://www.sivasubramanyam.me/index/">Home</a></li>
+        <li><a href="https://www.sivasubramanyam.me/about/">About</a></li>
+        <li><a href="http://blog.sivasubramanyam.me/">Travel Blog</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class = "row title">
+        <div class = "col-md-8 col-md-offset-2 meta-outer">
+            Weather Forecast
+            <div class = "meta-inner">
+                
+                    <a href = "/tag/Javascript">&nbsp;&nbsp;Javascript</a>    
+                
+            </div>
+        </div>
+    </div>
+    <div class = "row content">
+        <div class = "col-md-8 col-md-offset-2">
+            
+    <p>I have recently decided to do one fun project every weekend. This weekend, I decided to create a site that would fetch the visitor's location and display the weather forecast for that location.</p>
+<p>I used the W3C Geolocation API for fetching the location and OpenWeather Map's API for fetching weather forecasts. I used an <a href="http://erikflowers.github.io/weather-icons/">awesome weather icon pack</a> by Erik Flowers for the icons. If you just want to see it working, then head <a href="http://weather.sivasubramanyam.me">here</a>. If you want to see the code, then continue reading. First the simple HTML markup.</p>
+<p><button type="button" class="btn btn-info "><a href="http://github.com/astronomersiva/weather/">View on Github</a></button></p>
+<p>The real work though, is done by the following Javascript code.
+<script src="https://gist.github.com/astronomersiva/15ebf47a9dedf4bbcb82.js"></script></p>
+
+        </div>
+    </div>
+        
+<footer>
+    <div class="row footer-contents">
+        <div class="col-md-6 copyright">
+            Sivasubramanyam A &copy;2015 
+        </div>
+        <div class="col-md-6">  
+            <a href="https://plus.google.com/u/0/+SivasubramanyamA/" class="social"><i class="icon-gplus"></i></a>
+            <a href="http://facebook.com/astronomersiva" class="social"><i class="icon-facebook"></i></a>
+            <a href="http://twitter.com/astronomersiva" class="social"><i class="icon-twitter"></i></a>
+            <a href="mailto:contact@sivasubramanyam.me" class="social"><i class="icon-mail-alt"></i></a>
+            <a href="http://github.com/astronomersiva" class="social"><i class="icon-github-circled"></i></a>
+        </div>
+    </div>
+</footer>
+<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../static/js/main.js"></script>
+</body>
+</html>
