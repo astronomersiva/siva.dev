@@ -23,7 +23,7 @@
 				        <span class = "language">
 				        		
 				        	{% for t in page.tags.split(',') %}
-			            			<a href = "/tag/{{ t.strip() }}">&nbsp;&nbsp;{{ t }}</a>       		
+				        			<a href="{{ url_for("tag", tag=t.strip()) }}">&nbsp;&nbsp;{{ t }}</a>       		
 			            	{% endfor %}
 
 

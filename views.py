@@ -1,6 +1,7 @@
 from flask import render_template
 from flask import Flask
 from flask_flatpages import FlatPages
+from flask_frozen import Freezer
 
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
@@ -9,6 +10,9 @@ FLATPAGES_EXTENSION = '.md'
 a = Flask(__name__)
 a.config.from_object(__name__)
 pages = FlatPages(a)
+freezer = Freezer(a)
+
+FREEZER_RELATIVE_URLS = True
 
 @a.route('/')
 @a.route('/index')
@@ -37,4 +41,5 @@ def page_not_found(e):
     return render_template('404.html'), 404
     
 if __name__ == "__main__":
+	freezer.freeze()
 	a.run(debug = True)
