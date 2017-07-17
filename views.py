@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, send_from_directory
 from flask import Flask
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
@@ -7,39 +7,47 @@ DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 
-a = Flask(__name__)
-a.config.from_object(__name__)
-pages = FlatPages(a)
-freezer = Freezer(a)
+app = Flask(__name__)
+app.config.from_object(__name__)
+
+pages = FlatPages(app)
+freezer = Freezer(app)
 
 FREEZER_RELATIVE_URLS = True
 
-@a.route('/')
-@a.route('/index')
-@a.route('/index/')
+@app.route('/')
+@app.route('/index')
+@app.route('/index/')
 def index():
-        return render_template("index.html", pages=pages)
+    return render_template("index.html", pages=pages)
 
-@a.route('/about')
-@a.route('/about/')
+@app.route('/about')
+@app.route('/about/')
 def about():
-		return render_template("about.html")
+    return render_template("about.html")
 
-@a.route('/<path:path>')
-@a.route('/<path:path>/')
+@app.route('/<path:path>')
+@app.route('/<path:path>/')
 def page(path):
     page = pages.get_or_404(path)
-    return render_template("page.html", page=page, pages=pages)	
+    return render_template("page.html", page=page, pages=pages)
 
-@a.route('/tag/<string:tag>')
-@a.route('/tag/<string:tag>/')
+@app.route('/tag/<string:tag>')
+@app.route('/tag/<string:tag>/')
 def tag(tag):
     return render_template('tag.html', pages=pages, tag=tag)
 
-@a.errorhandler(404)
+@app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-    
+
+@app.route('/sw.js')
+def sw():
+    response = send_from_directory('static', 'js/sw.js')
+    response.headers['Content-Type'] = 'application/javascript; charset=utf-8'
+    return response
+
+
 if __name__ == "__main__":
 	freezer.freeze()
-	a.run(debug = True)
+	app.run(debug = True)
