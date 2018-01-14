@@ -8,22 +8,26 @@
 
 <body>
   {% include "navbar.html" %}
-  <div class = "row posts taglist" id="list">
-    <div class = "col-md-6 col-md-offset-3">
+  <div class="row posts taglist" id="list">
+    <div class="col-md-8 col-md-offset-2">
       <h2>List of posts tagged <em class="taglistem">{{ tag }}</em></h2>
       {% for page in pages|sort(attribute='order') %}
-      {% for t in page.tags.lower().split(',') %}
-      {% if t.strip() == tag.lower() %}
-      <a href = "{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
-      <span class = "language">
-        {% for t in page.tags.split(',') %}
-        <a href = "/tag/{{ t.strip() }}">&nbsp;&nbsp;{{ t }}</a>
+        {% for t in page.tags.lower().split(',') %}
+          {% if t.strip() == tag.lower() %}
+            <div class="row">
+              <div class="col-md-12">
+                <a href = "{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
+                <span class="language">
+                  {% for t in page.tags.split(',') %}
+                  <a href = "/tag/{{ t.strip() }}">&nbsp;&nbsp;{{ t }}</a>
+                  {% endfor %}
+                </span><br>
+                {{ page.description }}
+                <hr>
+              </div>
+            </div>
+          {% endif %}
         {% endfor %}
-      </span><br>
-      {{ page.description }}
-      <hr>
-      {% endif %}
-      {% endfor %}
       {% endfor %}
     </div>
   </div>

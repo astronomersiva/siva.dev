@@ -4,7 +4,7 @@
   {% include "head.html" %}
 </head>
 <body>
-  <div class = "row content">
+  <div class="row content">
     <div class="col-md-8 col-md-offset-2 helloWorld">
       <div class="hello text-center">
         Hello, World!
@@ -16,24 +16,23 @@
     </div>
   </div>
 
-  <div class = "row posts">
-    <div class = "col-md-6 col-md-offset-3">
-      {% block content %}
+  <div class="container posts">
+    {% block content %}
       {% for page in pages|sort(attribute='order', reverse=True) %}
-      <a href = "{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
-      <span class = "language">
-
-        {% for t in page.tags.split(',') %}
-        <a href="{{ url_for("tag", tag=t.strip()) }}">&nbsp;&nbsp;{{ t }}</a>
-        {% endfor %}
-
-
-      </span><br>
-      {{ page.description }}
-      <hr>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
+            <span class="language">
+              {% for t in page.tags.split(',') %}
+                <a href="{{ url_for("tag", tag=t.strip()) }}">&nbsp;&nbsp;{{ t }}</a>
+              {% endfor %}
+            </span><br>
+            {{ page.description }}
+            <hr>
+          </div>
+        </div>
       {% endfor %}
-      {% endblock content %}
-    </div>
+    {% endblock content %}
   </div>
   {% include "navbar.html" %}
   {% include "footer.html" %}
