@@ -592,7 +592,7 @@ ul.nav.navbar-nav {
   letter-spacing: 0.01rem;
 }
 
-.HelloWorld {
+.helloWorld {
   margin-top: 75px;
 }
 
@@ -603,9 +603,9 @@ ul.nav.navbar-nav {
   line-height: 1;
 }
 
-.IntroText {
+.introText {
   font-size: 43px;
-  color: rgb(102, 102, 102);
+  color: #666;
   margin-top: 100px;
   margin-bottom: 120px;
   line-height: 1.5em;
@@ -791,4 +791,3 @@ a:active {
 .fa-envelope:before {
   content: "\f0e0";
 }
-
