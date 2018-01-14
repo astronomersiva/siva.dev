@@ -85,14 +85,14 @@ ul.nav.navbar-nav
 .content
 {
   margin-top: 20px;
-  font-size: 20px;
   color: #555;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 0 5px;
   text-align: justify;
-  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-size: 18px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
 }
 
 .helloWorld
