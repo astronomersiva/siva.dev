@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-  <title>{{ page.title }}</title>
+  <title>@siva{% if page.title %} | {{ page.title }}{% endif %}</title>
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:site_name" content="@siva" />
   <meta property="og:url" content="https://sivasubramanyam.me/{{ page.path }}" />
