@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>@siva | Scaling Gulp</title>
+  <meta property="og:title" content="Scaling Gulp" />
+  <meta property="og:site_name" content="@siva" />
+  <meta property="og:url" content="https://sivasubramanyam.me/scaling-gulp" />
+  <meta property="og:description" content="How Gulp can be (re)used for very large projects" />
+  <meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="sivasubramanyam,sivasubramanyam.me" name="keywords">
+<meta content="Sivasubramanyam A" name="author">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>@siva </title>
+<style>
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+  }
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="/static/sdist/d1d7c9914818a03f260e19c5e62e8696.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top upper row" id="opacityNav">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://sivasubramanyam.me/">@siva</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="http://blog.sivasubramanyam.me/">Travel Blog</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div class="row title">
+    <div class="col-md-8 col-md-offset-2 meta-outer">
+      Scaling Gulp
+      <div class="meta-inner">
+        
+          <a href = "/tag/Gulp">&nbsp;&nbsp;Gulp</a>
+        
+          <a href = "/tag/Node">&nbsp;&nbsp; Node</a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-md-8 col-md-offset-2">
+      
+  <p>About a year back, I started to work on unifying the development, build and deployment process of several websites. All these websites had almost the same structure and dependencies and were using <a href="https://gulpjs.com/">Gulp</a>.</p>
+<p>The main problem was the verbosity. Each gulpfile was over 250 lines long and was incomprehensible even to experienced developers. For example, consider this <code>gulpfile.js</code>.</p>
+<p><code class="block">
+  const gulp = require('gulp');
+  const pug = require('gulp-pug');
+  const less = require('gulp-less');
+  const minifyCSS = require('gulp-csso');
+  const concat = require('gulp-concat');
+  const sourcemaps = require('gulp-sourcemaps');
+  gulp.task('html', function() {
+    return gulp.src('client/templates/<em>.pug')
+      .pipe(pug())
+      .pipe(gulp.dest('build/html'));
+  });
+  gulp.task('css', function() {
+    return gulp.src('client/templates/</em>.less')
+      .pipe(less())
+      .pipe(minifyCSS())
+      .pipe(gulp.dest('build/css'));
+  });
+  gulp.task('js', function() {
+    return gulp.src('client/javascript/*.js')
+      .pipe(sourcemaps.init())
+      .pipe(concat('app.min.js'))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest('build/js'));
+  });
+  gulp.task('default', [ 'html', 'css', 'js' ]);
+</code></p>
+<p>Ugh. The largest contributor to the verbosity is the task definition. In days of Gulp 3, the task ordering <code>gulp.task('default', ['html', 'css', 'js']);</code> was even more confusing but was largely solved by plugins such as <a href="https://www.npmjs.com/package/gulp-sequence">gulp-sequence</a>.</p>
+<p>Fortunately, this could easily be addressed by moving out the tasks to separate files.</p>
+<p>For example,</p>
+<p><code class="block">
+  const gulp = require('gulp');
+  const getTask = (task) =&gt; {
+    return require(<code>./${task}</code>);
+  }
+  gulp.task('html', getTask('html');
+  gulp.task('css', getTask('css');
+  gulp.task('js', getTask('js');
+  gulp.task('default', [ 'html', 'css', 'js' ]);
+</code></p>
+<p>and</p>
+<p><code class="block">
+  module.exports = function() {
+    return function() {
+      const pug = require('gulp-pug');
+      return gulp.src('client/templates/*.pug')
+        .pipe(pug())
+        .pipe(gulp.dest('build/html'));
+    }
+  }
+</code></p>
+<p>accomplishes the same thing!</p>
+<p>You can see that the gulpfile is now simpler and the tasks act as separate modules which I feel is much more intuitive than putting them all in the same place.</p>
+<p>As an added bonus, requiring <code>gulp-pug</code> inside the task this way makes sure that it will be required only when the task is actually run. <code>require()</code> is expensive and when you require a lot of modules in plain gulpfiles, they tend to slow down the startup. But by moving these to tasks and in a way, lazy-requiring them, you can see significant performance gains(especially on large websites). </p>
+<p>One another signifact thing that was done was to package this gulpfile(and its associated tasks and utils) into an NPM package. The consuming websites were then asked to provide a configuration file that this package could simply require. We now had one gulpfile for all websites and this meant, there was just one place where all our efforts were focussed on. By adding <code>./gulpfile</code> to the <code>package.json</code>s <code>bin</code> field, we could call the tasks as <code>myFastGulp taskName</code>.</p>
+<p>For example,
+<code class="block">
+  return gulp.src('websiteA/templates/*.pug')
+    .pipe(pug())
+    .pipe(gulp.dest('build/html'));
+</code></p>
+<p>was changed to</p>
+<p><code class="block">
+  const path = require('path');
+  const config = require(path.join(process.cwd(), 'myFastGulp.js'));
+  return gulp.src(<code>${config.websiteName}/client/templates/*.pug</code>)
+    .pipe(pug())
+    .pipe(gulp.dest('build/html'));
+</code></p>
+<p>In some cases like copying a large number of files(in the range of tens of thousands), gulp tended to be very slow. In these cases, just using an equivalent NPM package(or just plain Node's <code>fs</code>) accelerated things. <code>gulp-util</code> which is used by most packages for Gulp 3 and by gulp itself for logging was also slowing down gulp's startup by about 4-5 seconds. Removing it and using the excellent <a href="https://github.com/sindresorhus/ora">ora</a> and <a href="https://www.npmjs.com/package/chalk">chalk</a> also helped in accelerating Gulp's startup times.</p>
+<p>I highly recommend that you guys checkout <a href="https://github.com/Jaguard/time-require/">time-require</a> to profile your startup times.</p>
+
+    </div>
+  </div>
+  <footer>
+  <div class="row footer-contents">
+    <div class="col-md-6 copyright">
+      Sivasubramanyam A &copy;2018
+    </div>
+    <div class="col-md-6">
+      <a href="http://facebook.com/astronomersiva" class="social"><i class="icon-facebook"></i></a>
+      <a href="http://twitter.com/astronomersiva" class="social"><i class="icon-twitter"></i></a>
+      <a href="mailto:contact@sivasubramanyam.me" class="social"><i class="icon-mail-alt"></i></a>
+      <a href="http://github.com/astronomersiva" class="social"><i class="icon-github-circled"></i></a>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
+<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/sdist/9d36d3db30fb66ac206d202a829dfc5e.js"></script>
+</body>
+</html>

@@ -159,6 +159,11 @@ p {
   color: #555;
 }
 
+code.block {
+  display: block;
+  white-space: pre-wrap;
+}
+
 button.btn.btn-info
 {
   background-color: #00a3f4;
