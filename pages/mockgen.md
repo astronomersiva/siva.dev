@@ -1,8 +1,8 @@
 title: Device Mockup Generator
 date: April, 2018
 description: Generating device mockups with Chrome Headless.
-tags: Javascript, Node, Chrome, Puppeteer
-order: 19
+tags: Javascript, Node, Puppeteer
+order: 20
 
 I had been wanting to release an NPM package for a long time but I have always held back myself as there are packages(sometimes several tens of them to do the same thing) for pretty much everythig.
 

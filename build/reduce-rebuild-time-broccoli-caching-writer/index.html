@@ -2,11 +2,11 @@
 
 <html lang="en">
 <head>
-  <title>@siva | Hexa Clock</title>
-  <meta property="og:title" content="Hexa Clock" />
+  <title>@siva | Reducing rebuild time with Broccoli Caching Writer</title>
+  <meta property="og:title" content="Reducing rebuild time with Broccoli Caching Writer" />
   <meta property="og:site_name" content="@siva" />
-  <meta property="og:url" content="https://sivasubramanyam.me/hexa-clock" />
-  <meta property="og:description" content="A simple Javascript clock that changes its background color with each passing second." />
+  <meta property="og:url" content="https://sivasubramanyam.me/reduce-rebuild-time-broccoli-caching-writer" />
+  <meta property="og:description" content="How using proper configuration can cut unnecessary rebuild time" />
   <meta charset="utf-8">
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
 <meta content="sivasubramanyam,sivasubramanyam.me" name="keywords">
@@ -49,10 +49,14 @@
 </nav>
   <div class="row title">
     <div class="col-md-8 col-md-offset-2 meta-outer">
-      Hexa Clock
+      Reducing rebuild time with Broccoli Caching Writer
       <div class="meta-inner">
         
-          <a href = "/tag/Javascript">&nbsp;&nbsp;Javascript</a>
+          <a href = "/tag/EmberJS">&nbsp;&nbsp;EmberJS</a>
+        
+          <a href = "/tag/Tooling">&nbsp;&nbsp; Tooling</a>
+        
+          <a href = "/tag/Build">&nbsp;&nbsp; Build</a>
         
       </div>
     </div>
@@ -60,11 +64,18 @@
   <div class="row content">
     <div class="col-md-8 col-md-offset-2">
       
-  <p>A small fun project using Javascript that changes the document's background color every second by converting the current time to color codes.</p>
-<p><object data="../static/timecolor/timeColor.html" width="600" height="400"><embed src="../static/timecolor/timeColor.html" width="600" height="400">Error: Embedded data could not be displayed.</object></p>
-<p>Source here:</p>
-<p><button type="button" class="btn btn-info "><a href="http://github.com/astronomersiva/timeColor/">View on Github</a></button>
-<script src="https://gist.github.com/astronomersiva/371b1f7343d26d268e56.js"></script></p>
+  <p>We use the <a href="https://github.com/pragatheeswarans/ember-bundle-i18n">ember-bundle-i18n</a> package to perform i18n of our SPA.</p>
+<p>One thing that I noticed over time was how this addon was always being printed in the build timing log printed by Ember-CLI on each rebuild. Now the size of our i18n files were huge and it made sense that they took some time. However, rebuilding these for every single change(like JS or CSS) in our app was unnecessary.</p>
+<p>While looking around for options, I came across the <a href="https://github.com/ember-cli/broccoli-caching-writer">broccoli-caching-writer</a> package that acts as a drop-in-replacement for broccoli-plugin.</p>
+<p>Using this, one can specify what files can trigger a rebuild and what files cannot trigger rebuilds.</p>
+<p>For example,</p>
+<p><code>options: {
+  cacheInclude: [
+    /.properties$/
+  ]
+}</code></p>
+<p>will only trigger rebuilds when <code>.properties</code> files are changed. This is exactly what we wanted!</p>
+<p>I submitted a <a href="https://github.com/pragatheeswarans/ember-bundle-i18n/pull/93">PR</a> and after this, our rebuilds got a second or so faster.</p>
 
     </div>
   </div>
