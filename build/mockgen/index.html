@@ -2,7 +2,11 @@
 
 <html lang="en">
 <head>
-  <title>@siva | List of posts tagged Twitter</title>
+  <title>@siva | Device Mockup Generator</title>
+  <meta property="og:title" content="Device Mockup Generator" />
+  <meta property="og:site_name" content="@siva" />
+  <meta property="og:url" content="https://sivasubramanyam.me/mockgen" />
+  <meta property="og:description" content="Generating device mockups with Chrome Headless." />
   <meta charset="utf-8">
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
 <meta content="sivasubramanyam,sivasubramanyam.me" name="keywords">
@@ -43,149 +47,34 @@
     </div>
   </div>
 </nav>
-  <div class="row posts taglist" id="list">
+  <div class="row title">
+    <div class="col-md-8 col-md-offset-2 meta-outer">
+      Device Mockup Generator
+      <div class="meta-inner">
+        
+          <a href = "/tag/Javascript">&nbsp;&nbsp;Javascript</a>
+        
+          <a href = "/tag/Node">&nbsp;&nbsp; Node</a>
+        
+          <a href = "/tag/Chrome">&nbsp;&nbsp; Chrome</a>
+        
+          <a href = "/tag/Puppeteer">&nbsp;&nbsp; Puppeteer</a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="row content">
     <div class="col-md-8 col-md-offset-2">
-      <h2>List of posts tagged <em class="taglistem">Twitter</em></h2>
       
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-            <div class="row">
-              <div class="col-md-12">
-                <a href = "/independence-day/">A coder&#39;s tribute to the country</a>
-                <span class="language">
-                  
-                  <a href = "/tag/Python">&nbsp;&nbsp;Python</a>
-                  
-                  <a href = "/tag/Flask">&nbsp;&nbsp; Flask</a>
-                  
-                  <a href = "/tag/Twitter">&nbsp;&nbsp; Twitter</a>
-                  
-                  <a href = "/tag/MongoDB">&nbsp;&nbsp; MongoDB</a>
-                  
-                  <a href = "/tag/Redis">&nbsp;&nbsp; Redis</a>
-                  
-                </span><br>
-                A real time Twitter streamer to celebrate India&#39;s independence day
-                <hr>
-              </div>
-            </div>
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
+  <p>I had been wanting to release an NPM package for a long time but I have always held back myself as there are packages(sometimes several tens of them to do the same thing) for pretty much everythig.</p>
+<p>One day, I noticed the designers at my workplace generating device mockups. I started looking if there was any package that could make this simpler but couldn't find anything. Wow! Finally a chance :D</p>
+<p>I immediately started working on it with Puppeteer, a Node package that provides easy to use APIs to work with Chrome Headless. My idea was to use the device emulator to emulate screen size and resolution and take screenshots using Puppeteer's API.</p>
+<p>After a few hours of looking around for free-to-use device mockups, I settled on <a href="https://facebook.design/devices">Facebook Devices</a>. It had multiple devices including desktops, laptops, tablets and even smartwatches. The only problem was it prohibits people from repackaging or redistributing it.</p>
+<p>I decided on a somewhat unconventional requirement of asking the users to have it downloaded in their machines already and passing that location as an arg to the generator's CLI. The quality that Facebook Devices provides is extremely good and a worthwhile compromise to have this weird requirement.</p>
+<p>It took me about two and a half hours to code this and I finally <a href="https://www.npmjs.com/package/@astronomersiva/mockgen">released</a> my first NPM package!</p>
+<p>As of now, I have only configured it for a few devices that me and my friends use and will add more if requirements arise. Feel free to <a href="https://github.com/astronomersiva/mockgen/issues/new">file an isse</a>, <a href="https://github.com/astronomersiva/mockgen#fork-destination-box">fork it</a> or submit a PR!</p>
+<p><img alt="" src="../static/images/mockgen.gif" /></p>
+
     </div>
   </div>
   <footer>
@@ -204,8 +93,5 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
 <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/static/sdist/9d36d3db30fb66ac206d202a829dfc5e.js"></script>
-  <script type="text/javascript">
-    $('footer').css('margin-top',$(document).height() - ($('#opacityNav').height() + $('.taglist').height()  ) - $('footer').height() - 80);
-  </script>
 </body>
 </html>
