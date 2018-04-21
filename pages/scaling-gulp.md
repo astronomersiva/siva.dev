@@ -8,24 +8,27 @@ About a year back, I started to work on unifying the development, build and depl
 
 The main problem was the verbosity. Each gulpfile was over 250 lines long and was incomprehensible even to experienced developers. For example, consider this `gulpfile.js`.
 
-<code class="block">
+<pre class="block">
   const gulp = require('gulp');
   const pug = require('gulp-pug');
   const less = require('gulp-less');
   const minifyCSS = require('gulp-csso');
   const concat = require('gulp-concat');
   const sourcemaps = require('gulp-sourcemaps');
+
   gulp.task('html', function() {
     return gulp.src('client/templates/*.pug')
       .pipe(pug())
       .pipe(gulp.dest('build/html'));
   });
+
   gulp.task('css', function() {
     return gulp.src('client/templates/*.less')
       .pipe(less())
       .pipe(minifyCSS())
       .pipe(gulp.dest('build/css'));
   });
+
   gulp.task('js', function() {
     return gulp.src('client/javascript/*.js')
       .pipe(sourcemaps.init())
@@ -33,8 +36,9 @@ The main problem was the verbosity. Each gulpfile was over 250 lines long and wa
       .pipe(sourcemaps.write())
       .pipe(gulp.dest('build/js'));
   });
+
   gulp.task('default', [ 'html', 'css', 'js' ]);
-</code>
+</pre>
 
 Ugh. The largest contributor to the verbosity is the task definition. In days of Gulp 3, the task ordering `gulp.task('default', ['html', 'css', 'js']);` was even more confusing but was largely solved by plugins such as [gulp-sequence](https://www.npmjs.com/package/gulp-sequence).
 
@@ -42,20 +46,22 @@ Fortunately, this could easily be addressed by moving out the tasks to separate 
 
 For example,
 
-<code class="block">
+<pre class="block">
   const gulp = require('gulp');
+
   const getTask = (task) => {
     return require(`./${task}`);
   }
+
   gulp.task('html', getTask('html');
   gulp.task('css', getTask('css');
   gulp.task('js', getTask('js');
   gulp.task('default', [ 'html', 'css', 'js' ]);
-</code>
+</pre>
 
 and
 
-<code class="block">
+<pre class="block">
   module.exports = function() {
     return function() {
       const pug = require('gulp-pug');
@@ -64,7 +70,7 @@ and
         .pipe(gulp.dest('build/html'));
     }
   }
-</code>
+</pre>
 
 accomplishes the same thing!
 
@@ -75,21 +81,22 @@ As an added bonus, requiring `gulp-pug` inside the task this way makes sure that
 One another signifact thing that was done was to package this gulpfile(and its associated tasks and utils) into an NPM package. The consuming websites were then asked to provide a configuration file that this package could simply require. We now had one gulpfile for all websites and this meant, there was just one place where all our efforts were focussed on. By adding `./gulpfile` to the `package.json`s `bin` field, we could call the tasks as `myFastGulp taskName`.
 
 For example,
-<code class="block">
+<pre class="block">
   return gulp.src('websiteA/templates/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('build/html'));
-</code>
+</pre>
 
 was changed to
 
-<code class="block">
+<pre class="block">
   const path = require('path');
   const config = require(path.join(process.cwd(), 'myFastGulp.js'));
+
   return gulp.src(`${config.websiteName}/client/templates/*.pug`)
     .pipe(pug())
     .pipe(gulp.dest('build/html'));
-</code>
+</pre>
 
 In some cases like copying a large number of files(in the range of tens of thousands), gulp tended to be very slow. In these cases, just using an equivalent NPM package(or just plain Node's `fs`) accelerated things. `gulp-util` which is used by most packages for Gulp 3 and by gulp itself for logging was also slowing down gulp's startup by about 4-5 seconds. Removing it and using the excellent [ora](https://github.com/sindresorhus/ora) and [chalk](https://www.npmjs.com/package/chalk) also helped in accelerating Gulp's speed(especially startup).
 

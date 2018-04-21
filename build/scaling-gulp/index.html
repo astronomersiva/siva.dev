@@ -133,8 +133,9 @@
     .pipe(pug())
     .pipe(gulp.dest('build/html'));
 </code></p>
-<p>In some cases like copying a large number of files(in the range of tens of thousands), gulp tended to be very slow. In these cases, just using an equivalent NPM package(or just plain Node's <code>fs</code>) accelerated things. <code>gulp-util</code> which is used by most packages for Gulp 3 and by gulp itself for logging was also slowing down gulp's startup by about 4-5 seconds. Removing it and using the excellent <a href="https://github.com/sindresorhus/ora">ora</a> and <a href="https://www.npmjs.com/package/chalk">chalk</a> also helped in accelerating Gulp's startup times.</p>
-<p>I highly recommend that you guys checkout <a href="https://github.com/Jaguard/time-require/">time-require</a> to profile your startup times.</p>
+<p>In some cases like copying a large number of files(in the range of tens of thousands), gulp tended to be very slow. In these cases, just using an equivalent NPM package(or just plain Node's <code>fs</code>) accelerated things. <code>gulp-util</code> which is used by most packages for Gulp 3 and by gulp itself for logging was also slowing down gulp's startup by about 4-5 seconds. Removing it and using the excellent <a href="https://github.com/sindresorhus/ora">ora</a> and <a href="https://www.npmjs.com/package/chalk">chalk</a> also helped in accelerating Gulp's speed(especially startup).</p>
+<p>Happy gulping!</p>
+<p>PS: I highly recommend that you guys checkout <a href="https://github.com/Jaguard/time-require/">time-require</a> to profile your startup times(even in your non-Gulp projects). You will be in for surprises.</p>
 
     </div>
   </div>
