@@ -2,13 +2,14 @@ title: Scaling Gulp
 date: April, 2018
 description: How Gulp can be (re)used for very large projects
 tags: Gulp, Node
+code: true
 order: 20
 
 About a year back, I started to work on unifying the development, build and deployment process of several websites. All these websites had almost the same structure and dependencies and were using [Gulp](https://gulpjs.com/).
 
 The main problem was the verbosity. Each gulpfile was over 250 lines long and was incomprehensible even to experienced developers. For example, consider this `gulpfile.js`.
 
-<pre class="block">
+<pre>
   const gulp = require('gulp');
   const pug = require('gulp-pug');
   const less = require('gulp-less');
@@ -46,7 +47,7 @@ Fortunately, this could easily be addressed by moving out the tasks to separate 
 
 For example,
 
-<pre class="block">
+<pre>
   const gulp = require('gulp');
 
   const getTask = (task) => {
@@ -61,7 +62,7 @@ For example,
 
 and
 
-<pre class="block">
+<pre>
   module.exports = function() {
     return function() {
       const pug = require('gulp-pug');
@@ -81,7 +82,7 @@ As an added bonus, requiring `gulp-pug` inside the task this way makes sure that
 One another signifact thing that was done was to package this gulpfile(and its associated tasks and utils) into an NPM package. The consuming websites were then asked to provide a configuration file that this package could simply require. We now had one gulpfile for all websites and this meant, there was just one place where all our efforts were focussed on. By adding `./gulpfile` to the `package.json`s `bin` field, we could call the tasks as `myFastGulp taskName`.
 
 For example,
-<pre class="block">
+<pre>
   return gulp.src('websiteA/templates/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('build/html'));
@@ -89,7 +90,7 @@ For example,
 
 was changed to
 
-<pre class="block">
+<pre>
   const path = require('path');
   const config = require(path.join(process.cwd(), 'myFastGulp.js'));
 

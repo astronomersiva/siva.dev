@@ -8,6 +8,12 @@
   <meta property="og:url" content="https://sivasubramanyam.me/{{ page.path }}" />
   <meta property="og:description" content="{{ page.description }}" />
   {% include "head.html" %}
+  {% if page.code %}
+    {% compress 'css' %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='js/highlight/styles/github-gist.css') }}"  type="text/css">
+    {% endcompress %}
+    <script src="{{ url_for('static', filename='js/highlight/highlight.pack.js') }}"></script>
+  {% endif %}
 </head>
 
 <body>
@@ -30,5 +36,13 @@
     </div>
   </div>
   {% include "footer.html" %}
+  {% if page.code %}
+    <script>
+      const preTags = Array.from(document.getElementsByTagName('pre'));
+      preTags.forEach((i, block) => {
+        hljs.highlightBlock(i);
+      });
+    </script>
+  {% endif %}
 </body>
 </html>

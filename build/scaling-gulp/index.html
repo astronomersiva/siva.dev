@@ -24,6 +24,10 @@
 </style>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="/static/sdist/d1d7c9914818a03f260e19c5e62e8696.css">
+  
+    <link type="text/css" rel="stylesheet" href="/static/sdist/21d3639a36e42670adea09156653b575.css">
+    <script src="/static/js/highlight/highlight.pack.js"></script>
+  
 </head>
 
 <body>
@@ -64,7 +68,7 @@
       
   <p>About a year back, I started to work on unifying the development, build and deployment process of several websites. All these websites had almost the same structure and dependencies and were using <a href="https://gulpjs.com/">Gulp</a>.</p>
 <p>The main problem was the verbosity. Each gulpfile was over 250 lines long and was incomprehensible even to experienced developers. For example, consider this <code>gulpfile.js</code>.</p>
-<pre class="block">
+<pre>
   const gulp = require('gulp');
   const pug = require('gulp-pug');
   const less = require('gulp-less');
@@ -99,7 +103,7 @@
 <p>Ugh. The largest contributor to the verbosity is the task definition. In days of Gulp 3, the task ordering <code>gulp.task('default', ['html', 'css', 'js']);</code> was even more confusing but was largely solved by plugins such as <a href="https://www.npmjs.com/package/gulp-sequence">gulp-sequence</a>.</p>
 <p>Fortunately, this could easily be addressed by moving out the tasks to separate files.</p>
 <p>For example,</p>
-<pre class="block">
+<pre>
   const gulp = require('gulp');
 
   const getTask = (task) => {
@@ -113,7 +117,7 @@
 </pre>
 
 <p>and</p>
-<pre class="block">
+<pre>
   module.exports = function() {
     return function() {
       const pug = require('gulp-pug');
@@ -129,13 +133,13 @@
 <p>As an added bonus, requiring <code>gulp-pug</code> inside the task this way makes sure that it will be required only when the task is actually run. <code>require()</code> is expensive and when you require a lot of modules in plain gulpfiles, they tend to slow down the startup. But by moving these to tasks and in a way, lazy-requiring them, you can see significant performance gains(especially on large websites). </p>
 <p>One another signifact thing that was done was to package this gulpfile(and its associated tasks and utils) into an NPM package. The consuming websites were then asked to provide a configuration file that this package could simply require. We now had one gulpfile for all websites and this meant, there was just one place where all our efforts were focussed on. By adding <code>./gulpfile</code> to the <code>package.json</code>s <code>bin</code> field, we could call the tasks as <code>myFastGulp taskName</code>.</p>
 <p>For example,
-<pre class="block">
+<pre>
   return gulp.src('websiteA/templates/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('build/html'));
 </pre></p>
 <p>was changed to</p>
-<pre class="block">
+<pre>
   const path = require('path');
   const config = require(path.join(process.cwd(), 'myFastGulp.js'));
 
@@ -166,5 +170,13 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
 <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/static/sdist/9d36d3db30fb66ac206d202a829dfc5e.js"></script>
+  
+    <script>
+      const preTags = Array.from(document.getElementsByTagName('pre'));
+      preTags.forEach((i, block) => {
+        hljs.highlightBlock(i);
+      });
+    </script>
+  
 </body>
 </html>
