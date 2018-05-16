@@ -2,7 +2,7 @@ body
 {
   font-family: 'Source Sans Pro', sans-serif;
   overflow-x: hidden;
-  color: #555;
+  color: #2b2b2b;
   padding: 20px;
 }
 
@@ -85,14 +85,18 @@ ul.nav.navbar-nav
 .content
 {
   margin-top: 20px;
-  color: #555;
+  color: #2b2b2b;
   padding: 0 5px;
   text-align: justify;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-size: 18px;
-  line-height: 1.58;
-  letter-spacing: -.003em;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+h4 {
+  margin: 20px 0;
 }
 
 .helloWorld
@@ -141,7 +145,7 @@ ul.nav.navbar-nav
 }
 
 p {
-  margin: 0 0 20px;
+  margin: 0 0 50px;
 }
 
 .meta-outer
@@ -150,7 +154,8 @@ p {
   font-size: 25px;
   text-transform: none;
   line-height: 1.5;
-  color: #555;
+  color: #2b2b2b;
+  font-weight: 600; 
 }
 
 .meta-inner
@@ -196,16 +201,6 @@ button a, button a:link, button a:visited, button a:hover, button a:active
   color: #555;
   text-align: center;
   font-size: 16px;
-}
-
-.aboutSiva
-{
-  color: #555;
-  font-size: 18px;
-  line-height: 1.5em;
-  margin-top: 20px;
-  text-align: justify;
-  letter-spacing: 0.01rem;
 }
 
 /* Tag List */
@@ -273,15 +268,15 @@ a.social:active
 {
   padding-left: 5px;
   padding-right: 5px;
-  float: right;
-  margin-right: 50px;
   font-size: 18px;
 }
 
 .copyright
 {
   padding-left: 50px;
+  padding-bottom: 50px;
   font-size: 18px;
+  text-align: right;
 }
 
 /* Miscellaneous */

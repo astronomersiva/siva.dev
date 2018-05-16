@@ -4,8 +4,6 @@ description: An approach to lazily migrate Bootstrap at scale for busy teams.
 tags: Bootstrap, Ideas
 order: 22
 
-### Lazily migrating Boostrap from v3 to v4
-
 Migrating tens of thousands of lines of code an be a pretty demanding task even for the most equipped teams. If there is a clear migration strategy that slowly introduces changes while gradually deprecating existing APIs, teams can migrate their code while upgrading versions by performing incremental changes. With Bootstrap 4 however, a bulk of the APIs have been changed and this requires every usage of Bootstrap to be changed to the latest version before upgrading. Even though this is straightforward to most projects, large projects that are fast paced may face difficulties.
 
 Consider this example. Harry migrates from Bootstrap 3 to Bootstrap 4 in a branch `bootstrap-v4` forked from the master branch on May 5. He finishes this by May 7 and realises that there has been code modifications and he has to work on the migration again(and resolve all those ugly merge conflicts). Not only does he have to change class names on the changes, he should also ensure that there are no visual regressions because of his changes. On a sufficiently large codebase, this is frankly not possible as one cannot be expected to remember how each part of an application looks like. One way to avoid this will be stopping all development until Harry finishes his work and involving all developers in helping out Harry by splitting modules/components among fellow devs. But when your customers are demanding features and there are deadlines to be met, this is not feasible for fast paced teams.
@@ -14,9 +12,9 @@ A better approach will be to perform migrations on the basis of Bootstrap APIs<s
 
 #### **Advantages**
 
-* *Does not hinder the development cycle* - Migration can happen **along** with other feature development.
-* *Enables a gradual learning(and unlearning) curve* - It will be quite confusing for developers to suddenly start using v4 syntax. With this approach, one gets to unlearn gradually and learn the latest syntax at the same time.
-* *Lets the developers set the pace for the migration* - Is it a busy week when developers are overloaded with work? Migrate just one(or zero) APIs. Is it a relatively free week? Migrate four APIs!
+* **Does not hinder the development cycle** - Migration can happen **along** with other feature development.
+* **Enables a gradual learning(and unlearning) curve** - It will be quite confusing for developers to suddenly start using v4 syntax. With this approach, one gets to unlearn gradually and learn the latest syntax at the same time.
+* **Lets the developers set the pace for the migration** - Is it a busy week when developers are overloaded with work? Migrate just one(or zero) APIs. Is it a relatively free week? Migrate four APIs!
 
 #### **Disadvantages**
 
@@ -24,9 +22,12 @@ A better approach will be to perform migrations on the basis of Bootstrap APIs<s
 * Interdependent APIs will have to be migrated together.
 * There will be cases where manual intervention will be required while custom building the newer version. However, the effort involved in this will be significantly lesser than migrating in bulk as it is easier to concentrate on just one thing and analyse all its variants.
 * Introduces an additional network call to fetch another CSS - This can be avoided by combining the two CSS files.
+* Developers will have to keep track of which APIs have been converted to use the correct styles.
 
-#### **Talk is cheap. Show me the code!**
+<br>
+<br>
+**Talk is cheap. Show me the code!**
 
 I have put together a [small, ugly example](/static/bootstrap-migration/example.html) of using Bootstrap 3 and 4 together. The table in this example uses Bootstrap 4 and the rest use Bootstrap 3.
 
-<sup>*</sup> Using the term APIs for the lack of something better.
+<sup>*</sup><small>Using the term APIs for the lack of something better.</small>
