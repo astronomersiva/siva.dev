@@ -22,6 +22,6 @@ With the lightning approach, each of these builds will have a different build la
 
 Now, once the app loads, you can test for ES6 support by [this technique](https://www.bram.us/2016/10/31/checking-if-a-browser-supports-es6/) and set a cookie or use the User-Agent to determine which build is needed. On subsequent reloads, check for the existence of this cookie and if the user's browser supports ES6, all you have to do is send the index.html pointed by the `${latest_build_label}_modern`.
 
-I used this approach and saw a reduction of around 250kb before gzip and 30kb after gzip in the shipped bundle size for modern browsers. The compile and parse times came down by around 5-7 seconds on slower computers!
+I used this approach and saw a reduction of around 250kb before gzip and 60kb after gzip in the shipped bundle size for modern browsers. The parse and compile times were reduced and page load time came down by around 5-7 seconds on slower computers!
 
 Feel free to try this approach and share your performance gains, alternate ideas and criticism!
