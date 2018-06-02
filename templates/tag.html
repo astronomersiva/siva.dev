@@ -11,7 +11,7 @@
   <div class="row posts taglist" id="list">
     <div class="col-md-6 col-md-offset-3">
       <h2>List of posts tagged <em class="taglistem">{{ tag }}</em></h2>
-      {% for page in pages|sort(attribute='order') %}
+      {% for page in pages|sort(attribute='order', reverse=True) %}
         {% for t in page.tags.lower().split(',') %}
           {% if t.strip() == tag.lower() %}
             <div class="row">

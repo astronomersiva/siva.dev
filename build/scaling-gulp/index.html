@@ -24,7 +24,7 @@
   }
 </style>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="/static/sdist/9ec9f8b22549c73f91574a4a1783b13c.css">
+<link type="text/css" rel="stylesheet" href="/static/sdist/b5bf8c54923067940dcb016d50ef6f42.css">
   
     <link type="text/css" rel="stylesheet" href="/static/sdist/21d3639a36e42670adea09156653b575.css">
     <script src="/static/js/highlight/highlight.pack.js"></script>
@@ -67,7 +67,7 @@
     <div class="col-md-6 col-md-offset-3">
       
   <p>About a year back, I started to work on unifying the development, build and deployment process of several websites. All these websites had almost the same structure and dependencies and were using <a href="https://gulpjs.com/">Gulp</a>.</p>
-<p>The main problem was the verbosity. Each gulpfile was over 250 lines long and was incomprehensible even to experienced developers. For example, consider this <code>gulpfile.js</code>.</p>
+<p>The main problem was the verbosity of the gulp tasks and code duplication. Each gulpfile was over 250 lines long and was incomprehensible even to experienced developers. The same gulpfile was present in each repository and making one change meant changing it in all the repos. Consider this <code>gulpfile.js</code>.</p>
 <pre>
   const gulp = require('gulp');
   const pug = require('gulp-pug');

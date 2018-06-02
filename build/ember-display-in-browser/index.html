@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>@siva | ember-display-in-browser</title>
+  <meta property="og:title" content="ember-display-in-browser" />
+  <meta property="og:site_name" content="@siva" />
+  <meta property="og:url" content="https://sivasubramanyam.me/ember-display-in-browser" />
+  <meta property="og:description" content="An Ember addon to display browser specific content" />
+  <meta name="description" content="An Ember addon to display browser specific content" />
+  <meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="sivasubramanyam,sivasubramanyam.me" name="keywords">
+<meta content="Sivasubramanyam A" name="author">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>@siva </title>
+<style>
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+  }
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="/static/sdist/b5bf8c54923067940dcb016d50ef6f42.css">
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top upper row" id="opacityNav">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://sivasubramanyam.me/">@siva</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div class="row title">
+    <div class="col-md-6 col-md-offset-3 meta-outer">
+      ember-display-in-browser
+      <div class="meta-inner">
+        
+          <a href = "/tag/EmberJS">&nbsp;&nbsp;EmberJS</a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-md-6 col-md-offset-3">
+      
+  <p>Inspired by <a href="https://github.com/flexdinesh/react-render-in-browser">react-render-in-browser</a>, I put together an addon for EmberJS to display content based on the user's browser.</p>
+<p>Head out to the <a href="https://astronomersiva.github.io/ember-display-in-browser/">demo page</a> to try it out and <a href="https://github.com/astronomersiva/ember-display-in-browser">here is the repo</a>, if you want to see the code or file an issue :)</p>
+<h4><strong>Why? 🤔</strong></h4>
+<p>Say you are developing an application that makes use of features that are not available
+in IE. You can make use of this addon to display a message asking the user to use a browser
+other than IE.</p>
+<h4><strong>This is a bad idea! 😠</strong></h4>
+<p>This addon has some valid use cases(like I explained in the <code>why</code> section). However, you should
+prefer to <strong>make use of feature checks</strong> instead of relying on the User Agent.</p>
+<p>Even though this addon lets you specify several browsers alone, please do not develop an app that supports
+Chrome(or Safari) alone. <strong>Compatibility matters</strong>.</p>
+<h4><strong>Installation 🔧</strong></h4>
+<p><code>ember install ember-display-in-browser</code></p>
+<h4><strong>Usage 💻</strong></h4>
+<ul>
+<li>
+<p>To display only in one or a set of browsers,
+<pre>
+  {{!-- arrayOfBrowsers = ["Chrome", "firefox"] --}}
+  {{#display-in-browser only=arrayOfBrowsers}}
+    &lt;p&gt;This will be visible only in Chrome and Firefox&lt;/p&gt;
+  {{/display-in-browser}}
+  <br>
+  {{#display-in-browser only="ie"}}
+    &lt;p&gt;This will be visible only in Internet Explorer&lt;/p&gt;
+  {{/display-in-browser}}
+</pre></p>
+</li>
+<li>
+<p>To display in browsers other than one or more browsers,
+<pre>
+  {{!-- arrayOfBrowsers = ["Chrome", "firefox"] --}}
+  {{#display-in-browser except=arrayOfBrowsers}}
+    &lt;p&gt;This will not be visible in Chrome and Firefox&lt;/p&gt;
+  {{/display-in-browser}}
+  <br>
+  {{!-- arrayOfBrowsers = ["ie", "mobile"] --}}
+  {{#display-in-browser except=arrayOfBrowsers}}
+    &lt;p&gt;This will not be visible in IE and Mobile browsers&lt;/p&gt;
+  {{/display-in-browser}}
+  <br>
+  {{#display-in-browser except="ie"}}
+    &lt;p&gt;This will not be visible in IE.&lt;/p&gt;
+  {{/display-in-browser}}
+</pre></p>
+</li>
+<li>
+<p>To display in all browsers,
+<pre>
+  {{#display-in-browser all=all}}
+    &lt;p&gt;This will be visible in all browsers&lt;/p&gt;
+  {{/display-in-browser}}
+  <br>
+  {{!-- You can also pass as a string, if needed --}}
+  {{#display-in-browser all="true"}}
+    &lt;p&gt;This will be visible in all browsers&lt;/p&gt;
+  {{/display-in-browser}}
+</pre></p>
+</li>
+<li>
+<p>To display in no browser,
+<pre>
+  {{#display-in-browser none="true"}}
+    &lt;p&gt;This will not be visible in any browser&lt;/p&gt;
+  {{/display-in-browser}}
+</pre></p>
+</li>
+</ul>
+<p>Supported browsers - <code>'chrome', 'firefox', 'safari', 'opera', 'ie', 'edge', 'blink', 'mobile'</code>(case-insensitive).</p>
+
+    </div>
+  </div>
+  <footer>
+  <div class="row footer-contents">
+    <div class="col-md-offset-6 col-md-6 copyright">
+        2018 &copy; Sivasubramanyam A <a href="http://twitter.com/astronomersiva" class="social"><i class="icon-twitter"></i></a> / <a href="http://github.com/astronomersiva" class="social"><i class="icon-github-circled"></i></a>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
+<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/sdist/9d36d3db30fb66ac206d202a829dfc5e.js"></script>
+  
+</body>
+</html>

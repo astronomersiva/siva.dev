@@ -7,7 +7,7 @@ order: 20
 
 About a year back, I started to work on unifying the development, build and deployment process of several websites. All these websites had almost the same structure and dependencies and were using [Gulp](https://gulpjs.com/).
 
-The main problem was the verbosity. Each gulpfile was over 250 lines long and was incomprehensible even to experienced developers. For example, consider this `gulpfile.js`.
+The main problem was the verbosity of the gulp tasks and code duplication. Each gulpfile was over 250 lines long and was incomprehensible even to experienced developers. The same gulpfile was present in each repository and making one change meant changing it in all the repos. Consider this `gulpfile.js`.
 
 <pre>
   const gulp = require('gulp');

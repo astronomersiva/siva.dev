@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>@siva | gifvid</title>
+  <meta property="og:title" content="gifvid" />
+  <meta property="og:site_name" content="@siva" />
+  <meta property="og:url" content="https://sivasubramanyam.me/gifvid" />
+  <meta property="og:description" content="Converts a GIF to an MP4 using ffmpeg" />
+  <meta name="description" content="Converts a GIF to an MP4 using ffmpeg" />
+  <meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="sivasubramanyam,sivasubramanyam.me" name="keywords">
+<meta content="Sivasubramanyam A" name="author">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>@siva </title>
+<style>
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+  }
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="/static/sdist/b5bf8c54923067940dcb016d50ef6f42.css">
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top upper row" id="opacityNav">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://sivasubramanyam.me/">@siva</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div class="row title">
+    <div class="col-md-6 col-md-offset-3 meta-outer">
+      gifvid
+      <div class="meta-inner">
+        
+          <a href = "/tag/Tooling">&nbsp;&nbsp;Tooling</a>
+        
+      </div>
+    </div>
+  </div>
+  <div class="row content">
+    <div class="col-md-6 col-md-offset-3">
+      
+  <p>I decided to convert some GIFs in this website to MP4 videos after reading this <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/">thoroughly researched blog</a> by Jeremy Wagner.</p>
+<p>When I tested it out however, I found that the videos were working only in Chrome. After a bit of Googling, I figured out the right params to be passed to the ffmpeg and it was over 200 characters long. There was no way I was going to remember this. Setting up an alias was the only solution if I ever wanted to use this again.</p>
+<p>I had never written any major bash script as of then so I wanted to try making this as one.</p>
+<h5><strong>Installation</strong></h5>
+<ul>
+<li>Install ffmpeg(<code>brew install ffmpeg</code> on macOS).</li>
+<li>Clone the <a href="https://github.com/astronomersiva/gifvid">repo</a>.</li>
+<li>Run <code>chmod +x gifvid</code>.</li>
+<li>Copy this to the bin path by running <code>cp gifvid /usr/bin</code>. Use <code>sudo</code> if needed.</li>
+</ul>
+<h5><strong>Usage</strong></h5>
+<p><code>gifvid source</code></p>
+<p><code>source</code> is mandatory. The converted video will be written to <code>source.mp4</code>.</p>
+<h5><strong>CLI Flags</strong></h5>
+<ul>
+<li><code>-s</code></li>
+<li><code>--src</code> - Specify the source.</li>
+<li><code>-d</code></li>
+<li><code>--dest</code> - Specify the destination. Will be <code>source.mp4</code> if not given.</li>
+<li><code>-c</code></li>
+<li><code>--crf</code> - Constant Rate Factor. Defaults to <code>25</code>. Lower the number, higher the quality and file size.</li>
+</ul>
+
+    </div>
+  </div>
+  <footer>
+  <div class="row footer-contents">
+    <div class="col-md-offset-6 col-md-6 copyright">
+        2018 &copy; Sivasubramanyam A <a href="http://twitter.com/astronomersiva" class="social"><i class="icon-twitter"></i></a> / <a href="http://github.com/astronomersiva" class="social"><i class="icon-github-circled"></i></a>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
+<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/sdist/9d36d3db30fb66ac206d202a829dfc5e.js"></script>
+  
+</body>
+</html>

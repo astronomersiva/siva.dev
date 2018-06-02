@@ -91,7 +91,7 @@ ul.nav.navbar-nav
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.6;
   letter-spacing: 0;
 }
 
@@ -145,7 +145,7 @@ h4 {
 }
 
 p {
-  margin: 0 0 50px;
+  margin: 0 0 30px;
 }
 
 .meta-outer
