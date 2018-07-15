@@ -1,90 +1,67 @@
-body
-{
+html {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
   font-family: 'Source Sans Pro', sans-serif;
   overflow-x: hidden;
   color: #2b2b2b;
-  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 10rem;
 }
 
 /* Navbar */
 
-.navbar
-{
-  background-color: white;
-  border-color: #e7e7e7;
-  height: 90px;
-  float: bottom;
-  line-height: 2;
-  padding-top: 20px;
-  opacity: 0.95;
-  transition: top 0.2s ease-in-out;
+.navbr {
+  position: absolute;
+  background: white;
+  padding: 0.7rem;
+  font-size: 1.2rem;
 }
 
-.nav-up {
-  top: -90px;
+.navbr-primary {
+  top: 0;
+  left: 0;
+  border-top: 3px solid #00a3f4;
 }
 
-a.navbar-brand
-{
-  font-size: 50px;
-  padding-left: 25px;
-  color: #00a3f4;
-}
-
-.navbar-default .navbar-brand {
-  color: #00a3f4;
-}
-
-ul.nav.navbar-nav
-{
-  float: right;
-  font-size: 20px;
-}
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #00a3f4;  /*Sets the text hover color on navbar*/
-}
-
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
- a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #00a3f4; /*BACKGROUND color for active*/
-  background-color: white;
-}
-
-.navbar-default {
-  background-color: white;
-  border-color: #e7e7e7;
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
-}
-
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-  color: #333;
-  text-decoration: none;
-  background-color: #66CCFF;  /*change color of links in drop down here*/
-}
-
-.nav > li > a:hover,
-.nav > li > a:focus {
-  text-decoration: none;
-  background-color: silver; /*Change rollover cell color here*/
-}
-
-
-.navbar-default .navbar-nav > li > a {
-  color: #555; /*Change active text color here*/
-}
-
-.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse
-{
-  background-color: white;
+.navbr-secondary {
+  bottom:0;
+  right:0;
+  border-bottom: 3px solid #00a3f4;
 }
 
 /* Contents */
 
-.content
-{
-  margin-top: 20px;
+.hero {
+  background-size: cover;
+  background-position-y: bottom;
+  text-align: left;
+  position: relative;
+}
+
+.hero-page {
+  background-image: url(http://localhost:5000/static/images/hero-page.png);
+}
+
+.hero-post {
+  background-image: url(http://localhost:5000/static/images/hero-post.png);
+}
+
+.content {
   color: #2b2b2b;
   padding: 0 5px;
   text-align: justify;
@@ -99,45 +76,53 @@ h4 {
   margin: 20px 0;
 }
 
-.helloWorld
-{
+.helloWorld {
   margin-top: 75px;
   margin-bottom: 120px;
 }
 
-.hello
-{
-  color: #00a3f4;
+.hello {
   margin-top: 10%;
-  font-size: 4em;
+  font-size: 4rem;
   line-height: 1;
+  background: white;
+  width: fit-content;
+  padding: 1rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.introText
-{
+.hello-page {
+  color: #00a3f4;
+}
+
+.hello-post {
+  color: #f03838;
+  font-style: italic;
+}
+
+.introText {
   font-size: 43px;
   color: #555;
   margin-top: 100px;
   margin-bottom: 120px;
-  line-height: 1.5em;
+  line-height: 1.5rem;
 }
 
-.language
-{
+.language {
   float: right;
   font-size: 16px;
   margin-top: 5px;
 }
 
-.posts
-{
+.posts {
   margin-top: 35px;
   line-height: 2;
-  font-size: 20px;
+  font-size: 1.2rem;
+  padding: 0 3rem;
 }
 
-.title
-{
+.title {
   color: #333;
   font-size: 20px;
   text-transform: uppercase;
@@ -148,134 +133,75 @@ p {
   margin: 0 0 30px;
 }
 
-.meta-outer
-{
-  border-left: solid 5px #ccc;
-  font-size: 25px;
-  text-transform: none;
-  line-height: 1.5;
-  color: #2b2b2b;
-  font-weight: 600; 
-}
-
-.meta-inner
-{
-  font-size: 16px;
-  color: #555;
-}
-
 code.block {
   display: block;
   white-space: pre-wrap;
 }
 
-button.btn.btn-info
-{
+button.btn.btn-info {
   background-color: #00a3f4;
   margin-bottom: 10px;
 }
 
-button a, button a:link, button a:visited, button a:hover, button a:active
-{
+button a, button a:link, button a:visited, button a:hover, button a:active {
   color: white;
   text-decoration: none;
 }
-/* About Me */
-
-.sivPic
-{
-  margin-top: 95px;
-  width: 70%;
-}
-
-.name
-{
-  font-size: 24px;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.centerText
-{
-  color: #555;
-  text-align: center;
-  font-size: 16px;
-}
 
 /* Tag List */
-
-.taglist
-{
-  margin-top: 125px;
-}
-
-.taglistem
-{
+.taglistem {
   color: #00a3f4;
 }
 
-.language a, .language a:link, .language a:visited
-{
+.language a, .language a:link, .language a:visited {
   color: #f03838;
 }
-.language a:hover, .language a:active
-{
+
+.language a:hover, .language a:active {
   color: #00a3f4;
 }
 
 /* Footer */
 
-footer
-{
+footer {
   font-size: 14px;
   color: #555;
   height: 50px;
-  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  min-width: 100vw;
+  padding: 5rem;
 }
 
-.footer-contents
-{
-  padding-top: 15px;
-}
-
-footer ul
-{
+footer ul {
   list-style: none;
   display: flex;
 }
 
-a.social, a.social:link, a.social:visited
-{
+a.social, a.social:link, a.social:visited {
   color: #555;
   text-decoration: none;
 }
 
-a.social:hover
-{
+a.social:hover {
   color: #00a3f4;
   text-decoration: none;
   transition: color 0.5s linear;
 }
 
-a.social:active
-{
+a.social:active {
   color: #555;
   text-decoration: none;
 }
 
-.social
-{
+.social {
   padding-left: 5px;
   padding-right: 5px;
   font-size: 18px;
 }
 
-.copyright
-{
-  padding-left: 50px;
-  padding-bottom: 50px;
-  font-size: 18px;
+.copyright {
+  font-size: 1.2rem;
   text-align: right;
 }
 
@@ -286,28 +212,13 @@ a.social:active
   color: white;
 }
 
-a, a:link, a:visited, a:active
-{
+a, a:link, a:visited, a:active {
   color: #00a3f4;
   text-decoration: none;
 }
 
-a:hover
-{
+a:hover {
   color: #f03838;
   text-decoration: none;
   transition: color 0.25s linear;
-}
-
-.navbar-collapse {
-  border: hidden;
-}
-
-.navbar-collapse.collapse.in {
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
-  padding-right: 25px;
-}
-
-.navbar-toggle {
-  margin-right: 25px;
 }

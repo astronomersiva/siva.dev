@@ -4,10 +4,14 @@
   {% include "head.html" %}
 </head>
 <body>
-  <div class="row content">
-    <div class="col-md-8 col-md-offset-2 helloWorld">
-      <div class="hello text-center">
-        Hello, World!
+  <div class="container-fluid">
+    <div class="row content hero hero-page">
+      {% include "navbar.html" %}
+
+      <div class="col-md-6 col-md-offset-3 helloWorld">
+        <div class="hello hello-page">
+          Hello, world!
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +34,6 @@
       {% endfor %}
     {% endblock content %}
   </div>
-  {% include "navbar.html" %}
   {% include "footer.html" %}
 </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 <head>
   <title>@siva | Bootstrap migration at scale for fast paced teams</title>
   <meta property="og:title" content="Bootstrap migration at scale for fast paced teams" />
@@ -24,7 +23,7 @@
   }
 </style>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="/static/sdist/b5bf8c54923067940dcb016d50ef6f42.css">
+<link type="text/css" rel="stylesheet" href="/static/sdist/f1f934e929d5d47a9d64102814fce19d.css">
 <link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/static/favicons/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-icon-72x72.png">
@@ -41,42 +40,35 @@
 <meta name="msapplication-TileImage" content="/static/favicons/ms-icon-144x144.png">
   
 </head>
-
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top upper row" id="opacityNav">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://sivasubramanyam.me/">@siva</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/index">Home</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  <div class="row title">
-    <div class="col-md-6 col-md-offset-3 meta-outer">
-      Bootstrap migration at scale for fast paced teams
-      <div class="meta-inner">
-        
-          <a href = "/tag/Bootstrap">&nbsp;&nbsp;Bootstrap</a>
-        
-          <a href = "/tag/Ideas">&nbsp;&nbsp; Ideas</a>
-        
+  <div class="container-fluid">
+    <div class="row content hero hero-post">
+      <div class="navbr navbr-primary">
+  <a href="/">@siva</a>
+</div>
+
+<div class="navbr navbr-secondary">
+  
+    Tagged
+    
+      &nbsp;&nbsp;-<a href = "/tag/Bootstrap">&nbsp;&nbsp;Bootstrap</a>
+    
+      &nbsp;&nbsp;-<a href = "/tag/Ideas">&nbsp;&nbsp; Ideas</a>
+    
+  
+</div>
+      <div class="col-md-8 col-md-offset-2 helloWorld">
+        <div class="hello hello-post">
+          Bootstrap migration at scale for fast paced teams
+        </div>
       </div>
     </div>
   </div>
-  <div class="row content">
-    <div class="col-md-6 col-md-offset-3">
-      
+
+  <div class="container posts">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 content">
+        
   <p>Migrating tens of thousands of lines of code an be a pretty demanding task even for the most equipped teams. If there is a clear migration strategy that slowly introduces changes while gradually deprecating existing APIs, teams can migrate their code while upgrading versions by performing incremental changes. With Bootstrap 4 however, a bulk of the APIs have been changed and this requires every usage of Bootstrap to be changed to the latest version before upgrading. Even though this is straightforward to most projects, large projects that are fast paced may face difficulties.</p>
 <p>Consider this example. Harry migrates from Bootstrap 3 to Bootstrap 4 in a branch <code>bootstrap-v4</code> forked from the master branch on May 5. He finishes this by May 7 and realises that there has been code modifications and he has to work on the migration again(and resolve all those ugly merge conflicts). Not only does he have to change class names on the changes, he should also ensure that there are no visual regressions because of his changes. On a sufficiently large codebase, this is frankly not possible as one cannot be expected to remember how each part of an application looks like. One way to avoid this will be stopping all development until Harry finishes his work and involving all developers in helping out Harry by splitting modules/components among fellow devs. But when your customers are demanding features and there are deadlines to be met, this is not feasible for fast paced teams.</p>
 <p>A better approach will be to perform migrations on the basis of Bootstrap APIs<sup>*</sup>. Bootstrap 3 has a <a href="https://getbootstrap.com/docs/3.3/customize/"><code>Customize and Download</code></a> feature that we can use to help in this migration. Let's say on May 5, all developers decide to change all tables in their codebase to work with Bootstrap v4. The customize and Download feature can be used to compile and download Bootstrap with all styles other than the ones related to tables. Even though v4 does not have this feature, the required styles(in this case,<code>tables.scss</code>) alone can be imported in the <code>bootstrap.scss</code> file in the cloned source and built to CSS. We will now have two CSS files - v3 containing all styles other than tables and v4 containing only table related styles. All developers can now easily migrate tables alone to v4. This can go on for several iterations, migrating one(or multiple) components at a time till the entire codebase has been migrated to v4.</p>
@@ -100,8 +92,10 @@
 <p>I have put together a <a href="/static/bootstrap-migration/example.html">small, ugly example</a> of using Bootstrap 3 and 4 together. The table in this example uses Bootstrap 4 and the rest use Bootstrap 3.</p>
 <p><sup>*</sup><small>Using the term APIs for the lack of something better.</small></p>
 
+      </div>
     </div>
   </div>
+
   <footer>
   <div class="row footer-contents">
     <div class="col-md-offset-6 col-md-6 copyright">
@@ -109,9 +103,8 @@
     </div>
   </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
-<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/static/sdist/9d36d3db30fb66ac206d202a829dfc5e.js"></script>
+<script type="text/javascript" src="/static/sdist/259803dc5e7badea53ff50efdb767142.js"></script>
+
   
 </body>
 </html>

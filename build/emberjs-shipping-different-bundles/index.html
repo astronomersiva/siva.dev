@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 <head>
-  <title>@siva | Shipping different EmberJS bundles based on the user&#39;s browser</title>
-  <meta property="og:title" content="Shipping different EmberJS bundles based on the user&#39;s browser" />
+  <title>@siva | Shipping EmberJS bundles based on the user&#39;s browser</title>
+  <meta property="og:title" content="Shipping EmberJS bundles based on the user&#39;s browser" />
   <meta property="og:site_name" content="@siva" />
   <meta property="og:url" content="https://sivasubramanyam.me/emberjs-shipping-different-bundles" />
   <meta property="og:description" content="A way to stop sending transpiled code to evergreen browsers with EmberJS" />
@@ -24,7 +23,7 @@
   }
 </style>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="/static/sdist/b5bf8c54923067940dcb016d50ef6f42.css">
+<link type="text/css" rel="stylesheet" href="/static/sdist/f1f934e929d5d47a9d64102814fce19d.css">
 <link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/static/favicons/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-icon-72x72.png">
@@ -41,42 +40,35 @@
 <meta name="msapplication-TileImage" content="/static/favicons/ms-icon-144x144.png">
   
 </head>
-
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top upper row" id="opacityNav">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://sivasubramanyam.me/">@siva</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/index">Home</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  <div class="row title">
-    <div class="col-md-6 col-md-offset-3 meta-outer">
-      Shipping different EmberJS bundles based on the user&#39;s browser
-      <div class="meta-inner">
-        
-          <a href = "/tag/EmberJS">&nbsp;&nbsp;EmberJS</a>
-        
-          <a href = "/tag/Build">&nbsp;&nbsp; Build</a>
-        
+  <div class="container-fluid">
+    <div class="row content hero hero-post">
+      <div class="navbr navbr-primary">
+  <a href="/">@siva</a>
+</div>
+
+<div class="navbr navbr-secondary">
+  
+    Tagged
+    
+      &nbsp;&nbsp;-<a href = "/tag/EmberJS">&nbsp;&nbsp;EmberJS</a>
+    
+      &nbsp;&nbsp;-<a href = "/tag/Build">&nbsp;&nbsp; Build</a>
+    
+  
+</div>
+      <div class="col-md-8 col-md-offset-2 helloWorld">
+        <div class="hello hello-post">
+          Shipping EmberJS bundles based on the user&#39;s browser
+        </div>
       </div>
     </div>
   </div>
-  <div class="row content">
-    <div class="col-md-6 col-md-offset-3">
-      
+
+  <div class="container posts">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 content">
+        
   <p>EmberJS provided <a href="https://rwjblue.com/2017/04/21/ember-cli-targets/">a way to specify browser targets</a> in April, 2017. With this, one could specify a list of browsers based on the app consumers' analytics and ship properly transpiled code.</p>
 <p>When this came out, a few people in the Ember Community(including me) <a href="https://github.com/babel/ember-cli-babel/issues/200">started looking</a> for ways to define multiple targets for the same build. With the current setup of using <code>@babel/preset-env</code>, we were shipping code needed for IE11 to users with Chrome and Firefox even though IE11 users were a considerable minority. Not only were we shipping unnecessary code, we were slowing down their experience in terms of JS parse and compile times. After numerous conversations on Twitter, Slack and Github issues, it became clear that it was not currently possible. I eventually forgot about this.</p>
 <p>The call for blog posts for #EmberJS2018 was out and I <a href="https://twitter.com/astronomersiva/status/1002280628815982592">tweeted</a> about this in <a href="https://twitter.com/astronomersiva/status/996041686311583744">one</a> of my replies. After reading Stefan Penner's replies, it became clear that a very obvious solution was to simple generate multiple builds with different build targets and make use of some logic at the server to determine which bundle to ship to the user.</p>
@@ -90,8 +82,10 @@
 <p>I used this approach and saw a reduction of around 250kb before gzip and 60kb after gzip in the shipped bundle size for modern browsers. The parse and compile times were reduced and page load time came down by around 5-7 seconds on slower computers!</p>
 <p>Feel free to try this approach and share your performance gains, alternate ideas and criticism!</p>
 
+      </div>
     </div>
   </div>
+
   <footer>
   <div class="row footer-contents">
     <div class="col-md-offset-6 col-md-6 copyright">
@@ -99,9 +93,8 @@
     </div>
   </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
-<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/static/sdist/9d36d3db30fb66ac206d202a829dfc5e.js"></script>
+<script type="text/javascript" src="/static/sdist/259803dc5e7badea53ff50efdb767142.js"></script>
+
   
 </body>
 </html>

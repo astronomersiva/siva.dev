@@ -1,4 +1,4 @@
-title: Shipping different EmberJS bundles based on the user's browser
+title: Shipping EmberJS bundles based on the user's browser
 date: June, 2018
 description: A way to stop sending transpiled code to evergreen browsers with EmberJS
 tags: EmberJS, Build

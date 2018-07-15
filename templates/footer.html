@@ -5,8 +5,11 @@
     </div>
   </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
-<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 {% compress 'js' %}
-  <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script defer>
+    let images = document.getElementsByTagName('img');
+    for(let image of images) {
+      image.className = `${image.className} img-responsive center-block`;
+    }
+  </script>
 {% endcompress %}

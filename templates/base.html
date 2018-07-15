@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 <head>
   <title>@siva{% if page.title %} | {{ page.title }}{% endif %}</title>
   <meta property="og:title" content="{{ page.title }}" />
@@ -16,27 +15,30 @@
     <script src="{{ url_for('static', filename='js/highlight/highlight.pack.js') }}"></script>
   {% endif %}
 </head>
-
 <body>
-  {% include "navbar.html" %}
-  <div class="row title">
-    <div class="col-md-6 col-md-offset-3 meta-outer">
-      {{ page.title }}
-      <div class="meta-inner">
-        {% for t in page.tags.split(',') %}
-          <a href = "/tag/{{ t.strip() }}">&nbsp;&nbsp;{{ t }}</a>
-        {% endfor %}
+  <div class="container-fluid">
+    <div class="row content hero hero-post">
+      {% include "navbar.html" %}
+      <div class="col-md-8 col-md-offset-2 helloWorld">
+        <div class="hello hello-post">
+          {{ page.title }}
+        </div>
       </div>
     </div>
   </div>
-  <div class="row content">
-    <div class="col-md-6 col-md-offset-3">
-      {% block content %}
-        <p>Default content to be displayed</p>
-      {% endblock content %}
+
+  <div class="container posts">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 content">
+        {% block content %}
+          <p>Default content to be displayed</p>
+        {% endblock content %}
+      </div>
     </div>
   </div>
+
   {% include "footer.html" %}
+
   {% if page.code %}
     <script>
       const preTags = Array.from(document.getElementsByTagName('pre'));

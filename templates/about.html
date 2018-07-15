@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      {% include "head.html" %}
-  </head>
-  <body>
+<head>
+  {% include "head.html" %}
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row content hero hero-page">
       {% include "navbar.html" %}
-      {% include "description.html" %}
-      {% include "footer.html" %}
-  </body>
+
+      <div class="col-md-6 col-md-offset-3 helloWorld">
+        <div class="hello hello-page">
+          Hello, world!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include "description.html" %}
+  {% include "footer.html" %}
+</body>
 </html>
