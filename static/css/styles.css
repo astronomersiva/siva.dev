@@ -54,11 +54,11 @@ body {
 }
 
 .hero-page {
-  background-image: url(http://localhost:5000/static/images/hero-page.png);
+  background-image: url(/static/images/hero-page.png);
 }
 
 .hero-post {
-  background-image: url(http://localhost:5000/static/images/hero-post.png);
+  background-image: url(/static/images/hero-post.png);
 }
 
 .content {
