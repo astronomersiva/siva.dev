@@ -202,7 +202,7 @@ footer ul {
 .social > svg {
   height: 1.2rem;
   fill: #555;
-  vertical-align: text-top;
+  vertical-align: middle;
 }
 
 .social > svg, .social > svg:link, .social > svg:visited {

@@ -23,8 +23,7 @@
   }
 </script>
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-
 {% compress 'css' %}
-  <link rel="stylesheet" rel="prefetch" href="{{ url_for('static', filename='css/styles.css') }}"  type="text/css">
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" rel="preload" href="{{ url_for('static', filename='css/styles.css') }}"  type="text/css">
 {% endcompress %}
