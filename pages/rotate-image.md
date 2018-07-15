@@ -3,6 +3,7 @@ date: May, 2018
 description: Rotates an image by n degrees using node-canvas
 tags: Javascript, Node
 order: 24
+code: true
 
 I had been looking for an NPM package that allowed me to rotate an image by `n` degrees. To my surprise, I found packages that only supported rotation in multiples of 90.
 

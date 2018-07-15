@@ -16,6 +16,7 @@ html {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  font-display: swap;
   overflow-x: hidden;
   color: #2b2b2b;
   position: relative;
@@ -54,11 +55,19 @@ body {
 }
 
 .hero-page {
-  background-image: url(/static/images/hero-page.png);
+  background-image: url(/static/images/hero-page.jpg);
+}
+
+.webp .hero-page {
+  background-image: url(/static/images/hero-page.webp);
 }
 
 .hero-post {
-  background-image: url(/static/images/hero-post.png);
+  background-image: url(/static/images/hero-post.jpg);
+}
+
+.webp .hero-post {
+  background-image: url(/static/images/hero-post.webp);
 }
 
 .content {
@@ -99,6 +108,8 @@ h4 {
 .hello-post {
   color: #f03838;
   font-style: italic;
+  text-justify: distribute;
+  text-justify: inter-character;
 }
 
 .introText {
@@ -111,7 +122,7 @@ h4 {
 
 .language {
   float: right;
-  font-size: 16px;
+  font-size: 1.2rem;
   margin-top: 5px;
 }
 
@@ -151,6 +162,9 @@ button a, button a:link, button a:visited, button a:hover, button a:active {
 /* Tag List */
 .taglistem {
   color: #00a3f4;
+  text-align: justify;
+  text-justify: distribute;
+  text-justify: inter-character;
 }
 
 .language a, .language a:link, .language a:visited {
@@ -178,26 +192,29 @@ footer ul {
   display: flex;
 }
 
-a.social, a.social:link, a.social:visited {
-  color: #555;
-  text-decoration: none;
-}
-
-a.social:hover {
-  color: #00a3f4;
-  text-decoration: none;
-  transition: color 0.5s linear;
-}
-
-a.social:active {
-  color: #555;
-  text-decoration: none;
-}
-
 .social {
   padding-left: 5px;
   padding-right: 5px;
   font-size: 18px;
+}
+
+.social > svg {
+  height: 1.2rem;
+  fill: #555;
+  vertical-align: text-top;
+}
+
+.social > svg, .social > svg:link, .social > svg:visited {
+  fill: #555;
+}
+
+.social > svg:hover {
+  fill: #00a3f4;
+  transition: color 0.5s linear;
+}
+
+.social > svg:active {
+  fill: #555;
 }
 
 .copyright {

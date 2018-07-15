@@ -1,21 +1,21 @@
 <meta charset="utf-8">
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
+{% include "favicons.html" %}
 <meta content="sivasubramanyam,sivasubramanyam.me" name="keywords">
 <meta content="Sivasubramanyam A" name="author">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <title>@siva {% if title %}{{ title }}{% endif %}</title>
-<style>
-  @font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+
+<script>
+  isWebp = () => document.createElement('canvas').toDataURL('image/webp').startsWith('data:image/webp');
+  if (isWebp()) {
+    let html = document.getElementsByTagName('html')[0];
+    html.className = 'webp';
   }
-</style>
+</script>
+
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
 {% compress 'css' %}
-  <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome.selected/css/font-awesome.selected.css') }}" type="text/css">
   <link rel="stylesheet" rel="prefetch" href="{{ url_for('static', filename='css/styles.css') }}"  type="text/css">
 {% endcompress %}
-{% include "favicons.html" %}
