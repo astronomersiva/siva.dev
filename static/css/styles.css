@@ -96,6 +96,7 @@ h4 {
   line-height: 1;
   background: white;
   width: fit-content;
+  width: -moz-fit-content;
   padding: 1rem;
   margin-right: auto;
   margin-left: auto;
