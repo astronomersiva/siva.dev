@@ -150,7 +150,12 @@ This trek gave me new friends, taught me new things and I began to appreciate al
   }
 </style>
 
-<script type="text/javascript" src="/static/sdist/259803dc5e7badea53ff50efdb767142.js"></script>
+<script defer>
+  let images = document.getElementsByTagName('img');
+  for(let image of images) {
+    image.className = `${image.className} img-responsive center-block`;
+  }
+</script>
 
   
 
