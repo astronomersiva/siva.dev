@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta name="description" content="Developer, Astronomer and Trekker from India.">
   {% include "head.html" %}
 </head>
 <body>
@@ -16,24 +17,26 @@
     </div>
   </div>
 
-  <div class="container posts">
-    {% block content %}
-      {% for page in pages|sort(attribute='order', reverse=True) %}
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-            <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
-            <span class="language">
-              {% for t in page.tags.split(',') %}
-                <a href="{{ url_for("tag", tag=t.strip()) }}">&nbsp;&nbsp;{{ t }}</a>
-              {% endfor %}
-            </span><br>
-            {{ page.description }}
-            <hr>
+  <main role="main">
+    <div class="container posts">
+      {% block content %}
+        {% for page in pages|sort(attribute='order', reverse=True) %}
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
+              <span class="language">
+                {% for t in page.tags.split(',') %}
+                  <a href="{{ url_for("tag", tag=t.strip()) }}">&nbsp;&nbsp;{{ t }}</a>
+                {% endfor %}
+              </span><br>
+              {{ page.description }}
+              <hr>
+            </div>
           </div>
-        </div>
-      {% endfor %}
-    {% endblock content %}
-  </div>
+        {% endfor %}
+      {% endblock content %}
+    </div>
+  </main>
   {% include "footer.html" %}
 </body>
 </html>

@@ -1,16 +1,16 @@
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 320px) {
   html {
-    font-size: calc(14px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(18px + 6 * ((100vw - 320px) / 680));
   }
 }
 
 @media screen and (min-width: 1000px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -30,7 +30,7 @@ body {
   position: absolute;
   background: white;
   padding: 0.7rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .navbr-primary {
@@ -76,7 +76,7 @@ body {
   text-align: justify;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.6;
   letter-spacing: 0;
 }
@@ -123,14 +123,14 @@ h4 {
 
 .language {
   float: right;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 5px;
 }
 
 .posts {
   margin-top: 35px;
   line-height: 2;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0 3rem;
 }
 
@@ -185,7 +185,8 @@ footer {
   position: absolute;
   bottom: 0;
   min-width: 100vw;
-  padding: 5rem;
+  padding: 4rem;
+  border-bottom: 10px solid #00a3f4;
 }
 
 footer ul {
@@ -219,8 +220,14 @@ footer ul {
 }
 
 .copyright {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: right;
+}
+
+@media screen and (max-width: 470px) {
+  .copyright {
+    text-align: center;
+  }
 }
 
 /* Miscellaneous */
