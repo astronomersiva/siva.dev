@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <title>@siva | List of posts tagged Redis</title>
+  <title>@siva | paste-clean-diff</title>
+  <meta property="og:title" content="paste-clean-diff" />
+  <meta property="og:site_name" content="@siva" />
+  <meta property="og:url" content="https://sivasubramanyam.me/paste-clean-diff" />
+  <meta property="og:description" content="A VSCode extension to paste Git diff without the plus and minus signs" />
+  <meta name="description" content="A VSCode extension to paste Git diff without the plus and minus signs" />
   <meta charset="utf-8">
 <meta content="IE=edge" http-equiv="X-UA-Compatible">
 <link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-icon-57x57.png">
@@ -42,223 +46,51 @@
 </script>
 
 <link type="text/css" rel="stylesheet" href="/static/sdist/6779838eda69222e36334570f1223c09.css">
+  
+    <link type="text/css" rel="stylesheet" href="/static/sdist/21d3639a36e42670adea09156653b575.css">
+    <script src="/static/js/highlight/highlight.pack.js"></script>
+  
 </head>
-
 <body>
   <div class="container-fluid">
-    <div class="row content hero hero-page">
+    <div class="row content hero hero-post">
       <div class="navbr navbr-primary">
   <a href="/">@siva</a>
 </div>
 
 <div class="navbr navbr-secondary">
   
-    <a href="/about">About Me</a>
+    Tagged
+    
+      &nbsp;&nbsp;-<a href = "/tag/Tooling">&nbsp;&nbsp;Tooling</a>
+    
   
 </div>
-
-      <div class="col-md-6 col-md-offset-3 helloWorld">
+      <div class="col-md-8 col-md-offset-2 helloWorld">
         <div class="hello hello-post">
-          <em class="taglistem">Posts tagged Redis</em>
+          paste-clean-diff
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container posts">
+  <main role="main">
+    <div class="container posts">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 content">
           
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <div class="row">
-                  <div class="col-md-12">
-                    <a href = "/independence-day/">A coder&#39;s tribute to the country</a>
-                    <span class="language">
-                      
-                        <a href = "/tag/Python">&nbsp;&nbsp;Python</a>
-                      
-                        <a href = "/tag/Flask">&nbsp;&nbsp; Flask</a>
-                      
-                        <a href = "/tag/Twitter">&nbsp;&nbsp; Twitter</a>
-                      
-                        <a href = "/tag/MongoDB">&nbsp;&nbsp; MongoDB</a>
-                      
-                        <a href = "/tag/Redis">&nbsp;&nbsp; Redis</a>
-                      
-                    </span><br>
-                    A real time Twitter streamer to celebrate India&#39;s independence day
-                    <hr>
-                  </div>
-                </div>
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
-          
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
-            
-              
-            
-              
-            
-          
+  <p>A VSCode extension to paste Git diffs without leading plus and minus signs.</p>
+<h2>Features</h2>
+<p>Open the Command Palette(Cmd+Shift+P on macOS, Ctrl+Shift+P on Windows and Linux) and type <code>Paste Clean Diff</code>.</p>
+<p><img alt="Paste Clean Diff" src="images/paste-clean-diff.gif" /></p>
+<p>To clean up an already pasted diff, select the diff and then choose <code>Clean Diff</code> from the Command Palette.</p>
+<p><img alt="Clean Pasted Diff" src="images/clean-pasted-diff.gif" /></p>
+<p>You can install it from the VSCode Marketplace <a href="https://marketplace.visualstudio.com/items?itemName=sivasubramanyam.paste-clean-diff">here</a>.</p>
+
         </div>
       </div>
     </div>
+  </main>
 
   <footer>
   <div class="row footer-contents">
@@ -292,5 +124,21 @@
     image.className = `${image.className} img-responsive center-block`;
   }
 </script>
+
+  
+    <script>
+      const preTags = Array.from(document.getElementsByTagName('pre'));
+      preTags.forEach((i, block) => {
+        hljs.highlightBlock(i);
+      });
+    </script>
+  
+
+  <script>
+    let imagesToLazyLoad = document.getElementsByTagName('img');
+    for (let image of imagesToLazyLoad) {
+      image.src = image.getAttribute('data-src');
+    }
+  </script>
 </body>
 </html>
