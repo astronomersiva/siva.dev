@@ -6,9 +6,9 @@
   {% if page and page.tags %}
     Tagged
     {% for tag in page.tags.split(',') %}
-      &nbsp;&nbsp;-<a href = "/tag/{{tag.strip()}}">&nbsp;&nbsp;{{tag}}</a>
+      &nbsp;&nbsp;-<a href="/tag/{{tag.strip()}}/">&nbsp;&nbsp;{{tag}}</a>
     {% endfor %}
   {% else %}
-    <a href="/about">About Me</a>
+    <a href="/about/">About Me</a>
   {% endif %}
 </div>
