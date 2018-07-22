@@ -1,10 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Heatmap</title>
-    <style>
+<!DOCTYPE html><html> <head><meta charset="utf-8"><title>Heatmap</title><style>
       html, body, #map-canvas {
         height: 100%;
         margin: 0px;
@@ -20,9 +14,7 @@
         padding: 5px;
         border: 1px solid #999;
       }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script>
-    <script>
+    </style><script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization"></script><script>
 
     var map, pointarray, heatmap;
 
@@ -82,15 +74,4 @@ function changeRadius() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
-    </script>
-  </head>
-
-  <body>
-    <div id="panel">
-      <button onclick="toggleHeatmap()">Toggle Heatmap</button>
-      <button onclick="changeGradient()">Change gradient</button>
-      <button onclick="changeRadius()">Change radius</button>
-    </div>
-    <div id="map-canvas"></div>
-  </body>
-</html>
+    </script></head> <body> <div id="panel"> <button onclick="toggleHeatmap()">Toggle Heatmap</button> <button onclick="changeGradient()">Change gradient</button> <button onclick="changeRadius()">Change radius</button> </div> <div id="map-canvas"></div> </body> </html>

@@ -2,6 +2,8 @@ from flask import render_template
 from flask import Flask
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
+from flask_static_compress import FlaskStaticCompress
+from flask_htmlmin import HTMLMIN
 
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
@@ -14,6 +16,7 @@ app.config['MINIFY_PAGE'] = True
 pages = FlatPages(app)
 freezer = Freezer(app)
 compress = FlaskStaticCompress(app)
+HTMLMIN(app)
 
 FREEZER_RELATIVE_URLS = True
 

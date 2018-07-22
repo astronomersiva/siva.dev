@@ -16,3 +16,4 @@ rjsmin==1.0.12
 six==1.11.0
 Werkzeug==0.12.2
 wheel==0.26.0
+Flask-HTMLmin==1.4.0
