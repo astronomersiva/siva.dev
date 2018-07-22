@@ -48,4 +48,4 @@ def page_not_found(e):
 
 if __name__ == "__main__":
     freezer.freeze()
-    a.run(debug = True)
+    a.run(debug = True, host = '0.0.0.0')

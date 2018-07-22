@@ -20,7 +20,8 @@ It uses SVGs to create charts so it is scalable and supports animations and grad
 
     <path style="
         animation: ember-line-animation-896528374 2500ms ease-in,
-        ember-line-animation-cleanup-896528374 1ms 2500ms
+        ember-line-animation-cleanup-896528374 1ms 2500ms;
+        animation-iteration-count: infinite;
       "
       id="ember-line-graph-path-896528374"
       fill="none"

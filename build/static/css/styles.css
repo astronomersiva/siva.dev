@@ -70,6 +70,17 @@ body {
   background-image: url(/static/images/hero-post.webp);
 }
 
+@media screen and (max-width: 470px) {
+  .webp .hero-page, .webp .hero-post {
+    background-image: url(/static/images/hero-mobile.webp);
+  }
+
+  .hero-post, .hero-page {
+    background-image: url(/static/images/hero-mobile.jpg);
+    background-position: top;
+  }
+}
+
 .content {
   color: #2b2b2b;
   padding: 0 5px;
@@ -185,7 +196,7 @@ footer {
   position: absolute;
   bottom: 0;
   min-width: 100vw;
-  padding: 4rem;
+  padding: 3rem;
   border-bottom: 10px solid #00a3f4;
 }
 
