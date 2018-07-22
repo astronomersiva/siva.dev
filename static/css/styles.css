@@ -124,14 +124,6 @@ h4 {
   text-justify: inter-character;
 }
 
-.introText {
-  font-size: 43px;
-  color: #555;
-  margin-top: 100px;
-  margin-bottom: 120px;
-  line-height: 1.5rem;
-}
-
 .language {
   float: right;
   font-size: 1rem;
@@ -143,13 +135,6 @@ h4 {
   line-height: 2;
   font-size: 1rem;
   padding: 0 3rem;
-}
-
-.title {
-  color: #333;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-top: 150px;
 }
 
 p {
