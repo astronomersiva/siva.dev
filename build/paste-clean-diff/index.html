@@ -21,12 +21,11 @@
   }
 </style> <script defer>
   let images = document.getElementsByTagName('img');
-  for(let image of images) {
+  for (let image of images) {
     image.className = `${image.className} img-responsive center-block`;
-  }
-</script> <script>
-    let imagesToLazyLoad = document.getElementsByTagName('img');
-    for (let image of imagesToLazyLoad) {
-      image.src = image.getAttribute('data-src');
+    let lazySrc = image.getAttribute('data-src');
+    if (lazySrc) {
+      image.src = lazySrc;
     }
-  </script> </body> </html>
+  }
+</script> </body> </html>

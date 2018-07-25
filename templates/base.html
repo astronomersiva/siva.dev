@@ -49,12 +49,5 @@
       });
     </script>
   {% endif %}
-
-  <script>
-    let imagesToLazyLoad = document.getElementsByTagName('img');
-    for (let image of imagesToLazyLoad) {
-      image.src = image.getAttribute('data-src');
-    }
-  </script>
 </body>
 </html>

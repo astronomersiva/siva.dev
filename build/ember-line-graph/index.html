@@ -60,17 +60,16 @@
   }
 </style> <script defer>
   let images = document.getElementsByTagName('img');
-  for(let image of images) {
+  for (let image of images) {
     image.className = `${image.className} img-responsive center-block`;
+    let lazySrc = image.getAttribute('data-src');
+    if (lazySrc) {
+      image.src = lazySrc;
+    }
   }
 </script> <script>
       const preTags = Array.from(document.getElementsByTagName('pre'));
       preTags.forEach((i, block) => {
         hljs.highlightBlock(i);
       });
-    </script> <script>
-    let imagesToLazyLoad = document.getElementsByTagName('img');
-    for (let image of imagesToLazyLoad) {
-      image.src = image.getAttribute('data-src');
-    }
-  </script> </body> </html>
+    </script> </body> </html>
