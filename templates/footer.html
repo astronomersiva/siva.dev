@@ -24,13 +24,19 @@
   }
 </style>
 
+<script defer src="/static/js/ajanta.min.js"></script>
+
 <script defer>
   let images = document.getElementsByTagName('img');
   for (let image of images) {
-    image.className = `${image.className} img-responsive center-block`;
+    // add BS classes. Won't be needed once migration away from BS is complete
+    image.classList.add('img-responsive', 'center-block')
+
+    // old handling for lazy loading images
     let lazySrc = image.getAttribute('data-src');
     if (lazySrc) {
       image.src = lazySrc;
     }
+
   }
 </script>

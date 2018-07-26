@@ -10,7 +10,7 @@
     let html = document.getElementsByTagName('html')[0];
     html.className = 'webp';
   }
-</script><link type="text/css" rel="stylesheet" href="/static/sdist/541ebec2bb85477e297dda0b4aec1a72.css"><link type="text/css" rel="stylesheet" href="/static/sdist/21d3639a36e42670adea09156653b575.css"><script src="/static/js/highlight/highlight.pack.js"></script></head> <body> <div class="container-fluid"> <div class="row content hero hero-post"> <div class="navbr navbr-primary"> <a href="/">@siva</a> </div> <div class="navbr navbr-secondary"> Tagged &nbsp;&nbsp;-<a href="/tag/EmberJS/">&nbsp;&nbsp;EmberJS</a> </div> <div class="col-md-8 col-md-offset-2 helloWorld"> <div class="hello hello-post"> ember-display-in-browser </div> </div> </div> </div> <main role="main"> <div class="container posts"> <div class="row"> <div class="col-md-8 col-md-offset-2 content"> <p>Inspired by <a href="https://github.com/flexdinesh/react-render-in-browser">react-render-in-browser</a>, I put together an addon for EmberJS to display content based on the user's browser.</p> <p>Head out to the <a href="https://astronomersiva.github.io/ember-display-in-browser/">demo page</a> to try it out and <a href="https://github.com/astronomersiva/ember-display-in-browser">here is the repo</a>, if you want to see the code or file an issue :)</p> <h4><strong>Why? 🤔</strong></h4> <p>Say you are developing an application that makes use of features that are not available in IE. You can make use of this addon to display a message asking the user to use a browser other than IE.</p> <h4><strong>This is a bad idea! 😠</strong></h4> <p>This addon has some valid use cases(like I explained in the <code>why</code> section). However, you should prefer to <strong>make use of feature checks</strong> instead of relying on the User Agent.</p> <p>Even though this addon lets you specify several browsers alone, please do not develop an app that supports Chrome(or Safari) alone. <strong>Compatibility matters</strong>.</p> <h4><strong>Installation 🔧</strong></h4> <p><code>ember install ember-display-in-browser</code></p> <h4><strong>Usage 💻</strong></h4> <ul> <li> <p>To display only in one or a set of browsers, <pre>
+</script><link type="text/css" rel="stylesheet" href="/static/sdist/d10e9e68f8d73ae90aacdcdbb83605c1.css"><link type="text/css" rel="stylesheet" href="/static/sdist/21d3639a36e42670adea09156653b575.css"><script src="/static/js/highlight/highlight.pack.js"></script></head> <body> <div class="container-fluid"> <div class="row content hero hero-post"> <div class="navbr navbr-primary"> <a href="/">@siva</a> </div> <div class="navbr navbr-secondary"> Tagged &nbsp;&nbsp;-<a href="/tag/EmberJS/">&nbsp;&nbsp;EmberJS</a> </div> <div class="col-md-8 col-md-offset-2 helloWorld"> <div class="hello hello-post"> ember-display-in-browser </div> </div> </div> </div> <main role="main"> <div class="container posts"> <div class="row"> <div class="col-md-8 col-md-offset-2 content"> <p>Inspired by <a href="https://github.com/flexdinesh/react-render-in-browser">react-render-in-browser</a>, I put together an addon for EmberJS to display content based on the user's browser.</p> <p>Head out to the <a href="https://astronomersiva.github.io/ember-display-in-browser/">demo page</a> to try it out and <a href="https://github.com/astronomersiva/ember-display-in-browser">here is the repo</a>, if you want to see the code or file an issue :)</p> <h4><strong>Why? 🤔</strong></h4> <p>Say you are developing an application that makes use of features that are not available in IE. You can make use of this addon to display a message asking the user to use a browser other than IE.</p> <h4><strong>This is a bad idea! 😠</strong></h4> <p>This addon has some valid use cases(like I explained in the <code>why</code> section). However, you should prefer to <strong>make use of feature checks</strong> instead of relying on the User Agent.</p> <p>Even though this addon lets you specify several browsers alone, please do not develop an app that supports Chrome(or Safari) alone. <strong>Compatibility matters</strong>.</p> <h4><strong>Installation 🔧</strong></h4> <p><code>ember install ember-display-in-browser</code></p> <h4><strong>Usage 💻</strong></h4> <ul> <li> <p>To display only in one or a set of browsers, <pre>
   {{!-- arrayOfBrowsers = ["Chrome", "firefox"] --}}
   {{#display-in-browser only=arrayOfBrowsers}}
     &lt;p&gt;This will be visible only in Chrome and Firefox&lt;/p&gt;
@@ -55,14 +55,18 @@
     src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
   }
-</style> <script defer>
+</style> <script defer src="/static/js/ajanta.min.js"></script> <script defer>
   let images = document.getElementsByTagName('img');
   for (let image of images) {
-    image.className = `${image.className} img-responsive center-block`;
+    // add BS classes. Won't be needed once migration away from BS is complete
+    image.classList.add('img-responsive', 'center-block')
+
+    // old handling for lazy loading images
     let lazySrc = image.getAttribute('data-src');
     if (lazySrc) {
       image.src = lazySrc;
     }
+
   }
 </script> <script>
       const preTags = Array.from(document.getElementsByTagName('pre'));

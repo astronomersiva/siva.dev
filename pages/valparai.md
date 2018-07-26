@@ -10,4 +10,12 @@ It all happened on a night like this. I was going through my newsfeed while taki
 
 We created a PHP and MySQL web application that would accelerate the process of selecting the list of people who have to be warned of the presence of elephants. The app would enable selecting the radius and the specification of the elephant's location in either geographical coordinates or a nearby locality's name and a CSV containing the contact numbers of all these people would be generated to be uploaded in the bulk messaging portal.
 
-<img data-src="/static/images/valparai.jpg" src="">
+<div class="ajanta">
+  <img
+    class="img-responsive center-block pixelated blur"
+    src="/static/images/lowres/valparai.png" 
+    alt="copy-pastable captcha"
+    data-image-format="jpg">
+
+  <img class="img-responsive center-block original">
+</div>

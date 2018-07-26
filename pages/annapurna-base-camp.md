@@ -23,11 +23,29 @@ Finally the day came and after a weird and crazy turn of events, it was just Sid
 
 We reached Pokhara on the night of 24th and literally jumped into our beds after an entire day’s journey. My alarm started to ring and I woke up to get ready in time. We had to repack our bags and recheck if we had everything before we set out to catch a jeep that would take us to the start of the trail head. I peeped out of the window and saw an amazing sight. I shook Sid and woke him up from his sleep much earlier than the agreed time. He gestured to me and asked for a few more minutes of sleep. I somehow managed to make him look out of the window and the moment he saw out, he sprang out of bed. Both of us have the habit of keeping our cameras on our sides while sleeping on trips and we quickly fetched them and ran to the terrace. It was such a magical sight to see the reddish-orange rays of the early morning sun striking the eastern face of Annapurna South. If all went well, we would stand at the base of this very peak a few days later. But for now, we had to head back, pack our bags properly and have what would be our last good breakfast and shower for a week.
 
-<img data-src="/static/abc/pokharaview.jpg" src="" alt="">
+<div class="ajanta">
+  <img
+    class="img-responsive center-block pixelated blur"
+    src="/static/abc/lowres/pokharaview.png" 
+    alt="copy-pastable captcha"
+    data-image-format="jpg">
+
+  <img class="img-responsive center-block original">
+</div>
+
 
 We started our trek at about 11 on the day of Christmas and unlike most people, we started the trek from Siwai instead of Nayapaul. This saved us close to three hours of walking on a jeep track at an altitude of just 700 meters or so. The first day was kind of easy as the altitude was quite low and the terrain was extremely similar to that of the western ghats. Barely an hour into the trek, we ran into the remains of a landslide. With plenty of extremely loose rocks that just kept rolling into the Modi Kola river below, we had to cross this with extreme caution. This set our mood for the rest of the entire trip. We realised that we were no longer in the forgiving jungles of south India. This was the mighty Himalaya and we had to be extremely cautious in whatever we did. Even a small sprain could ruin the trek and we were double and sometimes triple checking every step we took. We had our lunch in Kyumi, a small village with a compact cluster of homes that had a lot of colorful flowers at their entrances.
 
-<img data-src="/static/abc/landslide.jpg" src="" alt="">
+<div class="ajanta">
+  <img
+    class="img-responsive center-block pixelated blur"
+    src="/static/abc/lowres/landslide.png" 
+    alt="copy-pastable captcha"
+    data-image-format="jpg">
+
+  <img class="img-responsive center-block original">
+</div>
+
 
 This is where we first ran into several other groups who later became our friends and foodmates on most occasions. There was a bunch of students from NUS who were shy(at least when we first met them),  a cute Chinese couple, a group of three girls from Netherlands, a lone woman trekker from Korea and another two girls from Korea who seemed like sisters(they mostly kept to themselves). After our first meal of “Dal Bhat” and Garlic soup, we proceeded uphill to Jihnudhanda. We pretty much ate the same thing for the next one week :D (As per the claims of  locals, they help in acclimatization and I can attest to that). That night, we ran into a huge Chinese group that were celebrating their return from ABC and being Christmas, they had extra reasons to be loud and I somehow managed to get some sleep that night. We slept tight at room 103. Now, the thing with almost every trek in Nepal is that, being the primary source of Nepal’s economy, tourists are treated with utmost respect and are taken extremely good care of. There are also numerous “teahouses” at various points on the trail, usually near small hamlets. Trekkers eat and stay in them and this is how the locals usually make their livelihood. We were travelling in the off season so we got to spend lesser than most people.
 
@@ -37,15 +55,42 @@ We were woken up by our guide the next day and he started his routine round of q
 
 We reached Dobhan a little after 4 in the evening. The views were perfect from Dobhan. Machapucchare was straight ahead standing tall at close to 7000 meters and the sunset and sunrise were simply magical with the clouds and the peaks taking shades of red and orange. There was even a huge waterfall right opposite to where I was staying and it was a pleasure to get to stay in such a place. We were allotted room 103 this night as well :D Machapucchare is revered by the Nepalis and they believe that Lord Shiva lives on the peak. For this reason, they prohibit climbers from setting foot on the mountain. That night, the temperatures were close to 5 degrees and we took some milky way shots at night. This is when we got well acquainted to Low Jian Sheng. We spent close to an hour taking photographs of the night sky and then finally got back to rest.
 
-<img data-src="/static/abc/frozen.jpg" src="" alt="">
+<div class="ajanta">
+  <img
+    class="img-responsive center-block pixelated blur"
+    src="/static/abc/lowres/frozen.png" 
+    alt="copy-pastable captcha"
+    data-image-format="jpg">
+
+  <img class="img-responsive center-block original">
+</div>
+
 
 The next day, we set out to Deurali located at about 3100 meters. However, our guide suggested that we could push and reach Machapucchare Base Camp at 3700 meters on day 3 itself. It seemed impossible at first but after listening to him and considering the fact that it was just two hours away, we decided to go ahead. If we went down with AMS, we could reach Deurali quite easily in an hour and recover. By now, we were used to our guide. We had also learnt a little Nepalese and we surprised a few Nepalese on the trek with whatever sentences we knew in their language. We were also surprised at how people behaved at these heights. Everyone was smiling at everyone, wishing each other good luck, sharing their experiences and helping out each other. People weren’t holding themselves back. People laughed when they wanted to, screamed out in joy if they wanted to and there was camaraderie all along the trail. I am not sure if it was the charm of the mountains or the loneliness. Or maybe, it was just us replicating the Nepali people. Honest, trustworthy and smiling from cheek to cheek. Even if the mountains just magically disappeared from Nepal, I would still go back there. Just for those people :)
 
-<img data-src="/static/abc/guides.jpg" src="" alt="">
+<div class="ajanta">
+  <img
+    class="img-responsive center-block pixelated blur"
+    src="/static/abc/lowres/guides.png" 
+    alt="copy-pastable captcha"
+    data-image-format="jpg">
+
+  <img class="img-responsive center-block original">
+</div>
+
 
 The groups that I had mentioned earlier were now close to us. We had even become friends with their guides. The Nepalese treat Indians very well and south Indians are treated even better. I learnt from them that Anna University has a good reputation there(lol) and one of the guides had a relative studying in it. All the guides took care of everyone on the trek irrespective of whether they were trekking with their respective agencies. That day, we saw snow for the first time and it was such a great feeling walking among all those tall mountains. As we neared MBC, we could feel some difficulty in our breathing. The air was getting thinner, drier and colder. As a result, our throats were hurting pretty bad. We were still enjoying it though. That evening, I met a Sherpa who had come in for a quick trek(he was doing this trek in 3 days). He offered to take me on an acclimatization climb and I readily agreed. What a difficult two hours it turned out to be. Being genetically modified for these altitudes, he was just running around the slopes when I was struggling to even breathe. It took me a huge struggle to even put on my shoelaces and this guy was just jumping from one rock to another.
 
-<img data-src="/static/abc/machapucchare.jpg" src="" alt="">
+<div class="ajanta">
+  <img
+    class="img-responsive center-block pixelated blur"
+    src="/static/abc/lowres/machapucchare.png" 
+    alt="copy-pastable captcha"
+    data-image-format="jpg">
+
+  <img class="img-responsive center-block original">
+</div>
+
 
 We were going to attempt reaching ABC for sunrise the next day morning. Our moods were high and our guides and porters were all singing and laughing that night in the dinner hall. That night, the girls from Netherlands played some English songs and it was such a relief to us to finally hear something other than the same three Nepali songs that the locals played over and over again. We again took some milky way shots at night and we took some photos of ourselves as well.  It was -5 degrees but that couldn’t stop us from trying out crazy poses at night :P  After that, we were back in the dinner hall where we exchanged our travel stories with each other, shared snacks and wished each other good luck for the next day’s push.
 
@@ -65,7 +110,16 @@ I was breathing hard and fast but it didn’t seem to be working. It was the rar
 
 As I kept moving, I could hear the snow crunching under my feet. The sound was loud and clear and I concentrated on it to divert my attention away from the cold. It worked. Annapurna 1 and Annapurna South were straight ahead of me and I took one step after another in the hopes of reaching the Annapurna Basecamp before sunrise.
 
-<img data-src="/static/abc/abcnight.jpg" src="" alt="">
+<div class="ajanta">
+  <img
+    class="img-responsive center-block pixelated blur"
+    src="/static/abc/lowres/abcnight.png" 
+    alt="copy-pastable captcha"
+    data-image-format="jpg">
+
+  <img class="img-responsive center-block original">
+</div>
+
 
 I ran into “Ji saab” on the way. He was an old, experienced guide with whom our guide, Madhav Khanal(another guide) and a few others had discussed before our ABC climb. He shared a lot of experiences and inspite of his age, he could climb faster than most of us. We had a small chat on the way and I joined him on the approach to ABC. It was just amazing to trek with him. He was walking at a mindblowing pace and I tried my best to keep up with him. He then turned to me, laughed and said - “Aap bahuth fit hein Shivaji.” How I wish to be at least half as fit as him when I am that old!
 An hour or so later, I was near ABC and I could make out the board welcoming trekkers. There was a small, frozen stream that was glowing orangish-yellow due to the sun coming out. We walked on the frozen stream to get to the other side and see the sunrise. Annapurna I and South were now glowing as well and I decided to take my camera out. There was magic unravelling right before my eyes.
@@ -73,14 +127,32 @@ An hour or so later, I was near ABC and I could make out the board welcoming tre
 
 The minute I took out my camera, I realised that I would have to remove my gloves to take some proper photos. The gloves that are essential for trekking in these temperatures aren't exactly made with photographers in mind. The minute I took my gloves off, I could feel the cold. BONE CHILLING COLD. It was almost as if someone was inserting needles through every part of my hand. I beared the pain for a few moments and clicked a few photographs. It didn't take me long to realise that no photo could do justice to the beauty of that place. Cold and dark, yet astoundingly beautiful.
 
-<img data-src="/static/abc/abc.jpg" src="" alt="">
+<div class="ajanta">
+  <img
+    class="img-responsive center-block pixelated blur"
+    src="/static/abc/lowres/abc.png" 
+    alt="copy-pastable captcha"
+    data-image-format="jpg">
+
+  <img class="img-responsive center-block original">
+</div>
+
 
 A few moments later, we were at the board welcoming trekkers to ABC. I fell on my knees and then face in snow. One of the world's deadliest peaks was right in front of me and there were mini-avalanches happening on the slopes of Annapurna South. There were rescue helicopters flying in and out to help out injured and trekkers who were down with AMS. My throat was hurting due to breathing the cold and dry air. The skin on my nose and lips were chapped due to the cold and they were peeling away. My lungs were crying for rest. My heart was beating like a drum. Sid and my guide joined me soon enough and we broke out into celebration.  Some memories never fade and I am sure this will be one of them.
 
 
 Soon, we met the other groups as well. The Netherlands gang was there and so was the group from NUS. We also met a French couple who live in Bangalore and they immediately went like “South India man!”. We shook hands and had some fun moments on some boulders overlooking the glacier. After a light breakfast, then started the descent. On the way, we met a Nepali porter who asked us this question the moment he saw us - “Sapteengala?”. I wasn’t sure if he actually said that or if I was just imagining things. He asked us the same thing again. We were taken back by surprise but managed to strike a conversation with him. Turns out, he had worked for a Tamil family in Malaysia before some years and he was now back in Nepal helping out trekkers.
 
-<img data-src="/static/abc/towardsm.jpg" src="" alt="">
+<div class="ajanta">
+  <img
+    class="img-responsive center-block pixelated blur"
+    src="/static/abc/lowres/towardsm.png" 
+    alt="copy-pastable captcha"
+    data-image-format="jpg">
+
+  <img class="img-responsive center-block original">
+</div>
+
 
 On the descent, we stopped at a hot water spring and took our first ever shower after leaving Chennai :D We even taught some basic astronomy and astrophotography to a Korean girl who was trying to take some photos with her camera. She invited us to join her on her trip to Iceland to which we laughed. She reminded us that we guys could be the very last generation that gets to visit all these places on foot. It sounded true.
 
@@ -92,4 +164,12 @@ We then got to Kathmandu where our guide and porter took leave. It was kind of t
 We spent the next two days visiting some tourist attractions in Nepal. However, we missed our guide and porter a lot. The “Enjoy your meal sir” dialog by our guide, “Chishuu, chishuu” of our porter whenever he felt cold, our own “Khana ramroo cha” that immediately brought bright smiles on the faces of our cooks...the mountains had a different atmosphere that simply cannot be recreated anywhere else.
 This trek gave me new friends, taught me new things and I began to appreciate all the small things that we take for granted. Breathing, walking, the warm(okay, extremely hot) Chennai weather, the fact that I do not have to carry crazy amounts of loads at altitudes where it’s not even possible to breathe to earn a living..treks like these really give you a new perspective.
 
-<img data-src="/static/abc/patan.jpg" src="" alt="">
+<div class="ajanta">
+  <img
+    class="img-responsive center-block pixelated blur"
+    src="/static/abc/lowres/patan.png" 
+    alt="copy-pastable captcha"
+    data-image-format="jpg">
+
+  <img class="img-responsive center-block original">
+</div>
