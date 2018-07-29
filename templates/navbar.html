@@ -4,6 +4,9 @@
 
 <div class="navbr navbr-secondary">
   {% if page and page.tags %}
+    {% if page.date %}
+      {{page.date}} - 
+    {% endif %}
     Tagged
     {% for tag in page.tags.split(',') %}
       &nbsp;&nbsp;-<a href="/tag/{{tag.strip()}}/">&nbsp;&nbsp;{{tag}}</a>

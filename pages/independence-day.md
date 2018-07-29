@@ -18,6 +18,8 @@ After that, all I had to do was run the mongo server using `sudo service mongod 
 
 When I then opened `localhost:5000/static/map.html` in my browser, I could see this cool map getting plotted by markers one by one. Here is a small GIF to give an idea.
 
+[[Source on Github]](https://github.com/astronomersiva/twitter-independence-day-heatmap)
+
 <div class="ajanta">
   <img
     class="img-responsive center-block pixelated blur"
@@ -27,5 +29,3 @@ When I then opened `localhost:5000/static/map.html` in my browser, I could see t
 
   <img class="img-responsive center-block original">
 </div>
-
-<button type="button" class="btn btn-info ">[View on Github](https://github.com/astronomersiva/twitter-independence-day-heatmap)</button>

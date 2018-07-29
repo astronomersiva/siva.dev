@@ -5,14 +5,12 @@
   {% include "head.html" %}
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row content hero hero-page">
-      {% include "navbar.html" %}
+  <div class="content hero hero-page">
+    {% include "navbar.html" %}
 
-      <div class="col-md-6 col-md-offset-3 helloWorld">
-        <div class="hello hello-page">
-          Hello, World!
-        </div>
+    <div class="helloWorld">
+      <div class="hello hello-page">
+        Hello, World!
       </div>
     </div>
   </div>
@@ -21,17 +19,15 @@
     <div class="container posts">
       {% block content %}
         {% for page in pages|sort(attribute='order', reverse=True) %}
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
-              <span class="language">
-                {% for t in page.tags.split(',') %}
-                  <a href="{{ url_for("tag", tag=t.strip()) }}">&nbsp;&nbsp;{{ t }}</a>
-                {% endfor %}
-              </span><br>
-              {{ page.description }}
-              <hr>
-            </div>
+          <div class="post">
+            <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
+            <span class="language">
+              {% for t in page.tags.split(',') %}
+                <a href="{{ url_for("tag", tag=t.strip()) }}">&nbsp;&nbsp;{{ t }}</a>
+              {% endfor %}
+            </span><br>
+            {{ page.description }}
+            <hr>
           </div>
         {% endfor %}
       {% endblock content %}

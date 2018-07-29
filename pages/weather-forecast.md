@@ -8,7 +8,6 @@ I have recently decided to do one fun project every weekend. This weekend, I dec
 
 I used the W3C Geolocation API for fetching the location and OpenWeather Map's API for fetching weather forecasts. I used an [awesome weather icon pack](http://erikflowers.github.io/weather-icons/) by Erik Flowers for the icons. If you just want to see it working, then head [here](http://weather.sivasubramanyam.me). If you want to see the code, then continue reading. First the simple HTML markup.
 
-<button type="button" class="btn btn-info ">[View on Github](http://github.com/astronomersiva/weather/)</button>
-
 The real work though, is done by the following Javascript code.
-<script src="https://gist.github.com/astronomersiva/15ebf47a9dedf4bbcb82.js"></script>
+
+[[Source on Github]](http://github.com/astronomersiva/weather/)

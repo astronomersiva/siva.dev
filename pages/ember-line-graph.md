@@ -55,11 +55,13 @@ It uses SVGs to create charts so it is scalable and supports animations and grad
   </style>
 </div>
 
-### Installation
+#### **Installation**
 
 `ember install ember-line-graph`
 
-### Usage
+#### **Usage**
+
+[Detailed Docs](https://astronomersiva.github.io/ember-line-graph/)
 
 <pre>
   {{line-graph
@@ -77,8 +79,6 @@ It uses SVGs to create charts so it is scalable and supports animations and grad
 </pre>
 
 <br>
-
-[Detailed Docs](https://astronomersiva.github.io/ember-line-graph/)
 
 * **points** - an array of values, example - `[1, 10, 45, 3, 4, 6]`.
 * **strokeWidth** - width of the SVG path stroke.

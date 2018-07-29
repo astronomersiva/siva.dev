@@ -8,8 +8,6 @@ I have always felt lazy to perform a Google search whenever I wanted a GIF for a
 
 I decided to create a Chrome extension to make this as easy as possible. GIPHY's API was made use of to generate random GIFs based on the user input.
 
-<button type="button" class="btn btn-info ">
-  [View on Github](https://github.com/astronomersiva/emogif)
-</button>
+[[Source on Github]](https://github.com/astronomersiva/emogif)
 
 ![Screenshot](https://github.com/astronomersiva/emogif/raw/master/sample.png)
