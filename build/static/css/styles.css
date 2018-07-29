@@ -1,3 +1,43 @@
+/* reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* sivastrap :P */
+
 html {
   font-size: 16px;
 }
@@ -24,6 +64,53 @@ body {
   padding-bottom: 10rem;
 }
 
+code {
+  font-family: monospace;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  font-size: 90%;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+ul {
+  -webkit-padding-start: 40px;
+  -moz-padding-start: 40px;
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* actual styles */
+
 /* Navbar */
 
 .navbr {
@@ -40,8 +127,8 @@ body {
 }
 
 .navbr-secondary {
-  bottom:0;
-  right:0;
+  bottom: 0;
+  right: 0;
   border-bottom: 3px solid #00a3f4;
 }
 
@@ -71,11 +158,12 @@ body {
 }
 
 @media screen and (max-width: 470px) {
-  .webp .hero-page, .webp .hero-post {
+  .webp .hero-page,
+  .webp .hero-post {
     background-image: url(/static/images/hero-mobile.webp);
   }
-
-  .hero-post, .hero-page {
+  .hero-post,
+  .hero-page {
     background-image: url(/static/images/hero-mobile.jpg);
     background-position: top;
   }
@@ -92,18 +180,32 @@ body {
   letter-spacing: 0;
 }
 
+.posts {
+  display: grid;
+  grid-template-columns: 16.66666667% auto 16.66666667%;
+}
+
+.post,
+.content {
+  grid-column-start: 2;
+}
+
+@media screen and (max-width: 760px) {
+  .posts {
+    grid-template-columns: 5% 90% 5%;
+  }
+}
+
 h4 {
   margin: 20px 0;
 }
 
 .helloWorld {
-  margin-top: 75px;
-  margin-bottom: 120px;
+  padding: 150px 10%;
 }
 
 .hello {
-  margin-top: 10%;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1;
   background: white;
   width: fit-content;
@@ -119,7 +221,7 @@ h4 {
 
 .hello-post {
   color: #f03838;
-  font-style: italic;
+  max-width: 780px;
   text-justify: distribute;
   text-justify: inter-character;
 }
@@ -130,11 +232,16 @@ h4 {
   margin-top: 5px;
 }
 
+@media screen and (max-width: 600px) {
+  .language {
+    float: none;
+  }
+}
+
 .posts {
   margin-top: 35px;
   line-height: 2;
   font-size: 1rem;
-  padding: 0 3rem;
 }
 
 p {
@@ -146,29 +253,23 @@ code.block {
   white-space: pre-wrap;
 }
 
-button.btn.btn-info {
-  background-color: #00a3f4;
-  margin-bottom: 10px;
-}
-
-button a, button a:link, button a:visited, button a:hover, button a:active {
-  color: white;
-  text-decoration: none;
-}
-
 /* Tag List */
+
 .taglistem {
   color: #00a3f4;
-  text-align: justify;
+  max-width: 780px;
   text-justify: distribute;
   text-justify: inter-character;
 }
 
-.language a, .language a:link, .language a:visited {
+.language a,
+.language a:link,
+.language a:visited {
   color: #f03838;
 }
 
-.language a:hover, .language a:active {
+.language a:hover,
+.language a:active {
   color: #00a3f4;
 }
 
@@ -196,22 +297,24 @@ footer ul {
   font-size: 18px;
 }
 
-.social > svg {
+.social>svg {
   height: 1.2rem;
   fill: #555;
   vertical-align: middle;
 }
 
-.social > svg, .social > svg:link, .social > svg:visited {
+.social>svg,
+.social>svg:link,
+.social>svg:visited {
   fill: #555;
 }
 
-.social > svg:hover {
+.social>svg:hover {
   fill: #00a3f4;
   transition: color 0.5s linear;
 }
 
-.social > svg:active {
+.social>svg:active {
   fill: #555;
 }
 
@@ -233,7 +336,10 @@ footer ul {
   color: white;
 }
 
-a, a:link, a:visited, a:active {
+a,
+a:link,
+a:visited,
+a:active {
   color: #00a3f4;
   text-decoration: none;
 }
@@ -244,36 +350,38 @@ a:hover {
   transition: color 0.25s linear;
 }
 
+/* Lazy loading images */
+
 .ajanta {
   overflow: hidden;
   position: relative;
   margin-bottom: 30px;
 }
 
-.ajanta > img {
+.ajanta>img {
   transition: opacity 250ms ease-in-out;
   min-width: 100%;
 }
 
-.ajanta > .original {
+.ajanta>.original {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
 
-.ajanta > .blur {
+.ajanta>.blur {
   filter: blur(1vw);
   transform: scale(1.1);
 }
 
 .ajanta-hide {
   animation: hidePixelated 250ms;
-  animation-delay: 250ms; 
+  animation-delay: 250ms;
   animation-fill-mode: forwards;
 }
 
-.ajanta > .original.ajanta-show {
+.ajanta>.original.ajanta-show {
   opacity: 1;
 }
 

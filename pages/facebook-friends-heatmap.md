@@ -12,7 +12,4 @@ I came across a Facebook application that plots one's FB friends' locations as a
 
 I was almost on the verge on giving up when this thought came to me. If the API doesn't allow this, how on earth did the app I had come across earlier work?? It was already late in the night(the next day morning actually) and I was still thinking about this with Snickers, tea and various other junk food. This is when I realised something very important. Version 2.0 doesn't allow to fetch locations. So, what about the previous ones? I had a breakthrough. I quickly went to the Graph Explorer tool on Facebook to check the access token generation tool. There was a small option near that text field where I could choose the API version. Voila! After a few test runs analysing the format in which the response was, I quickly created a heatmap with Google Maps API.
 
-This is the code that I used:
-
-<button type="button" class="btn btn-info "><a href="http://github.com/astronomersiva/Facebook-HeatMap/">View on Github</a></button>
-<script src="https://gist.github.com/astronomersiva/280cd8f1cb64ec8e46c0.js"></script>
+[[Source on Github]](https://github.com/astronomersiva/Facebook-HeatMap/)

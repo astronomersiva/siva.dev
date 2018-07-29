@@ -16,25 +16,21 @@
   {% endif %}
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row content hero hero-post">
-      {% include "navbar.html" %}
-      <div class="col-md-8 col-md-offset-2 helloWorld">
-        <div class="hello hello-post">
-          {{ page.title }}
-        </div>
+  <div class="content hero hero-post">
+    {% include "navbar.html" %}
+    <div class="helloWorld">
+      <div class="hello hello-post">
+        {{ page.title }}
       </div>
     </div>
   </div>
 
   <main role="main">
     <div class="container posts">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 content">
-          {% block content %}
-            <p>Default content to be displayed</p>
-          {% endblock content %}
-        </div>
+      <div class="content">
+        {% block content %}
+          <p>Default content to be displayed</p>
+        {% endblock content %}
       </div>
     </div>
   </main>

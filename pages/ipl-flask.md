@@ -20,5 +20,6 @@ I had to do the following steps to get Flask running on Heroku: installed toolbe
 *   I used 'pip freeze>requirements.txt'
 *   Create Procfile with contents as "web: gunicorn app:app"
 
-<button type="button" class="btn btn-info ">[View on Github](http://github.com/astronomersiva/IPLFlask/)</button>
-<script src="https://gist.github.com/astronomersiva/c661cc44997c41d7c4ad.js"></script>
+<br>
+
+[[Source on Github]](http://github.com/astronomersiva/IPLFlask/)

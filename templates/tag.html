@@ -7,42 +7,36 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row content hero hero-page">
-      {% include "navbar.html" %}
+  <div class="content hero hero-page">
+    {% include "navbar.html" %}
 
-      <div class="col-md-6 col-md-offset-3 helloWorld">
-        <div class="hello hello-post">
-          <em class="taglistem">Posts tagged {{tag}}</em>
-        </div>
+    <div class="helloWorld">
+      <div class="hello hello-post">
+        <div class="taglistem">Posts tagged {{tag}}</div>
       </div>
     </div>
   </div>
 
   <div class="container posts">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 content">
-          {% for page in pages|sort(attribute='order', reverse=True) %}
-            {% for pageTag in page.tags.lower().split(',') %}
-              {% if pageTag.strip() == tag.lower() %}
-                <div class="row">
-                  <div class="col-md-12">
-                    <a href = "{{ url_for("page", path=page.path) }}">{{page.title}}</a>
-                    <span class="language">
-                      {% for pageTag in page.tags.split(',') %}
-                        <a href = "/tag/{{ pageTag.strip() }}">&nbsp;&nbsp;{{pageTag}}</a>
-                      {% endfor %}
-                    </span><br>
-                    {{page.description}}
-                    <hr>
-                  </div>
-                </div>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        </div>
-      </div>
+    <div class="content">
+      {% for page in pages|sort(attribute='order', reverse=True) %}
+        {% for pageTag in page.tags.lower().split(',') %}
+          {% if pageTag.strip() == tag.lower() %}
+            <div>
+              <a href="{{ url_for("page", path=page.path) }}">{{page.title}}</a>
+              <span class="language">
+                {% for pageTag in page.tags.split(',') %}
+                  <a href = "/tag/{{ pageTag.strip() }}">&nbsp;&nbsp;{{pageTag}}</a>
+                {% endfor %}
+              </span><br>
+              {{page.description}}
+              <hr>
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
     </div>
+  </div>
 
   {% include "footer.html" %}
 </body>

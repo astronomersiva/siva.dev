@@ -10,10 +10,4 @@ I also went ahead and used the publicly available earthquake database to plot al
 
 <object data="../static/earthquakebig.html" width="600" height="400"><embed src="../static/earthquakebig.html" width="600" height="400">Error: Embedded data could not be displayed.</object>
 
-You can find the code for this here.
-
-This is the code that I used:
-
-<button type="button" class="btn btn-info ">[View on Github](http://github.com/astronomersiva/Earthquake-Heat-map/)</button>
-
-<script src="https://gist.github.com/astronomersiva/7067f9cbe8dbde0b18c0.js"></script>
+[[Source on Github]](https://github.com/astronomersiva/Earthquake-Heat-map/)

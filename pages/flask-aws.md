@@ -3,6 +3,7 @@ date: July, 2015
 description: How I redesigned my site with Flask and moved it to AWS.
 tags: Python, Flask, AWS, General
 order: 14
+code: true
 
 I had started learning Flask and felt that a good way to practice it would be redesigning my site with it. 
 

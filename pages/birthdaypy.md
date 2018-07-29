@@ -8,5 +8,4 @@ It was November 15, 2013\. I was liking and replying to some 150 birthday wishes
 
 The day arrived and I ran the script. And Python did the magic exactly as I wanted. Feel free to play around with the script.
 
-<button type="button" class="btn btn-info ">[View on Github](http://github.com/astronomersiva/birthdayWishesReplier/)</button>
-<script src="https://gist.github.com/astronomersiva/35a68973bc2b1a023f94.js"></script>
+[[Source on Github]](http://github.com/astronomersiva/birthdayWishesReplier/)

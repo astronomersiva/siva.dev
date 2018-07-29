@@ -8,7 +8,4 @@ A small fun project using Javascript that changes the document's background colo
 
 <object data="../static/timecolor/timeColor.html" width="600" height="400"><embed src="../static/timecolor/timeColor.html" width="600" height="400">Error: Embedded data could not be displayed.</object>
 
-Source here:
-
-<button type="button" class="btn btn-info ">[View on Github](http://github.com/astronomersiva/timeColor/)</button>
-<script src="https://gist.github.com/astronomersiva/371b1f7343d26d268e56.js"></script>
+[[Source on Github]](http://github.com/astronomersiva/timeColor/)

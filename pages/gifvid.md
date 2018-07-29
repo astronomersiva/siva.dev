@@ -10,20 +10,20 @@ When I tested it out however, I found that the videos were working only in Chrom
 
 I had never written any major bash script as of then so I wanted to try making this as one.
 
-##### **Installation**
+#### **Installation**
 
 * Install ffmpeg(`brew install ffmpeg` on macOS).
 * Clone the [repo](https://github.com/astronomersiva/gifvid).
 * Run `chmod +x gifvid`.
 * Copy this to the bin path by running `cp gifvid /usr/bin`. Use `sudo` if needed.
 
-##### **Usage**
+#### **Usage**
 
 `gifvid source`
 
 `source` is mandatory. The converted video will be written to `source.mp4`.
 
-##### **CLI Flags**
+#### **CLI Flags**
 
 * `-s`
 * `--src` - Specify the source.

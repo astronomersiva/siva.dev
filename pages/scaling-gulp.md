@@ -7,7 +7,9 @@ order: 20
 
 About a year back, I started to work on unifying the development, build and deployment process of several websites. All these websites had almost the same structure and dependencies and were using [Gulp](https://gulpjs.com/).
 
-The main problem was the verbosity of the gulp tasks and code duplication. Each gulpfile was over 250 lines long and was incomprehensible even to experienced developers. The same gulpfile was present in each repository and making one change meant changing it in all the repos. Consider this `gulpfile.js`.
+The main problem was the verbosity of the gulp tasks and code duplication. Each gulpfile was over 250 lines long and was incomprehensible even to experienced developers. The same gulpfile was present in each repository and making one change meant changing it in all the repos.
+
+Consider this `gulpfile.js`.
 
 <pre>
   const gulp = require('gulp');
@@ -41,9 +43,7 @@ The main problem was the verbosity of the gulp tasks and code duplication. Each 
   gulp.task('default', [ 'html', 'css', 'js' ]);
 </pre>
 
-Ugh. The largest contributor to the verbosity is the task definition. In days of Gulp 3, the task ordering `gulp.task('default', ['html', 'css', 'js']);` was even more confusing but was largely solved by plugins such as [gulp-sequence](https://www.npmjs.com/package/gulp-sequence).
-
-Fortunately, this could easily be addressed by moving out the tasks to separate files.
+Ugh. The largest contributor to the verbosity is the task definition. Fortunately, this could easily be addressed by moving out the tasks to separate files.
 
 For example,
 
@@ -78,6 +78,8 @@ accomplishes the same thing!
 You can see that the gulpfile is now simpler and the tasks act as separate modules which I feel is much more intuitive than putting them all in the same place.
 
 As an added bonus, requiring `gulp-pug` inside the task this way makes sure that it will be required only when the task is actually run. `require()` is expensive and when you require a lot of modules in plain gulpfiles, they tend to slow down the startup. But by moving these to tasks and in a way, lazy-requiring them, you can see significant performance gains(especially on large websites). 
+
+In days of Gulp 3, the task ordering `gulp.task('default', ['html', 'css', 'js']);` was even more confusing but was largely solved by plugins such as [gulp-sequence](https://www.npmjs.com/package/gulp-sequence).
 
 One another signifact thing that was done was to package this gulpfile(and its associated tasks and utils) into an NPM package. The consuming websites were then asked to provide a configuration file that this package could simply require. We now had one gulpfile for all websites and this meant, there was just one place where all our efforts were focussed on. By adding `./gulpfile` to the `package.json`s `bin` field, we could call the tasks as `myFastGulp taskName`.
 

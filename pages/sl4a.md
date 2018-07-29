@@ -8,6 +8,4 @@ I have been trying to create a Siri like interface using Python and SL4A(Scripti
 
 Since the code is still under development and my team and I are using it for a future idea of ours, I am including only the earliest version of the code.
 
-<button type="button" class="btn btn-info ">[View on Github](http://github.com/astronomersiva/SL4A/)</button>
-
-<script src="https://gist.github.com/astronomersiva/de64ee5487db13b118b2.js"></script>
+[[Source on Github]](http://github.com/astronomersiva/SL4A/)

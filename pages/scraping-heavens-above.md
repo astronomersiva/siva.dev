@@ -8,5 +8,4 @@ I wanted to write a Python script that would scrape Heavens-above.com and post I
 
 To make it more interesting, I added some weather details fetcher to the code.
 
-<button type="button" class="btn btn-info "><a href="http://github.com/astronomersiva/heavens-above/">View on Github</a></button>
-<script src="https://gist.github.com/astronomersiva/7b02868b58cbcc698112.js"></script>
+[[Source on Github]](https://github.com/astronomersiva/heavens-above/)
