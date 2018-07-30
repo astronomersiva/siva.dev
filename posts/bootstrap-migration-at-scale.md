@@ -1,8 +1,10 @@
+---
 title: Bootstrap migration at scale for fast paced teams
 date: May, 2018
 description: An approach to lazily migrate Bootstrap at scale for busy teams.
 tags: Bootstrap, Ideas
 order: 22
+---
 
 Migrating tens of thousands of lines of code an be a pretty demanding task even for the most equipped teams. If there is a clear migration strategy that slowly introduces changes while gradually deprecating existing APIs, teams can migrate their code while upgrading versions by performing incremental changes. With Bootstrap 4 however, a bulk of the APIs have been changed and this requires every usage of Bootstrap to be changed to the latest version before upgrading. Even though this is straightforward to most projects, large projects that are fast paced may face difficulties.
 

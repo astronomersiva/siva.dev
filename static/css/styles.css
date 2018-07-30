@@ -99,14 +99,24 @@ hr {
   border-top: 1px solid #eee;
 }
 
-ul {
+ul, ol {
   -webkit-padding-start: 40px;
   -moz-padding-start: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .text-center {
   text-align: center;
+}
+
+blockquote {
+  border-left: 5px solid #eee;
+  margin: 0 0 20px;
+  padding: 10px 20px;
+}
+
+blockquote p {
+  margin-bottom: 0;
 }
 
 /* actual styles */

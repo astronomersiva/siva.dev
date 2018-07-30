@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>@siva{% if page.title %} | {{ page.title }}{% endif %}</title>
-  <meta property="og:title" content="{{ page.title }}" />
+  <title>@siva{% if post.title %} | {{ post.title }}{% endif %}</title>
+  <meta property="og:title" content="{{ post.title }}" />
   <meta property="og:site_name" content="@siva" />
-  <meta property="og:url" content="https://sivasubramanyam.me/{{ page.path }}" />
-  <meta property="og:description" content="{{ page.description }}" />
-  <meta name="description" content="{{ page.description }}" />
+  <meta property="og:url" content="https://sivasubramanyam.me/{{ post.path }}" />
+  <meta property="og:description" content="{{ post.description }}" />
+  <meta name="description" content="{{ post.description }}" />
   {% include "head.html" %}
-  {% if page.code %}
-    {% compress 'css' %}
-      <link rel="stylesheet" href="{{ url_for('static', filename='js/highlight/styles/github-gist.css') }}"  type="text/css">
-    {% endcompress %}
-    <script src="{{ url_for('static', filename='js/highlight/highlight.pack.js') }}"></script>
+  {% if post.code %}
+    <link rel="stylesheet" href="/static/js/highlight/styles/github-gist.css"  type="text/css">
+    <script src="/static/js/highlight/highlight.pack.js"></script>
   {% endif %}
 </head>
 <body>
@@ -20,7 +18,7 @@
     {% include "navbar.html" %}
     <div class="helloWorld">
       <div class="hello hello-post">
-        {{ page.title }}
+        {{ post.title }}
       </div>
     </div>
   </div>
@@ -28,16 +26,14 @@
   <main role="main">
     <div class="container posts">
       <div class="content">
-        {% block content %}
-          {{ page.html|safe }}
-        {% endblock content %}
+        {{ post.html }}
       </div>
     </div>
   </main>
 
   {% include "footer.html" %}
 
-  {% if page.code %}
+  {% if post.code %}
     <script>
       const preTags = Array.from(document.getElementsByTagName('pre'));
       preTags.forEach((i, block) => {

@@ -1,8 +1,10 @@
+---
 title: emogif
 date: December, 2015
-description: A GIF for every emotion. 
-tags: Javascript, Chrome Extension  
-order: 17    
+description: A GIF for every emotion.
+tags: Javascript, Chrome Extension
+order: 17
+---
 
 I have always felt lazy to perform a Google search whenever I wanted a GIF for a Facebook comment or a tweet.
 

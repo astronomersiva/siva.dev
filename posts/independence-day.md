@@ -1,8 +1,10 @@
+---
 title: A coder's tribute to the country
 date: August, 2015
 description: A real time Twitter streamer to celebrate India's independence day
 tags: Python, Flask, Twitter, MongoDB, Redis
 order: 15
+---
 
 I wanted to write some piece of code dedicated to the country on the eve of India's independence day and thought of doing something with Twitter and maps. 
 

@@ -1,8 +1,10 @@
+---
 title: Trek to the Annapurna Base Camp
 date: December, 2016
 description: A week long trek in Nepal to the Annapurna Base Camp.
 tags: Travel
 order: 18
+---
 
 “Siva, December end la nan long leave poda poren da....Engayavdhu polama?”, Arivazhagan’s voice was loud and clear on the phone. “Sure da, oru 3-4 day trip poitu varalam”, I replied not fully understanding what he was trying to say. “Dei....oru 10 days leave podlam nu solren da”. I did not know what to say. I was barely five months into my job when this call came. It was October and we were planning for a long trip in December. Over the next one week or so, the “Leave Vittal Veetai Vittu Oduvor Sangam” started to look for treks that could be done in ten days. We decided that it had to be an Himalayan trek. Initially, we considered a few commercial operators but decided against them as we understood that they wouldn’t fit our style.
 

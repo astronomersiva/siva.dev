@@ -1,8 +1,10 @@
+---
 title: niram
 date: May, 2018
 description: Extract colors from an image
 tags: React, Javascript
 order: 25
+---
 
 niram(Tamil for *color*) is an app that I built for learning React and CSS-in-JS.
 

@@ -1,8 +1,11 @@
+---
 title: Reducing rebuild time with Broccoli Caching Writer
 date: October, 2017
 description: How using proper configuration can cut unnecessary rebuild time
 tags: EmberJS, Tooling, Build
 order: 19
+code: true
+---
 
 We use the [ember-bundle-i18n](https://github.com/pragatheeswarans/ember-bundle-i18n) package to perform i18n of our SPA.
 
@@ -14,13 +17,13 @@ Using this, one can specify what files can trigger a rebuild and what files cann
 
 For example,
 
-```
+<pre>
 options: {
   cacheInclude: [
     /.properties$/
   ]
 }
-```
+</pre>
 
 will only trigger rebuilds when `.properties` files are changed. This is exactly what we wanted!
 

@@ -17,16 +17,18 @@
 
   <main role="main">
     <div class="container posts">
+      {% assign articles = posts | sortByOrder %}
+
       {% block content %}
-        {% for page in pages|sort(attribute='order', reverse=True) %}
+        {% for post in articles %}
           <div class="post">
-            <a href="{{ url_for("page", path=page.path) }}">{{ page.title }}</a>
+            <a href="{{post.path}}">{{ post.title }}</a>
             <span class="language">
-              {% for t in page.tags.split(',') %}
-                <a href="{{ url_for("tag", tag=t.strip()) }}">&nbsp;&nbsp;{{ t }}</a>
+              {% for tag in post.tags %}
+                <a href="/tag/{{tag}}">&nbsp;&nbsp;{{tag}}</a>
               {% endfor %}
             </span><br>
-            {{ page.description }}
+            {{ post.description }}
             <hr>
           </div>
         {% endfor %}

@@ -1,8 +1,10 @@
+---
 title: paste-clean-diff
 date: June, 2018
 description: A VSCode extension to paste Git diff without the plus and minus signs
 tags: Tooling
 order: 28
+---
 
 A VSCode extension to paste Git diffs without leading plus and minus signs.
 

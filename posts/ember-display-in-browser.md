@@ -1,9 +1,11 @@
+---
 title: ember-display-in-browser
 date: May, 2018
 description: An Ember addon to display browser specific content
 tags: EmberJS
-order: 26
 code: true
+order: 26
+---
 
 Inspired by [react-render-in-browser](https://github.com/flexdinesh/react-render-in-browser), I put together an addon for EmberJS to display content based on the user's browser.
 

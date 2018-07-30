@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <div class="content hero hero-page">
+  <div class="content hero hero-post">
     {% include "navbar.html" %}
 
     <div class="helloWorld">
@@ -19,17 +19,19 @@
 
   <div class="container posts">
     <div class="content">
-      {% for page in pages|sort(attribute='order', reverse=True) %}
-        {% for pageTag in page.tags.lower().split(',') %}
-          {% if pageTag.strip() == tag.lower() %}
+      {% assign articles = posts | sortByOrder %}
+
+      {% for post in articles %}
+        {% for postTag in post.tags %}
+          {% if postTag == tag %}
             <div>
-              <a href="{{ url_for("page", path=page.path) }}">{{page.title}}</a>
+              <a href="/{{post.path}}">{{post.title}}</a>
               <span class="language">
-                {% for pageTag in page.tags.split(',') %}
-                  <a href = "/tag/{{ pageTag.strip() }}">&nbsp;&nbsp;{{pageTag}}</a>
+                {% for postTag in post.tags %}
+                  <a href = "/tag/{{postTag}}">&nbsp;&nbsp;{{postTag}}</a>
                 {% endfor %}
               </span><br>
-              {{page.description}}
+              {{post.description}}
               <hr>
             </div>
           {% endif %}

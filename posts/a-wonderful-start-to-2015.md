@@ -1,8 +1,10 @@
+---
 title: A wonderful start to 2015 
 date: March, 2015
-description: Hackathons, conferences, coding, astronomy and more  
-tags: General  
+description: Hackathons, conferences, coding, astronomy and more
+tags: General
 order: 11
+---
 
 2015 has been a great year. My friends and I have been involved in some interesting stuff and even though some of them have been really demanding, we have managed to keep ourselves up and running.
 

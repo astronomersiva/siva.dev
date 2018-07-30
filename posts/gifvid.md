@@ -1,8 +1,10 @@
+---
 title: gifvid
 date: May, 2018
 description: Converts a GIF to an MP4 using ffmpeg
 tags: Tooling
 order: 23
+---
 
 I decided to convert some GIFs in this website to MP4 videos after reading this [thoroughly researched blog](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/) by Jeremy Wagner.
 

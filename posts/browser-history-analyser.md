@@ -1,8 +1,10 @@
-title: Browser History Analyser  
+---
+title: Browser History Analyser
 date: June, 2015
-description: Fetch your most visited sites and plot a graph.  
-tags: Python, matplotlib  
+description: Fetch your most visited sites and plot a graph.
+tags: Python, matplotlib
 order: 13
+---
 
 I wanted to write a Python script to analyse my browsing history and view the most visited sites.
 
@@ -15,7 +17,7 @@ Initially, I had to figure out a way to access the browser history from the Pyth
 <div class="ajanta">
   <img
     class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/siteanalytics.png" 
+    src="/static/images/lowres/siteanalytics.png"
     alt="Sample output">
 
   <img class="img-responsive center-block original">

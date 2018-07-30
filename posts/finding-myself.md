@@ -1,14 +1,12 @@
+---
 title: The stream of life
 date: August, 2015
 description: How I learnt life lessons in the mountains and found myself.
 tags: General
 order: 16
+---
 
-> Mountains are not stadiums where I satisfy my ambition to achieve, they are the cathedrals where I practice my religion...
-  I go to them as humans go to worship. From their lofty summits I view my past, dream of the future and, with an unusual 
-  acuity, am allowed to experience the present moment...my vision cleared, my strength renewed. In the mountains I celebrate 
-  creation. On each journey I am reborn.
-> - Anatoli Boukreev
+> Mountains are not stadiums where I satisfy my ambition to achieve, they are the cathedrals where I practice my religion...I go to them as humans go to worship. From their lofty summits I view my past, dream of the future and, with an unusual acuity, am allowed to experience the present moment...my vision cleared, my strength renewed. In the mountains I celebrate creation. On each journey I am reborn. - *Anatoli Boukreev*
 
 
 I guess it all started with what was a religious trip to Nepal with my parents. I was hardly 5 years old back then. I remember
@@ -97,7 +95,7 @@ such a corrupting force that people in the cities always run after it instead of
 people who value money more than anything else in their life and continue to give it as little priority as possible.
 
 
-###Life lesson 1: **Remember, goat sh\*t can save your life when money can't.**
+### **Life lesson 1: Remember, goat sh\*t can save your life when money can't.**
 
 
 We were now on a trek to Meesapulimala. We were finally doing it. It felt like meeting a long last friend. The interesting thing was we had
@@ -110,7 +108,7 @@ a glimpse of the peak. Boy, we knew it was tall, but now it looked like a monste
 again.
 
 
-###Life lesson 2: **It's okay if you fail. You can't always win everything. Sometimes, you have to fail so that more important things are not lost**.
+### **Life lesson 2: It's okay if you fail. You can't always win everything. Sometimes, you have to fail so that more important things are not lost**.
 
 
 June 2014. We were attempting Meesapulimala again. This time, we were climbing from the Kerala side after getting the necessary permissions from the Kerala Forest Development Corporation. The weather was bad and it looked like the heavens were going to open up anytime. This made us trek as fast as possible and our guide took us through numerous shortcuts and by noon, we were at the base of the final ridge to the Meesapulimala peak. It was a steep incline and we took one step at a time knowing that something that we had been chasing for a long time was finally here, literally just steps away. When we set foot on the peak we were all just smiling at each other and didn't talk much to each other. Each of us had something driving us to climb this peak. I guess that is what unites us. 
@@ -128,7 +126,7 @@ After I got back home, I analysed photos that I had taken from a trek in a mount
 3. They were tired to climb further.
 
 
-###Life lesson 3: **Do not compromise on your goals just because you are tired or someone else asks you to. Fight for your goals even if it means fighting yourself**.
+### **Life lesson 3: Do not compromise on your goals just because you are tired or someone else asks you to. Fight for your goals even if it means fighting yourself**.
 
 
 I told about this to my team and we planned for another attempt at climbing Meesapulimala. When we called the KFDC office in Munnar to ask about permits, they told us that they no longer give permits for one day treks and if we had to climb Meesapulimala, we had to camp at the Rhodo Valley and then attempt the peak on day 2. Even though it sounded glamorous, we did not take it as it was way too costly(a single day permit for one person would have costed the entire budget of the previous climb). We now had two options: 
@@ -144,4 +142,4 @@ It gave me strength and taught me so many life lessons that I live by. It made m
 
 All those silly jokes sitting inside wet and leaking makeshift tents in the rains, all those nasty falls and slips when we saved each other, all the trust that we have among us, I think the mountains have given us so much and I will forever be grateful to them. Whenever I face problems these days, I have the courage to face them because I have seen worse in the mountains. 
 
-###Life lesson 4: **All of us have our own Meesapulimalas. It is upto us to face them or run away from them.**.
+### **Life lesson 4: All of us have our own Meesapulimalas. It is upto us to face them or run away from them.**.

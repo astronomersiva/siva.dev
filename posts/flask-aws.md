@@ -1,9 +1,11 @@
+---
 title: Moving to AWS. The journey.
 date: July, 2015
 description: How I redesigned my site with Flask and moved it to AWS.
 tags: Python, Flask, AWS, General
-order: 14
 code: true
+order: 14
+---
 
 I had started learning Flask and felt that a good way to practice it would be redesigning my site with it. 
 
@@ -16,10 +18,7 @@ The initial setup on AWS like installing Apache, Flask were simple.
 I just had to run a few commands like 
 
 - `sudo apt-get install apache2 libapache2-mod-wsgi`
-- ```
-	wget https://bootstrap.pypa.io/get-pip.py
-	python get-pip.py
-  ```
+- `wget https://bootstrap.pypa.io/get-pip.py; python get-pip.py`
 - `pip install flask`
 - `pip install flask-flatpages`
 
