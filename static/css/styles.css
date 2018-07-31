@@ -239,7 +239,6 @@ h4 {
 .language {
   float: right;
   font-size: 1rem;
-  margin-top: 5px;
 }
 
 @media screen and (max-width: 600px) {
