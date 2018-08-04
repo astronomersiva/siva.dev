@@ -26,8 +26,6 @@ A better approach will be to perform migrations on the basis of Bootstrap APIs<s
 * Introduces an additional network call to fetch another CSS - This can be avoided by combining the two CSS files.
 * Developers will have to keep track of which APIs have been converted to use the correct styles.
 
-<br>
-<br>
 **Talk is cheap. Show me the code!**
 
 I have put together a [small, ugly example](/static/bootstrap-migration/example.html) of using Bootstrap 3 and 4 together. The table in this example uses Bootstrap 4 and the rest use Bootstrap 3.

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://sivasubramanyam.me/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/about</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/emberjs-shipping-different-bundles/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/EmberJS/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Build/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/ember-display-in-browser/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/niram/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/React/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Javascript/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/rotate-image/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Node/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/gifvid/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Tooling/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/bootstrap-migration-at-scale/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Bootstrap/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Ideas/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/mockgen/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Puppeteer/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/scaling-gulp/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Gulp/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/reduce-rebuild-time-broccoli-caching-writer/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/annapurna-base-camp/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Travel/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/emogif/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Chrome%20Extension/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/finding-myself/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/General/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/independence-day/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Python/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Flask/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Twitter/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/MongoDB/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Redis/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/flask-aws/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/AWS/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/browser-history-analyser/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/matplotlib/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/ipl-flask/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/a-wonderful-start-to-2015/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/hexa-clock/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/birthdaypy/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/GraphAPI/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Facebook/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/weather-forecast/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/scraping-heavens-above/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/mechanize/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/facebook-friends-heatmap/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/heatmaps/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/Google%20Maps/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/sl4a/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/SL4A/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/irctc/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/IRCTC/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/valparai/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/PHP/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://sivasubramanyam.me/tag/MySQL/</loc>
+  <lastmod>2018-07-15T19:49:43+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+
+
+</urlset>

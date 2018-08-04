@@ -26,6 +26,4 @@ We also qualified for the finals of the National Android Developer Challenge tha
 
 I will also be giving a lightning talk at the Chennai Python Users Group([ChennaiPy](http://chennaipy.org)) on Python scripting in Android. You can find the slides [here](https://speakerdeck.com/astronomersiva/python-scripting-in-android-with-sl4a).
 
-We are also working on our long-pending project of sending cameras to near space(High Altitude Ballooning) and we are hoping to have the launch within the next 2-3 months. It's going to be tough but hey, as they say,
-
-<div class="text-center">"When the going gets tough, the tough get going."</div>
+We are also working on our long-pending project of sending cameras to near space(High Altitude Ballooning) and we are hoping to have the launch within the next 2-3 months. It's going to be tough but hey, as they say, *When the going gets tough, the tough get going.*
