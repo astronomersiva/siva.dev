@@ -204,8 +204,12 @@ h4 {
   margin: 20px 0;
 }
 
-.helloWorld {
+.hero-page .helloWorld {
   padding: 150px 10%;
+}
+
+.hero-post .helloWorld {
+  padding: 100px 10%;
 }
 
 .hello {
@@ -224,6 +228,7 @@ h4 {
 }
 
 .hello-post {
+  font-size: 1.6rem;
   color: #f03838;
   max-width: 780px;
   text-justify: distribute;

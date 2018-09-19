@@ -8,9 +8,24 @@
   <meta property="og:description" content="{{ post.description }}" />
   <meta name="description" content="{{ post.description }}" />
   {% include "head.html" %}
+  {% if post.hero %}
+    <style>
+      .hero-post, .webp .hero-post {
+        background-image: url('{{post.hero}}');
+      }
+
+      {% if post.heroMobile %}
+        @media screen and (max-width: 760px) {
+          .hero-post, .webp .hero-post {
+            background-image: url('{{post.heroMobile}}');
+          }
+        }
+      {% endif %}
+    </style>
+  {% endif %}
   <link href="/static/css/ajanta.css" rel="stylesheet" type="text/css">
   {% if post.code %}
-    <link rel="stylesheet" href="/static/js/highlight/styles/github-gist.css"  type="text/css">
+    <link rel="stylesheet" href="/static/js/highlight/styles/github-gist.css" type="text/css">
     <script src="/static/js/highlight/highlight.pack.js"></script>
   {% endif %}
 </head>

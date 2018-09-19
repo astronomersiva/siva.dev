@@ -5,9 +5,8 @@
 <div class="navbr navbr-secondary">
   {% if post and post.tags %}
     {% if post.date %}
-      {{post.date}} - 
+      {{post.date}}
     {% endif %}
-    Tagged
     {% for tag in post.tags %}
       &nbsp;&nbsp;-<a href="/tag/{{tag}}/">&nbsp;&nbsp;{{tag}}</a>
     {% endfor %}
