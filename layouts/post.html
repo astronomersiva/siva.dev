@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>@siva{% if post.title %} | {{ post.title }}{% endif %}</title>
+  <title>{% if post.title %}{{ post.title }} | {% endif %}@siva</title>
   <meta property="og:title" content="{{ post.title }}" />
   <meta property="og:site_name" content="@siva" />
   <meta property="og:url" content="https://sivasubramanyam.me/{{ post.path }}" />
