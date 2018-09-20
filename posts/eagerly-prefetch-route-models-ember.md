@@ -3,8 +3,10 @@ title: Eagerly prefetching a route's models to make apps faster
 date: September, 2018
 description: Improving perceived performance in Ember Apps
 code: true
-hero: //source.unsplash.com/1vTFoSyWyFQ/1600x900
-heroMobile: //source.unsplash.com/1vTFoSyWyFQ
+hero: /static/images/hero-images/eager-large.jpeg
+heroMobile: /static/images/hero-images/eager.jpeg
+thishack: is needed because colon in data image/jpeg breaks the parser
+heroPlaceholder: image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAcADIDASIAAhEBAxEB/8QAGwAAAgMAAwAAAAAAAAAAAAAABQYAAwQCBwj/xAAoEAABBAEDAwMFAQAAAAAAAAABAAIDBBEFEiEGMVETYXEiIyRCgZH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgD/xAAZEQEBAQEBAQAAAAAAAAAAAAAAARECEjH/2gAMAwEAAhEDEQA/APN9KNhe7JcT7IrHVrOqOe+UteP1Kvq6XbjfmGDv5RCDpy5Zfmb02D5RrYFaDFHK8yyTBoacY9lqnr0oNQeWH6XhEn9JRxNybbWnwCqX6Gx52mR0jh2IW9Q+aWNQ0/8AK3Rnc3vwtj6Dq1MTYOHJmqdNzsrl8zdrRzk+ED1u6Y4jWjI2ArS6bzZ9A958qKnf7KJSYBrtyQ49THwtVe9am4Mr/wDUArAbwmirEyOFrmjlBglp1EzkOncf6Ux1xVqMHAyl6nK8MLs8hZnWZXeo4u5HZTmrnWCfUeu/aMUbsZ74XW2py75ScrfqEz3yEudlBpyS85VSYi3VWSouGVEh/9k=
 tags: EmberJS
 order: 31
 ---

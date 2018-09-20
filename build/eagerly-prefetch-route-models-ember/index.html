@@ -6,14 +6,15 @@
   if (isWebp()) {
     let html = document.getElementsByTagName('html')[0];
     html.className = 'webp';
-  }</script><link href="/static/css/styles-ee5a3ff46f.css" rel="stylesheet" type="text/css"><style>.hero-post, .webp .hero-post {
-        background-image: url('//source.unsplash.com/1vTFoSyWyFQ/1600x900');
+  }</script><link href="/static/css/styles-ee5a3ff46f.css" rel="stylesheet" type="text/css"><style>.webp .hero-post, .hero-post {
+        background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAcADIDASIAAhEBAxEB/8QAGwAAAgMAAwAAAAAAAAAAAAAABQYAAwQCBwj/xAAoEAABBAEDAwMFAQAAAAAAAAABAAIDBBEFEiEGMVETYXEiIyRCgZH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgD/xAAZEQEBAQEBAQAAAAAAAAAAAAAAARECEjH/2gAMAwEAAhEDEQA/APN9KNhe7JcT7IrHVrOqOe+UteP1Kvq6XbjfmGDv5RCDpy5Zfmb02D5RrYFaDFHK8yyTBoacY9lqnr0oNQeWH6XhEn9JRxNybbWnwCqX6Gx52mR0jh2IW9Q+aWNQ0/8AK3Rnc3vwtj6Dq1MTYOHJmqdNzsrl8zdrRzk+ED1u6Y4jWjI2ArS6bzZ9A958qKnf7KJSYBrtyQ49THwtVe9am4Mr/wDUArAbwmirEyOFrmjlBglp1EzkOncf6Ux1xVqMHAyl6nK8MLs8hZnWZXeo4u5HZTmrnWCfUeu/aMUbsZ74XW2py75ScrfqEz3yEudlBpyS85VSYi3VWSouGVEh/9k=');
+        transition: background 0.7s linear;
       }
 
       
         @media screen and (max-width: 760px) {
-          .hero-post, .webp .hero-post {
-            background-image: url('//source.unsplash.com/1vTFoSyWyFQ');
+          .webp .hero-post, .hero-post {
+            background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAcADIDASIAAhEBAxEB/8QAGwAAAgMAAwAAAAAAAAAAAAAABQYAAwQCBwj/xAAoEAABBAEDAwMFAQAAAAAAAAABAAIDBBEFEiEGMVETYXEiIyRCgZH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgD/xAAZEQEBAQEBAQAAAAAAAAAAAAAAARECEjH/2gAMAwEAAhEDEQA/APN9KNhe7JcT7IrHVrOqOe+UteP1Kvq6XbjfmGDv5RCDpy5Zfmb02D5RrYFaDFHK8yyTBoacY9lqnr0oNQeWH6XhEn9JRxNybbWnwCqX6Gx52mR0jh2IW9Q+aWNQ0/8AK3Rnc3vwtj6Dq1MTYOHJmqdNzsrl8zdrRzk+ED1u6Y4jWjI2ArS6bzZ9A958qKnf7KJSYBrtyQ49THwtVe9am4Mr/wDUArAbwmirEyOFrmjlBglp1EzkOncf6Ux1xVqMHAyl6nK8MLs8hZnWZXeo4u5HZTmrnWCfUeu/aMUbsZ74XW2py75ScrfqEz3yEudlBpyS85VSYi3VWSouGVEh/9k=');
           }
         }</style><link href="/static/css/ajanta-f742d71aac.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/static/js/highlight/styles/github-gist-6a5d39bb21.css" type="text/css"><script src="/static/js/highlight/highlight.pack-92445837db.js"></script></head><body><div class="content hero hero-post"><div class="navbr navbr-primary"><a href="/">@siva</a></div><div class="navbr navbr-secondary">September, 2018 &nbsp;&nbsp;-<a href="/tag/EmberJS/">&nbsp;&nbsp;EmberJS</a></div><div class="helloWorld"><div class="hello hello-post">Eagerly prefetching a route's models to make apps faster</div></div></div><main role="main"><div class="container posts"><div class="content"><p><strong>There is a 200-300ms interval between a user hovering on a link and actually clicking it.</strong></p><p>If we use this time to prefetch the target route's model in our Ember applications, the app will feel faster and users will have a better experience.</p><p>Implementing this in Ember apps is trivial. We can make use of the store's built-in caching mechanism and <a href="https://github.com/machty/ember-concurrency">ember-concurrency</a> to achieve this(the implementation looks much neater with ember-concurrency compared to just using the run loop).</p><p>To make sure the app doesn't make redundant calls, the <a href="https://www.emberjs.com/api/ember-data/3.4/classes/DS.Adapter/methods/shouldBackgroundReloadAll?anchor=shouldBackgroundReloadAll">shouldBackgroundReloadAll</a> method in the application adapter can be used.</p><p>Then proceed to create a component(say, <code>eager-link</code>).</p><p><strong>components/eager-link.js</strong></p><pre>
 import Component from '@ember/component';
@@ -68,4 +69,23 @@ export default Component.extend({
   }</script><script>const preTags = Array.from(document.getElementsByTagName('pre'));
       preTags.forEach((i, block) => {
         hljs.highlightBlock(i);
-      });</script></body></html>
+      });</script><script defer="defer">let hero = '/static/images/hero-images/eager-large.jpeg';
+      let heroMobile = '/static/images/hero-images/eager.jpeg';
+
+      let html = document.getElementsByTagName('html')[0];
+      if (html.className.includes('webp')) {
+        hero = hero.replace('.jpeg', '.webp').replace('.jpg', '.webp').replace('.png', '.webp');
+        heroMobile = heroMobile.replace('.jpeg', '.webp').replace('.jpg', '.webp').replace('.png', '.webp');
+      }
+
+      let heroDiv = document.getElementsByClassName('hero-post')[0];
+      if (window.innerWidth < 760) {
+        hero = heroMobile;
+      }
+
+      let placeholderElement = new Image();
+      placeholderElement.src = hero;
+
+      placeholderElement.onload = function() {
+        heroDiv.setAttribute('style', `background-image: url(${hero})`);
+      }</script></body></html>

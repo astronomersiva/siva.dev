@@ -12,14 +12,15 @@
   {% include "head.html" %}
   {% if post.hero %}
     <style>
-      .hero-post, .webp .hero-post {
-        background-image: url('{{post.hero}}');
+      .webp .hero-post, .hero-post {
+        background-image: url('data:{{post.heroPlaceholder}}');
+        transition: background 0.7s linear;
       }
 
       {% if post.heroMobile %}
         @media screen and (max-width: 760px) {
-          .hero-post, .webp .hero-post {
-            background-image: url('{{post.heroMobile}}');
+          .webp .hero-post, .hero-post {
+            background-image: url('data:{{post.heroPlaceholder}}');
           }
         }
       {% endif %}
@@ -57,6 +58,31 @@
       preTags.forEach((i, block) => {
         hljs.highlightBlock(i);
       });
+    </script>
+  {% endif %}
+
+  {% if post.hero %}
+    <script defer>
+      let hero = '{{post.hero}}';
+      let heroMobile = '{{post.heroMobile}}';
+
+      let html = document.getElementsByTagName('html')[0];
+      if (html.className.includes('webp')) {
+        hero = hero.replace('.jpeg', '.webp').replace('.jpg', '.webp').replace('.png', '.webp');
+        heroMobile = heroMobile.replace('.jpeg', '.webp').replace('.jpg', '.webp').replace('.png', '.webp');
+      }
+
+      let heroDiv = document.getElementsByClassName('hero-post')[0];
+      if (window.innerWidth < 760) {
+        hero = heroMobile;
+      }
+
+      let placeholderElement = new Image();
+      placeholderElement.src = hero;
+
+      placeholderElement.onload = function() {
+        heroDiv.setAttribute('style', `background-image: url(${hero})`);
+      }
     </script>
   {% endif %}
 </body>
