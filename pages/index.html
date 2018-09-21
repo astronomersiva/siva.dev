@@ -22,10 +22,10 @@
       {% block content %}
         {% for post in articles %}
           <div class="post">
-            <a href="{{post.path}}">{{ post.title }}</a>
+            <a href="/{{post.path}}/">{{ post.title }}</a>
             <span class="language">
               {% for tag in post.tags %}
-                <a href="/tag/{{tag}}">&nbsp;&nbsp;{{tag}}</a>
+                <a href="/tag/{{tag}}/">&nbsp;&nbsp;{{tag}}</a>
               {% endfor %}
             </span><br>
             {{ post.description }}
