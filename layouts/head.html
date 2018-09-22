@@ -4,7 +4,11 @@
 <meta name="keywords" content="sivasubramanyam,sivasubramanyam.me">
 <meta name="author" content="Sivasubramanyam A">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>@siva {% if title %}{{ title }}{% endif %}</title>
+{% unless post %}
+  <title>@siva {% if title %}{{ title }}{% endif %}</title>
+{% endunless %}
+
+<meta name="theme-color" content="#3869ff">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57141163-3"></script>
 <script>
@@ -23,4 +27,69 @@
   }
 </script>
 
-<link href="/static/css/styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/static/css/styles.css">
+
+<link
+  rel="preload"
+  href="https://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2"
+  crossorigin="anonymous"
+  as="font">
+
+{% if post %}
+  <link rel="preload" href="/static/js/highlight/styles/github-gist.css" as="style">
+  <link rel="preload" href="/static/js/highlight/highlight.pack.js" as="script">
+
+  <link rel="preload" href="/static/css/ajanta.css" as="style">
+  <link rel="preload" href="/static/js/ajanta.js" as="script">
+  <link rel="preload" href="/static/js/ajanta-for-css.js" as="script">
+
+  {% unless post.hero %}
+    <style>
+      .hero-post {
+        background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAhADIDASIAAhEBAxEB/8QAHAAAAgICAwAAAAAAAAAAAAAAAAUEBgEDAgcI/8QAKRAAAQMDAgUEAwEAAAAAAAAAAQACAwQFESExBhITNFEUQWFxFTIzNf/EABgBAQEBAQEAAAAAAAAAAAAAAAIDAQQF/8QAIBEAAwACAgIDAQAAAAAAAAAAAAECAxEEEhMxFCEiQf/aAAwDAQACEQMRAD8A86RSsADZG6eVvFLFNkxSAfBWI4oZJC32zurHLwrGbUKynl19wEJ/b0huHM936Ky6mnhOcZHkJ7w/xHPaj0pGkxO3BW6x2l9QeUzjPgpvc+GZfT8zYw7G5Chn5WPBk8dvTDMup7L0O7ZfKGrhdqGOISSqkZNWljXAk7JJR0jGzGN7iwhSXNNJURv1IB3TWUtgxTmTaf2Mvwk515jqhO47lAY25eM4CF07kn4qOoI3uYcgqwW3iWalpHU7xzMdokMERkeGjcqa+3uhwZP18oJ6e0Hba6/wc2OqM1Y4wkhw1V2qr6YbBJLE4GVo5XAqgWuIUs4lhdqQs19PWSCR7HksdqWhefzuM+blTvWkUxOcUan2K6i5TTTPfnBccqfBeXOp+lKOYjYpO2F/U5cHKZizzCDqv0C7HMpaDFVD3Ju9d8lCgekkQh0Rb5GQ4Ufcx/asF47EfSEKzOciUP8ABqd0Xbv+kIWGlePfj7VjrP8AOCEIMSEw2QhC0w//2Q==');
+        transition: background 0.3s linear;
+      }
+    </style>
+  {% endunless %}
+{% else %}
+  <link rel="prefetch" href="/static/js/highlight/styles/github-gist.css" as="style">
+  <link rel="prefetch" href="/static/js/highlight/highlight.pack.js" as="script">
+
+  <link rel="prefetch" href="/static/css/ajanta.css" as="style">
+  <link rel="prefetch" href="/static/js/ajanta.js" as="script">
+  <link rel="prefetch" href="/static/js/ajanta-for-css.js" as="script">
+
+  <style>
+    @media screen and (max-width: 470px) {
+      .hero-page {
+        background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAhADIDASIAAhEBAxEB/8QAHAAAAgICAwAAAAAAAAAAAAAAAAUEBgEDAgcI/8QAKRAAAQMDAgUEAwEAAAAAAAAAAQACAwQFESExBhITNFEUQWFxFTIzNf/EABgBAQEBAQEAAAAAAAAAAAAAAAIDAQQF/8QAIBEAAwACAgIDAQAAAAAAAAAAAAECAxEEEhMxFCEiQf/aAAwDAQACEQMRAD8A86RSsADZG6eVvFLFNkxSAfBWI4oZJC32zurHLwrGbUKynl19wEJ/b0huHM936Ky6mnhOcZHkJ7w/xHPaj0pGkxO3BW6x2l9QeUzjPgpvc+GZfT8zYw7G5Chn5WPBk8dvTDMup7L0O7ZfKGrhdqGOISSqkZNWljXAk7JJR0jGzGN7iwhSXNNJURv1IB3TWUtgxTmTaf2Mvwk515jqhO47lAY25eM4CF07kn4qOoI3uYcgqwW3iWalpHU7xzMdokMERkeGjcqa+3uhwZP18oJ6e0Hba6/wc2OqM1Y4wkhw1V2qr6YbBJLE4GVo5XAqgWuIUs4lhdqQs19PWSCR7HksdqWhefzuM+blTvWkUxOcUan2K6i5TTTPfnBccqfBeXOp+lKOYjYpO2F/U5cHKZizzCDqv0C7HMpaDFVD3Ju9d8lCgekkQh0Rb5GQ4Ufcx/asF47EfSEKzOciUP8ABqd0Xbv+kIWGlePfj7VjrP8AOCEIMSEw2QhC0w//2Q==');
+        transition: background 0.3s linear;
+      }
+    }
+
+    @media screen and (min-width: 471px) {
+      .hero-page {
+        background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALADIDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABAYAAgUD/8QAIhAAAgIBAwQDAAAAAAAAAAAAAQIAEQMEBjEFEiFRFTJB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQMEAP/EAB0RAAICAgMBAAAAAAAAAAAAAAABAhUyUgURQWL/2gAMAwEAAhEDEQA/AMPH0F3+ouEYttZnNBDNzp7FV8Gpq6fNkDimMutF5Ejr5eyFNNtZLorxCMe2m/RGd3a2Ny+lYsaY2IXyiSxBXvvIXse3IQNuADzG3Ai1xOmRR28RNu9RlZ9Cf8CnuSNHYvoSQW8tTVi2P//Z');
+        transition: background 0.3s linear;
+      }
+    }
+  </style>
+{% endif %}
+
+<script defer src="/static/js/ajanta.js"></script>
+
+{% unless post.hero %}
+  <script defer src="/static/js/ajanta-for-css.js"></script>
+{% endunless %}
+
+<script defer>
+  let images = document.getElementsByTagName('img');
+  for (let image of images) {
+    // old handling for lazy loading images
+    let lazySrc = image.getAttribute('data-src');
+    if (lazySrc) {
+      image.src = lazySrc;
+    }
+
+  }
+</script>

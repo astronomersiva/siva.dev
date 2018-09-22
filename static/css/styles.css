@@ -36,12 +36,6 @@ img {
   height: auto;
 }
 
-/* sivastrap :P */
-
-html {
-  font-size: 16px;
-}
-
 @media screen and (min-width: 1000px) {
   html {
     font-size: 18px;
@@ -127,50 +121,22 @@ blockquote p {
 .navbr-primary {
   top: 0;
   left: 0;
-  border-top: 3px solid #00a3f4;
+  border-top: 3px solid #3869ff;
 }
 
 .navbr-secondary {
   bottom: 0;
   right: 0;
-  border-bottom: 3px solid #00a3f4;
+  border-bottom: 3px solid #3869ff;
 }
 
 /* Contents */
 
 .hero {
   background-size: cover;
-  background-position-y: bottom;
+  background-position-y: center;
   text-align: left;
   position: relative;
-}
-
-.hero-page {
-  background-image: url(/static/images/hero-page.jpg);
-}
-
-.webp .hero-page {
-  background-image: url(/static/images/hero-page.webp);
-}
-
-.hero-post {
-  background-image: url(/static/images/hero-post.jpg);
-}
-
-.webp .hero-post {
-  background-image: url(/static/images/hero-post.webp);
-}
-
-@media screen and (max-width: 470px) {
-  .webp .hero-page,
-  .webp .hero-post {
-    background-image: url(/static/images/hero-mobile.webp);
-  }
-  .hero-post,
-  .hero-page {
-    background-image: url(/static/images/hero-mobile.jpg);
-    background-position: top;
-  }
 }
 
 .content {
@@ -204,11 +170,7 @@ h4 {
   margin: 20px 0;
 }
 
-.hero-page .helloWorld {
-  padding: 150px 10%;
-}
-
-.hero-post .helloWorld {
+.hero-post .helloWorld, .hero-page .helloWorld {
   padding: 100px 10%;
 }
 
@@ -224,15 +186,17 @@ h4 {
 }
 
 .hello-page {
-  color: #00a3f4;
+  color: #0099e4;
 }
 
 .hello-post {
   font-size: 1.6rem;
-  color: #f03838;
+  color: #ee0000;
+  /* font-weight: bold; */
   max-width: 780px;
-  text-justify: distribute;
-  text-justify: inter-character;
+  text-align: left;
+  text-align: -webkit-auto;
+  background: rgba(255, 255, 255, 1);
 }
 
 .language {
@@ -264,7 +228,7 @@ code.block {
 /* Tag List */
 
 .taglistem {
-  color: #00a3f4;
+  color: #3869ff;
   max-width: 780px;
   text-justify: distribute;
   text-justify: inter-character;
@@ -273,12 +237,12 @@ code.block {
 .language a,
 .language a:link,
 .language a:visited {
-  color: #f03838;
+  color: #ee0000;
 }
 
 .language a:hover,
 .language a:active {
-  color: #00a3f4;
+  color: #3869ff;
 }
 
 /* Footer */
@@ -291,7 +255,7 @@ footer {
   bottom: 0;
   min-width: 100vw;
   padding: 3rem;
-  border-bottom: 10px solid #00a3f4;
+  border-bottom: 10px solid #0099e4;
 }
 
 footer ul {
@@ -318,8 +282,8 @@ footer ul {
 }
 
 .social>svg:hover {
-  fill: #00a3f4;
-  transition: color 0.5s linear;
+  fill: #3869ff;
+  transition: fill 0.2s linear;
 }
 
 .social>svg:active {
@@ -340,7 +304,7 @@ footer ul {
 /* Miscellaneous */
 
 ::selection {
-  background-color: #555;
+  background-color: #3869ff;
   color: white;
 }
 
@@ -348,12 +312,21 @@ a,
 a:link,
 a:visited,
 a:active {
-  color: #00a3f4;
+  color: #3869ff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #f03838;
+  color: #ee0000;
   text-decoration: none;
-  transition: color 0.25s linear;
+  transition: color 0.2s linear;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v11/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }

@@ -15,10 +15,13 @@
       .webp .hero-post, .hero-post {
         background-image: url('data:{{post.heroPlaceholder}}');
         transition: background 0.7s linear;
+        {% if post.heroPosition %}
+          background-position: {{post.heroPosition}}
+        {% endif %}
       }
 
       {% if post.heroMobile %}
-        @media screen and (max-width: 760px) {
+        @media screen and (max-width: 470px) {
           .webp .hero-post, .hero-post {
             background-image: url('data:{{post.heroPlaceholder}}');
           }
