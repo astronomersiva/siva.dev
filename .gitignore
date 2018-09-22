@@ -1,2 +1,4 @@
+node_modules
+
 git-deploy.sh
 .DS_Store
