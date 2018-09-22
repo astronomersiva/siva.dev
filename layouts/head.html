@@ -81,15 +81,3 @@
 {% unless post.hero %}
   <script defer src="/static/js/ajanta-for-css.js"></script>
 {% endunless %}
-
-<script defer>
-  let images = document.getElementsByTagName('img');
-  for (let image of images) {
-    // old handling for lazy loading images
-    let lazySrc = image.getAttribute('data-src');
-    if (lazySrc) {
-      image.src = lazySrc;
-    }
-
-  }
-</script>
