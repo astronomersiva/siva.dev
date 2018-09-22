@@ -34,7 +34,7 @@
               <a href="/{{post.path}}/">{{post.title}}</a>
               <span class="language">
                 {% for postTag in post.tags %}
-                  <a href = "/tag/{{postTag}}/">&nbsp;&nbsp;{{postTag}}</a>
+                  <a href = "/tag/{{postTag | downcase}}/">&nbsp;&nbsp;{{postTag}}</a>
                 {% endfor %}
               </span><br>
               {{post.description}}
