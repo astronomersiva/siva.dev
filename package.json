@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/astronomersiva/www.sivasubramanyam.me#readme",
   "devDependencies": {
-    "@astronomersiva/lego": "0.0.11"
+    "@astronomersiva/lego": "0.0.12"
   }
 }
