@@ -36,6 +36,11 @@
   {% endif %}
 
   {% if post %}
+    {% assign toPreload = post.imagesToPreload | split: ',' %}
+    {% for asset in toPreload %}
+      <link rel="preload" href="{{asset}}" as="image">
+    {% endfor %}
+
     {% for tag in post.tags %}
       <link rel="prefetch" href="/tag/{{tag | downcase}}/">
     {% endfor %}
