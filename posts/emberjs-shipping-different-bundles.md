@@ -4,6 +4,7 @@ date: June, 2018
 description: A way to stop sending transpiled code to evergreen browsers with EmberJS
 tags: EmberJS, Build
 order: 27
+featured: true
 ---
 
 EmberJS provided [a way to specify browser targets](https://rwjblue.com/2017/04/21/ember-cli-targets/) in April, 2017. With this, one could specify a list of browsers based on the app consumers' analytics and ship properly transpiled code.

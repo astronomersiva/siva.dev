@@ -45,7 +45,7 @@ Consider this `gulpfile.js`.
   gulp.task('default', [ 'html', 'css', 'js' ]);
 </pre>
 
-Ugh. The largest contributor to the verbosity is the task definition. Fortunately, this could easily be addressed by moving out the tasks to separate files.
+The largest contributor to the verbosity is the task definition. Fortunately, this could easily be addressed by moving out the tasks to separate files.
 
 For example,
 
@@ -81,7 +81,7 @@ You can see that the gulpfile is now simpler and the tasks act as separate modul
 
 As an added bonus, requiring `gulp-pug` inside the task this way makes sure that it will be required only when the task is actually run. `require()` is expensive and when you require a lot of modules in plain gulpfiles, they tend to slow down the startup. But by moving these to tasks and in a way, lazy-requiring them, you can see significant performance gains(especially on large websites). 
 
-In days of Gulp 3, the task ordering `gulp.task('default', ['html', 'css', 'js']);` was even more confusing but was largely solved by plugins such as [gulp-sequence](https://www.npmjs.com/package/gulp-sequence).
+In days of Gulp 3, the task ordering `gulp.task('default', ['html', 'css', 'js']);` was even more confusing but we largely solved this by using [gulp-sequence](https://www.npmjs.com/package/gulp-sequence).
 
 One another signifact thing that was done was to package this gulpfile(and its associated tasks and utils) into an NPM package. The consuming websites were then asked to provide a configuration file that this package could simply require. We now had one gulpfile for all websites and this meant, there was just one place where all our efforts were focussed on. By adding `./gulpfile` to the `package.json`s `bin` field, we could call the tasks as `myFastGulp taskName`.
 
@@ -103,7 +103,7 @@ was changed to
     .pipe(gulp.dest('build/html'));
 </pre>
 
-In some cases like copying a large number of files(in the range of tens of thousands), gulp tended to be very slow. In these cases, just using an equivalent NPM package(or just plain Node's `fs`) accelerated things. `gulp-util` which is used by most packages for Gulp 3 and by gulp itself for logging was also slowing down gulp's startup by about 4-5 seconds. Removing it and using the excellent [ora](https://github.com/sindresorhus/ora) and [chalk](https://www.npmjs.com/package/chalk) also helped in accelerating Gulp's speed(especially startup).
+In some cases like copying a large number of files(in the range of tens of thousands), gulp tended to be very slow. In these cases, just using an equivalent NPM package(or just plain Node's `fs`) accelerated things. `gulp-util` which is used by most Gulp 3 era packages and by gulp itself for logging was also slowing down gulp's startup by about 4-5 seconds. Removing it and using the excellent [ora](https://github.com/sindresorhus/ora) and [chalk](https://www.npmjs.com/package/chalk) also helped in accelerating Gulp's speed(especially startup).
 
 Happy gulping!
 
