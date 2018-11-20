@@ -72,7 +72,7 @@ invited to give an interview on a radio station about this!
 Some of the best memories I have with this place are:
 
 * Seeing launches in the month of January/February. This is when there are numerous flamingoes in the lake.
-  During the launch, the birds start to fly due to the noise and the sky looks orange in pinkish-orange in
+  During the launch, the birds start to fly due to the noise and the sky looks pinkish-orange in
   color because of their number!
 * Every single night launch. The place goes from being pitch black to feeling like daytime.
 
