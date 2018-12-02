@@ -25,16 +25,6 @@ I intended to create something visually similar to the impressive [night owl](ht
 It has the following feautures:
 
 * The prompt character turns red when the previous command didn't run sucessfully(non-zero exit code).
-
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/invalid-command.png" 
-    alt="invalid command">
-
-  <img class="img-responsive center-block original">
-</div>
-
 * All directory paths are shown relative to the root.
 * When in a Git repository, the path is shown relative to the project root.
 * Displays the branch name when in a Git repository and indicates if it's dirty. 

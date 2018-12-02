@@ -5,7 +5,6 @@ description: A tiny(1.74kb gzipped), zero-dependency ember-addon to draw line-ch
 tags: EmberJS
 code: true
 order: 29
-featured: true
 ---
 
 ember-line-graph is a tiny(1.74kb gzipped), zero-dependency ember-addon to draw line charts.

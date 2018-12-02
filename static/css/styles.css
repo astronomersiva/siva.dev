@@ -84,7 +84,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 2px solid #eee;
 }
 
 ul, ol {
@@ -156,8 +156,27 @@ blockquote p {
 }
 
 .post,
-.content {
+.content,
+.see-more {
   grid-column-start: 2;
+}
+
+.see-more {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.animate {
+  margin-top: -22px;
+  border-color: #3869ff;
+  width: 0;
+}
+
+.post:hover > hr.animate {
+  width: 100%;
+  border-width: 1.5px;
+  transition: width 0.3s linear;
 }
 
 @media screen and (max-width: 760px) {

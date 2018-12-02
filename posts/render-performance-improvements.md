@@ -24,8 +24,10 @@ There are columns for the person's name, gender and a More Details dropdown.
   {{#student-list}}
     &lt;td&gt;{{row.name}}&lt;/td&gt;
     &lt;td&gt;{{row.gender}}&lt;/td&gt;
+
     {{#basic-dropdown as |dropdown|}}
       {{#dropdown.trigger}}More Details{{/dropdown.trigger}}
+
       {{#dropdown.content}}
         &lt;ul&gt;
           &lt;li&gt;Phone: {{row.phone}}&lt;/li&gt;
@@ -36,6 +38,7 @@ There are columns for the person's name, gender and a More Details dropdown.
           {{/if}}
         &lt;/ul&gt;
       {{/dropdown.content}}
+
     {{/basic-dropdown}}
   {{/student-list}}
 {{/each}}
@@ -90,8 +93,10 @@ see if there are any improvements in the initial rendering performance.
   {{#student-list}}
     &lt;td&gt;{{row.name}}&lt;/td&gt;
     &lt;td&gt;{{row.gender}}&lt;/td&gt;
+
     {{#basic-dropdown as |dropdown|}}
       {{#dropdown.trigger}}More Details{{/dropdown.trigger}}
+
       {{#if dropdown.isOpen}}
         {{#dropdown.content}}
           &lt;ul&gt;
@@ -104,6 +109,7 @@ see if there are any improvements in the initial rendering performance.
           &lt;/ul&gt;
         {{/dropdown.content}}
       {{/if}}
+
     {{/basic-dropdown}}
   {{/student-list}}
 {{/each}}

@@ -9,7 +9,6 @@
       <link rel="prefetch" href="/{{article.path}}/">
     {% endif %}
   {% endfor %}
-  <link rel="prefetch" href="/archive/">
 </head>
 <body>
   <div class="content hero hero-page">
@@ -26,13 +25,9 @@
     <div class="container posts">
       {% assign articles = posts | sortByOrder %}
 
-      <div class="post" style="font-size: 15px; letter-spacing: 3px;">
-        Recent Posts
-        <hr style="margin-top: 5px;width: 15%;margin-bottom: 40px;">
-      </div>
       {% block content %}
         {% for post in articles %}
-          {% if post.featured %}
+          {% unless post.featured %}
             <div class="post">
               <a href="/{{post.path}}/">{{ post.title }}</a>
               <span class="language">
@@ -44,12 +39,8 @@
               <hr>
               <hr class="animate">
             </div>
-          {% endif %}
+          {% endunless %}
         {% endfor %}
-
-        <div class="see-more">
-          <a href="/archive/">View All Posts →</a>
-        </div>
       {% endblock content %}
     </div>
   </main>

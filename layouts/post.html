@@ -61,6 +61,13 @@
     <div class="container posts">
       <div class="content">
         {{ post.html }}
+        <br>
+        <div class="see-more">
+          View Other Posts Tagged
+          {% for tag in post.tags %}
+            - <a href="/tag/{{tag | downcase}}">{{tag}}</a>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </main>

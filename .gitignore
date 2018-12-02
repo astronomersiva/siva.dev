@@ -1,6 +1,9 @@
 node_modules
-
 build
 
-git-deploy.sh
 .DS_Store
+
+# Profiling lego
+*.0x
+*flamegraph*
+*isolate*
