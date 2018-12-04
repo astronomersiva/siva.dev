@@ -1,8 +1,16 @@
+/* Color Codes */
+:root {
+  --theme-text-color: #2b2b2b;
+  --theme-red: #ee0000;
+  --theme-blue: #3869ff;
+  --theme-light-blue: #0099e4;
+}
+
 /* reset */
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 0.625;
 }
 
 * {
@@ -46,7 +54,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-display: swap;
   overflow-x: hidden;
-  color: #2b2b2b;
+  color: var(--theme-text-color);
   position: relative;
   min-height: 100vh;
   padding-bottom: 10rem;
@@ -121,13 +129,13 @@ blockquote p {
 .navbr-primary {
   top: 0;
   left: 0;
-  border-top: 3px solid #3869ff;
+  border-top: 3px solid var(--theme-blue);
 }
 
 .navbr-secondary {
   bottom: 0;
   right: 0;
-  border-bottom: 3px solid #3869ff;
+  border-bottom: 3px solid var(--theme-blue);
 }
 
 /* Contents */
@@ -140,7 +148,7 @@ blockquote p {
 }
 
 .content {
-  color: #2b2b2b;
+  color: var(--theme-text-color);
   padding: 0 5px;
   text-align: justify;
   -webkit-font-smoothing: antialiased;
@@ -169,7 +177,7 @@ blockquote p {
 
 .animate {
   margin-top: -22px;
-  border-color: #3869ff;
+  border-color: var(--theme-blue);
   width: 0;
 }
 
@@ -205,12 +213,12 @@ h4 {
 }
 
 .hello-page {
-  color: #0099e4;
+  color: var(--theme-light-blue);
 }
 
 .hello-post {
   font-size: 1.6rem;
-  color: #ee0000;
+  color: var(--theme-red);
   /* font-weight: bold; */
   max-width: 780px;
   text-align: left;
@@ -247,7 +255,7 @@ code.block {
 /* Tag List */
 
 .taglistem {
-  color: #3869ff;
+  color: var(--theme-blue);
   max-width: 780px;
   text-justify: distribute;
   text-justify: inter-character;
@@ -256,12 +264,12 @@ code.block {
 .language a,
 .language a:link,
 .language a:visited {
-  color: #ee0000;
+  color: var(--theme-red);
 }
 
 .language a:hover,
 .language a:active {
-  color: #3869ff;
+  color: var(--theme-blue);
 }
 
 /* Footer */
@@ -274,7 +282,7 @@ footer {
   bottom: 0;
   min-width: 100vw;
   padding: 3rem;
-  border-bottom: 10px solid #0099e4;
+  border-bottom: 10px solid var(--theme-light-blue);
 }
 
 footer ul {
@@ -301,7 +309,7 @@ footer ul {
 }
 
 .social>svg:hover {
-  fill: #3869ff;
+  fill: var(--theme-blue);
   transition: fill 0.2s linear;
 }
 
@@ -323,7 +331,7 @@ footer ul {
 /* Miscellaneous */
 
 ::selection {
-  background-color: #3869ff;
+  background-color: var(--theme-blue);
   color: white;
 }
 
@@ -331,12 +339,12 @@ a,
 a:link,
 a:visited,
 a:active {
-  color: #3869ff;
+  color: var(--theme-blue);
   text-decoration: none;
 }
 
 a:hover {
-  color: #ee0000;
+  color: var(--theme-red);
   text-decoration: none;
   transition: color 0.2s linear;
 }

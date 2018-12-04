@@ -11,12 +11,18 @@
     "type": "git",
     "url": "git+https://github.com/astronomersiva/www.sivasubramanyam.me.git"
   },
-  "author": "",
+  "author": "Sivasubramanyam A",
+  "browserslist": [
+    "> 1%",
+    "last 1 versions",
+    "ie 10",
+    "not dead"
+  ],
   "bugs": {
     "url": "https://github.com/astronomersiva/www.sivasubramanyam.me/issues"
   },
   "homepage": "https://github.com/astronomersiva/www.sivasubramanyam.me#readme",
   "devDependencies": {
-    "@astronomersiva/lego": "^1.0.0"
+    "@astronomersiva/lego": "^1.0.1"
   }
 }
