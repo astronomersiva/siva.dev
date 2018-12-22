@@ -1,6 +1,7 @@
 module.exports = {
   name: 'www.sivasubramanyam.me',
   url: 'https://www.sivasubramanyam.me/',
+  skipDirsInPostUrls: true,
   critical: {
     inline: true,
     dimensions: [
