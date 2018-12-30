@@ -6,7 +6,7 @@ tags: General
 order: 16
 ---
 
-> Mountains are not stadiums where I satisfy my ambition to achieve, they are the cathedrals where I practice my religion...I go to them as humans go to worship. From their lofty summits I view my past, dream of the future and, with an unusual acuity, am allowed to experience the present moment...my vision cleared, my strength renewed. In the mountains I celebrate creation. On each journey I am reborn. - *Anatoli Boukreev*
+> Mountains are not stadiums where I satisfy my ambition to achieve, they are the cathedrals where I practice my religion...I go to them as humans go to worship. From their lofty summits I view my past, dream of the future and, with an unusual acuity, am allowed to experience the present moment...my vision cleared, my strength renewed. In the mountains I celebrate creation. On each journey I am reborn. <br><br> *Anatoli Boukreev*
 
 
 I guess it all started with what was a religious trip to Nepal with my parents. I was hardly 5 years old back then. I remember

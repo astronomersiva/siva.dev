@@ -1,7 +1,18 @@
+require('dotenv').config();
+
 module.exports = {
   name: 'www.sivasubramanyam.me',
   url: 'https://www.sivasubramanyam.me/',
   skipDirsInPostUrls: true,
+  inlineSource: true,
+  server: {
+    port: 1511,
+    host: process.env.HOST,
+    ssl: {
+      key: 'ssl/server.key',
+      cert: 'ssl/server.crt'
+    }
+  },
   critical: {
     inline: true,
     dimensions: [
@@ -15,6 +26,11 @@ module.exports = {
     ],
     penthouse: {
       timeout: 150000
+    }
+  },
+  htmlMinifier: {
+    minifyJS: {
+      output: { quote_style: 3 }
     }
   }
 }

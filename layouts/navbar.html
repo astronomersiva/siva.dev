@@ -1,8 +1,8 @@
-<div class="navbr navbr-primary">
+<div class="navbar navbar-primary">
   <a href="/">@siva</a>
 </div>
 
-<div class="navbr navbr-secondary">
+<div class="navbar navbar-secondary">
   {% if post and post.tags %}
     {% if post.date %}
       {{post.date}}
@@ -12,5 +12,7 @@
     {% endfor %}
   {% else %}
     <a href="/about/">About Me</a>
+    <span>&nbsp;/&nbsp;</span>
+    <a href="/photography/">Photography</a>
   {% endif %}
 </div>

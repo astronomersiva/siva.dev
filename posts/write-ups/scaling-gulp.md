@@ -2,7 +2,7 @@
 title: Scaling Gulp
 date: April, 2018
 description: How Gulp can be (re)used for very large projects
-tags: Gulp, Node
+tags: Gulp, Node, Tooling
 code: true
 order: 20
 ---
@@ -79,7 +79,7 @@ accomplishes the same thing!
 
 You can see that the gulpfile is now simpler and the tasks act as separate modules which I feel is much more intuitive than putting them all in the same place.
 
-As an added bonus, requiring `gulp-pug` inside the task this way makes sure that it will be required only when the task is actually run. `require()` is expensive and when you require a lot of modules in plain gulpfiles, they tend to slow down the startup. But by moving these to tasks and in a way, lazy-requiring them, you can see significant performance gains(especially on large websites). 
+As an added bonus, requiring `gulp-pug` inside the task this way makes sure that it will be required only when the task is actually run. `require()` is expensive and when you require a lot of modules in plain gulpfiles, they tend to slow down the startup. But by moving these to tasks and in a way, lazy-requiring them, you can see significant performance gains(especially for huge packages like imageoptim). 
 
 In days of Gulp 3, the task ordering `gulp.task('default', ['html', 'css', 'js']);` was even more confusing but we largely solved this by using [gulp-sequence](https://www.npmjs.com/package/gulp-sequence).
 

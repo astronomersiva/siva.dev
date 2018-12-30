@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Photography | @siva</title>
+  <meta property="og:title" content="Photography | @siva" />
+  <meta property="og:site_name" content="@siva" />
+  <meta property="og:url" content="https://sivasubramanyam.me/photography" />
+  <meta property="og:description" content="Photography | @siva" />
+  <meta name="twitter:card" content="Photography | @siva" />
+  <meta name="twitter:creator" content="@astronomersiva" />
+  <meta name="description" content="Photography | @siva" />
+
+  {% include "head.html" %}
+
+  <link href="/static/css/ajanta.css" rel="stylesheet" type="text/css">
+  <link inline href="/static/css/photography.css" rel="stylesheet" type="text/css">
+
+  {% assign imageSrcBase = "/static/images/photography/" %}
+  <!-- {% for photo in data.photos %}
+    <link rel="preload" href="{{imageSrcBase}}{{photo.src}}" as="image">
+  {% endfor %} -->
+</head>
+<body>
+  {% include "navbar-posts.html" %}
+
+  <div class="container">
+    <div class="content post-header">
+      <h1>Photography</h1>
+      <h2>{{post.description}}</h2>
+      <hr class="post-hr">
+    </div>
+  </div>
+
+  <main role="main">
+    <div class="container photos">
+      <div class="content">
+        <!-- Probably the most complex Liquid template code you will ever see :facepalm:
+        Beats JS based solutions anyday, so going to stick to this -->
+        {% assign no_of_photos = data.photos.size %}
+
+        <!-- range in liquid is inclusive of the last digit -->
+        {% assign no_of_photos_for_looping = no_of_photos | minus: 1 %}
+
+        {% assign _photos_in_first_col = no_of_photos | divided_by: 3 | ceil %}
+        {% assign _photos_in_second_col = no_of_photos | minus: _photos_in_first_col | divided_by: 2 | ceil %}
+        {% assign _photos_in_third_col = no_of_photos | minus: _photos_in_first_col | minus: _photos_in_second_col %}
+
+        {% if _photos_in_first_col == _photos_in_second_col and _photos_in_second_col == _photos_in_third_col %}
+          {% assign photos_in_first_col = _photos_in_first_col %}
+          {% assign photos_in_second_col = _photos_in_second_col %}
+          {% assign photos_in_third_col = _photos_in_third_col %}
+        {% else %}
+          <!-- 4, 4, 3 -- 4, 3, 4 -->
+          {% if _photos_in_first_col == _photos_in_second_col %}
+            {% if _photos_in_second_col != _photos_in_third_col %}
+              {% comment %}
+                {% assign photos_in_second_col = _photos_in_second_col | minus: 1 %}
+                {% assign photos_in_third_col = _photos_in_third_col | plus: 1 %}
+                {% assign photos_in_first_col = _photos_in_first_col %}
+              {% endcomment %}
+              {% assign photos_in_first_col = _photos_in_first_col %}
+              {% assign photos_in_second_col = _photos_in_second_col %}
+              {% assign photos_in_third_col = _photos_in_third_col %}
+            {% endif %}
+          <!-- 4, 3, 3 -- 3, 4, 3 -->
+          {% else %}
+            {% if _photos_in_second_col == _photos_in_third_col %}
+              {% assign photos_in_first_col = _photos_in_first_col | minus: 1 %}
+              {% assign photos_in_second_col = _photos_in_second_col | plus: 1 %}
+              {% assign photos_in_third_col = _photos_in_third_col %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+
+        <div class="photo-column">
+          {% assign endindex = photos_in_first_col | minus: 1 %}
+          {% for i in (0..endindex) %}
+            {% include "photo-column.html" %}
+          {% endfor %}
+        </div>
+        <div class="photo-column">
+          {% assign startindex = photos_in_first_col %}
+          {% assign endindex = photos_in_first_col | plus: photos_in_second_col | minus: 1 %}
+          {% for i in (startindex..endindex) %}
+            {% include "photo-column.html" %}
+          {% endfor %}
+        </div>
+        <div class="photo-column">
+          {% assign startindex = photos_in_first_col | plus: photos_in_second_col %}
+          {% assign endindex = no_of_photos_for_looping %}
+          {% for i in (startindex..endindex) %}
+            {% include "photo-column.html" %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal">
+    <div class="close" onclick="closeModal()">x</div>
+    <img src="" class="img-responsive center-block modal-image">
+    <h4 class="modal-desc"></h4>
+  </div>
+
+  {% include "footer.html" %}
+
+  <script inline defer src="/static/js/modal.js"></script>
+  <script inline defer src="/static/js/intersection-lazy-loader.js"></script>
+</body>
+</html>

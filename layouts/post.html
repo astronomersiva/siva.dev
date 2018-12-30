@@ -9,7 +9,9 @@
   <meta name="twitter:card" content="{{ post.description }}" />
   <meta name="twitter:creator" content="@astronomersiva" />
   <meta name="description" content="{{ post.description }}" />
+
   {% include "head.html" %}
+
   {% if post.hero %}
     <style>
       .webp .hero-post, .hero-post {
@@ -29,7 +31,9 @@
       {% endif %}
     </style>
   {% endif %}
+
   <link href="/static/css/ajanta.css" rel="stylesheet" type="text/css">
+
   {% if post.code %}
     <link rel="stylesheet" href="/static/js/highlight/styles/github-gist.css" type="text/css">
     <script src="/static/js/highlight/highlight.pack.js"></script>
@@ -45,24 +49,20 @@
       <link rel="prefetch" href="/tag/{{tag | downcase}}/">
     {% endfor %}
   {% endif %}
-  <link rel="prefetch" href="/">
 </head>
 <body>
-  <div class="content hero hero-post">
-    {% include "navbar.html" %}
-    <div class="helloWorld">
-      <div class="hello hello-post">
-        {{ post.title }}
-      </div>
-    </div>
-  </div>
+  {% include "navbar-posts.html" %}
+
+  {% include "post-header.html" %}
 
   <main role="main">
     <div class="container posts">
       <div class="content">
         {{ post.html }}
         <br>
-        <div class="see-more">
+        <hr class="post-hr">
+        <br>
+        <div class="see-more text-center">
           View Other Posts Tagged
           {% for tag in post.tags %}
             - <a href="/tag/{{tag | downcase}}">{{tag}}</a>

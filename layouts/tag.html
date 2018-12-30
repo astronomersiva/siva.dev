@@ -3,28 +3,34 @@
 <html lang="en">
 <head>
   <title>List of posts tagged {{ tag }} | @siva</title>
+
   {% include "head.html" %}
+
   {% assign allArticles = posts | sortByOrder %}
   {% for article in allArticles %}
     {% if article.featured %}
       <link rel="prefetch" href="/{{article.path}}/">
     {% endif %}
   {% endfor %}
-  <style>
-    .hero-post {
-      background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAhADIDASIAAhEBAxEB/8QAHAAAAgICAwAAAAAAAAAAAAAAAAUEBgEDAgcI/8QAKRAAAQMDAgUEAwEAAAAAAAAAAQACAwQFESExBhITNFEUQWFxFTIzNf/EABgBAQEBAQEAAAAAAAAAAAAAAAIDAQQF/8QAIBEAAwACAgIDAQAAAAAAAAAAAAECAxEEEhMxFCEiQf/aAAwDAQACEQMRAD8A86RSsADZG6eVvFLFNkxSAfBWI4oZJC32zurHLwrGbUKynl19wEJ/b0huHM936Ky6mnhOcZHkJ7w/xHPaj0pGkxO3BW6x2l9QeUzjPgpvc+GZfT8zYw7G5Chn5WPBk8dvTDMup7L0O7ZfKGrhdqGOISSqkZNWljXAk7JJR0jGzGN7iwhSXNNJURv1IB3TWUtgxTmTaf2Mvwk515jqhO47lAY25eM4CF07kn4qOoI3uYcgqwW3iWalpHU7xzMdokMERkeGjcqa+3uhwZP18oJ6e0Hba6/wc2OqM1Y4wkhw1V2qr6YbBJLE4GVo5XAqgWuIUs4lhdqQs19PWSCR7HksdqWhefzuM+blTvWkUxOcUan2K6i5TTTPfnBccqfBeXOp+lKOYjYpO2F/U5cHKZizzCDqv0C7HMpaDFVD3Ju9d8lCgekkQh0Rb5GQ4Ufcx/asF47EfSEKzOciUP8ABqd0Xbv+kIWGlePfj7VjrP8AOCEIMSEw2QhC0w//2Q==');
-      transition: background 0.3s linear;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="content hero hero-post">
+  <div class="content hero hero-page">
     {% include "navbar.html" %}
 
     <div class="helloWorld">
-      <div class="hello hello-post">
+      <div class="hello hello-page">
         <div class="taglistem">Posts tagged {{tag}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content mobile-hero">
+    {% include "navbar-posts.html" %}
+
+    <div class="container">
+      <div class="content post-header">
+        <h1>Posts tagged {{tag}}</h1>
       </div>
     </div>
   </div>
@@ -33,45 +39,19 @@
     <div class="content">
       {% assign articles = posts | sortByOrder %}
 
-      {% for post in articles %}
-        {% if post.featured %}
-          {% for postTag in post.tags %}
-            {% if postTag == tag %}
-              <div class="post">
-                <a href="/{{post.path}}/">{{post.title}}</a>
-                <span class="language">
-                  {% for postTag in post.tags %}
-                    <a href = "/tag/{{postTag | downcase}}/">&nbsp;&nbsp;{{postTag}}</a>
-                  {% endfor %}
-                </span><br>
-                {{post.description}}
-                <hr>
-                <hr class="animate">
-              </div>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
+      <main role="main">
+        {% for post in articles %}
+          {% if post.featured %}
+            {% include "tagged-post.html" %}
+          {% endif %}
+        {% endfor %}
 
-      {% for post in articles %}
-        {% unless post.featured %}
-          {% for postTag in post.tags %}
-            {% if postTag == tag %}
-              <div class="post">
-                <a href="/{{post.path}}/">{{post.title}}</a>
-                <span class="language secondary-link">
-                  {% for postTag in post.tags %}
-                    <a href = "/tag/{{postTag | downcase}}/">&nbsp;&nbsp;{{postTag}}</a>
-                  {% endfor %}
-                </span><br>
-                {{post.description}}
-                <hr>
-                <hr class="animate">
-              </div>
-            {% endif %}
-          {% endfor %}
-        {% endunless %}
-      {% endfor %}
+        {% for post in articles %}
+          {% unless post.featured %}
+            {% include "tagged-post.html" %}
+          {% endunless %}
+        {% endfor %}
+      </main>
     </div>
   </div>
 
