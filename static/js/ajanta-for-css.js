@@ -7,17 +7,16 @@ if (!heroDiv) {
   hero = '/static/images/hero-post.jpg';
 }
 
-if (window.innerWidth <= 470) {
-  hero = '/static/images/hero-mobile.jpg';
-}
 
 if (html.className.includes('webp')) {
   hero = hero.replace('.jpg', '.webp');
 }
 
-let placeholderElement = new Image();
-placeholderElement.src = hero;
+if (heroDiv) {
+  let placeholderElement = new Image();
+  placeholderElement.src = hero;
 
-placeholderElement.onload = function() {
-  heroDiv.setAttribute('style', `background-image: url(${hero})`);
+  placeholderElement.onload = function() {
+    heroDiv.setAttribute('style', `background-image: url(${hero})`);
+  }
 }

@@ -1,0 +1,24 @@
+{% assign src = imageSrcBase | append: data.photos[i].src %}
+{% assign placeholderSrc = imageSrcBase | append: "placeholder-" | append: data.photos[i].src %}
+<div class="photo-container">
+  <div class="ajanta">
+    {% assign description = data.photos[i].description %}
+
+    <img
+      inline
+      data-img-src="{{src}}"
+      class="img-responsive center-block pixelated blur"
+      src="{{placeholderSrc}}"
+      alt="{{description}}"
+    />
+
+    <img
+      class="img-responsive center-block original"
+      data-loaded="photo-{{i}}"
+    />
+  </div>
+  <div class="loading" data-loading="photo-{{i}}"></div>
+  <div class="photo-overlay" onclick="openModal('{{src}}', '{{description}}')">
+    <h4>{{description}}</h4>
+  </div>
+</div>

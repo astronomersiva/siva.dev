@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "lego s",
-    "build": "lego"
+    "build": "lego",
+    "build:debug": "DEBUG=t lego"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,7 @@
   "browserslist": [
     "> 1%",
     "last 1 versions",
-    "ie 10",
+    "not ie 11",
     "not dead"
   ],
   "bugs": {
@@ -23,6 +24,9 @@
   },
   "homepage": "https://github.com/astronomersiva/www.sivasubramanyam.me#readme",
   "devDependencies": {
-    "@astronomersiva/lego": "^1.3.0"
+    "@astronomersiva/lego": "^1.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0"
   }
 }

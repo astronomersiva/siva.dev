@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta name="description" content="Developer, Astronomer and Trekker from India.">
+
   {% include "head.html" %}
+
   {% assign allArticles = posts | sortByOrder %}
   {% for article in allArticles %}
     {% if article.featured %}
@@ -17,6 +19,16 @@
     <div class="helloWorld">
       <div class="hello hello-page">
         Hello, World!
+      </div>
+    </div>
+  </div>
+
+  <div class="content mobile-hero">
+    {% include "navbar-posts.html" %}
+
+    <div class="container">
+      <div class="content post-header">
+        <h1>Hello, World!</h1>
       </div>
     </div>
   </div>

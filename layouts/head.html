@@ -21,13 +21,7 @@
   </script>
 {% endunless %}
 
-<script>
-  isWebp = () => document.createElement('canvas').toDataURL('image/webp').startsWith('data:image/webp');
-  if (isWebp()) {
-    let html = document.getElementsByTagName('html')[0];
-    html.className = 'webp';
-  }
-</script>
+<script inline src="/static/js/determine-webp-support.js"></script>
 
 <link rel="stylesheet" href="/static/css/styles.css">
 
@@ -37,22 +31,29 @@
   crossorigin="anonymous"
   as="font">
 
+<link
+  rel="preload"
+  href="https://fonts.gstatic.com/s/ptserif/v9/EJRVQgYoZZY2vCFuvAFWzr-_dSb_.woff2"
+  crossorigin="anonymous"
+  as="font">
+
+<link
+  rel="preload"
+  href="https://fonts.gstatic.com/s/ptserif/v9/EJRSQgYoZZY2vCFuvAnt66qSVyvVp8NA.woff2"
+  crossorigin="anonymous"
+  as="font">
+
+<link rel="prefetch" href="/">
+<link rel="prefetch" href="/about/">
+<link rel="prefetch" href="/archive/">
+<link rel="prefetch" href="/photography/">
+
 {% if post %}
   <link rel="preload" href="/static/js/highlight/styles/github-gist.css" as="style">
   <link rel="preload" href="/static/js/highlight/highlight.pack.js" as="script">
 
   <link rel="preload" href="/static/css/ajanta.css" as="style">
   <link rel="preload" href="/static/js/ajanta.js" as="script">
-  <link rel="preload" href="/static/js/ajanta-for-css.js" as="script">
-
-  {% unless post.hero %}
-    <style>
-      .hero-post {
-        background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAhADIDASIAAhEBAxEB/8QAHAAAAgICAwAAAAAAAAAAAAAAAAUEBgEDAgcI/8QAKRAAAQMDAgUEAwEAAAAAAAAAAQACAwQFESExBhITNFEUQWFxFTIzNf/EABgBAQEBAQEAAAAAAAAAAAAAAAIDAQQF/8QAIBEAAwACAgIDAQAAAAAAAAAAAAECAxEEEhMxFCEiQf/aAAwDAQACEQMRAD8A86RSsADZG6eVvFLFNkxSAfBWI4oZJC32zurHLwrGbUKynl19wEJ/b0huHM936Ky6mnhOcZHkJ7w/xHPaj0pGkxO3BW6x2l9QeUzjPgpvc+GZfT8zYw7G5Chn5WPBk8dvTDMup7L0O7ZfKGrhdqGOISSqkZNWljXAk7JJR0jGzGN7iwhSXNNJURv1IB3TWUtgxTmTaf2Mvwk515jqhO47lAY25eM4CF07kn4qOoI3uYcgqwW3iWalpHU7xzMdokMERkeGjcqa+3uhwZP18oJ6e0Hba6/wc2OqM1Y4wkhw1V2qr6YbBJLE4GVo5XAqgWuIUs4lhdqQs19PWSCR7HksdqWhefzuM+blTvWkUxOcUan2K6i5TTTPfnBccqfBeXOp+lKOYjYpO2F/U5cHKZizzCDqv0C7HMpaDFVD3Ju9d8lCgekkQh0Rb5GQ4Ufcx/asF47EfSEKzOciUP8ABqd0Xbv+kIWGlePfj7VjrP8AOCEIMSEw2QhC0w//2Q==');
-        transition: background 0.3s linear;
-      }
-    </style>
-  {% endunless %}
 {% else %}
   <link rel="prefetch" href="/static/js/highlight/styles/github-gist.css" as="style">
   <link rel="prefetch" href="/static/js/highlight/highlight.pack.js" as="script">
