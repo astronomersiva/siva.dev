@@ -60,14 +60,16 @@
       <div class="content">
         {{ post.html }}
         <br>
-        <hr class="post-hr">
-        <br>
-        <div class="see-more text-center">
+
+        <div class="see-more" style="font-style: italic;">
           View Other Posts Tagged
           {% for tag in post.tags %}
             - <a href="/tag/{{tag | downcase}}">{{tag}}</a>
           {% endfor %}
         </div>
+
+        <hr class="post-hr">
+        <br>
       </div>
     </div>
   </main>

@@ -238,6 +238,7 @@ strong, b {
   margin-top: 30px;
   font-size: 0.85rem;
   letter-spacing: 2px;
+  color: var(--theme-text-light);
 }
 
 .animate {
@@ -309,11 +310,12 @@ code.block {
 }
 
 .post-hr {
-  width: 10%;
-  margin-left: 45%;
+  width: 5%;
+  margin-left: 50%;
   border-top: 2px solid var(--theme-red);
-  margin-top: 4%;
+  margin-top: 2%;
   margin-bottom: 0;
+  transform: translateX(-50%);
 }
 
 @media screen and (max-width: 760px) {
