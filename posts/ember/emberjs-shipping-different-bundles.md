@@ -19,7 +19,10 @@ We use [ember-cli-deploy](http://ember-cli-deploy.com/docs/v0.6.x/the-lightning-
 
 One of the core concepts of this strategy is to have a build label(say, June_1_2018) pointing to the `index.html` of the build. `ember-cli-deploy` provides various hooks to take control of your entire build pipeline. Using those hooks, generate and upload two different builds for your application. You can make use of ENV variables to change the targets. So, generate one build with transpilation and another without transpilation. One of these builds works for all browsers specified in the `targets.js` and the other will work only on modern browsers.
 
-<img data-src="/static/images/targets.png" src="" alt="Passing ENV to targets">
+<img data-src="/static/images/targets.png" src="" alt="Passing ENV to targets" class="old-lazy-load">
+<noscript>
+  <img src="/static/images/targets.png" alt="Passing ENV to targets">
+</noscript>
 
 With the lightning approach, each of these builds will have a different build label(say, June_1_2018_1 for transpiled and June_1_2018_2 for untranspiled). With ember-cli-deploy, we can change these! We can change the label of the untranspiled build to `${label_of_transpiled_build}-modern`.
 

@@ -19,14 +19,7 @@ have well established spots to see rocket launches from. So we googled SHAR and 
 was a roughly 20 kilometer long road connecting Sullurpet with the island of Sriharikota. Of this,
 there was a 10 km section that passed straight through the Pulicat lake. This is when it struck us.
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/shar-road.png" 
-    alt="Road to SHAR">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/shar-road.png" alt="Road to SHAR" :::
 
 Bang in the middle is the Pulicate Bird Sanctuary office. It was highly unlikely that it would be out of
 bounds to outsiders just because there was a rocket launch happening. We also noticed that there was
@@ -57,14 +50,24 @@ forward bearing between my location(the triangle) and a place of interest(the ci
 bearing is displayed as 45.9 degrees.
 
 <div class="portrait-image">
-  <img data-src="/static/images/forward-bearing.jpg" src="" alt="Forward Bearing">
+  <img data-src="/static/images/forward-bearing.jpg" src="" alt="Forward Bearing" class="old-lazy-load">
 </div>
+<noscript>
+  <div class="portrait-image">
+    <img src="/static/images/forward-bearing.jpg" alt="Forward Bearing">
+  </div>
+</noscript>
 
 All we had to do after that was use a mobile compass to point to that bearing and wait.
 
 <div class="portrait-image">
-  <img data-src="/static/images/gslv.jpg" src="" alt="GSLV Launch">
+  <img data-src="/static/images/gslv.jpg" src="" alt="GSLV Launch" class="old-lazy-load">
 </div>
+<noscript>
+  <div class="portrait-image">
+    <img src="/static/images/gslv.jpg" alt="GSLV Launch">
+  </div>
+</noscript>
 
 I have visited this place numerous times and seen the crowd gradually increase over the years. I was even
 invited to give an interview on a radio station about this!

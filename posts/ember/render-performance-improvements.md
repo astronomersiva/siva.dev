@@ -49,28 +49,14 @@ in my viewport.
 
 It displays something as simple as this.
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/list.png" 
-    alt="List">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/list.png" alt="List" :::
 
 Let us profile this and see. 
 
 *I use a high-end Macbook Pro, so let's throttle the CPU by 4x to replicate what most
 people will be seeing.*
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/before-isopen.png" 
-    alt="Rendering Speed">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/before-isopen.png" alt="Rendering Speed" :::
 
 There. ~240ms to display a simple list. I had this whole thing wrapped in a `canShow` block
 with a button to toggle it and could clearly notice the lag between when I clicked the button
@@ -117,14 +103,7 @@ see if there are any improvements in the initial rendering performance.
 
 **99ms**. This is still bad but at least a major improvement from what we had before.
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/after-isopen.png" 
-    alt="After">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/after-isopen.png" alt="After" :::
 
 We were able to significantly improve our initial and re-render performance in some of our
 routes by this technique. Do try this out in your apps if you follow a similar pattern in your templates.

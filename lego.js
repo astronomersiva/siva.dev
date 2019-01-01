@@ -1,5 +1,8 @@
 require('dotenv').config();
 
+const markdownOptions = require('./config/markdown');
+const critical = require('./config/extract-critical');
+
 module.exports = {
   name: 'www.sivasubramanyam.me',
   url: 'https://www.sivasubramanyam.me/',
@@ -13,24 +16,11 @@ module.exports = {
       cert: 'ssl/server.crt'
     }
   },
-  critical: {
-    inline: true,
-    dimensions: [
-      {
-        height: 800,
-        width: 470
-      }, {
-        height: 900,
-        width: 1200
-      }
-    ],
-    penthouse: {
-      timeout: 150000
-    }
-  },
   htmlMinifier: {
     minifyJS: {
       output: { quote_style: 3 }
     }
-  }
+  },
+  md: markdownOptions,
+  critical
 }

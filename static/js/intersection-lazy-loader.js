@@ -56,7 +56,7 @@
     }
 
     if (isWebpSupported) {
-      src = `${src}.webp`;
+      src = image.dataset.imgWebpSrc;
     }
 
     return fetchImage(src).then(() => { applyImage(image, src); });

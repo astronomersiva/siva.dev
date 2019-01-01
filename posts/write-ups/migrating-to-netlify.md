@@ -33,25 +33,11 @@ It was time to move!
 
 #### **Before**
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/webpagetest-before.png" 
-    alt="Before">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/webpagetest-before.png" alt="Before" :::
 
 #### **After**
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/webpagetest-after.png" 
-    alt="After">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/webpagetest-after.png" alt="After" :::
 
 I set up a CNAME for the subdomain `www` aliasing it to Netlify. After it was provisioned with
 SSL, I set up a 301 permanent redirect from the root domain to the www subdomain. This ensured that
