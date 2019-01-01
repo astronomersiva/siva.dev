@@ -10,7 +10,7 @@ module.exports = {
   inlineSource: true,
   server: {
     port: 1511,
-    host: process.env.HOST,
+    host: process.env.HOST || 'localhost',
     ssl: {
       key: 'ssl/server.key',
       cert: 'ssl/server.crt'

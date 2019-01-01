@@ -1,0 +1,16 @@
+language: node_js
+node_js: '8'
+cache: npm
+
+dist: trusty
+
+git:
+  depth: 5
+
+addons:
+  chrome: stable
+
+script:
+  - npm run build
+  - sleep 3
+  - npm run test
