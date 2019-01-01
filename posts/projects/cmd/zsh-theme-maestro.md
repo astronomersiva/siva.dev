@@ -13,15 +13,7 @@ I intended to create something visually similar to the impressive [night owl](ht
 
 [[Source on Github]](https://github.com/astronomersiva/zsh-theme-maestro/)
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/maestro.png" 
-    data-src="/static/images/maestro.png" 
-    alt="maestro theme">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/maestro.png" alt="maestro theme" :::
 
 It has the following feautures:
 
@@ -30,12 +22,4 @@ It has the following feautures:
 * When in a Git repository, the path is shown relative to the project root.
 * Displays the branch name when in a Git repository and indicates if it's dirty. 
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/git-repo.png" 
-    data-src="/static/images/git-repo.png" 
-    alt="git repo">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/git-repo.png" alt="git repo" :::

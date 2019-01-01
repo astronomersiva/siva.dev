@@ -12,12 +12,4 @@ I used the W3C Geolocation API for fetching the location and OpenWeather Map's A
 
 [[Source on Github]](http://github.com/astronomersiva/weather/)
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    data-src="/static/images/weather.jpg" 
-    src="/static/images/lowres/weather.jpg" 
-    alt="Screenshot">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/weather.jpg" alt="Screenshot" :::

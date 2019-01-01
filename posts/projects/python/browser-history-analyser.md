@@ -14,12 +14,4 @@ Initially, I had to figure out a way to access the browser history from the Pyth
 
 [[Source on Github]](https://github.com/astronomersiva/SnoopMyself)
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/siteanalytics.png"
-    data-src="/static/images/siteanalytics.png"
-    alt="Sample output">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/siteanalytics.png" alt="Sample output" :::

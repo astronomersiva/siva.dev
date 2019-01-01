@@ -9,11 +9,8 @@ for (let ajanta of ajantaImages) {
     original.setAttribute('alt', pixelated.getAttribute('alt'));
   }
 
-  let src = pixelated.src.replace('/lowres', '');
-  let imageFormat = pixelated.getAttribute('data-image-format');
-  if (imageFormat) {
-    src = src.replace('png', imageFormat);
+  let src = pixelated.getAttribute('data-src');
+  if (src) {
+    original.src = src;
   }
-
-  original.src = src;
 }

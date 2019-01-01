@@ -22,13 +22,4 @@ When I then opened `localhost:5000/static/map.html` in my browser, I could see t
 
 [[Source on Github]](https://github.com/astronomersiva/twitter-independence-day-heatmap)
 
-<div class="ajanta">
-  <img
-    class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/india.png" 
-    data-src="/static/images/india.gif" 
-    alt="Screenshot"
-    data-image-format="gif">
-
-  <img class="img-responsive center-block original">
-</div>
+::: lazy-image src="/static/images/lowres/india.png" dSrc="/static/images/india.gif" alt="Screenshot" :::

@@ -19,6 +19,13 @@
       data-loaded="photo-{{i}}"
     />
   </div>
+  <noscript>
+    <img
+      class="img-responsive center-block"
+      src="{{src}}"
+      alt="{{description}}"
+      data-loaded="photo-{{i}}">
+  </noscript>
   <div class="loading" data-loading="photo-{{i}}"></div>
   <div class="photo-overlay" onclick="openModal('{{src}}', '{{webp_src}}', '{{description}}')">
     <h4>{{description}}</h4>
