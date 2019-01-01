@@ -11,6 +11,7 @@ addons:
   chrome: stable
 
 script:
-  - npm run build
+  - npm run build:debug
+  - npm run serve
   - sleep 3
   - npm run test
