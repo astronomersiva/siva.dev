@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/astronomersiva/www.sivasubramanyam.me#readme",
   "devDependencies": {
-    "@astronomersiva/lego": "^1.5.0"
+    "@astronomersiva/lego": "^1.6.0"
   },
   "dependencies": {
     "dotenv": "^6.2.0"
