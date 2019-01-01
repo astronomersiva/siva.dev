@@ -16,6 +16,7 @@ We created a PHP and MySQL web application that would accelerate the process of 
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/valparai.png"
+    data-src="/static/images/valparai.jpg"
     alt="copy-pastable captcha"
     data-image-format="jpg">
 

@@ -26,6 +26,7 @@ When I then opened `localhost:5000/static/map.html` in my browser, I could see t
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/india.png" 
+    data-src="/static/images/india.gif" 
     alt="Screenshot"
     data-image-format="gif">
 

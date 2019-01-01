@@ -13,6 +13,7 @@ Open the Command Palette(Cmd+Shift+P on macOS, Ctrl+Shift+P on Windows and Linux
 <div class="ajanta">
   <img
     class="img-responsive center-block pixelated blur"
+    data-src="/static/images/paste-clean-diff.gif" 
     src="/static/images/lowres/paste-clean-diff.png" 
     alt="Paste Clean Diff"
     data-image-format="gif">
@@ -25,6 +26,7 @@ To clean up an already pasted diff, select the diff and then choose `Clean Diff`
 <div class="ajanta">
   <img
     class="img-responsive center-block pixelated blur"
+    data-src="/static/images/clean-pasted-diff.gif" 
     src="/static/images/lowres/clean-pasted-diff.png" 
     alt="Clean Pasted Diff"
     data-image-format="gif">

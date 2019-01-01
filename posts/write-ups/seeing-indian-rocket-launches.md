@@ -23,6 +23,7 @@ there was a 10 km section that passed straight through the Pulicat lake. This is
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/shar-road.png" 
+    data-src="/static/images/shar-road.png" 
     alt="Road to SHAR">
 
   <img class="img-responsive center-block original">

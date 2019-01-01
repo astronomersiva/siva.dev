@@ -12,6 +12,7 @@ It was November 15, 2013\. I was liking and replying to some 150 birthday wishes
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/birthday.jpg" 
+    data-src="/static/images/birthday.jpg" 
     alt="Screenshot">
 
   <img class="img-responsive center-block original">

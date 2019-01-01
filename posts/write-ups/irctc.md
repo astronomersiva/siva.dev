@@ -14,6 +14,7 @@ Recently, I chanced upon the PNR Enquiry site and then noticed this. Their CAPTC
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/irctc1.png"
+    data-src="/static/images/irctc1.jpg"
     alt="copy-pastable captcha"
     data-image-format="jpg">
 
@@ -26,6 +27,7 @@ Seriously, wasn't CAPTCHA designed to prevent bots? I went through the source co
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/irctc2.png"
+    data-src="/static/images/irctc2.jpg"
     alt="text overlay for a captcha"
     data-image-format="jpg">
 
@@ -38,6 +40,7 @@ After spending some more time in the source code, I was shocked. It was not actu
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/irctc3.png"
+    data-src="/static/images/irctc3.jpg"
     alt="random number generator test code"
     data-image-format="jpg">
 
@@ -52,6 +55,7 @@ To demonstrate how easy it is to break this so called CAPTCHA, I wrote a Python 
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/irctc5.png"
+    data-src="/static/images/irctc5.jpg"
     alt="breaking captcha"
     data-image-format="jpg">
 

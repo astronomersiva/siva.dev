@@ -52,6 +52,7 @@ It displays something as simple as this.
 <div class="ajanta">
   <img
     class="img-responsive center-block pixelated blur"
+    data-src="/static/images/list.png" 
     src="/static/images/lowres/list.png" 
     alt="List">
 
@@ -66,6 +67,7 @@ people will be seeing.*
 <div class="ajanta">
   <img
     class="img-responsive center-block pixelated blur"
+    data-src="/static/images/before-isopen.png" 
     src="/static/images/lowres/before-isopen.png" 
     alt="Rendering Speed">
 
@@ -120,6 +122,7 @@ see if there are any improvements in the initial rendering performance.
 <div class="ajanta">
   <img
     class="img-responsive center-block pixelated blur"
+    data-src="/static/images/after-isopen.png" 
     src="/static/images/lowres/after-isopen.png" 
     alt="After">
 

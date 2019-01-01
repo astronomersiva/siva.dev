@@ -17,6 +17,7 @@ I intended to create something visually similar to the impressive [night owl](ht
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/maestro.png" 
+    data-src="/static/images/maestro.png" 
     alt="maestro theme">
 
   <img class="img-responsive center-block original">
@@ -33,6 +34,7 @@ It has the following feautures:
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/git-repo.png" 
+    data-src="/static/images/git-repo.png" 
     alt="git repo">
 
   <img class="img-responsive center-block original">

@@ -18,6 +18,7 @@ Initially, I had to figure out a way to access the browser history from the Pyth
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/siteanalytics.png"
+    data-src="/static/images/siteanalytics.png"
     alt="Sample output">
 
   <img class="img-responsive center-block original">

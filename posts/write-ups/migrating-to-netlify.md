@@ -36,7 +36,8 @@ It was time to move!
 <div class="ajanta">
   <img
     class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/webpagetest-before.png" 
+    src="/static/images/lowres/webpagetest-before.png"
+    data-src="/static/images/webpagetest-before.png" 
     alt="Before">
 
   <img class="img-responsive center-block original">
@@ -48,6 +49,7 @@ It was time to move!
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/images/lowres/webpagetest-after.png" 
+    data-src="/static/images/webpagetest-after.png" 
     alt="After">
 
   <img class="img-responsive center-block original">

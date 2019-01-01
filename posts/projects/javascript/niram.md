@@ -13,7 +13,8 @@ niram lets you upload an image and displays the 5 most common color codes of tha
 <div class="ajanta">
   <img
     class="img-responsive center-block pixelated blur"
-    src="/static/images/lowres/niram.png" 
+    src="/static/images/lowres/niram.png"
+    data-src="/static/images/niram.png"
     alt="Screenshot">
 
   <img class="img-responsive center-block original">

@@ -29,6 +29,7 @@ We reached Pokhara on the night of 24th and literally jumped into our beds after
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/abc/lowres/pokharaview.png" 
+    data-src="/static/abc/pokharaview.jpg" 
     alt="copy-pastable captcha"
     data-image-format="jpg">
 
@@ -42,6 +43,7 @@ We started our trek at about 11 on the day of Christmas and unlike most people, 
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/abc/lowres/landslide.png" 
+    data-src="/static/abc/landslide.jpg" 
     alt="copy-pastable captcha"
     data-image-format="jpg">
 
@@ -61,6 +63,7 @@ We reached Dobhan a little after 4 in the evening. The views were perfect from D
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/abc/lowres/frozen.png" 
+    data-src="/static/abc/frozen.jpg" 
     alt="copy-pastable captcha"
     data-image-format="jpg">
 
@@ -74,6 +77,7 @@ The next day, we set out to Deurali located at about 3100 meters. However, our g
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/abc/lowres/guides.png" 
+    data-src="/static/abc/guides.jpg" 
     alt="copy-pastable captcha"
     data-image-format="jpg">
 
@@ -87,6 +91,7 @@ The groups that I had mentioned earlier were now close to us. We had even become
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/abc/lowres/machapucchare.png" 
+    data-src="/static/abc/machapucchare.jpg" 
     alt="copy-pastable captcha"
     data-image-format="jpg">
 
@@ -116,6 +121,7 @@ As I kept moving, I could hear the snow crunching under my feet. The sound was l
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/abc/lowres/abcnight.png" 
+    data-src="/static/abc/abcnight.jpg" 
     alt="copy-pastable captcha"
     data-image-format="jpg">
 
@@ -133,6 +139,7 @@ The minute I took out my camera, I realised that I would have to remove my glove
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/abc/lowres/abc.png" 
+    data-src="/static/abc/abc.jpg" 
     alt="copy-pastable captcha"
     data-image-format="jpg">
 
@@ -149,6 +156,7 @@ Soon, we met the other groups as well. The Netherlands gang was there and so was
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/abc/lowres/towardsm.png" 
+    data-src="/static/abc/towardsm.jpg" 
     alt="copy-pastable captcha"
     data-image-format="jpg">
 
@@ -170,6 +178,7 @@ This trek gave me new friends, taught me new things and I began to appreciate al
   <img
     class="img-responsive center-block pixelated blur"
     src="/static/abc/lowres/patan.png" 
+    data-src="/static/abc/patan.jpg" 
     alt="copy-pastable captcha"
     data-image-format="jpg">
 
