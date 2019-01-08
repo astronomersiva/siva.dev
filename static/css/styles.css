@@ -234,6 +234,10 @@ strong, b {
   margin-bottom: 40px;
 }
 
+.archive-year:not(:first-child) {
+  margin-top: 20px;
+}
+
 .see-more {
   margin-top: 30px;
   font-size: 0.85rem;
@@ -389,6 +393,7 @@ h4 {
   color: var(--theme-red);
 }
 
+.language a:focus,
 .language a:hover,
 .language a:active {
   color: var(--theme-blue);
@@ -460,10 +465,20 @@ a:active {
   text-decoration: none;
 }
 
+a:focus,
 a:hover {
   color: var(--theme-red);
   text-decoration: none;
   transition: color 0.2s linear;
+}
+
+h4 > a,
+h4 > a:link,
+h4 > a:visited,
+h4 > a:focus,
+h4 > a:hover,
+h4 > a:active {
+  color: var(--theme-heading);
 }
 
 @font-face {
