@@ -19,7 +19,9 @@ have well established spots to see rocket launches from. So we googled SHAR and 
 was a roughly 20 kilometer long road connecting Sullurpet with the island of Sriharikota. Of this,
 there was a 10 km section that passed straight through the Pulicat lake. This is when it struck us.
 
-::: lazy-image src="/static/images/lowres/shar-road.png" alt="Road to SHAR" :::
+::: lazy-image src="/static/images/lowres/shar-road.png" alt="Road to SHAR" style="max-width: 600px; margin: 0 auto;" :::
+
+<br>
 
 Bang in the middle is the Pulicate Bird Sanctuary office. It was highly unlikely that it would be out of
 bounds to outsiders just because there was a rocket launch happening. We also noticed that there was
