@@ -13,7 +13,7 @@ module.exports = {
           if (statement.type === 'container_lazy-image_open') {
             let tagContents = statement.info.replace(':::', '').trim();
 
-            let attributesRegex = /(\w+)="([\s\w,.\-_/@]+)"/g;
+            let attributesRegex = /(\w+)="([\s\w,.\-_/@:;]+)"/g;
             let attributes = tagContents.match(attributesRegex);
             let attributeMap = {};
             for (let attribute of attributes) {
@@ -21,8 +21,10 @@ module.exports = {
               attributeMap[key] = value.replace(/"/g, '');
             }
 
+            let style = attributeMap.style;
+            let styleMarkup = style ? `style="${style}"` : '';
             return `
-              <div class="ajanta">
+              <div class="ajanta" ${styleMarkup}>
                 <img
                   class="img-responsive center-block pixelated blur"
                   src="${attributeMap.src}"
