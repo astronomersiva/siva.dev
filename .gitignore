@@ -8,5 +8,5 @@ ssl/
 
 # Profiling lego
 *.0x
-*flamegraph*
+*flamegraph*.html*
 *isolate*

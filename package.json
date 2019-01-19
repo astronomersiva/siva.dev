@@ -13,6 +13,9 @@
     "type": "git",
     "url": "git+https://github.com/astronomersiva/www.sivasubramanyam.me.git"
   },
+  "resolutions": {
+    "globby": "8.0.2"
+  },
   "author": "Sivasubramanyam A",
   "browserslist": [
     "> 1%",
@@ -25,7 +28,7 @@
   },
   "homepage": "https://github.com/astronomersiva/www.sivasubramanyam.me#readme",
   "devDependencies": {
-    "@astronomersiva/lego": "^1.6.0",
+    "@astronomersiva/lego": "^1.7.3",
     "differencify": "^1.5.2",
     "dotenv": "^6.2.0",
     "glob": "^7.1.3",
