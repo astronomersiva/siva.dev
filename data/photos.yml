@@ -1,3 +1,9 @@
+- src: ladakh-ducks.jpg
+  description: Semi-Frozen Ladakh
+
+- src: taj.jpg
+  description: Taj Mahal
+
 - src: gurudongmar.jpg
   description: The Tibetan Plateau, North Sikkim
 
@@ -7,8 +13,8 @@
 - src: meenakshi-temple.jpg
   description: Meenakshi Temple, Madurai
 
-- src: annapurna.jpg
-  description: Sunrise, ABC, Nepal
+- src: monks.jpg
+  description: Playful Monks, Sikkim
 
 - src: langza.jpg
   description: Komik to Langza
@@ -31,8 +37,8 @@
 - src: mobile.jpg
   description: Amber Palace, Jaipur
 
-- src: monks.jpg
-  description: Playful Monks, Sikkim
+- src: annapurna.jpg
+  description: Sunrise, ABC, Nepal
 
 - src: rainbow.jpg
   description: Nongriat, Meghalaya
