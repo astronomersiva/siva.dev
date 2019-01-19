@@ -115,6 +115,7 @@
 }
 .modal h4:after {
   content: '\B7';
+  margin-left: 15px;
   color: var(--theme-red);
 }
 .modal > .close {

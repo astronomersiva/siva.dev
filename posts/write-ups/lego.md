@@ -322,8 +322,9 @@ over time:
 
 #### **Can I contribute?**
 
-If any of you reading this would like to contribute, [please go ahead!](https://github.com/astronomersiva/lego/) I would love to see more people use this. While lego has
-largely been driven by my own needs, I am always open to see new features getting added to it.
+If any of you reading this would like to contribute, [please go ahead!](https://github.com/astronomersiva/lego/)
+I would love to see more people use this. While lego has largely been driven by my own needs, I am always open
+to see new features getting added to it.
 
 Two things that I would like to see improved in lego are logging and tests. There is a decent logger
 right now but that can be greatly improved. There are no tests other than ESLint as of now and I
