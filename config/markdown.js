@@ -26,6 +26,7 @@ module.exports = {
             return `
               <div class="ajanta" ${styleMarkup}>
                 <img
+                  inline
                   class="img-responsive center-block pixelated blur"
                   src="${attributeMap.src}"
                   data-src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"

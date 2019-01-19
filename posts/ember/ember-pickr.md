@@ -8,6 +8,8 @@ order: 34
 featured: true
 ---
 
+::: lazy-image src="/static/images/lowres/pickr.png" alt="Screenshot" style="max-width: 600px; margin: 0 auto;" :::
+
 ember-pickr provides a wrapper for [Pickr](https://github.com/Simonwep/pickr), a flat, responsive and hackable color picker.
 
 #### **Installation**
@@ -16,16 +18,10 @@ ember-pickr provides a wrapper for [Pickr](https://github.com/Simonwep/pickr), a
 
 #### **Usage**
 
+`{{color-picker value=color format="hex"}}`
+
 You can see live examples and a detailed documentation in the [documentation site](https://astronomersiva.github.io/ember-pickr/).
 
-::: lazy-image src="/static/images/lowres/pickr.png" alt="Screenshot" style="max-width: 600px; margin: 0 auto;" :::
-
-<pre>
-  {{color-picker
-    value=color
-    format="hex"}}
-</pre>
-
-<br>
+#### **Contribute**
 
 Head out to the [Github repo](https://github.com/astronomersiva/ember-pickr/) if you want to contribute or file an issue!
