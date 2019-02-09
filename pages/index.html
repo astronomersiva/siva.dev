@@ -9,6 +9,7 @@
       <link rel="prefetch" href="/{{article.path}}/">
     {% endif %}
   {% endfor %}
+  {% include "no-script-bg.html" %}
 </head>
 <body>
   <div class="content hero hero-page">
@@ -35,8 +36,8 @@
     <div class="container posts">
       {% assign articles = posts | sortByOrder %}
 
-      <div class="post recent-posts">
-        Recent Posts
+      <div class="post featured-posts">
+        Featured Posts
         <hr>
       </div>
       {% for post in articles %}
@@ -56,10 +57,11 @@
       {% endfor %}
 
       <div class="see-more">
-        <a href="/archive/">View Archived Posts →</a>
+        <a href="/archive/">View Archive →</a>
       </div>
     </div>
   </main>
+
   {% include "footer.html" %}
 </body>
 </html>

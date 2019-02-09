@@ -40,12 +40,12 @@
       {% assign year = "" %}
 
       {% for post in articles %}
-        {% unless post.featured %}
+        {% unless post.hidden %}
           {% assign currentYear = post.date | date: "%Y" %}
 
           {% unless year == currentYear %}
             {% assign year = currentYear %}
-            <div class="post recent-posts archive-year" id="{{currentYear}}">
+            <div class="post featured-posts archive-year" id="{{currentYear}}">
               <h4>#<a href="#{{currentYear}}">{{currentYear}}</a></h4>
             </div>
           {% endunless %}

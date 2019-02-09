@@ -10,3 +10,6 @@ ssl/
 *.0x
 *flamegraph*.html*
 *isolate*
+
+# WIP
+layouts/generative-art

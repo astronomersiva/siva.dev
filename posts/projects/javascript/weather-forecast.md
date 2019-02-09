@@ -4,6 +4,7 @@ date: October, 2014
 description: A Javascript based webapp to fetch your location using the W3C Geolocation API and display relevant weather data.
 tags: Javascript
 order: 8
+hidden: true
 ---
 
 I have recently decided to do one fun project every weekend. This weekend, I decided to create a site that would fetch the visitor's location and display the weather forecast for that location.

@@ -5,8 +5,7 @@
     <p class="date">
       {{post.date}}
       {% if post.tags %}
-        &middot;
-        Tagged -
+        in
         {% for tag in post.tags %}
           <a href="/tag/{{tag | downcase}}/">{{tag}}</a>&nbsp;&middot;
         {% endfor %}

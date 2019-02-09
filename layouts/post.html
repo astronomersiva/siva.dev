@@ -42,7 +42,7 @@
   </noscript>
 
   {% if post.code %}
-    <link rel="stylesheet" href="/static/js/highlight/styles/github-gist.css" type="text/css">
+    <link rel="stylesheet" href="/static/js/highlight/styles/shades-of-purple.css" type="text/css">
     <script src="/static/js/highlight/highlight.pack.js"></script>
   {% endif %}
 
@@ -63,7 +63,7 @@
   {% include "post-header.html" %}
 
   <main role="main">
-    <div class="container posts">
+    <div class="container posts narrow">
       <div class="content">
         {{ post.html }}
         <br>

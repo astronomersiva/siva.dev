@@ -32,6 +32,9 @@
   </style>
 </noscript>
 
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com/">
 
 <link
   rel="preload"
@@ -57,13 +60,13 @@
 <link rel="prefetch" href="/photography/">
 
 {% if post %}
-  <link rel="preload" href="/static/js/highlight/styles/github-gist.css" as="style">
+  <link rel="preload" href="/static/js/highlight/styles/shades-of-purple.css" as="style">
   <link rel="preload" href="/static/js/highlight/highlight.pack.js" as="script">
 
   <link rel="preload" href="/static/css/ajanta.css" as="style">
   <link rel="preload" href="/static/js/ajanta.js" as="script">
 {% else %}
-  <link rel="prefetch" href="/static/js/highlight/styles/github-gist.css" as="style">
+  <link rel="prefetch" href="/static/js/highlight/styles/shades-of-purple.css" as="style">
   <link rel="prefetch" href="/static/js/highlight/highlight.pack.js" as="script">
 
   <link rel="prefetch" href="/static/css/ajanta.css" as="style">
@@ -71,13 +74,6 @@
   <link rel="prefetch" href="/static/js/ajanta-for-css.js" as="script">
 
   <style>
-    @media screen and (max-width: 470px) {
-      .hero-page {
-        background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAhADIDASIAAhEBAxEB/8QAHAAAAgICAwAAAAAAAAAAAAAAAAUEBgEDAgcI/8QAKRAAAQMDAgUEAwEAAAAAAAAAAQACAwQFESExBhITNFEUQWFxFTIzNf/EABgBAQEBAQEAAAAAAAAAAAAAAAIDAQQF/8QAIBEAAwACAgIDAQAAAAAAAAAAAAECAxEEEhMxFCEiQf/aAAwDAQACEQMRAD8A86RSsADZG6eVvFLFNkxSAfBWI4oZJC32zurHLwrGbUKynl19wEJ/b0huHM936Ky6mnhOcZHkJ7w/xHPaj0pGkxO3BW6x2l9QeUzjPgpvc+GZfT8zYw7G5Chn5WPBk8dvTDMup7L0O7ZfKGrhdqGOISSqkZNWljXAk7JJR0jGzGN7iwhSXNNJURv1IB3TWUtgxTmTaf2Mvwk515jqhO47lAY25eM4CF07kn4qOoI3uYcgqwW3iWalpHU7xzMdokMERkeGjcqa+3uhwZP18oJ6e0Hba6/wc2OqM1Y4wkhw1V2qr6YbBJLE4GVo5XAqgWuIUs4lhdqQs19PWSCR7HksdqWhefzuM+blTvWkUxOcUan2K6i5TTTPfnBccqfBeXOp+lKOYjYpO2F/U5cHKZizzCDqv0C7HMpaDFVD3Ju9d8lCgekkQh0Rb5GQ4Ufcx/asF47EfSEKzOciUP8ABqd0Xbv+kIWGlePfj7VjrP8AOCEIMSEw2QhC0w//2Q==');
-        transition: background 0.3s linear;
-      }
-    }
-
     @media screen and (min-width: 471px) {
       .hero-page {
         background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALADIDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABAYAAgUD/8QAIhAAAgIBAwQDAAAAAAAAAAAAAQIAEQMEBjEFEiFRFTJB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQMEAP/EAB0RAAICAgMBAAAAAAAAAAAAAAABAhUyUgURQWL/2gAMAwEAAhEDEQA/AMPH0F3+ouEYttZnNBDNzp7FV8Gpq6fNkDimMutF5Ejr5eyFNNtZLorxCMe2m/RGd3a2Ny+lYsaY2IXyiSxBXvvIXse3IQNuADzG3Ai1xOmRR28RNu9RlZ9Cf8CnuSNHYvoSQW8tTVi2P//Z');
