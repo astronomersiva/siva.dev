@@ -79,7 +79,7 @@ Whenever the link is hovered for more than 200ms, the model will be fetched and 
 
 Here is a working example.
 
-<video autoplay loop muted playsinline src="../static/images/eager-prefetch.mp4" type="video/mp4" style="max-width: 100%;"></video>
+::: video src="../static/images/eager-prefetch.mp4" :::
 
 Notice the following:
 

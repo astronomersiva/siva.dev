@@ -89,29 +89,7 @@ should have a list of all posts tagged `javascript`.
 
 This is the directory structure that I eventually settled on.
 
-<pre>
-.
-├── CNAME
-├── layouts
-│   ├── post.html             // will be used for markdown posts, can be overridden in posts' front-matter
-│   └── tag.html              // will be used to generate tag wise listing of posts
-├── pages
-│   ├── 404.html
-│   └── about.html            // each of these will be put under a separate folder in build
-│   └── index.html
-├── data
-│   ├── authors.yml
-│   └── speakers.yaml         // will be available as data.authors and data.speakers
-├── posts
-│   ├── post.md
-│   └── another-post.md
-└── static
-    ├── css
-    │   └── styles.css        // possible to have sub folders
-    ├── images
-    └── js
-        └── script.js
-</pre>
+::: lazy-image src="/static/images/lowres/lego-filestructure.jpg" alt="Project Structure" :::
 
 While each file in `posts` will be generated in `build/post/index.html` by default, it is possible to
 override this by providing a `url` field in the file's front-matter. I also like to have my posts
@@ -318,7 +296,7 @@ thanks to this.
 Here is a gif that demonstrates the improvement of lego's performance to start a development server
 over time:
 
-::: lazy-image src="/static/images/lowres/lego-flamegraph.gif" alt="Flamegraph" :::
+::: video src="../static/images/lego-flamegraph.mp4" :::
 
 #### **Can I contribute?**
 

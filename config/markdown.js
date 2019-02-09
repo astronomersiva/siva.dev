@@ -1,3 +1,16 @@
+function getAttributes(tagContents) {
+  let attributesRegex = /(\w+)="([\s\w,.\-_/@:;]+)"/g;
+  let attributeMap = {};
+
+  let attributes = tagContents.match(attributesRegex);
+  for (let attribute of attributes) {
+    let [key, value] = attribute.split('=');
+    attributeMap[key] = value.replace(/"/g, '');
+  }
+
+  return attributeMap;
+}
+
 module.exports = {
   containers: [
     {
@@ -12,15 +25,7 @@ module.exports = {
 
           if (statement.type === 'container_lazy-image_open') {
             let tagContents = statement.info.replace(':::', '').trim();
-
-            let attributesRegex = /(\w+)="([\s\w,.\-_/@:;]+)"/g;
-            let attributes = tagContents.match(attributesRegex);
-            let attributeMap = {};
-            for (let attribute of attributes) {
-              let [key, value] = attribute.split('=');
-              attributeMap[key] = value.replace(/"/g, '');
-            }
-
+            let attributeMap = getAttributes(tagContents);
             let style = attributeMap.style;
             let styleMarkup = style ? `style="${style}"` : '';
             return `
@@ -40,6 +45,37 @@ module.exports = {
                   src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"
                   alt="${attributeMap.alt}">
               </noscript>
+            `;
+          }
+
+          return '';
+        }
+      }
+    },
+    {
+      name: 'video',
+      options: {
+        validate: function(params) {
+          return params.endsWith(':::') && params.includes('video');
+        },
+
+        render: function(tokens, idx) {
+          let statement = tokens[idx];
+
+          if (statement.type === 'container_video_open') {
+            let tagContents = statement.info.replace(':::', '').trim();
+            let attributeMap = getAttributes(tagContents);
+            return `
+              <video
+                controls
+                preload
+                muted
+                playsinline
+                src="${attributeMap.src}"
+                type="video/mp4"
+                style="max-width: 100%;"
+              >
+              </video>
             `;
           }
 

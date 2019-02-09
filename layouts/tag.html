@@ -12,6 +12,8 @@
       <link rel="prefetch" href="/{{article.path}}/">
     {% endif %}
   {% endfor %}
+
+  {% include "no-script-bg.html" %}
 </head>
 
 <body>
@@ -48,7 +50,9 @@
 
         {% for post in articles %}
           {% unless post.featured %}
-            {% include "tagged-post.html" %}
+            {% unless post.hidden %}
+              {% include "tagged-post.html" %}
+              {% endunless %}
           {% endunless %}
         {% endfor %}
       </main>

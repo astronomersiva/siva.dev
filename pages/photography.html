@@ -48,36 +48,8 @@
         <!-- range in liquid is inclusive of the last digit -->
         {% assign no_of_photos_for_looping = no_of_photos | minus: 1 %}
 
-        {% assign _photos_in_first_col = no_of_photos | divided_by: 3 | ceil %}
-        {% assign _photos_in_second_col = no_of_photos | minus: _photos_in_first_col | divided_by: 2 | ceil %}
-        {% assign _photos_in_third_col = no_of_photos | minus: _photos_in_first_col | minus: _photos_in_second_col %}
-
-        {% if _photos_in_first_col == _photos_in_second_col and _photos_in_second_col == _photos_in_third_col %}
-          {% assign photos_in_first_col = _photos_in_first_col %}
-          {% assign photos_in_second_col = _photos_in_second_col %}
-          {% assign photos_in_third_col = _photos_in_third_col %}
-        {% else %}
-          <!-- 4, 4, 3 -- 4, 3, 4 -->
-          {% if _photos_in_first_col == _photos_in_second_col %}
-            {% if _photos_in_second_col != _photos_in_third_col %}
-              {% comment %}
-                {% assign photos_in_second_col = _photos_in_second_col | minus: 1 %}
-                {% assign photos_in_third_col = _photos_in_third_col | plus: 1 %}
-                {% assign photos_in_first_col = _photos_in_first_col %}
-              {% endcomment %}
-              {% assign photos_in_first_col = _photos_in_first_col %}
-              {% assign photos_in_second_col = _photos_in_second_col %}
-              {% assign photos_in_third_col = _photos_in_third_col %}
-            {% endif %}
-          <!-- 4, 3, 3 -- 3, 4, 3 -->
-          {% else %}
-            {% if _photos_in_second_col == _photos_in_third_col %}
-              {% assign photos_in_first_col = _photos_in_first_col | minus: 1 %}
-              {% assign photos_in_second_col = _photos_in_second_col | plus: 1 %}
-              {% assign photos_in_third_col = _photos_in_third_col %}
-            {% endif %}
-          {% endif %}
-        {% endif %}
+        {% assign photos_in_first_col = no_of_photos | divided_by: 2 | ceil %}
+        {% assign photos_in_second_col = no_of_photos | minus: photos_in_first_col %}
 
         <div class="photo-column">
           {% assign endindex = photos_in_first_col | minus: 1 %}
@@ -92,13 +64,13 @@
             {% include "photo-column.html" %}
           {% endfor %}
         </div>
-        <div class="photo-column">
+        <!-- <div class="photo-column">
           {% assign startindex = photos_in_first_col | plus: photos_in_second_col %}
           {% assign endindex = no_of_photos_for_looping %}
           {% for i in (startindex..endindex) %}
             {% include "photo-column.html" %}
           {% endfor %}
-        </div>
+        </div> -->
       </div>
     </div>
   </main>
