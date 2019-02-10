@@ -36,7 +36,7 @@ where, `a`, `b`, `c` and `d` are the initial conditions.
 Generating the attractor with HTML Canvas and Javascript is straightforward.
 
 <pre>
-// 2 million points
+// .2 million points
 let n = 200000;
 
 context.translate(width / 2, height / 2);
