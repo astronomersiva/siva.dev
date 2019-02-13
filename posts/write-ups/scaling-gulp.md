@@ -2,7 +2,7 @@
 title: Scaling Gulp
 date: April, 2018
 description: How Gulp can be (re)used for very large projects
-tags: Gulp, Node, Tooling
+tags: Gulp, Node.js, Tooling
 code: true
 order: 20
 ---

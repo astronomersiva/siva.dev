@@ -2,7 +2,7 @@
 title: The heatmap addiction 
 date: February, 2014
 description: Heatmaps are addictive. Water pollution levels from the Open Data Portal of India, earthquakes and more.
-tags: Python, Javascript, Google Maps 
+tags: Python, JavaScript, Google Maps 
 order: 5
 ---
 

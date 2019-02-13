@@ -1,8 +1,8 @@
 ---
 title: Weather Forecast
 date: October, 2014
-description: A Javascript based webapp to fetch your location using the W3C Geolocation API and display relevant weather data.
-tags: Javascript
+description: A JavaScript based webapp to fetch your location using the W3C Geolocation API and display relevant weather data.
+tags: JavaScript
 order: 8
 hidden: true
 ---

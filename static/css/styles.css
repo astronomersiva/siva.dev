@@ -143,15 +143,6 @@ strong, b {
   background: white;
   padding: 0.7rem;
   font-size: 1rem;
-}
-
-.navbar-primary {
-  top: 0;
-  left: 0;
-  border-top: 3px solid var(--theme-blue);
-}
-
-.navbar-secondary {
   bottom: 0;
   right: 0;
   border-bottom: 3px solid var(--theme-blue);
@@ -279,18 +270,16 @@ strong, b {
 }
 
 .hello {
-  font-size: 3rem;
+  font-size: 3.25rem;
   line-height: 1;
-  background: white;
   width: fit-content;
   width: -moz-fit-content;
   padding: 1rem;
   margin-right: auto;
   margin-left: auto;
-}
-
-.hello-page {
-  color: var(--theme-light-blue);
+  font-weight: 900;
+  color: var(--theme-light-border);
+  text-shadow: 3px 2px 5px var(--theme-text);
 }
 
 .language {
@@ -300,7 +289,7 @@ strong, b {
 
 @media screen and (max-width: 600px) {
   .language {
-    float: none;
+    display: none;
   }
 }
 

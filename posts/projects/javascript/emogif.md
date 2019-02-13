@@ -2,7 +2,7 @@
 title: emogif
 date: December, 2015
 description: A GIF for every emotion.
-tags: Javascript, Chrome Extension
+tags: JavaScript, Chrome Extension
 order: 17
 ---
 

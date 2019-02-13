@@ -1,8 +1,8 @@
 ---
 title: De Jong Attractors
 date: February, 2019
-description: Generating Art with Mathematics using HTML Canvas and Javascript
-tags: Javascript, Generative Art
+description: Generating art with mathematics using HTML canvas and JavaScript
+tags: JavaScript, Generative Art
 code: true
 order: 36
 featured: true
@@ -33,7 +33,7 @@ The De Jong Attractor is defined by the following equations:
 
 where, `a`, `b`, `c` and `d` are the initial conditions.
 
-Generating the attractor with HTML Canvas and Javascript is straightforward.
+Generating the attractor with HTML Canvas and JavaScript is straightforward.
 
 <pre>
 // .2 million points

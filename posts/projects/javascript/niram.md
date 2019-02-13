@@ -2,7 +2,7 @@
 title: niram
 date: May, 2018
 description: Extract colors from an image
-tags: React, Javascript
+tags: React, JavaScript
 order: 25
 ---
 

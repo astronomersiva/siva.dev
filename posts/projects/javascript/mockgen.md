@@ -2,7 +2,7 @@
 title: Device Mockup Generator
 date: April, 2018
 description: Generating device mockups with Chrome Headless.
-tags: Javascript, Node, Puppeteer
+tags: JavaScript, Node.js, Puppeteer
 order: 21
 ---
 
@@ -10,7 +10,7 @@ I had been wanting to release an NPM package for a long time but I have always h
 
 One day, I noticed the designers at my workplace generating device mockups. I started looking if there was any package that could make this simpler but couldn't find anything. Wow! Finally a chance :D
 
-I immediately started working on it with Puppeteer, a Node package that provides easy to use APIs to work with Chrome Headless. My idea was to use the device emulator to emulate screen size and resolution and take screenshots using Puppeteer's API.
+I immediately started working on it with Puppeteer, a Node.js package that provides easy to use APIs to work with Chrome Headless. My idea was to use the device emulator to emulate screen size and resolution and take screenshots using Puppeteer's API.
 
 After a few hours of looking around for free-to-use device mockups, I settled on [Facebook Devices](https://facebook.design/devices). It had multiple devices including desktops, laptops, tablets and even smartwatches. The only problem was it prohibits people from repackaging or redistributing it.
 
