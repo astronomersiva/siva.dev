@@ -1,18 +1,9 @@
-<div class="navbar navbar-primary">
-  <a href="/">@siva</a>
-</div>
-
-<div class="navbar navbar-secondary">
-  {% if post and post.tags %}
-    {% if post.date %}
-      {{post.date}}
-    {% endif %}
-    {% for tag in post.tags %}
-      &nbsp;&nbsp;-<a href="/tag/{{tag | downcase}}/">&nbsp;&nbsp;{{tag}}</a>
-    {% endfor %}
-  {% else %}
-    <a href="/about/">About Me</a>
+<div class="navbar">
+  {% unless isIndexPage %}
+    <a href="/">Home</a>
     <span>&nbsp;/&nbsp;</span>
-    <a href="/photography/">Photography</a>
-  {% endif %}
+  {% endunless %}
+  <a href="/about/">About Me</a>
+  <span>&nbsp;/&nbsp;</span>
+  <a href="/photography/">Photography</a>
 </div>

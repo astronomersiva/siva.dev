@@ -2,7 +2,7 @@
 title: rotate-image
 date: May, 2018
 description: Rotates an image by n degrees using node-canvas
-tags: Javascript, Node
+tags: JavaScript, Node.js
 code: true
 order: 24
 ---
