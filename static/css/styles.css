@@ -270,16 +270,15 @@ strong, b {
 }
 
 .hello {
-  font-size: 3.25rem;
+  font-size: 3rem;
   line-height: 1;
   width: fit-content;
   width: -moz-fit-content;
   padding: 1rem;
   margin-right: auto;
   margin-left: auto;
-  font-weight: 900;
-  color: var(--theme-light-border);
-  text-shadow: 3px 2px 5px var(--theme-text);
+  background: white;
+  color: var(--theme-light-blue);
 }
 
 .language {
