@@ -8,8 +8,8 @@ const ssl = process.env.SSL ?
   false;
 
 module.exports = {
-  name: 'www.sivasubramanyam.me',
-  url: 'https://www.sivasubramanyam.me/',
+  name: 'siva.dev',
+  url: 'https://siva.dev',
   skipDirsInPostUrls: true,
   inlineSource: true,
   server: {
