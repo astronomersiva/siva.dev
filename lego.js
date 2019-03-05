@@ -9,7 +9,7 @@ const ssl = process.env.SSL ?
 
 module.exports = {
   name: 'siva.dev',
-  url: 'https://siva.dev',
+  url: 'https://siva.dev/',
   skipDirsInPostUrls: true,
   inlineSource: true,
   server: {

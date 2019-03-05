@@ -23,12 +23,12 @@ const getMatches = (string) => {
 const sitemap = fs.readFileSync('./build/sitemap.xml').toString();
 // ignore urls with gifs and iframes with animations
 const urlsToIgnore = [
-  'https://www.sivasubramanyam.me/facebook-friends-heatmap',
-  'https://www.sivasubramanyam.me/independence-day',
-  'https://www.sivasubramanyam.me/heatmaps',
-  'https://www.sivasubramanyam.me/hexa-clock',
-  'https://www.sivasubramanyam.me/paste-clean-diff',
-  'https://sivasubramanyam.me/valparai/'
+  'https://siva.dev/facebook-friends-heatmap',
+  'https://siva.dev/independence-day',
+  'https://siva.dev/heatmaps',
+  'https://siva.dev/hexa-clock',
+  'https://siva.dev/paste-clean-diff',
+  'https://siva.dev/valparai/'
 ];
 
 let replacementUrl = config.server.host === 'localhost' ?

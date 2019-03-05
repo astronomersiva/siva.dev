@@ -2,7 +2,7 @@
 
 ### Hello
 
-This is the source of my [website](https://sivasubramanyam.me).
+This is the source of my [website](https://siva.dev).
 
 I initially set this up during my college days(~2013) and much
 of the layout and styles haven't changed since then.
@@ -18,7 +18,7 @@ community back then and I used to run several other apps with this.
 Much of those apps no longer exist.
 
 At one point of time, this site and the associated apps were being
-served from AWS and I wrote a [blog](https://sivasubramanyam.me/flask-aws/)
+served from AWS and I wrote a [blog](https://siva.dev/flask-aws/)
 about the setup which you can read if you are interested.
 
 I do a lot of experimentation with this site and some successful
