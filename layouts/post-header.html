@@ -3,9 +3,9 @@
     <h1>{{post.title}}</h1>
     <h2>{{post.description}}</h2>
     <p class="date">
-      {{post.date}}
+      {{post.date}},
       {% if post.tags %}
-        in
+        Tagged
         {% for tag in post.tags %}
           <a href="/tag/{{tag | downcase}}/">{{tag}}</a>&nbsp;&middot;
         {% endfor %}

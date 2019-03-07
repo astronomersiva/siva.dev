@@ -75,4 +75,4 @@ If you would like to see more, you can check out the repository on [GitHub](http
 
 <br>
 
-*Reference: <small>[https://www.algosome.com/articles/strange-attractors-de-jong.html](https://www.algosome.com/articles/strange-attractors-de-jong.html)</small>*
+*Reference: <small>[algosome](https://www.algosome.com/articles/strange-attractors-de-jong.html)</small>*

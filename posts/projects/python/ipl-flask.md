@@ -4,6 +4,7 @@ date: June, 2015
 description: A simple Flask application to fetch and display cricket scores.
 tags: Python, Flask
 order: 12
+hidden: true
 ---
 
 I was looking for a quick solution to see cricket scores from my college without having to use proxies. I thought I would design one myself using Python and host it in Heroku. That's how this project was born.

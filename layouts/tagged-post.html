@@ -3,8 +3,9 @@
     <div class="post">
       <a href="/{{post.path}}/">{{post.title}}</a>
       <span class="language">
+        <img alt="Tag" src="/static/images/tag.svg" class="tag-svg">
         {% for postTag in post.tags %}
-          <a href = "/tag/{{postTag | downcase}}/">&nbsp;&nbsp;{{postTag}}</a>
+          <a class="tag" href = "/tag/{{postTag | downcase}}/">{{postTag}}</a>
         {% endfor %}
       </span><br>
       {{post.description}}
