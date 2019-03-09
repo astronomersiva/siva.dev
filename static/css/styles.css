@@ -185,7 +185,7 @@ strong, b {
 .content {
   color: var(--theme-text);
   padding: 0 5px;
-  text-align: justify;
+  text-align: left;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-size: 1rem;

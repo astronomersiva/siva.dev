@@ -7,6 +7,8 @@ order: 27
 featured: true
 ---
 
+*Update: I have written about a newer and simpler approach to do this [here](/ember-differential-bundles/).*
+
 EmberJS provided [a way to specify browser targets](https://rwjblue.com/2017/04/21/ember-cli-targets/) in April, 2017. With this, one could specify a list of browsers based on the app consumers' analytics and ship properly transpiled code.
 
 When this came out, a few people in the Ember Community(including me) [started looking](https://github.com/babel/ember-cli-babel/issues/200) for ways to define multiple targets for the same build. With the current setup of using `@babel/preset-env`, we were shipping code needed for IE11 to users with Chrome and Firefox even though IE11 users were a considerable minority. Not only were we shipping unnecessary code, we were slowing down their experience in terms of JS parse and compile times. After numerous conversations on Twitter, Slack and Github issues, it became clear that it was not currently possible. I eventually forgot about this.
