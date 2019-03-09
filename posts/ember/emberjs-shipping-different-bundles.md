@@ -4,7 +4,6 @@ date: June, 2018
 description: A way to stop sending transpiled code to evergreen browsers with EmberJS
 tags: EmberJS, Build
 order: 27
-featured: true
 ---
 
 *Update: I have written about a newer and simpler approach to do this [here](/ember-differential-bundles/).*
