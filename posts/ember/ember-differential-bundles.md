@@ -93,7 +93,7 @@ in the server based on a cookie, or if possible, parsing the UA.
 * Run parallel builds with 
 
   <pre>
-    ember build --environment=production --output-path=modern &
+    ember build --environment=production --output-path=modern &&
     LEGACY=true ember build --environment=production --output-path=legacy
   </pre>
 * Run the [`index.js`](https://github.com/astronomersiva/ember-differential-bundles/blob/master/index.js)
