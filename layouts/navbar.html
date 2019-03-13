@@ -1,9 +1,11 @@
 <div class="navbar">
-  {% unless isIndexPage %}
-    <a href="/">Home</a>
-    <span>&nbsp;/&nbsp;</span>
-  {% endunless %}
-  <a href="/about/">About Me</a>
-  <span>&nbsp;/&nbsp;</span>
-  <a href="/photography/">Photography</a>
+  <a class="{% if active == "index" %}active{% endif %}" href="/">
+    Home
+  </a>
+  <a class="{% if active == "archive" %}active{% endif %}" href="/archive/">
+    Archive
+  </a>
+  <a class="{% if active == "photography" %}active{% endif %}" href="/photography/">
+    Photography
+  </a>
 </div>

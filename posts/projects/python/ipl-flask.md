@@ -23,4 +23,4 @@ I had to do the following steps to get Flask running on Heroku: installed toolbe
 
 <br>
 
-[[Source on Github]](http://github.com/astronomersiva/IPLFlask/)
+[[Source on GitHub]](http://github.com/astronomersiva/IPLFlask/)

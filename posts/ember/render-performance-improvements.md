@@ -19,30 +19,30 @@ Even with tools like these, there might be significant performance penalties due
 being displayed in the *scene* itself. Consider this very simple list with about 35 rows.
 There are columns for the person's name, gender and a More Details dropdown. 
 
-<pre>
+```
 {{#each model as |row|}}
   {{#student-list}}
-    &lt;td&gt;{{row.name}}&lt;/td&gt;
-    &lt;td&gt;{{row.gender}}&lt;/td&gt;
+    <td>{{row.name}}</td>
+    <td>{{row.gender}}</td>
 
     {{#basic-dropdown as |dropdown|}}
       {{#dropdown.trigger}}More Details{{/dropdown.trigger}}
 
       {{#dropdown.content}}
-        &lt;ul&gt;
-          &lt;li&gt;Phone: {{row.phone}}&lt;/li&gt;
-          &lt;li&gt;Company: {{row.company}}&lt;/li&gt;
-          &lt;li&gt;Balance: {{row.balance}}&lt;/li&gt;
+        <ul>
+          <li>Phone: {{row.phone}}</li>
+          <li>Company: {{row.company}}</li>
+          <li>Balance: {{row.balance}}</li>
           {{#if row.isActive}}
-            &lt;li&gt;Send Greeting&lt;/li&gt;
+            <li>Send Greeting</li>
           {{/if}}
-        &lt;/ul&gt;
+        </ul>
       {{/dropdown.content}}
 
     {{/basic-dropdown}}
   {{/student-list}}
 {{/each}}
-</pre>
+```
 
 Note that `vertical-collection` will still render all of these rows because they are all
 in my viewport.
@@ -74,32 +74,32 @@ exposes an `isOpen` property that we can make use of. Even if you do not use thi
 trivial to determine if a dropdown is open or not. Let's try and make use of this property to
 see if there are any improvements in the initial rendering performance.
 
-<pre>
+```
 {{#each model as |row|}}
   {{#student-list}}
-    &lt;td&gt;{{row.name}}&lt;/td&gt;
-    &lt;td&gt;{{row.gender}}&lt;/td&gt;
+    <td>{{row.name}}</td>
+    <td>{{row.gender}}</td>
 
     {{#basic-dropdown as |dropdown|}}
       {{#dropdown.trigger}}More Details{{/dropdown.trigger}}
 
       {{#if dropdown.isOpen}}
         {{#dropdown.content}}
-          &lt;ul&gt;
-            &lt;li&gt;Phone: {{row.phone}}&lt;/li&gt;
-            &lt;li&gt;Company: {{row.company}}&lt;/li&gt;
-            &lt;li&gt;Balance: {{row.balance}}&lt;/li&gt;
+          <ul>
+            <li>Phone: {{row.phone}}</li>
+            <li>Company: {{row.company}}</li>
+            <li>Balance: {{row.balance}}</li>
             {{#if row.isActive}}
-              &lt;li&gt;Send Greeting&lt;/li&gt;
+              <li>Send Greeting</li>
             {{/if}}
-          &lt;/ul&gt;
+          </ul>
         {{/dropdown.content}}
       {{/if}}
 
     {{/basic-dropdown}}
   {{/student-list}}
 {{/each}}
-</pre>
+```
 
 **99ms**. This is still bad but at least a major improvement from what we had before.
 

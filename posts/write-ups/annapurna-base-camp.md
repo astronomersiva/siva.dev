@@ -70,7 +70,7 @@ I was breathing hard and fast but it didn’t seem to be working. It was the rar
 
 As I kept moving, I could hear the snow crunching under my feet. The sound was loud and clear and I concentrated on it to divert my attention away from the cold. It worked. Annapurna 1 and Annapurna South were straight ahead of me and I took one step after another in the hopes of reaching the Annapurna Basecamp before sunrise.
 
-::: lazy-image src="/static/abc/lowres/abcnight.png" dSrc="/static/abc/abcnight.jpg" alt="Annapurna at night"
+::: lazy-image src="/static/abc/lowres/abcnight.png" dSrc="/static/abc/abcnight.jpg" alt="Annapurna at night" :::
 
 
 I ran into “Ji saab” on the way. He was an old, experienced guide with whom our guide, Madhav Khanal(another guide) and a few others had discussed before our ABC climb. He shared a lot of experiences and inspite of his age, he could climb faster than most of us. We had a small chat on the way and I joined him on the approach to ABC. It was just amazing to trek with him. He was walking at a mindblowing pace and I tried my best to keep up with him. He then turned to me, laughed and said - “Aap bahuth fit hein Shivaji.” How I wish to be at least half as fit as him when I am that old!
@@ -86,7 +86,7 @@ A few moments later, we were at the board welcoming trekkers to ABC. I fell on m
 
 Soon, we met the other groups as well. The Netherlands gang was there and so was the group from NUS. We also met a French couple who live in Bangalore and they immediately went like “South India man!”. We shook hands and had some fun moments on some boulders overlooking the glacier. After a light breakfast, then started the descent. On the way, we met a Nepali porter who asked us this question the moment he saw us - “Sapteengala?”. I wasn’t sure if he actually said that or if I was just imagining things. He asked us the same thing again. We were taken back by surprise but managed to strike a conversation with him. Turns out, he had worked for a Tamil family in Malaysia before some years and he was now back in Nepal helping out trekkers.
 
-::: lazy-image src="/static/abc/lowres/towardsm.png" dSrc="/static/abc/towardsm.jpg" alt="Towards MBC"
+::: lazy-image src="/static/abc/lowres/towardsm.png" dSrc="/static/abc/towardsm.jpg" alt="Towards MBC" :::
 
 On the descent, we stopped at a hot water spring and took our first ever shower after leaving Chennai :D We even taught some basic astronomy and astrophotography to a Korean girl who was trying to take some photos with her camera. She invited us to join her on her trip to Iceland to which we laughed. She reminded us that we guys could be the very last generation that gets to visit all these places on foot. It sounded true.
 

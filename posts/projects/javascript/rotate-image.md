@@ -11,7 +11,7 @@ I had been looking for an NPM package that allowed me to rotate an image by `n` 
 
 I thought this would be an easy task and jumped into action. Boy! It was tough. I was using all my trigonometry lessons(finally) and found myself often on [math.stackexchange](http://math.stackexchange.com/). It felt so good when I finally got it working :D
 
-You can see the code on [Github](https://github.com/astronomersiva/rotate-image)
+You can see the code on [GitHub](https://github.com/astronomersiva/rotate-image)
 
 #### **Install**
 
@@ -19,7 +19,7 @@ You can see the code on [Github](https://github.com/astronomersiva/rotate-image)
 
 #### **Usage**
 
-<pre>
+```
 (async () => {
   const rotate = require('rotate-image');
   const options = {
@@ -30,4 +30,4 @@ You can see the code on [Github](https://github.com/astronomersiva/rotate-image)
 
   await rotate(options);
 })();
-</pre>
+```

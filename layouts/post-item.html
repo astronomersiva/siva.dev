@@ -1,0 +1,11 @@
+<div class="post">
+  <h2><a href="/{{post.path}}/">{{post.title}}</a></h2>
+
+  {% include "date-and-tags.html" %}
+
+  <p>
+    {{post.html | strip_html | truncate: 300}}
+  </p>
+
+  <hr class="post-separator">
+</div>

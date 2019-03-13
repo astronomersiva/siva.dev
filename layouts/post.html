@@ -12,26 +12,6 @@
 
   {% include "head.html" %}
 
-  {% if post.hero %}
-    <style>
-      .webp .hero-post, .hero-post {
-        background-image: url('data:{{post.heroPlaceholder}}');
-        transition: background 0.7s linear;
-        {% if post.heroPosition %}
-          background-position: {{post.heroPosition}}
-        {% endif %}
-      }
-
-      {% if post.heroMobile %}
-        @media screen and (max-width: 470px) {
-          .webp .hero-post, .hero-post {
-            background-image: url('data:{{post.heroPlaceholder}}');
-          }
-        }
-      {% endif %}
-    </style>
-  {% endif %}
-
   <link href="/static/css/ajanta.css" rel="stylesheet" type="text/css">
   <noscript>
     <style>
@@ -43,7 +23,6 @@
 
   {% if post.code %}
     <link rel="stylesheet" href="/static/js/highlight/styles/shades-of-purple.css" type="text/css">
-    <script src="/static/js/highlight/highlight.pack.js"></script>
   {% endif %}
 
   {% if post %}
@@ -58,21 +37,26 @@
   {% endif %}
 </head>
 <body>
-  {% include "navbar-posts.html" %}
-
-  {% include "post-header.html" %}
+  <div class="container posts">
+    <div class="content">
+      {% include "navbar.html" %}
+      {% include "post-header.html" %}
+    </div>
+  </div>
 
   <main role="main">
-    <div class="container posts narrow">
+    <div class="container posts">
       <div class="content">
         {{ post.html }}
         <br>
 
-        <div class="see-more" style="font-style: italic;">
-          View Other Posts Tagged
-          {% for tag in post.tags %}
-            - <a href="/tag/{{tag | downcase}}">{{tag}}</a>
-          {% endfor %}
+        <div class="see-more">
+          <strong>
+            View Other Posts Tagged
+            {% for tag in post.tags %}
+              <a href="/tag/{{tag | downcase}}" class="text-light post-tag">{{tag}}</a>
+            {% endfor %}
+          </strong>
         </div>
         <br>
       </div>
@@ -80,39 +64,5 @@
   </main>
 
   {% include "footer.html" %}
-
-  {% if post.code %}
-    <script>
-      const preTags = Array.from(document.getElementsByTagName('pre'));
-      preTags.forEach((i, block) => {
-        hljs.highlightBlock(i);
-      });
-    </script>
-  {% endif %}
-
-  {% if post.hero %}
-    <script defer>
-      let hero = '{{post.hero}}';
-      let heroMobile = '{{post.heroMobile}}';
-
-      let html = document.getElementsByTagName('html')[0];
-      if (html.className.includes('webp')) {
-        hero = hero.replace('.jpeg', '.webp').replace('.jpg', '.webp').replace('.png', '.webp');
-        heroMobile = heroMobile.replace('.jpeg', '.webp').replace('.jpg', '.webp').replace('.png', '.webp');
-      }
-
-      let heroDiv = document.getElementsByClassName('hero-post')[0];
-      if (window.innerWidth < 760) {
-        hero = heroMobile;
-      }
-
-      let placeholderElement = new Image();
-      placeholderElement.src = hero;
-
-      placeholderElement.onload = function() {
-        heroDiv.setAttribute('style', `background-image: url(${hero})`);
-      }
-    </script>
-  {% endif %}
 </body>
 </html>

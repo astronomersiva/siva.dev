@@ -1,14 +1,15 @@
 /* Color Codes */
 :root {
-  --theme-text: #2b2b2b;
+  --theme-text: black;
   --theme-text-light: #5d5d5d;
   --theme-heading: #111;
   --theme-red: #ee0000;
   --theme-blue: #3869ff;
   --theme-light-blue: #0099e4;
-  --theme-heading-font: 'PT Serif', serif;
-  --theme-font: 'Source Sans Pro', sans-serif;
   --theme-light-border: #eee;
+  --theme-light-background: #f9f9f9;
+  --theme-heading-font: 'Roboto Condensed', sans-serif;
+  --theme-font: 'Source Sans Pro', sans-serif;
 }
 
 .photos {

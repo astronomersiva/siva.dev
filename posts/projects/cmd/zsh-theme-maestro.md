@@ -11,7 +11,7 @@ order: 30
 
 I intended to create something visually similar to the impressive [night owl](https://github.com/sdras/night-owl-vscode-theme) theme and with some of the best functionality that several themes provide but at the same time remain uncluttered.
 
-[[Source on Github]](https://github.com/astronomersiva/zsh-theme-maestro/)
+[[Source on GitHub]](https://github.com/astronomersiva/zsh-theme-maestro/)
 
 ::: lazy-image src="/static/images/lowres/maestro.png" alt="maestro theme" :::
 

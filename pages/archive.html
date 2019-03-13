@@ -3,6 +3,7 @@
 <head>
   <meta name="description" content="Personal blog on code and travel by Sivasubramanyam A.">
 
+  {% assign title = "Archive" %}
   {% include "head.html" %}
 
   {% assign allArticles = posts | sortByOrder %}
@@ -13,23 +14,11 @@
   {% endfor %}
 </head>
 <body>
-  <div class="content hero hero-page">
-    {% include "navbar.html" %}
-
-    <div class="helloWorld">
-      <div class="hello">
-        Hello, World!
-      </div>
-    </div>
-  </div>
-
-  <div class="content mobile-hero">
-    {% include "navbar-posts.html" %}
-
-    <div class="container">
-      <div class="content post-header">
-        <h1>Hello, World!</h1>
-      </div>
+  <div class="container posts">
+    <div class="content">
+      {% assign active = "archive" %}
+      {% include "navbar.html" %}
+      <h1>Archive</h1>
     </div>
   </div>
 
@@ -45,22 +34,12 @@
 
           {% unless year == currentYear %}
             {% assign year = currentYear %}
-            <div class="post featured-posts archive-year" id="{{currentYear}}">
+            <div class="post archive-year" id="{{currentYear}}">
               <h4>#<a href="#{{currentYear}}">{{currentYear}}</a></h4>
             </div>
           {% endunless %}
 
-          <div class="post">
-            <a href="/{{post.path}}/">{{ post.title }}</a>
-            <span class="language">
-              {% for tag in post.tags %}
-                <a href="/tag/{{tag | downcase}}/">&nbsp;&nbsp;{{tag}}</a>
-              {% endfor %}
-            </span><br>
-            {{ post.description }}
-            <hr>
-            <hr class="animate">
-          </div>
+          {% include "post-item.html" %}
         {% endunless %}
       {% endfor %}
     </div>

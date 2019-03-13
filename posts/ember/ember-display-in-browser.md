@@ -32,51 +32,55 @@ Chrome(or Safari) alone. **Compatibility matters**.
 #### **Usage 💻**
 
 * To display only in one or a set of browsers,
-<pre>
+```
   {{!-- arrayOfBrowsers = ["Chrome", "firefox"] --}}
+
   {{#display-in-browser only=arrayOfBrowsers}}
-    &lt;p&gt;This will be visible only in Chrome and Firefox&lt;/p&gt;
+    <p>This will be visible only in Chrome and Firefox</p>
   {{/display-in-browser}}
-  <br>
+
   {{#display-in-browser only="ie"}}
-    &lt;p&gt;This will be visible only in Internet Explorer&lt;/p&gt;
+    <p>This will be visible only in Internet Explorer</p>
   {{/display-in-browser}}
-</pre>
+```
 
 * To display in browsers other than one or more browsers,
-<pre>
+```
   {{!-- arrayOfBrowsers = ["Chrome", "firefox"] --}}
+
   {{#display-in-browser except=arrayOfBrowsers}}
-    &lt;p&gt;This will not be visible in Chrome and Firefox&lt;/p&gt;
+    <p>This will not be visible in Chrome and Firefox</p>
   {{/display-in-browser}}
-  <br>
+
   {{!-- arrayOfBrowsers = ["ie", "mobile"] --}}
+
   {{#display-in-browser except=arrayOfBrowsers}}
-    &lt;p&gt;This will not be visible in IE and Mobile browsers&lt;/p&gt;
+    <p>This will not be visible in IE and Mobile browsers</p>
   {{/display-in-browser}}
-  <br>
+
   {{#display-in-browser except="ie"}}
-    &lt;p&gt;This will not be visible in IE.&lt;/p&gt;
+    <p>This will not be visible in IE.</p>
   {{/display-in-browser}}
-</pre>
+```
 
 * To display in all browsers,
-<pre>
+```
   {{#display-in-browser all=all}}
-    &lt;p&gt;This will be visible in all browsers&lt;/p&gt;
+    <p>This will be visible in all browsers</p>
   {{/display-in-browser}}
-  <br>
+
   {{!-- You can also pass as a string, if needed --}}
+
   {{#display-in-browser all="true"}}
-    &lt;p&gt;This will be visible in all browsers&lt;/p&gt;
+    <p>This will be visible in all browsers</p>
   {{/display-in-browser}}
-</pre>
+```
 
 * To display in no browser,
-<pre>
+```
   {{#display-in-browser none="true"}}
-    &lt;p&gt;This will not be visible in any browser&lt;/p&gt;
+    <p>This will not be visible in any browser</p>
   {{/display-in-browser}}
-</pre>
+```
 
 Supported browsers - `'chrome', 'firefox', 'safari', 'opera', 'ie', 'edge', 'blink', 'mobile'`(case-insensitive).

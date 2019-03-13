@@ -1,0 +1,9 @@
+<p class="date">
+  {{post.date}}
+  {% if post.tags %}
+    &nbsp;&nbsp;|
+    {% for postTag in post.tags %}
+      <a href="/tag/{{postTag | downcase}}/" class="text-light post-tag">{{postTag}}</a>
+    {% endfor %}
+  {% endif %}
+</p>

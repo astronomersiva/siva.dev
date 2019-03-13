@@ -28,52 +28,56 @@
   {% endfor %} -->
 </head>
 <body>
-  {% include "navbar-posts.html" %}
+  <div class="container posts">
+    <div class="content">
+      {% assign active = "photography" %}
+      {% include "navbar.html" %}
 
-  <div class="container">
-    <div class="content post-header">
-      <h1>Photography</h1>
-      <h2>{{post.description}}</h2>
-      <hr class="post-hr">
+      <main role="main">
+        <h1>Photography</h1>
+        <p style="margin-top: 2rem;">
+          This is an attempt to curate some of my photographs
+          and self-host them instead of using third-party
+          services like Flickr and Instagram.
+        </p>
+      </main>
     </div>
   </div>
 
-  <main role="main">
-    <div class="container photos">
-      <div class="content">
-        <!-- Probably the most complex Liquid template code you will ever see :facepalm:
-        Beats JS based solutions anyday, so going to stick to this -->
-        {% assign no_of_photos = data.photos.size %}
+  <div class="container photos">
+    <div class="content">
+      <!-- Probably the most complex Liquid template code you will ever see :facepalm:
+      Beats JS based solutions anyday, so going to stick to this -->
+      {% assign no_of_photos = data.photos.size %}
 
-        <!-- range in liquid is inclusive of the last digit -->
-        {% assign no_of_photos_for_looping = no_of_photos | minus: 1 %}
+      <!-- range in liquid is inclusive of the last digit -->
+      {% assign no_of_photos_for_looping = no_of_photos | minus: 1 %}
 
-        {% assign photos_in_first_col = no_of_photos | divided_by: 2 | ceil %}
-        {% assign photos_in_second_col = no_of_photos | minus: photos_in_first_col %}
+      {% assign photos_in_first_col = no_of_photos | divided_by: 2 | ceil %}
+      {% assign photos_in_second_col = no_of_photos | minus: photos_in_first_col %}
 
-        <div class="photo-column">
-          {% assign endindex = photos_in_first_col | minus: 1 %}
-          {% for i in (0..endindex) %}
-            {% include "photo-column.html" %}
-          {% endfor %}
-        </div>
-        <div class="photo-column">
-          {% assign startindex = photos_in_first_col %}
-          {% assign endindex = photos_in_first_col | plus: photos_in_second_col | minus: 1 %}
-          {% for i in (startindex..endindex) %}
-            {% include "photo-column.html" %}
-          {% endfor %}
-        </div>
-        <!-- <div class="photo-column">
-          {% assign startindex = photos_in_first_col | plus: photos_in_second_col %}
-          {% assign endindex = no_of_photos_for_looping %}
-          {% for i in (startindex..endindex) %}
-            {% include "photo-column.html" %}
-          {% endfor %}
-        </div> -->
+      <div class="photo-column">
+        {% assign endindex = photos_in_first_col | minus: 1 %}
+        {% for i in (0..endindex) %}
+          {% include "photo-column.html" %}
+        {% endfor %}
       </div>
+      <div class="photo-column">
+        {% assign startindex = photos_in_first_col %}
+        {% assign endindex = photos_in_first_col | plus: photos_in_second_col | minus: 1 %}
+        {% for i in (startindex..endindex) %}
+          {% include "photo-column.html" %}
+        {% endfor %}
+      </div>
+      <!-- <div class="photo-column">
+        {% assign startindex = photos_in_first_col | plus: photos_in_second_col %}
+        {% assign endindex = no_of_photos_for_looping %}
+        {% for i in (startindex..endindex) %}
+          {% include "photo-column.html" %}
+        {% endfor %}
+      </div> -->
     </div>
-  </main>
+  </div>
 
   <div class="modal">
     <div class="close" onclick="closeModal()">x</div>

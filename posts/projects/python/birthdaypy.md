@@ -12,4 +12,4 @@ It was November 15, 2013\. I was liking and replying to some 150 birthday wishes
 
 The day arrived and I ran the script. And Python did the magic exactly as I wanted. Feel free to play around with the script.
 
-[[Source on Github]](http://github.com/astronomersiva/birthdayWishesReplier/)
+[[Source on GitHub]](http://github.com/astronomersiva/birthdayWishesReplier/)

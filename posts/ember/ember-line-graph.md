@@ -21,7 +21,7 @@ It uses SVGs to create charts so it is scalable and supports animations and grad
 
 [Detailed Docs](https://astronomersiva.github.io/ember-line-graph/)
 
-<pre>
+```
   {{line-graph
     points=points
     strokeWidth=5
@@ -34,7 +34,7 @@ It uses SVGs to create charts so it is scalable and supports animations and grad
     width=500
     height=125
     padding=10}}
-</pre>
+```
 
 <br>
 
@@ -55,4 +55,4 @@ It uses SVGs to create charts so it is scalable and supports animations and grad
 
 <br>
 
-Head out to the [Github repo](https://github.com/astronomersiva/ember-line-graph/) if you want to contribute or file an issue!
+Head out to the [GitHub repo](https://github.com/astronomersiva/ember-line-graph/) if you want to contribute or file an issue!

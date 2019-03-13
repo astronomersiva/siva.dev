@@ -6,11 +6,11 @@ tags: EmberJS, Build
 order: 27
 ---
 
-*Update: I have written about a newer and simpler approach to do this [here](/ember-differential-bundles/).*
+***Update: I have written about a newer and simpler approach to do this [here](/ember-differential-bundles/).***
 
 EmberJS provided [a way to specify browser targets](https://rwjblue.com/2017/04/21/ember-cli-targets/) in April, 2017. With this, one could specify a list of browsers based on the app consumers' analytics and ship properly transpiled code.
 
-When this came out, a few people in the Ember Community(including me) [started looking](https://github.com/babel/ember-cli-babel/issues/200) for ways to define multiple targets for the same build. With the current setup of using `@babel/preset-env`, we were shipping code needed for IE11 to users with Chrome and Firefox even though IE11 users were a considerable minority. Not only were we shipping unnecessary code, we were slowing down their experience in terms of JS parse and compile times. After numerous conversations on Twitter, Slack and Github issues, it became clear that it was not currently possible. I eventually forgot about this.
+When this came out, a few people in the Ember Community(including me) [started looking](https://github.com/babel/ember-cli-babel/issues/200) for ways to define multiple targets for the same build. With the current setup of using `@babel/preset-env`, we were shipping code needed for IE11 to users with Chrome and Firefox even though IE11 users were a considerable minority. Not only were we shipping unnecessary code, we were slowing down their experience in terms of JS parse and compile times. After numerous conversations on Twitter, Slack and GitHub issues, it became clear that it was not currently possible. I eventually forgot about this.
 
 The call for blog posts for #EmberJS2018 was out and I [tweeted](https://twitter.com/astronomersiva/status/1002280628815982592) about this in [one](https://twitter.com/astronomersiva/status/996041686311583744) of my replies. After reading Stefan Penner's replies, it became clear that a very obvious solution was to simple generate multiple builds with different build targets and make use of some logic at the server to determine which bundle to ship to the user.
 

@@ -3,32 +3,19 @@
 <head>
   <meta name="description" content="Personal blog on code and travel by Sivasubramanyam A.">
   {% include "head.html" %}
-  {% include "no-script-bg.html" %}
 </head>
 <body>
-  <div class="content hero hero-page">
-    {% include "navbar.html" %}
-
-    <div class="helloWorld">
-      <div class="hello">
-        Sorry!
-      </div>
-    </div>
-  </div>
-
-  <div class="content mobile-hero">
-    {% include "navbar-posts.html" %}
-
-    <div class="container">
-      <div class="content post-header">
-        <h1>Sorry!</h1>
-      </div>
-    </div>
-  </div>
-
   <div class="container posts">
     <div class="content">
-      <h4 class="text-center">The page you are looking for doesn't exist.</h4>
+      {% include "navbar.html" %}
+
+      <main role="main">
+        <h1>Sorry!</h1>
+
+        <p style="margin-top: 2rem;">
+          The page you are looking for doesn't exist.
+        </p>
+      </main>
     </div>
   </div>
 
