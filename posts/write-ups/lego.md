@@ -9,11 +9,11 @@ featured: true
 ---
 
 I have always been a fan of static site generators. Back in my college days, when
-I was running college projects on free AWS credits courtesy of the Github Student Pack
+I was running college projects on free AWS credits courtesy of the GitHub Student Pack
 and a few hackathon credits, I **had** to minimise expenditure in every possible way.
 So when it came to my own website, the cheapest possible way to host it was to just use
 some cheap shared hosting service. This costed somewhere around 10-15USD a year and it
-was something I could barely manage to afford. When Github Pages entered, things became easier.
+was something I could barely manage to afford. When GitHub Pages entered, things became easier.
 Instead of uploading a zip on CPanel and then extracting it, I had to just check-in the
 generated files into the *gh-pages* branches and the hosting was taken care of.
 
@@ -97,13 +97,13 @@ organised by topic in the repo but want them to be built to the same path so `le
 a `skipDirsInPostUrls` option at the project level that lets to skip directory names in the generated URLs.
 
 For example,
-<pre>
+```
 .
 └── posts
     ├── travel
     │   └── nepal.md
     └── i-love-js.md
-</pre>
+```
 
 The URL of nepal.md will be `site.com/nepal` if this option is `true`. By default, the URL
 of this post would be `site.com/travel/nepal`. This option will be overridden if the post's front-matter
@@ -136,7 +136,7 @@ demonstrates how this can be implemented:
 There is a task folder inside lego that contains these tasks. The name of the task used in the code
 is the same as that of the file name.
 
-<pre>
+```
   const tasks = {};
 
   const tasks = fs.readdirSync('./tasks', { encoding: 'utf8' });
@@ -147,12 +147,12 @@ is the same as that of the file name.
   tasks.forEach((task) => {
     tasks[path.parse(task).name] = require(`${pathToTasks}/${task}`);
   });
-</pre>
+```
 
 The task runner can now call `tasks['revisionAssets']()` and that task will be run. Each of these tasks
 return a promise and can take any number of arguments.
 
-<pre>
+```
   const build = [
     'revisionAssets',
     [
@@ -162,14 +162,14 @@ return a promise and can take any number of arguments.
       'generateSiteMap'
     ]
   ];
-</pre>
+```
 
 The task runner iterates over each element of this array and if it is a string, waits till the task is
 resolved. If it is an array, it calls each of them and pushes all the returned promises into an array.
 Using `Promise.all`, we can determine if the parallel tasks have all executed and then move on to the next
 task.
 
-<pre>
+```
   if (!Array.isArray(task)) {
     task = [task];
   }
@@ -186,7 +186,7 @@ task.
       await tasks[taskUnit](options);
     }
   }
-</pre>
+```
 
 
 #### **Fast live reload capability**
@@ -199,7 +199,7 @@ dependent on that post.
 
 For example, consider the following function that generates html from markdown files.
 
-<pre>
+```
   function generateHtmlFromMd(changedPath) {
     let files;
     files = changedPath ? [changedPath] : readFilesInDir('posts', '.md')
@@ -211,11 +211,11 @@ For example, consider the following function that generates html from markdown f
       // write to build
     }
   }
-</pre>
+```
 
 How does lego determine which files have changed? By using a watcher like *chokidar*.
 
-<pre>
+```
   let postsWatcher = chokidar.watch(
     [`posts/**/*md`, `posts/**/*html`],
     watchOptions
@@ -227,20 +227,20 @@ How does lego determine which files have changed? By using a watcher like *choki
 
     // path will be the changed file's name
   });
-</pre>
+```
 
 #### **Responsive image generation**
 
 markdown-it supports custom containers. Using that, I wrote a plugin that would generate images
 for various resolutions and insert a `<picture>` tag with appropriate `<source>` tags.
 
-<pre>
+```
 ::: lego-image
   src="static/images/hello.png"
   res="1080,500,320"
   alt="alternate text"
   class="img-responsive center-block" :::
-</pre>
+```
 
 #### **Putting together the rest of the pieces**
 

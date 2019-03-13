@@ -29,7 +29,7 @@ method in the application adapter can be used.
 Then proceed to create a component(say, `eager-link`).
 
 **components/eager-link.js**
-<pre>
+```
 import Component from '@ember/component';
 import { getOwner } from '@ember/application';
 import { task, timeout } from 'ember-concurrency';
@@ -57,21 +57,21 @@ export default Component.extend({
     this.get('eagerPrefetch').cancelAll();
   },
 });
-</pre>
+```
 
 <br>
 
 **templates/components/eager-link.hbs**
-<pre>
+```
 {{link-to text href}}
-</pre>
+```
 
 <br>
 
 and this component can be used in the application as
-<pre>
+```
 {{eager-link href="cars" text="See your cars!"}}
-</pre>
+```
 
 <br>
 

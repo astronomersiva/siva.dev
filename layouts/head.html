@@ -5,10 +5,12 @@
 <meta name="author" content="Sivasubramanyam A">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% unless post %}
-  <title>@siva {% if title %}{{ title }}{% endif %}</title>
+  {% unless tagList %}
+    <title>{% if title %}{{ title }} | {% endif %}@siva</title>
+  {% endunless %}
 {% endunless %}
 
-<meta name="theme-color" content="#3869ff">
+<meta name="theme-color" content="#0000ff">
 
 {% unless isDevelopment %}
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57141163-3"></script>
@@ -44,47 +46,22 @@
 
 <link
   rel="preload"
-  href="https://fonts.gstatic.com/s/ptserif/v9/EJRVQgYoZZY2vCFuvAFWzr-_dSb_.woff2"
-  crossorigin="anonymous"
-  as="font">
-
-<link
-  rel="preload"
-  href="https://fonts.gstatic.com/s/ptserif/v9/EJRSQgYoZZY2vCFuvAnt66qSVyvVp8NA.woff2"
+  href="https://fonts.gstatic.com/s/robotocondensed/v16/ieVi2ZhZI2eCN5jzbjEETS9weq8-32meGCQYb9lecyU.woff2"
   crossorigin="anonymous"
   as="font">
 
 <link rel="prefetch" href="/">
-<link rel="prefetch" href="/about/">
 <link rel="prefetch" href="/archive/">
 <link rel="prefetch" href="/photography/">
 
 {% if post %}
   <link rel="preload" href="/static/js/highlight/styles/shades-of-purple.css" as="style">
-  <link rel="preload" href="/static/js/highlight/highlight.pack.js" as="script">
-
   <link rel="preload" href="/static/css/ajanta.css" as="style">
   <link rel="preload" href="/static/js/ajanta.js" as="script">
 {% else %}
   <link rel="prefetch" href="/static/js/highlight/styles/shades-of-purple.css" as="style">
-  <link rel="prefetch" href="/static/js/highlight/highlight.pack.js" as="script">
-
   <link rel="prefetch" href="/static/css/ajanta.css" as="style">
   <link rel="prefetch" href="/static/js/ajanta.js" as="script">
-  <link rel="prefetch" href="/static/js/ajanta-for-css.js" as="script">
-
-  <style>
-    @media screen and (min-width: 471px) {
-      .hero-page {
-        background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALADIDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAABAYAAgUD/8QAIhAAAgIBAwQDAAAAAAAAAAAAAQIAEQMEBjEFEiFRFTJB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQMEAP/EAB0RAAICAgMBAAAAAAAAAAAAAAABAhUyUgURQWL/2gAMAwEAAhEDEQA/AMPH0F3+ouEYttZnNBDNzp7FV8Gpq6fNkDimMutF5Ejr5eyFNNtZLorxCMe2m/RGd3a2Ny+lYsaY2IXyiSxBXvvIXse3IQNuADzG3Ai1xOmRR28RNu9RlZ9Cf8CnuSNHYvoSQW8tTVi2P//Z');
-        transition: background 0.3s linear;
-      }
-    }
-  </style>
 {% endif %}
 
 <script defer src="/static/js/ajanta.js"></script>
-
-{% unless post.hero %}
-  <script defer src="/static/js/ajanta-for-css.js"></script>
-{% endunless %}

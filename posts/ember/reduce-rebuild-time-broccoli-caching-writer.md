@@ -17,13 +17,13 @@ Using this, one can specify what files can trigger a rebuild and what files cann
 
 For example,
 
-<pre>
+```
 options: {
   cacheInclude: [
     /.properties$/
   ]
 }
-</pre>
+```
 
 will only trigger rebuilds when `.properties` files are changed. This is exactly what we wanted!
 

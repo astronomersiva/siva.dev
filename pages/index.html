@@ -3,57 +3,58 @@
 <head>
   <meta name="description" content="Personal blog on code and travel by Sivasubramanyam A.">
   {% include "head.html" %}
+
   {% assign allArticles = posts | sortByOrder %}
   {% for article in allArticles %}
     {% if article.featured %}
       <link rel="prefetch" href="/{{article.path}}/">
     {% endif %}
   {% endfor %}
-  {% include "no-script-bg.html" %}
 </head>
 <body>
-  <div class="content hero hero-page">
-    {% assign isIndexPage = true %}
-    {% include "navbar.html" %}
-
-    <div class="helloWorld">
-      <div class="hello">
-        Hello, World!
-      </div>
+  <div class="container posts">
+    <div class="content">
+      {% assign active = "index" %}
+      {% include "navbar.html" %}
+      <main role="main">
+        <h1>Hello!</h1>
+        <p style="margin-top: 2rem;">
+          My name is Siva. I currently work as a front-end engineer
+          in Zoho.
+        </p>
+        <p>
+          I contribute to web apps built with EmberJS and Preact at work.
+          When not rolling out features or fixing bugs, I help in improving
+          the performance of our web apps by hunting down memory leaks and
+          trying new patterns that could make our apps faster to our users.
+          I also built several internal tools and frameworks that are used
+          by about a hundred developers everyday.
+        </p>
+        <p>
+          I am a seasoned trekker and love the sounds and smells of jungles.
+          I have done a few exploratory treks, opening up new routes in the
+          south Indian mountains. I am also an avid astronomer and run the
+          Chennai Astronomy Club with the help of other volunteers.
+        </p>
+        <p>
+          You can get in touch with me on
+          <a href="https://twitter.com/astronomersiva" target="_blank" rel="noopener">Twitter</a>.
+          You can also check out my <a href="https://github.com/astronomersiva" target="_blank" rel="noopener">GitHub</a>
+          profile where I host all my code and contribute what I can to some open source projects.
+        </p>
+      </main>
     </div>
   </div>
 
-  <div class="content mobile-hero">
-    {% include "navbar-posts.html" %}
+  <div class="container posts">
+    <div class="content">
+      <h4>Featured Posts</h4>
 
-    <div class="container">
-      <div class="content post-header">
-        <h1>Hello, World!</h1>
-      </div>
-    </div>
-  </div>
-
-  <main role="main">
-    <div class="container posts">
       {% assign articles = posts | sortByOrder %}
 
-      <div class="post featured-posts">
-        Featured Posts
-        <hr>
-      </div>
       {% for post in articles %}
         {% if post.featured %}
-          <div class="post">
-            <a href="/{{post.path}}/" class="post-title">{{ post.title }}</a>
-            <span class="language">
-              {% for tag in post.tags %}
-                <a href="/tag/{{tag | downcase}}/">&nbsp;&nbsp;{{tag}}</a>
-              {% endfor %}
-            </span><br>
-            {{ post.description }}
-            <hr>
-            <hr class="animate">
-          </div>
+          {% include "post-item.html" %}
         {% endif %}
       {% endfor %}
 
@@ -61,7 +62,7 @@
         <a href="/archive/">View Archive →</a>
       </div>
     </div>
-  </main>
+  </div>
 
   {% include "footer.html" %}
 </body>

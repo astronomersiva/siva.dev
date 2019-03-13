@@ -12,6 +12,6 @@ I wrote a Python script to do this and used matplotlib to plot the visited sites
 
 Initially, I had to figure out a way to access the browser history from the Python script and [this blog](http://digital-forensics.sans.org/blog/2010/01/21/google-chrome-forensics/) proved to be a great reference. After using the sqllite3 package to access the browser history, I used the urlparse package to get the website's name.
 
-[[Source on Github]](https://github.com/astronomersiva/SnoopMyself)
+[[Source on GitHub]](https://github.com/astronomersiva/SnoopMyself)
 
 ::: lazy-image src="/static/images/lowres/siteanalytics.png" alt="Sample output" :::

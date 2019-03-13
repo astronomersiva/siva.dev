@@ -35,7 +35,7 @@ where, `a`, `b`, `c` and `d` are the initial conditions.
 
 Generating the attractor with HTML Canvas and JavaScript is straightforward.
 
-<pre>
+```
 // .2 million points
 let n = 200000;
 
@@ -59,7 +59,7 @@ for (let index = 1; index &lt;= n; index++) {
 }
 
 context.stroke();
-</pre>
+```
 
 By changing the value of `a`, `b`, `c` and `d`, different behaviours of the attractor can be generated.
 

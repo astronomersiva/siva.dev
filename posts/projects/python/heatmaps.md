@@ -12,4 +12,4 @@ I also went ahead and used the publicly available earthquake database to plot al
 
 <object data="../static/earthquakebig.html" width="600" height="400"><embed src="../static/earthquakebig.html" width="600" height="400">Error: Embedded data could not be displayed.</object>
 
-[[Source on Github]](https://github.com/astronomersiva/Earthquake-Heat-map/)
+[[Source on GitHub]](https://github.com/astronomersiva/Earthquake-Heat-map/)

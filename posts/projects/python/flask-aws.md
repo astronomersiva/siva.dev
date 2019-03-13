@@ -33,12 +33,12 @@ After this, create a name.wsgi file where name is the name of the file containin
 
 The contents of the name.wsgi file should be as follows:
 
-<pre>
+```
 import sys
 sys.path.insert(0, '/var/www/flaskapp')
 
 from app import app as application
-</pre>
+```
 
 Then, run the following commands:
 
@@ -48,21 +48,21 @@ Then, run the following commands:
 
 Type the following contents into the amazonaws.com.conf file:
 
-<pre>
+```
 NameVirtualHost *:80
 
-&lt;VirtualHost *:80&gt;
-        ServerName  'Public DNS of your EC2 Instance'
-        WSGIScriptAlias / /var/www/flaskapp/name.wsgi
-        &lt;Directory /var/www/flaskapp/&gt;
-                Order allow,deny
-                Allow from all
-        &lt;/Directory&gt;
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        LogLevel info
-        CustomLog ${APACHE_LOG_DIR}/access.log combined
-&lt;/VirtualHost&gt;
-</pre>
+<VirtualHost *:80>
+    ServerName  'Public DNS of your EC2 Instance'
+    WSGIScriptAlias / /var/www/flaskapp/name.wsgi
+    <Directory /var/www/flaskapp/>
+        Order allow,deny
+        Allow from all
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel info
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
 
 After this, enable the Flask app by disabling the default Apache page and enabling the newly created one.
 

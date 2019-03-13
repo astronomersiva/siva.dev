@@ -10,4 +10,4 @@ I wanted to write a Python script that would scrape Heavens-above.com and post I
 
 To make it more interesting, I added some weather details fetcher to the code.
 
-[[Source on Github]](https://github.com/astronomersiva/heavens-above/)
+[[Source on GitHub]](https://github.com/astronomersiva/heavens-above/)

@@ -3,61 +3,63 @@
 <html lang="en">
 <head>
   <title>List of posts tagged {{ tag }} | @siva</title>
-
+  <meta name="description" content="Personal blog on code and travel by Sivasubramanyam A.">
+  {% assign tagList = true %}
   {% include "head.html" %}
 
   {% assign allArticles = posts | sortByOrder %}
-  {% for article in allArticles %}
-    {% if article.featured %}
-      <link rel="prefetch" href="/{{article.path}}/">
+  {% for post in allArticles %}
+    {% if post.featured %}
+      {% for postTag in post.tags %}
+        {% if postTag == tag %}
+          <link rel="prefetch" href="/{{post.path}}/">
+        {% endif %}
+      {% endfor %}
     {% endif %}
   {% endfor %}
-
-  {% include "no-script-bg.html" %}
 </head>
 
 <body>
-  <div class="content hero hero-page">
-    {% include "navbar.html" %}
-
-    <div class="helloWorld">
-      <div class="hello">
-        <div class="taglistem">Posts tagged {{tag}}</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="content mobile-hero">
-    {% include "navbar-posts.html" %}
-
-    <div class="container">
-      <div class="content post-header">
-        <h1>Posts tagged {{tag}}</h1>
-      </div>
-    </div>
-  </div>
-
   <div class="container posts">
     <div class="content">
-      {% assign articles = posts | sortByOrder %}
+      {% include "navbar.html" %}
 
-      <main role="main">
-        {% for post in articles %}
+      <h1>Posts tagged {{tag}}</h1>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <main role="main">
+    <div class="container posts">
+      <div class="content">
+        {% assign featuredArticles = posts | sortByOrder %}
+        {% for post in featuredArticles %}
           {% if post.featured %}
-            {% include "tagged-post.html" %}
+            {% for postTag in post.tags %}
+              {% if postTag == tag %}
+                {% include "post-item.html" %}
+              {% endif %}
+            {% endfor %}
           {% endif %}
         {% endfor %}
 
-        {% for post in articles %}
+        {% assign otherArticles = posts | sortByOrder %}
+        {% for post in otherArticles %}
           {% unless post.featured %}
             {% unless post.hidden %}
-              {% include "tagged-post.html" %}
-              {% endunless %}
+              {% for postTag in post.tags %}
+                {% if postTag == tag %}
+                  {% include "post-item.html" %}
+                {% endif %}
+              {% endfor %}
+            {% endunless %}
           {% endunless %}
         {% endfor %}
-      </main>
+      </div>
     </div>
-  </div>
+  </main>
 
   {% include "footer.html" %}
 </body>
