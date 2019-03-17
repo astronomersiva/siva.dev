@@ -56,7 +56,7 @@
     rotation.oninput = handleRotationForTriangle;
     translation.oninput = handleTranslationForTriangle;
 
-    function drawTriangles(canvas) {
+    function drawTriangles(canvas, isBlue) {
       let context = canvas.getContext('2d');
 
       let scaledWidth = window.innerWidth / 6;
@@ -94,7 +94,8 @@
         context.lineTo(pointB.x, pointB.y);
         context.lineTo(pointC.x, pointC.y);
         context.lineTo(pointA.x, pointA.y);
-        context.fillStyle = flag ? 'black' : 'transparent';
+        let fillStyle = isBlue ? 'blue' : 'red';
+        context.fillStyle = flag ? fillStyle : 'transparent';
         context.closePath();
         context.stroke();
         context.fill();
@@ -123,7 +124,7 @@
     let topCanvas = document.getElementById('top-triangle');
     let bottomCanvas = document.getElementById('bottom-triangle');
 
-    drawTriangles(topCanvas)
-    drawTriangles(bottomCanvas)
+    drawTriangles(topCanvas, true);
+    drawTriangles(bottomCanvas, false);
   })();
 </script>

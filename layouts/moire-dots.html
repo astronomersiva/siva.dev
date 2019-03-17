@@ -57,7 +57,7 @@
     rotation.oninput = handleRotationForDots;
     translation.oninput = handleTranslationForDots;
 
-    function drawDots(canvas) {
+    function drawDots(canvas, isBlue) {
       let context = canvas.getContext('2d');
 
       let scaledWidth = window.innerWidth / 6;
@@ -68,7 +68,7 @@
       context.scale(dpr, dpr);
       context.lineJoin = 'bevel';
 
-      let gap = 3;
+      let gap = 5;
       let points = [];
 
       for (let y = 0; y <= size; y += gap) {
@@ -76,6 +76,7 @@
         for (let x = 0; x <= size; x += gap) {
           rows.push({ x, y });
           context.beginPath();
+          context.fillStyle = isBlue ? 'blue' : 'red';
           context.arc(x, y, 1, 0, 2 * Math.PI, true);
           context.fill();
         }
@@ -87,7 +88,7 @@
     let topCanvas = document.getElementById('top');
     let bottomCanvas = document.getElementById('bottom');
 
-    drawDots(topCanvas)
-    drawDots(bottomCanvas)
+    drawDots(topCanvas, true)
+    drawDots(bottomCanvas, false)
   })();
 </script>
