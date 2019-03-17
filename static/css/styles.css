@@ -160,6 +160,7 @@ a.active:active {
 
 /* Contents */
 .content {
+  position: relative;
   color: var(--theme-text);
   padding: 0 5px;
   text-align: left;
