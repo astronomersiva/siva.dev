@@ -135,7 +135,7 @@ strong, b {
 /* Navbar */
 .navbar {
   width: 100%;
-  padding: 1rem 0 5rem 0;
+  padding: 1rem 5px 5rem 5px;
   display: block;
 }
 
