@@ -1,7 +1,8 @@
 require('dotenv').config();
 
-const markdownOptions = require('./config/markdown');
+const md = require('./config/markdown');
 const critical = require('./config/extract-critical');
+const rss = require('./config/rss');
 
 const ssl = process.env.SSL ?
   { key: 'ssl/server.key', cert: 'ssl/server.crt' } :
@@ -10,6 +11,7 @@ const ssl = process.env.SSL ?
 module.exports = {
   name: 'siva.dev',
   url: 'https://siva.dev/',
+  author: 'Sivasubramanyam A',
   skipDirsInPostUrls: true,
   inlineSource: true,
   server: {
@@ -22,6 +24,7 @@ module.exports = {
       output: { quote_style: 3 }
     }
   },
-  md: markdownOptions,
-  critical
+  md,
+  critical,
+  rss
 }
