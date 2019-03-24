@@ -11,5 +11,8 @@ ssl/
 *flamegraph*.html*
 *isolate*
 
+# lego cache
+.lego/
+
 # WIP
 layouts/generative-art
