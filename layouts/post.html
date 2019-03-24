@@ -32,7 +32,7 @@
     {% endfor %}
 
     {% for tag in post.tags %}
-      <link rel="prefetch" href="/tag/{{tag | downcase}}/">
+      <link rel="prefetch" href="/tags/{{tag | downcase}}/">
     {% endfor %}
   {% endif %}
 </head>
@@ -54,7 +54,7 @@
           <strong>
             View Other Posts Tagged
             {% for tag in post.tags %}
-              <a href="/tag/{{tag | downcase}}" class="text-light post-tag">{{tag}}</a>
+              <a href="/tags/{{tag | downcase}}" class="text-light post-tag">{{tag}}</a>
             {% endfor %}
           </strong>
         </div>

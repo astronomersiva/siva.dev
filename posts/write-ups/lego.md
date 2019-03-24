@@ -82,7 +82,7 @@ feedback. This is critical especially when working on websites because you can s
 there and it helps in maintaining your flow of thoughts. 
 * **A simple directory structure** - I always admired the simplicity of the Jekyll project structure and
 wanted something similar to that.
-* **Extract tags from posts' metadata and create relevant pages** - Example, `site.com/tag/javascript/`
+* **Extract tags from posts' metadata and create relevant pages** - Example, `site.com/tags/javascript/`
 should have a list of all posts tagged `javascript`.
 
 #### **Project directory structure**
