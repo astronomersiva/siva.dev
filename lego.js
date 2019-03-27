@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const fs = require('fs-extra');
 const path = require('path');
 const md = require('./config/markdown');
 const critical = require('./config/extract-critical');
@@ -11,8 +12,13 @@ const ssl = process.env.SSL
 
 let cacheDir = '';
 if (process.env.NETLIFY_BUILD_BASE) {
-  cacheDir = path.join(process.env.NETLIFY_BUILD_BASE, 'cache', 'lego');
+  // cacheDir = path.join(process.env.NETLIFY_BUILD_BASE, 'cache', 'lego');
+  cacheDir = path.join(__dirname, 'node_modules', '@astronomersiva/lego', 'cache');
+  fs.mkdirpSync(cacheDir);
+
+  console.log(JSON.stringify(fs.readdirSync(cacheDir)))
 }
+cacheDir = path.join(__dirname, 'node_modules', '@astronomersiva/lego', 'cache');
 
 module.exports = {
   name: 'siva.dev',
