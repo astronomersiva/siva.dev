@@ -90,6 +90,11 @@ in the server based on a cookie, or if possible, parsing the UA.
     ember build --environment=production --output-path=modern &&
     LEGACY=true ember build --environment=production --output-path=legacy
   ```
+  **Note:** You can also run these builds in parallel. When doing so, you might often get build failures
+  with the error `Unexpected end of file ...` due to an
+  [issue](https://github.com/stefanpenner/broccoli-persistent-filter/issues/124) in broccoli-persistent-filter.
+  To avoid this, set `process.env.BROCCOLI_PERSISTENT_FILTER_CACHE_ROOT` to a unique value for each
+  build(for example, the complete path of the workspace or the current timestamp).
 * Run the [`index.js`](https://github.com/astronomersiva/ember-differential-bundles/blob/master/index.js)
   provided in [this repo](https://github.com/astronomersiva/ember-differential-bundles).
   It will generate a `dist` folder with an `index.html` containing combined script tags and meta

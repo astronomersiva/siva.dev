@@ -7,6 +7,11 @@ order: 33
 featured: true
 ---
 
+**Update:** ISRO has now opened a launch view gallery to view launches. This is a lot closer(~6kms away,
+the place I have described here is 11kms away) to the launchpads. However, for night launches, especially
+if you are interested in photography, I would recommend the place that I have described in this post.
+To enter the viewing gallery, you will have to register in [this website](https://www.shar.gov.in/VSCREGISTRATION/index.jsp).
+
 I am a space freak. All throughout my childhood, I have seen the rockets being launched from
 Sriharikota from my home in Chennai. Yes, you read that right. **Rockets launched from Sriharikota
 are visible from Chennai.** Sriharikota is in fact just around 100 kilometers from Chennai.
