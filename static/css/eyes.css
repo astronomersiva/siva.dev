@@ -1,0 +1,47 @@
+:root {
+  --theme-eye-border: hsl(0, 0%, 0%);
+  --theme-iris: hsl(0, 0%, 0%);
+}
+
+body.dark {
+  --theme-iris: hsl(0, 0%, 62%);
+}
+
+.face {
+  display: none;
+}
+.animate .face {
+  display: inline;
+  position: relative;
+}
+.eye {
+  border-radius: 50%;
+  border: 2px solid var(--theme-text);
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: -2px;
+  margin-bottom: 10px;
+  transform: rotate(180deg);
+}
+.eye:after {
+  content: '';
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  width: 7px;
+  background: var(--theme-iris);
+  background: black;
+  border: 1px solid var(--theme-iris)
+}
+.mouth {
+  background: grey;
+  -webkit-clip-path: polygon(26% 65%, 30% 75%, 38% 80%, 48% 79%, 60% 73%, 61% 63%);
+  clip-path: polygon(26% 65%, 30% 75%, 38% 80%, 48% 79%, 60% 73%, 61% 63%);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 5px;
+  top: 15px;
+}

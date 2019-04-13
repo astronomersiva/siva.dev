@@ -1,5 +1,5 @@
 ---
-title: Serving modern or legacy bundles based on users' browser in Ember
+title: Differential Serving of assets in Ember
 date: March, 2019
 description: A new take on differential browser bundling in EmberJS
 tags: EmberJS

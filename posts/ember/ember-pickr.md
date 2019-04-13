@@ -5,7 +5,6 @@ description: An EmberJS color picker addon that wraps Pickr, and works without j
 tags: EmberJS
 code: true
 order: 34
-featured: true
 ---
 
 ember-pickr provides a wrapper for [Pickr](https://github.com/Simonwep/pickr), a flat, responsive and hackable color picker.

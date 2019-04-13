@@ -23,6 +23,8 @@
   </script>
 {% endunless %}
 
+<link rel="preload" href="/static/js/dark-mode.js" as="script">
+<script defer src="/static/js/dark-mode.js"></script>
 <script inline src="/static/js/determine-webp-support.js"></script>
 
 <link rel="stylesheet" href="/static/css/styles.css">
@@ -51,7 +53,7 @@
   as="font">
 
 <link rel="prefetch" href="/">
-<link rel="prefetch" href="/archive/">
+<link rel="prefetch" href="/blog/">
 <link rel="prefetch" href="/photography/">
 
 {% if post %}

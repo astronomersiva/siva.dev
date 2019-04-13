@@ -1,13 +1,27 @@
 /* Color Codes */
 :root {
-  --theme-text: black;
+  --theme-background: white;
+  --theme-text: hsl(0, 0%, 0%);
   --theme-text-light: #5d5d5d;
   --theme-heading: #111;
-  --theme-red: #ee0000;
-  --theme-blue: #3869ff;
-  --theme-light-blue: #0099e4;
+  --theme-red: hsl(0, 100%, 50%);
+  /* --theme-blue: hsl(225, 100%, 61%); */
+  --theme-blue: hsl(240, 100%, 50%);
+  --theme-code-bg: hsl(42, 100%, 61%);
   --theme-light-border: #eee;
-  --theme-light-background: #f9f9f9;
+  --theme-heading-font: 'Roboto Condensed', sans-serif;
+  --theme-font: 'Source Sans Pro', sans-serif;
+}
+
+body.dark {
+  --theme-background: #1e2227;
+  --theme-text: hsl(0, 0%, 62%);
+  --theme-text-light: hsl(0, 0%, 62%);
+  --theme-heading: hsl(0, 0%, 62%);
+  --theme-red: hsl(225, 100%, 75%);
+  --theme-blue : hsl(225, 100%, 75%);
+  --theme-code-bg: hsl(42, 100%, 61%);
+  --theme-light-border: hsl(0, 0%, 26%);
   --theme-heading-font: 'Roboto Condensed', sans-serif;
   --theme-font: 'Source Sans Pro', sans-serif;
 }
@@ -87,7 +101,7 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--theme-background);
   justify-content: center;
   justify-items: center;
   align-items: center;
