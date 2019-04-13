@@ -5,7 +5,6 @@ description: Cutting down rendering performance in Ember
 code: true
 tags: EmberJS
 order: 32
-featured: true
 ---
 
 Anyone who has profiled long list views will know how slow they can get irrespective of the

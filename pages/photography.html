@@ -22,6 +22,14 @@
     </style>
   </noscript>
 
+  <script>
+    window.onkeydown = function(event) {
+      if (event.keyCode == 27) {
+        closeModal();
+      }
+    };
+  </script>
+
   {% assign imageSrcBase = "/static/images/photography/" %}
   <!-- {% for photo in data.photos %}
     <link rel="preload" href="{{imageSrcBase}}{{photo.src}}" as="image">

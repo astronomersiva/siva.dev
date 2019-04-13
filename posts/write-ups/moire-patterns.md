@@ -2,10 +2,9 @@
 title: Moiré Patterns
 date: March, 2019
 description: Do not see this if you are prone to motion sickness
-tags: Generative Art
+tags: General
 code: true
 order: 38
-featured: true
 ---
 
 I recently came across this [tweet](https://twitter.com/Rainmaker1973/status/1103631346633707523)

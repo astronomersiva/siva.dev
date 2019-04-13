@@ -4,7 +4,6 @@ date: November, 2018
 description: A tale of how we ended up finding the best place to spot rockets launched from Sriharikota
 tags: General
 order: 33
-featured: true
 ---
 
 **Update:** ISRO has now opened a launch view gallery to view launches. This is a lot closer(~6kms away,

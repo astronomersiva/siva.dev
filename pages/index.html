@@ -4,6 +4,8 @@
   <meta name="description" content="Personal blog on code and travel by Sivasubramanyam A.">
   {% include "head.html" %}
 
+  <!-- <link rel="stylesheet" href="/static/css/eyes.css"> -->
+
   {% assign allArticles = posts | sortByOrder %}
   {% for article in allArticles %}
     {% if article.featured %}
@@ -17,7 +19,16 @@
       {% assign active = "index" %}
       {% include "navbar.html" %}
       <main role="main">
-        <h1>Hello!</h1>
+        <h1>
+          Hello!
+
+          <!-- <div class="face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+          </div> -->
+        </h1>
+
         <p style="margin-top: 2rem;">
           My name is Siva. I currently work as a front-end engineer
           in Zoho.
@@ -48,7 +59,7 @@
 
   <div class="container posts">
     <div class="content">
-      <h4>Featured Posts</h4>
+      <h4>Featured Articles</h4>
 
       {% assign articles = posts | sortByOrder %}
 
@@ -59,11 +70,12 @@
       {% endfor %}
 
       <div class="see-more">
-        <a href="/archive/">View Archive →</a>
+        <a href="/blog/">View Blog →</a>
       </div>
     </div>
   </div>
 
+  <!-- <script inline defer src="/static/js/eyes.js"></script> -->
   {% include "footer.html" %}
 </body>
 </html>
