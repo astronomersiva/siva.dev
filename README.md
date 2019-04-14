@@ -4,8 +4,8 @@
 
 This is the source of my [website](https://siva.dev).
 
-I initially set this up during my college days(~2013) and much
-of the layout and styles haven't changed since then.
+I initially set this up during my college days(~2013) and much of the layout
+and styles haven't changed since then.
 
 This site is built with [lego](https://github.com/astronomersiva/lego),
 a Node.js based static site generator that I built for fun.

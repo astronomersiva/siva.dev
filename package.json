@@ -7,7 +7,8 @@
     "serve": "lego s --skipBuild &",
     "start": "lego s",
     "build": "lego",
-    "build:debug": "DEBUG=t lego"
+    "build:debug": "DEBUG=t lego",
+    "cache:list": "ls node_modules/@astronomersiva/lego/cache"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,7 @@
   },
   "homepage": "https://github.com/astronomersiva/www.sivasubramanyam.me#readme",
   "devDependencies": {
-    "@astronomersiva/lego": "1.9.0",
+    "@astronomersiva/lego": "^2.0.0",
     "differencify": "^1.5.2",
     "dotenv": "^6.2.0",
     "glob": "^7.1.3",
