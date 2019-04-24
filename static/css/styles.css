@@ -27,7 +27,7 @@ body.dark {
 }
 
 .dark .hljs {
-  background: #2d2b57 !important;
+  border: 1px solid var(--theme-light-border);
 }
 
 .dark :not(pre) > code {
