@@ -19,7 +19,7 @@ by GitHub where they announced the introduction of identicons on their site.
 > Our Identicons are simple 5×5 “pixel” sprites that are generated using a hash of the user’s ID. The algorithm walks through the hash and turns pixels on or off depending on even or odd values. These generated patterns, combined with hash-determined color values, ensures a huge number of unique Identicons.
 
 While the identicon itself is a 5x5 image, one can notice that it is symmetrical. The fourth and fifth columns
-mirror the second and first columns respectively. This implies that these identicons can be expressed as a 15 bit number.
+mirror the second and first columns respectively. This implies that these identicons can be expressed as a 15 bit number(3x5 matrix).
 As for the color, we can use any 6 bit sequence from this 15 bit number itself and generate a color code in the hex format.
 
 Let's try and build this now.
