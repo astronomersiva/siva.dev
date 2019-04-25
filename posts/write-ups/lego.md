@@ -85,6 +85,20 @@ wanted something similar to that.
 * **Extract tags from posts' metadata and create relevant pages** - Example, `site.com/tags/javascript/`
 should have a list of all posts tagged `javascript`.
 
+**Update: I have now added the following features as well**
+
+* **RSS Feed generation**
+* **Build time code highlighting** - This uses [highlight.js](https://highlightjs.org). A CSS file can
+  be included to style the generated markup as needed. There are plenty of themes available for hightlight.js.
+* **Caching** - This was always planned but I actually got around to doing it only for v2 of lego.
+  **lego is now fast ⚡.**
+  [Initial benchmarks](https://github.com/astronomersiva/lego#benchmarks) suggest that lego is
+  as fast as Jekyll while still doing additional stuff like HTML minification out of the box. At the time of
+  writing this, my own site, which has about 80 pages in the output and about 40MB of static files takes
+  **2 seconds to start a development server**. Rebuilds take a couple hundred milliseconds.
+  A production build that does all the above optimisations takes about 35 seconds without a cache
+  and less than 10 seconds with an existing cache.
+
 #### **Project directory structure**
 
 This is the directory structure that I eventually settled on.
