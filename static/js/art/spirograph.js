@@ -24,7 +24,7 @@ function drawSpirograph(context, cx, cy, radius1, radius2, d, n) {
 
   for (theta = 0; theta <= Math.PI * n; theta += 0.01) {
     x = cx + (radius1 + radius2) * Math.cos(theta) - d * Math.cos(theta * ((radius1+radius2)/radius2));
-    y = cy + (radius1 + radius2) * Math.sin(theta/5) - d * Math.sin(theta * ((radius1+radius2)/radius2));
+    y = cy + (radius1 + radius2) * Math.sin(theta) - d * Math.sin(theta * ((radius1+radius2)/radius2));
     context.lineTo(x, y);
   }
 
