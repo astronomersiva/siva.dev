@@ -55,3 +55,7 @@ Here are some that I managed to generate.
 
 I am surprised that it's possible to generate even triangles with this even though the
 driving shape behind this are circles.
+
+The code behind this is hosted on
+[GitHub](https://github.com/astronomersiva/generative-art/blob/master/spirographs/).
+Feel free to check it out in case you are interested.
