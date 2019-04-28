@@ -2,7 +2,7 @@
 title: De Jong Attractors
 date: February, 2019
 description: Generating art with mathematics using HTML canvas and JavaScript
-tags: JavaScript, Generative Art
+tags: JavaScript, Art
 code: true
 order: 36
 featured: true
