@@ -2,8 +2,8 @@ let canvas = document.getElementById('canvas');
 let context = canvas.getContext('2d');
 let dpr = window.devicePixelRatio;
 
-canvas.width = canvas.offsetWidth;
-canvas.height = canvas.offsetHeight * 5;
+canvas.width = canvas.offsetWidth > 750 ? 750 : canvas.offsetWidth;
+canvas.height = canvas.width;
 
 context.lineWidth = 1;
 
