@@ -24,6 +24,7 @@ was a roughly 20 kilometer long road connecting Sullurpet with the island of Sri
 there was a 10 km section that passed straight through the Pulicat lake. This is when it struck us.
 
 ::: lazy-image src="/static/images/lowres/shar-road.png" alt="Road to SHAR" style="max-width: 600px; margin: 0 auto;" :::
+<small>Courtesy: Map data ©2019 Google</small>
 
 <br>
 
