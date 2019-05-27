@@ -31,7 +31,7 @@
     "@astronomersiva/lego": "^2.0.0",
     "differencify": "^1.5.2",
     "dotenv": "^6.2.0",
-    "glob": "^7.1.3",
+    "glob": "^7.1.4",
     "p-limit": "^2.1.0",
     "request-promise": "^4.2.2"
   }
