@@ -5,7 +5,6 @@ description: Generating art with mathematics using HTML canvas and JavaScript
 tags: JavaScript, Art
 code: true
 order: 36
-featured: true
 ---
 
 ::: lazy-image src="/static/images/gen-art/lowres/de-jong-white.jpg" alt="De Jong Attractor" :::

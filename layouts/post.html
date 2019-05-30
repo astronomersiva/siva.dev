@@ -64,5 +64,15 @@
   </main>
 
   {% include "footer.html" %}
+  {% if post.showComments %}
+    <script src="https://utteranc.es/client.js"
+      repo="astronomersiva/www.sivasubramanyam.me"
+      issue-term="pathname"
+      label="comments"
+      theme="github-light"
+      crossorigin="anonymous"
+      async defer>
+  {% endif %}
+</script>
 </body>
 </html>
