@@ -69,10 +69,13 @@ This might be an unpopular opinion but I seriously believe that Ember needs a fe
 Consider this simple scenario: Display "Hello, World!" if `canShowHello` is equal to `"yes"`. In React,
 you can use the good ol' `===` with JSX. In Vue, you would do `v-if="canShowHello === 'yes'"`. In Ember?
 
+* Use a computed property. This feels a bit too much for cases like these. Also, the
+  template and JS file will both have to be checked to determine the behaviour of the
+  code. Colocation of related code is a good thing and this goes against it.
 * Write a helper(need to learn it if you haven't done so already).
 * Use an [addon](https://www.npmjs.com/package/ember-truth-helpers).
 
-Needless to say, both are not as simple as the ones provided by other frameworks/libraries. I understand
+Needless to say, they are not as simple as the ones provided by other frameworks/libraries. I understand
 that has got more to do with Handlebars than Ember but still...it's basic things like these that make
 beginners feel Ember is difficult. Not just beginners, even I have been annoyed at times when I have had to
 write helpers for what I consider basic utilities in new addons.
