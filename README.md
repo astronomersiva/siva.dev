@@ -23,4 +23,4 @@ about the setup which you can read if you are interested.
 
 I do a lot of experimentation with this site and some successful
 ones have been made as separate projects that you can check out
-on my Gitub profile. Some have even made it to my workplace :P
+on my GitHub profile. Some have even made it to my workplace :P
