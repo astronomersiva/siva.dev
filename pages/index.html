@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+
+  <body>
+    <div class="top-banner animated delay"></div>
+
+    <main>
+      <div class="wrapper-medium">
+        <div class="page home">
+          {% assign current = "index" %}
+          {% include header.html %}
+
+          <section class="list animated">
+            {% assign articles = posts | sortByOrder %}
+            {% assign hideHighlight = true %}
+
+            <h3 class="item" style="margin-bottom:30px;">Here are some of my featured blog posts.</h3>
+            {% for article in articles %}
+              {% assign post = article %}
+              {% unless article.hidden %}
+                {% if article.showOnHomePage %}
+                  {% include blog-post.html %}
+                {% endif %}
+              {% endunless %}
+            {% endfor %}
+
+            <hr>
+
+            <h3 class="item" style="margin-bottom:30px;margin-top:30px;">And, here's a few of my projects.</h3>
+            {% for project in data.projects %}
+              <div class="item {% if project.featured %}{% unless hideHighlight %}featured{% endunless %}{% endif %}">
+                <a class="url" href="{{ project.link }}">
+                  <h3 class="title">{{ project.name }}</h3>
+                  <p style="margin-bottom: 0;">{{project.description}}</p>
+                </a>
+              </div>
+            {% endfor %}
+          </section>
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+</html>

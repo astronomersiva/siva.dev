@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% assign title = post.title %}
+  {% assign description = post.description %}
+
+  {% include head.html %}
+<body>
+  <div class="top-banner animated delay"></div>
+  <div class="wrapper-medium">
+  <div class="post">
+  {% include header.html %}
+
+  {% if post.image and post.headerImage %}
+  <img class="title-image" src="{{ post.image }}" alt="{{ post.title }}">
+  {% endif %}
+
+  <h1 class="title">{{ post.title }}</h1>
+
+  <span class="date">
+    <time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+    - {% include read-time.html %}
+  </span>
+
+
+  <div class="post-tags">
+    {% for tag in post.tags %}
+    <a class="item" href="{{ site.url }}/tags/{{ tag | downcase }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+
+  <main>
+    {{post.html}}
+  </main>
+
+  {% include related.html %}
+
+  {% if post.showComments %}
+    {% include comments.html %}
+  {% endif %}
+
+  {% include footer.html %}
+  </div>
+  </div>
+</body>
+
+</html>

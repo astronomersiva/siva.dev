@@ -1,0 +1,72 @@
+<head>
+  {% include ga.html %}
+  {% include favicon.html %}
+
+  <link rel="prefetch" href="/">
+  <link rel="prefetch" href="/blog/">
+  <link rel="prefetch" href="/art/">
+
+  <link rel="preload" href="/static/css/styles.css" as="style">
+  {% if post %}
+    <link rel="preload" href="/static/css/github-gist.css" as="style">
+    <link rel="preload" href="/static/css/ajanta.css" as="style">
+    <link rel="preload" href="/static/js/ajanta.js" as="script">
+  {% else %}
+    <link rel="prefetch" href="/static/css/github-gist.css" as="style">
+    <link rel="prefetch" href="/static/css/ajanta.css" as="style">
+    <link rel="prefetch" href="/static/js/ajanta.js" as="script">
+  {% endif %}
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% if tag %}
+    <title>Posts Tagged {{ tag }} | @siva</title>
+  {% else %}
+    <title>{% if title %}{{ title }} | {% endif %}@siva</title>
+  {% endif %}
+
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ data.config.description }}{% endif %}">
+  <meta name="author" content="{{ data.config.name }}">
+
+  {% unless post %}
+  <meta property="og:image" content="{{ data.config.url }}{{ data.config.picture }}">
+  <meta property="og:type" content="profile">
+  {% endunless %}
+
+  <link rel="alternate" type="application/rss+xml" title="{{ data.config.title }}" href="{{ data.config.url }}feed.xml" />
+
+  <link rel="stylesheet" href="/static/css/styles.css">
+  {% if post %}
+    <link rel="stylesheet" href="/static/css/ajanta.css">
+    <noscript>
+      <style>
+        .ajanta {
+          display: none;
+        }
+      </style>
+    </noscript>
+  {% endif %}
+
+  {% if current == "art" %}
+    <link rel="preload" href="/static/css/ajanta.css" as="style">
+    <link rel="preload" href="/static/css/photography.css" as="style">
+
+    <link href="/static/css/ajanta.css" rel="stylesheet" type="text/css">
+    <link inline href="/static/css/photography.css" rel="stylesheet" type="text/css">
+    <noscript>
+      <style>
+        .loading {
+          display: none;
+        }
+      </style>
+    </noscript>
+  {% endif %}
+
+  <script inline src="/static/js/determine-webp-support.js"></script>
+
+  {% if post %}
+    <script defer src="/static/js/ajanta.js"></script>
+  {% endif %}
+</head>

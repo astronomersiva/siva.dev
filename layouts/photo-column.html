@@ -1,0 +1,35 @@
+{% assign imageSrcBase = "/static/images/photography/" %}
+{% assign src = imageSrcBase | append: data.photos[i].src %}
+{% assign webp_src = src | append: ".webp" %}
+{% assign placeholderSrc = imageSrcBase | append: "placeholder-" | append: data.photos[i].src %}
+<div class="photo-container" onclick="openModal('{{src}}', '{{webp_src}}', '{{description}}')">
+  <div class="ajanta">
+    {% assign description = data.photos[i].description %}
+
+    <img
+      inline
+      data-img-src="{{ src }}"
+      data-img-webp-src="{{ webp_src }}"
+      class="img-responsive center-block pixelated blur"
+      src="{{ placeholderSrc }}"
+      alt="{{description}}"
+    />
+
+    <img
+      class="img-responsive center-block original"
+      data-loaded="photo-{{i}}"
+      alt="{{description}}"
+    />
+  </div>
+  <noscript>
+    <img
+      class="img-responsive center-block"
+      src="{{ src }}"
+      alt="{{description}}"
+      data-loaded="photo-{{i}}">
+  </noscript>
+  <div class="loading" data-loading="photo-{{i}}"></div>
+  <div class="photo-overlay">
+    <h4>{{description}}</h4>
+  </div>
+</div>

@@ -1,0 +1,130 @@
+<style>
+  .canvas-container {
+    position: relative;
+    margin-bottom: 400px;
+    margin-top: 70px;
+  }
+  canvas {
+    height: 300px;
+    overflow: hidden;
+  }
+  #top-triangle {
+    position: absolute;
+    left: 0
+  }
+  #bottom-triangle {
+    position: absolute;
+    left: 0;
+  }
+</style>
+
+<label>
+  Rotation
+  <input id="rotation-triangle" type="range" min="0" max="360">
+</label>
+<br>
+<label>
+  Translation
+  <input id="translation-triangle" type="range" min="0" max="100">
+</label>
+
+<div class="canvas-container">
+  <canvas id="top-triangle"></canvas>
+  <canvas id="bottom-triangle"></canvas>
+</div>
+
+<script>
+  function handleRotationForTriangle() {
+    let input = document.getElementById('rotation-triangle');
+    let topCanvas = document.getElementById('top-triangle');
+
+    topCanvas.style.transform = `rotate(${input.value || 0}deg)`;
+  }
+
+  function handleTranslationForTriangle() {
+    let input = document.getElementById('translation-triangle');
+    let topCanvas = document.getElementById('top-triangle');
+
+    topCanvas.style.transform = `translate(${input.value}%)`;
+  }
+
+  (function() {
+    let rotation = document.getElementById('rotation-triangle');
+    let translation = document.getElementById('translation-triangle');
+    rotation.value = 0;
+    translation.value = 0;
+    rotation.oninput = handleRotationForTriangle;
+    translation.oninput = handleTranslationForTriangle;
+
+    function drawTriangles(canvas, isBlue) {
+      let context = canvas.getContext('2d');
+
+      let scaledWidth = window.innerWidth / 6;
+      let size = scaledWidth > 360 ? scaledWidth : 360;
+      let dpr = window.devicePixelRatio;
+      canvas.width = size * dpr;
+      canvas.height = size * dpr;
+      context.scale(dpr, dpr);
+      context.lineJoin = 'bevel';
+
+      let gap = size / 30;
+      let line;
+      let dot;
+      let odd = false;
+      let lines = [];
+
+      for (let y = gap / 2; y <= size; y += gap) {
+        odd = !odd;
+        line = [];
+
+        for (let x = gap / 4; x <= size; x+= gap) {
+          dot = { x: x + (odd ? gap/2 : 0), y };
+          line.push(dot);
+          context.beginPath();
+          context.arc(dot.x, dot.y, 1, 0, 2 * Math.PI, true);
+          context.fill();
+        }
+
+        lines.push(line);
+      }
+
+      function drawTriangle(pointA, pointB, pointC, flag) {
+        context.beginPath();
+        context.moveTo(pointA.x, pointA.y);
+        context.lineTo(pointB.x, pointB.y);
+        context.lineTo(pointC.x, pointC.y);
+        context.lineTo(pointA.x, pointA.y);
+        let fillStyle = isBlue ? 'blue' : 'red';
+        context.fillStyle = flag ? fillStyle : 'transparent';
+        context.closePath();
+        context.stroke();
+        context.fill();
+        flag = !flag;
+      }
+
+      let dotLine;
+      odd = true;
+
+      for (let y = 0; y < lines.length - 1; y++) {
+        odd = !odd;
+        dotLine = [];
+        for (let i = 0; i < lines[y].length; i++) {
+          dotLine.push(odd ? lines[y][i] : lines[y+1][i]);
+          dotLine.push(odd ? lines[y+1][i] : lines[y][i]);
+        }
+
+        let pattern = y % 2;
+        let flag = false || pattern;
+        for (let i = 0; i < dotLine.length - 2; i +=1 ) {
+          drawTriangle(dotLine[i], dotLine[i+1], dotLine[i+2], !flag);
+          flag = !flag;
+        }
+      }
+    }
+    let topCanvas = document.getElementById('top-triangle');
+    let bottomCanvas = document.getElementById('bottom-triangle');
+
+    drawTriangles(topCanvas, true);
+    drawTriangles(bottomCanvas, false);
+  })();
+</script>

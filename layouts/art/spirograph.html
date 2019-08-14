@@ -1,0 +1,31 @@
+<style>
+  input {
+    width: 50%;
+  }
+  #canvas {
+    width: 100%;
+  }
+</style>
+
+<canvas id="canvas"></canvas>
+<div>
+  <label for="R">R</label>
+  <input oninput="handleOnChange()" type="range" id="R" name="R" min="-150" max="150">
+</div>
+
+<div>
+  <label for="r">r</label>
+  <input oninput="handleOnChange()" type="range" id="r" name="r" min="-150" max="150">
+</div>
+
+<div>
+  <label for="d">d</label>
+  <input oninput="handleOnChange()" type="range" id="d" name="d" min="-150" max="150">
+</div>
+
+<div>
+  <label for="n">n</label>
+  <input oninput="handleOnChange()" type="range" id="n" name="n" min="1" max="150">
+</div>
+
+<script src="/static/js/art/spirograph.js"></script>

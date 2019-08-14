@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% assign current = "blog" %}
+  {% assign title = "Blog" %}
+
+  {% include head.html %}
+
+  <body>
+    <div class="top-banner animated delay"></div>
+
+    <main>
+      <div class="wrapper-medium">
+        <div class="page blog">
+          {% include header.html %}
+
+          <section class="list animated">
+            {% assign articles = posts | sortByOrder %}
+            {% assign year = "" %}
+
+            {% for article in articles %}
+              {% assign post = article %}
+
+              {% unless article.hidden %}
+                {% assign currentYear = post.date | date: "%Y" %}
+                {% unless year == currentYear %}
+                  {% unless year == "" %}
+                    <hr>
+                  {% endunless %}
+
+                  {% assign year = currentYear %}
+                  <div class="item year">
+                    <h3 class="title">{{currentYear}}</h3>
+                  </div>
+                {% endunless %}
+
+                {% include blog-post.html %}
+              {% endunless %}
+            {% endfor %}
+          </section>
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+</html>

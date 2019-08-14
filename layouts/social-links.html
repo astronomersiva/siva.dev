@@ -1,0 +1,44 @@
+<div class="social-links">
+  <a
+    class="link"
+    title="Twitter"
+    href="https://twitter.com/{{ data.config.twitter }}"
+    rel="noopener"
+    target="_blank">
+    <svg title="Twitter" class="icon icon-twitter">
+    <use xlink:href="#icon-twitter"></use>
+    </svg>
+  </a>
+
+  <a
+    class="link"
+    title="GitHub"
+    href="https://github.com/{{ data.config.github }}"
+    rel="noopener"
+    target="_blank">
+    <svg title="GitHub" class="icon icon-github">
+      <use xlink:href="#icon-github"></use>
+    </svg>
+  </a>
+
+  <a
+    class="link"
+    title="email"
+    href="mailto:{{ data.config.email }}"
+    target="_blank">
+    <svg title="email" class="icon icon-mail">
+      <use xlink:href="#icon-mail"></use>
+    </svg>
+  </a>
+
+  <a
+    class="link"
+    title="RSS Feed"
+    href="{{ data.config.url }}rss.xml"
+    target="_blank"
+    rel="noopener">
+    <svg class="icon icon-rss">
+      <use xlink:href="#icon-rss"></use>
+    </svg>
+  </a>
+</div>

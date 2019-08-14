@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+<body>
+  <main>
+    <div class="wrapper-medium">
+        <div class="page blog">
+        {% include header.html %}
+
+        <section class="list">
+          <h3 class="item" style="margin-bottom:30px;">List Of Posts Tagged {{tag}}</h3>
+
+          {% assign featuredArticles = posts | sortByOrder %}
+
+          {% for post in featuredArticles %}
+            {% if post.featured %}
+              {% for postTag in post.tags %}
+                {% if postTag == tag %}
+                  {% include blog-post.html %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+
+          {% assign otherArticles = posts | sortByOrder %}
+          {% for post in otherArticles %}
+            {% unless post.featured %}
+              {% unless post.hidden %}
+                {% for postTag in post.tags %}
+                  {% if postTag == tag %}
+                    {% include blog-post.html %}
+                  {% endif %}
+                {% endfor %}
+              {% endunless %}
+            {% endunless %}
+          {% endfor %}
+
+          </section>
+        </div>
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% assign current = "art" %}
+  {% assign title = "Art" %}
+
+  {% include head.html %}
+
+  <body>
+    <div class="top-banner animated delay"></div>
+
+    <main>
+      <div class="wrapper-large">
+        <div class="page home">
+          {% include header.html %}
+
+          <section class="list animated">
+            {% assign no_of_photos = data.photos.size %}
+
+            <!-- range in liquid is inclusive of the last digit -->
+            {% assign no_of_photos_for_looping = no_of_photos | minus: 1 %}
+
+            {% assign photos_in_first_col = no_of_photos | divided_by: 2 | ceil %}
+            {% assign photos_in_second_col = no_of_photos | minus: photos_in_first_col %}
+
+            <div class="photo-column">
+              {% assign endindex = photos_in_first_col | minus: 1 %}
+              {% for i in (0..endindex) %}
+                {% include "photo-column.html" %}
+              {% endfor %}
+            </div>
+            <div class="photo-column">
+              {% assign startindex = photos_in_first_col %}
+              {% assign endindex = photos_in_first_col | plus: photos_in_second_col | minus: 1 %}
+              {% for i in (startindex..endindex) %}
+                {% include "photo-column.html" %}
+              {% endfor %}
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal">
+      <div class="close" onclick="closeModal()">x</div>
+      <img src="" class="img-responsive center-block modal-image">
+      <h4 class="modal-desc"></h4>
+    </div>
+
+    {% include footer.html %}
+
+    <script inline defer src="/static/js/modal.js"></script>
+    <script inline defer src="/static/js/intersection-lazy-loader.js"></script>
+
+  </body>
+</html>

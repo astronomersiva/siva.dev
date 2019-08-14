@@ -1,0 +1,43 @@
+/* Lazy loading images */
+
+.ajanta {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.ajanta>img {
+  transition: opacity 250ms ease-in-out;
+  min-width: 100%;
+}
+
+.ajanta>.original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.ajanta>.blur {
+  filter: blur(1vw);
+  transform: scale(1.1);
+}
+
+.ajanta-hide {
+  animation: hidePixelated 250ms;
+  animation-delay: 250ms;
+  animation-fill-mode: forwards;
+}
+
+.ajanta>.original.ajanta-show {
+  opacity: 1;
+}
+
+@keyframes hidePixelated {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

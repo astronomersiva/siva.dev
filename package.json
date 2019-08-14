@@ -1,0 +1,20 @@
+{
+  "name": "siva.dev",
+  "scripts": {
+    "start": "lego s",
+    "build": "lego"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 1 versions",
+    "not ie 11",
+    "not dead"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "@astronomersiva/lego": "^2.0.1",
+    "dotenv": "^8.0.0",
+    "postcss-nested": "^4.1.2",
+    "precss": "^4.0.0"
+  }
+}
