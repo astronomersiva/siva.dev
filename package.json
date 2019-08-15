@@ -12,7 +12,7 @@
   ],
   "devDependencies": {},
   "dependencies": {
-    "@astronomersiva/lego": "^2.1.0",
+    "@astronomersiva/lego": "https://github.com/astronomersiva/lego#netlify-workaround",
     "dotenv": "^8.0.0",
     "postcss-nested": "^4.1.2",
     "precss": "^4.0.0"
