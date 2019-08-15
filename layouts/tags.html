@@ -2,12 +2,13 @@
 <html lang="en">
   {% include head.html %}
 <body>
+  <div class="top-banner animated delay"></div>
   <main>
     <div class="wrapper-medium">
         <div class="page blog">
         {% include header.html %}
 
-        <section class="list">
+        <section class="list animated">
           <h3 class="item" style="margin-bottom:30px;">List Of Posts Tagged {{tag}}</h3>
 
           {% assign featuredArticles = posts | sortByOrder %}
