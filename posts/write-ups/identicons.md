@@ -1,7 +1,7 @@
 ---
 title: Identicons
 date: April, 2019
-description: Understanding how identicons work.
+description: Do you want to know how identicons work?
 tags: General
 code: true
 order: 39

@@ -30,15 +30,15 @@
   <meta name="description" content="{% if description %}{{ description }}{% else %}{{ data.config.description }}{% endif %}">
   <meta name="author" content="{{ data.config.name }}">
 
-  {% unless post %}
-  <meta property="og:image" content="{{ data.config.url }}{{ data.config.picture }}">
-  <meta property="og:type" content="profile">
+  {% unless post.headerImage %}
+    <meta property="og:image" content="{{ data.config.url }}static/images/og-image.png">
   {% endunless %}
 
   <link rel="alternate" type="application/rss+xml" title="{{ data.config.title }}" href="{{ data.config.url }}feed.xml" />
 
   <link rel="stylesheet" href="/static/css/styles.css">
   {% if post %}
+    <link rel="stylesheet" href="/static/css/github-gist.css">
     <link rel="stylesheet" href="/static/css/ajanta.css">
     <noscript>
       <style>

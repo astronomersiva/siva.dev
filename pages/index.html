@@ -15,7 +15,7 @@
             {% assign articles = posts | sortByOrder %}
             {% assign hideHighlight = true %}
 
-            <h3 class="item" style="margin-bottom:30px;">Here are some of my featured blog posts.</h3>
+            <h3 class="item" style="margin-bottom:30px;font-weight: 800;">Here are some of my featured blog posts.</h3>
             {% for article in articles %}
               {% assign post = article %}
               {% unless article.hidden %}
@@ -27,7 +27,7 @@
 
             <hr>
 
-            <h3 class="item" style="margin-bottom:30px;margin-top:30px;">And, here's a few of my projects.</h3>
+            <h3 class="item" style="margin-bottom:30px;margin-top:30px;font-weight: 800;">And, here's a few of my projects.</h3>
             {% for project in data.projects %}
               <div class="item {% if project.featured %}{% unless hideHighlight %}featured{% endunless %}{% endif %}">
                 <a class="url" href="{{ project.link }}">

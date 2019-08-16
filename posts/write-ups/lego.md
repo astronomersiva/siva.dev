@@ -1,7 +1,7 @@
 ---
 title: My Experiences in Building a Static Site Generator
 date: January, 2019
-description: How an opinionated static site generator focussed on website performance came to power this site
+description: Look ma, I wrote a Static Site Generator!
 tags: Node.js, JavaScript
 code: true
 order: 35

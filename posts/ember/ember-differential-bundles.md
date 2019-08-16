@@ -1,7 +1,7 @@
 ---
 title: Differential Serving of Assets in Ember
 date: March, 2019
-description: A new take on differential browser bundling in EmberJS
+description: Ship bundles based on the user's browser.
 tags: EmberJS
 code: true
 order: 37
