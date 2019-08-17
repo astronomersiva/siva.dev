@@ -24,6 +24,7 @@ module.exports = {
   },
   postCSSPlugins: [
     'precss',
+    'postcss-cssnext',
     'postcss-nested'
   ],
   htmlMinifier: {

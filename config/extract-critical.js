@@ -10,6 +10,7 @@ module.exports = {
     }
   ],
   penthouse: {
-    timeout: 150000
+    timeout: 150000,
+    forceInclude: ['.dark-mode > body', '.dark-mode>body', '.dark-mode .top-banner']
   }
 };
