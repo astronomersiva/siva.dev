@@ -6,7 +6,6 @@ tags: General
 code: true
 order: 39
 featured: true
-showOnHomePage: true
 ---
 
 We have seen them everywhere. From GitHub to Stack Overflow, identicons have been
