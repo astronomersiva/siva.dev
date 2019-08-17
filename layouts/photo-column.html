@@ -2,10 +2,9 @@
 {% assign src = imageSrcBase | append: data.photos[i].src %}
 {% assign webp_src = src | append: ".webp" %}
 {% assign placeholderSrc = imageSrcBase | append: "placeholder-" | append: data.photos[i].src %}
+{% assign description = data.photos[i].description %}
 <div class="photo-container" onclick="openModal('{{src}}', '{{webp_src}}', '{{description}}')">
   <div class="ajanta">
-    {% assign description = data.photos[i].description %}
-
     <img
       inline
       data-img-src="{{ src }}"
