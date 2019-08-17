@@ -1,37 +1,51 @@
+const html = document.documentElement;
+const DARK_MODE = 'dark-mode';
+const LIGHT_MODE = 'light';
+
+let currentMode = localStorage.getItem('mode');
+
+function applyThemeColor() {
+  let meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) {
+    if (currentMode === DARK_MODE) {
+      meta.setAttribute('content', '#121212');
+    } else {
+      meta.setAttribute('content', '#f0fcfd');
+    }
+  }
+}
+
 function applyMode() {
-  let body = document.body;
-  let currentMode = localStorage.getItem('mode');
-  let toggle = document.getElementById('dark-mode-toggle');
+  let html = document.documentElement;
+  currentMode = localStorage.getItem('mode');
 
   // handle macOS dark theme preference.
   // when the user hasn't set a preference in the site and preferred
   // scheme is dark, default to dark
   let darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
   if (!currentMode && darkModeQuery.matches) {
-    localStorage.setItem('mode', 'dark');
-    currentMode = 'dark';
+    localStorage.setItem('mode', DARK_MODE);
+    currentMode = DARK_MODE;
   }
 
-  let meta = document.querySelector('meta[name="theme-color"]');
-
-  if (currentMode === 'dark') {
-    body.classList.add('dark');
-    toggle.textContent = '🌖';
-    toggle.setAttribute('title', 'Toggle Light Mode');
-    meta.setAttribute('content', '#1e2227');
+  if (currentMode === DARK_MODE) {
+    html.classList.add(DARK_MODE);
   } else {
-    body.classList.remove('dark');
-    toggle.textContent = '🌘';
-    toggle.setAttribute('title', 'Toggle Dark Mode');
-    meta.setAttribute('content', '#0000ff');
+    html.classList.remove(DARK_MODE);
   }
+
+  applyThemeColor();
 }
 
 applyMode();
 
-let darkModeToggle = document.getElementById('dark-mode-toggle');
-darkModeToggle.onclick = function() {
-  let currentMode = localStorage.getItem('mode');
-  localStorage.setItem('mode', currentMode === 'dark' ? 'light' : 'dark');
-  applyMode();
-}
+document.addEventListener('DOMContentLoaded', (event) => {
+  let darkModeToggle = document.getElementById('dark-mode-toggle');
+  applyThemeColor();
+
+  darkModeToggle.onclick = function() {
+    let currentMode = localStorage.getItem('mode');
+    localStorage.setItem('mode', currentMode === DARK_MODE ? LIGHT_MODE : DARK_MODE);
+    applyMode();
+  }
+})

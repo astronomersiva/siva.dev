@@ -2,7 +2,8 @@
   {% assign relatedPosts = 0 %}
   {% assign counter = 0 %}
   {% for tag in post.tags %}
-    {% for otherPost in posts %}
+    {% assign allPosts = posts | sortByOrder %}
+    {% for otherPost in allPosts %}
       {% for tagInOtherPost in otherPost.tags %}
         {% if tagInOtherPost == tag %}
           {% if relatedPosts == 0 %}
@@ -12,7 +13,7 @@
           {% assign counter = relatedPosts | plus: 1 %}
           {% assign relatedPosts = counter %}
           <li>
-            <a href="/{{otherPost.path}}">{{ otherPost.title }}</a>
+            <a href="/{{otherPost.path}}/">{{ otherPost.title }}</a>
           </li>
         {% endif %}
       {% endfor %}

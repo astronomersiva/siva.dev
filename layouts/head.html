@@ -1,4 +1,6 @@
 <head>
+  <script inline src="/static/js/dark-mode.js"></script>
+
   {% include ga.html %}
   {% include favicon.html %}
 
@@ -27,6 +29,7 @@
     <title>{% if title %}{{ title }} | {% endif %}@siva</title>
   {% endif %}
 
+  <meta name="theme-color" content="#f0fcfd">
   <meta name="description" content="{% if description %}{{ description }}{% else %}{{ data.config.description }}{% endif %}">
   <meta name="author" content="{{ data.config.name }}">
 

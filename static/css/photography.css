@@ -1,29 +1,34 @@
-/* Color Codes */
-:root {
-  --theme-background: white;
-  --theme-text: hsl(0, 0%, 0%);
-  --theme-text-light: #5d5d5d;
-  --theme-heading: #111;
-  --theme-red: hsl(0, 100%, 50%);
-  /* --theme-blue: hsl(225, 100%, 61%); */
-  --theme-blue: hsl(240, 100%, 50%);
-  --theme-code-bg: hsl(42, 100%, 61%);
-  --theme-light-border: #eee;
-  --theme-heading-font: 'Roboto Condensed', sans-serif;
-  --theme-font: 'Source Sans Pro', sans-serif;
+html {
+  --color-text: #1f1f1f;
+  --color-heading: #222;
+  --color-heading-photo: #e1e1e1;
+  --color-red: hsl(0, 100%, 50%);
+  --color-link: black;
+  --color-link-action: #6166DC;
+  --color-border: #eee;
+  --color-border-darker: #ededed;
+  --color-bg: white;
+  --highlight: rgba(39, 243, 106, 0.15);
+  --highlight-text: #1f1f1f;
+  --transition: all 0.2s ease-in-out;
+  --banner: linear-gradient(180deg,  rgba(181,239,249,0.2) 15%, rgba(254,254,254,1) 90%);
+  --banner-mobile: linear-gradient(180deg,  rgba(181,239,249, 0.3) 0%, rgba(255,255,255,1) 80%);
+  --fonts: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
 }
 
-body.dark {
-  --theme-background: #1e2227;
-  --theme-text: hsl(0, 0%, 62%);
-  --theme-text-light: hsl(0, 0%, 62%);
-  --theme-heading: hsl(0, 0%, 62%);
-  --theme-red: hsl(225, 100%, 75%);
-  --theme-blue : hsl(225, 100%, 75%);
-  --theme-code-bg: hsl(42, 100%, 61%);
-  --theme-light-border: hsl(0, 0%, 26%);
-  --theme-heading-font: 'Roboto Condensed', sans-serif;
-  --theme-font: 'Source Sans Pro', sans-serif;
+html.dark-mode {
+  --color-text: #a8a8a8;
+  --color-heading: #e1e1e1;
+  --color-heading-photo: #e1e1e1;
+  --color-link: white;
+  --color-link-action: #6166DC;
+  --color-border: #3a3a3a;
+  --color-border-darker: #696969;
+  --color-bg: #121212;
+  --highlight: #e06c75;
+  --highlight-text: #272727;
+  --banner: none;
+  --banner-mobile: none;
 }
 
 .photos {
@@ -58,7 +63,7 @@ body.dark {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--theme-heading);
+  background: var(--color-heading);
   opacity: 0;
 }
 
@@ -82,16 +87,16 @@ body.dark {
   top: 45%;
   left: 45%;
   background: rgba(255, 255, 255, 0);
-  border: 2px solid var(--theme-light-border);
+  border: 2px solid var(--color-border);
   animation: spin 1s linear infinite;
-  border-top: 2px solid var(--theme-text-light);
+  border-top: 2px solid var(--color-border-darker);
   border-radius: 50%;
   width: 50px;
   height: 50px;
 }
 
 .photo-overlay h4 {
-  color: white;
+  color: var(--color-heading-photo);
 }
 
 @media screen and (max-width: 760px) {
@@ -109,7 +114,7 @@ body.dark {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: var(--theme-background);
+  background-color: var(--color-bg);
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -135,19 +140,19 @@ body.dark {
 .modal h4:before {
   content: '\B7';
   margin-right: 15px;
-  color: var(--theme-red);
+  color: var(--color-red);
 }
 .modal h4:after {
   content: '\B7';
   margin-left: 15px;
-  color: var(--theme-red);
+  color: var(--color-red);
 }
 .modal > .close {
   position: absolute;
   top: 2%;
   right: 4%;
   font-size: 2rem;
-  color: var(--theme-text-light);
+  color: var(--color-text);
   cursor: pointer;
 }
 .ajanta {
