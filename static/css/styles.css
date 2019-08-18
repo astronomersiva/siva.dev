@@ -1181,12 +1181,8 @@ pre {
 }
 
 #dark-mode-toggle::before {
-  content: '🌑';
+  content: '◑';
   font-size: 2rem;
-}
-
-.dark-mode #dark-mode-toggle::before {
-  content: '🌘';
 }
 
 .nav .dark-mode-toggle-container {
