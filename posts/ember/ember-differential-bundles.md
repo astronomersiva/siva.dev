@@ -7,10 +7,15 @@ code: true
 order: 37
 featured: true
 showOnHomePage: true
+special: talk
 ---
 
-***This is an update on an approach that
-[I blogged about earlier](/emberjs-shipping-different-bundles/).***
+**Update**: I recently spoke about this in [Chennai EmberJS](https://chennaiemberjs.in/).
+
+::: youtube id="lh9Rndz9g2o" title="Differential bundling of assets in Ember" :::
+
+<br>
+<br>
 
 The market share of users with evergreen browsers is rising fast. Inspite of this,
 we ship transpiled assets, often caused by the need to support legacy browsers like IE,

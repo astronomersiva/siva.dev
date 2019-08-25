@@ -7,6 +7,7 @@ code: true
 order: 40
 featured: true
 showOnHomePage: true
+special: interactive
 ---
 
 A Spirograph is a toy that produces geometrical patterns. I am very sure that you would have

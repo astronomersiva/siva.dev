@@ -709,6 +709,14 @@ pre {
   line-height: 1.17;
 }
 
+.list>.item>.url>.title>span {
+  color: var(--color-caption);
+  font-size: 1.2rem;
+  vertical-align: super;
+  text-transform: uppercase;
+  font-family: "Consolas", Liberation Mono, Menlo, Courier, monospace;
+}
+
 .home>.list>.item>.url>.title,
 .blog>.list>.item>.url>.title {
   margin: 0;
@@ -718,7 +726,9 @@ pre {
 }
 
 .home>.list>.item:hover>.url>.title,
-.blog>.list>.item:hover>.url>.title {
+.home>.list>.item:hover>.url>.title>span,
+.blog>.list>.item:hover>.url>.title,
+.blog>.list>.item:hover>.url>.title>span {
   color: var(--color-link-action);
 }
 
