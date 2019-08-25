@@ -5,6 +5,7 @@ description: Do not see this if you are prone to motion sickness
 tags: General
 code: true
 order: 38
+special: interactive
 ---
 
 I recently came across this [tweet](https://twitter.com/Rainmaker1973/status/1103631346633707523)
