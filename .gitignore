@@ -1,3 +1,6 @@
 node_modules/
 build
 .lego
+.env
+ssl/
+layouts/generative-art
