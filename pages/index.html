@@ -30,7 +30,7 @@
             <h3 class="item" style="margin-bottom:30px;margin-top:30px;font-weight: 800;">And, here's a few of my projects.</h3>
             {% for project in data.projects %}
               <div class="item {% if project.featured %}{% unless hideHighlight %}featured{% endunless %}{% endif %}">
-                <a class="url" href="{{ project.link }}">
+                <a class="url" target="_blank" rel="noopener" href="{{ project.link }}">
                   <h3 class="title">{{ project.name }}</h3>
                   <p style="margin-bottom: 0;">{{project.description}}</p>
                 </a>
