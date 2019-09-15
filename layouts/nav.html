@@ -1,5 +1,17 @@
-<nav class="{% unless post %}nav-home animated{% else %}nav{% endunless %}">
+<nav class="nav wrapper-full animated" style="display: flex; justify-content: space-between;">
   <ul class="list">
+    <li class="item">
+      <a class="link active" href="{{ site.url }}/">Siva<span class="fullname">subramanyam A</span></a>
+    </li>
+    <li class="item">
+      <a class="link skip-main" href="#main">Skip To Main Content</a>
+    </li>
+  </ul>
+  <ul class="list">
+    <li class="item" aria-hidden="true">
+      <p class="dark-mode-star">★</p>
+    </li>
+
     <li class="item">
       <a class="link {% if current == "index" %}active{% endif %}" href="{{ site.url }}/">Home</a>
     </li>
@@ -13,7 +25,17 @@
     </li>
 
     <li class="item dark-mode-toggle-container">
-      <a class="link" role="button" tabindex="0" title="Toggle Dark Mode" id="dark-mode-toggle"></a>
+      <a class="link" role="button" tabindex="0" title="Toggle Dark Mode" id="dark-mode-toggle">
+        <svg title="Toggle Dark Mode" class="icon icon-moon">
+          <use xlink:href="#icon-moon"></use>
+        </svg>
+
+        <div class="magic"></div>
+
+        <svg title="Toggle Dark Mode" class="icon icon-sun">
+          <use xlink:href="#icon-sun"></use>
+        </svg>
+      </a>
     </li>
   </ul>
 </nav>

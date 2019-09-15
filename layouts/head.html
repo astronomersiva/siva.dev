@@ -8,7 +8,20 @@
   <link rel="prefetch" href="/blog/">
   <link rel="prefetch" href="/art/">
 
+  {% if current == 'index' %}
+    {% assign articles = posts | sortByOrder %}
+    {% for article in articles %}
+      {% assign post = article %}
+      {% unless article.hidden %}
+        {% if article.showOnHomePage %}
+          <link rel="prefetch" href="/{{ post.path }}/">
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+
   <link rel="preload" href="/static/css/styles.css" as="style">
+
   {% if post %}
     <link rel="preload" href="/static/css/github-gist.css" as="style">
     <link rel="preload" href="/static/css/ajanta.css" as="style">

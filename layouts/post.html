@@ -5,42 +5,48 @@
 
   {% include head.html %}
 <body>
-  <div class="top-banner animated delay"></div>
-  <div class="wrapper-medium">
-  <div class="post">
-  {% include header.html %}
+  {% include nav.html %}
 
-  {% if post.image and post.headerImage %}
-  <img class="title-image" src="{{ post.image }}" alt="{{ post.title }}">
-  {% endif %}
+  <div class="wrapper-full animated">
+    {% assign bgColors = "f3f8ff, deecff, d6e6f2, ffe6eb, defcfc, ecfcff, c8f5ff" | split: ", " %}
+    <header class="header header-post" style="background:#{{bgColors | randomElement}}">
+      <h1 class="title">{{ post.title }}</h1>
 
-  <h1 class="title">{{ post.title }}</h1>
+      <span class="date">
+        <time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        · {% include read-time.html %}
+      </span>
 
-  <span class="date">
-    <time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
-    - {% include read-time.html %}
-  </span>
-
-
-  <div class="post-tags">
-    {% for tag in post.tags %}
-    <a class="item" href="{{ site.url }}/tags/{{ tag | downcase }}">{{ tag }}</a>
-    {% endfor %}
+      <div class="post-tags">
+        Tagged
+        {% for tag in post.tags %}
+          <a class="item" href="{{ site.url }}/tags/{{ tag | downcase }}">{{ tag }}</a>
+          {% unless forloop.last == true %}·{% endunless %}
+        {% endfor %}
+      </div>
+    </header>
   </div>
 
-  <main>
-    {{post.html}}
+  <main id="main">
+    <div class="wrapper-medium animated">
+      <div class="post">
+        {% if post.image and post.headerImage %}
+        <img class="title-image" src="{{ post.image }}" alt="{{ post.title }}">
+        {% endif %}
+
+        {{post.html}}
+
+        {% include related.html %}
+
+        {% if post.showComments %}
+          {% include comments.html %}
+        {% endif %}
+      </div>
+    </div>
   </main>
 
-  {% include related.html %}
-
-  {% if post.showComments %}
-    {% include comments.html %}
-  {% endif %}
-
   {% include footer.html %}
-  </div>
-  </div>
+  <script defer inline src="/static/js/determine-chrome.js"></script>
 </body>
 
 </html>

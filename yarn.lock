@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@astronomersiva/lego@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@astronomersiva/lego/-/lego-2.2.1.tgz#624bf13f1997e8ac02c5be66583dbfa60ddfcf41"
-  integrity sha512-kl3yPKeVubrZ7nvUxkH4E/EYKF+29WEhh0bN6DrNhKs/bx1En6GZQwzHMSs1xiQ4FTXL6q5s9vwEZ4Pb2u4Fvg==
+"@astronomersiva/lego@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@astronomersiva/lego/-/lego-2.3.0.tgz#235924b72456575d0dfb849e48594a82b66bd4a7"
+  integrity sha512-u4GodZxjksRlWS0IuKiOGCE80cNLqjh1ZUQKhlYHQrX7m3JSUBfjtYfoe46fMCkorW1gwQspIqnl5UDtuYdyXQ==
   dependencies:
     "@astronomersiva/sitemap-static" "^1.0.1"
     "@parcel/watcher" "^2.0.0-alpha.3"

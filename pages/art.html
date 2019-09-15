@@ -6,14 +6,21 @@
   {% include head.html %}
 
   <body>
-    <div class="top-banner animated delay"></div>
+    {% include nav.html %}
 
-    <main>
-      <div class="wrapper-large">
+    <div class="wrapper-full">
+      {% include header.html %}
+    </div>
+    <main id="main">
+      <div class="wrapper-large animated">
         <div class="page home">
-          {% include header.html %}
+          <p>
+            This page is an attempt to curate some of my photographs
+            and the results of my creative coding experiments.
+            Still a bit of work in progress.
+          </p>
 
-          <section class="list animated">
+          <section class="list">
             {% assign no_of_photos = data.photos.size %}
 
             <!-- range in liquid is inclusive of the last digit -->
@@ -50,6 +57,7 @@
 
     <script inline defer src="/static/js/modal.js"></script>
     <script inline defer src="/static/js/intersection-lazy-loader.js"></script>
-
+    <script defer inline src="/static/js/determine-chrome.js"></script>
+    <script defer inline src="/static/js/ajanta-for-css.js"></script>
   </body>
 </html>
