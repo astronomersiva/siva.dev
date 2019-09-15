@@ -3,13 +3,15 @@
   {% include head.html %}
 
   <body>
-    <div class="top-banner"></div>
+    {% include nav.html %}
 
-    <main>
-      <div class="wrapper-medium">
+    <div class="wrapper-full">
+      {% include header.html %}
+    </div>
+
+    <main id="main">
+      <div class="wrapper-large">
         <div class="page blog">
-          {% include header.html %}
-
           <section class="list animated">
             <h3 class="item text-center" style="margin-bottom:30px;">
               The page you are looking for for doesn't exist.
@@ -21,5 +23,7 @@
 
     {% include footer.html %}
 
+    <script defer inline src="/static/js/determine-chrome.js"></script>
+    <script defer inline src="/static/js/ajanta-for-css.js"></script>
   </body>
 </html>

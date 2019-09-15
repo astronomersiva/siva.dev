@@ -2,15 +2,17 @@
 <html lang="en">
   {% include head.html %}
 <body>
-  <div class="top-banner animated delay"></div>
-  <main>
-    <div class="wrapper-medium">
-        <div class="page blog">
-        {% include header.html %}
+  {% include nav.html %}
 
-        <section class="list animated">
-          <h3 class="item" style="margin-bottom:30px;font-weight: 800;">List Of Posts Tagged {{tag}}</h3>
+  <div class="wrapper-full">
+    {% include header.html %}
+  </div>
 
+  <main id="main">
+    <div class="wrapper-medium animated">
+      <div class="page blog">
+        <p>Here's a list of all my blog articles that have been tagged under <span style="font-weight: 800;">{{tag}}</span>.</p>
+        <section class="list">
           {% assign featuredArticles = posts | sortByOrder %}
 
           {% for post in featuredArticles %}
@@ -36,10 +38,13 @@
             {% endunless %}
           {% endfor %}
 
-          </section>
-        </div>
+        </section>
+      </div>
     </div>
   </main>
   {% include footer.html %}
+
+  <script defer inline src="/static/js/determine-chrome.js"></script>
+  <script defer inline src="/static/js/ajanta-for-css.js"></script>
 </body>
 </html>

@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% assign current = "index" %}
   {% include head.html %}
-
   <body>
-    <div class="top-banner animated delay"></div>
+    {% include nav.html %}
+    <div class="wrapper-full animated">
+      {% include header.html %}
+    </div>
 
-    <main>
-      <div class="wrapper-medium">
+    <main id="main">
+      <div class="wrapper-large animated">
         <div class="page home">
-          {% assign current = "index" %}
-          {% include header.html %}
+          <p>
+            Hello, I'm Siva. I am currently working as a JavaScript Engineer at Zoho.
+            My work involves building applications with Ember and React that are used by thousands of customers.
+            I also write and maintain several internal applications and frameworks that are used by other developers.
+          </p>
+          <p>
+            I love writing applications that are user-friendly, accessible and performant.
+            I also like travelling and stargazing. This site is where I write down some of my thoughts, mostly related to
+            programming but also touching upon my other interests at times.
+            You can contact me on <a
+            class="link"
+            title="Twitter"
+            href="https://twitter.com/{{ data.config.twitter }}"
+            rel="noopener"
+            target="_blank">Twitter</a> or send me an
+            <a
+              class="link"
+              title="email"
+              href="mailto:{{ data.config.email }}"
+              target="_blank">email</a>.
+          </p>
 
-          <section class="list animated">
+          <h3 class="item featured-entries-intro" style="margin-top:50px;font-weight: 800;padding-bottom: 30px;">Here are some of my featured blog posts.</h3>
+
+          <section class="list">
             {% assign articles = posts | sortByOrder %}
             {% assign hideHighlight = true %}
 
-            <h3 class="item" style="margin-bottom:30px;font-weight: 800;">Here are some of my featured blog posts.</h3>
             {% for article in articles %}
               {% assign post = article %}
               {% unless article.hidden %}
                 {% if article.showOnHomePage %}
-                  {% include blog-post.html %}
+                  {% include blog-post-grid.html %}
                 {% endif %}
               {% endunless %}
             {% endfor %}
+          </section>
 
-            <hr>
+          <h3 class="item featured-entries-intro" style="padding-bottom:30px;margin-top:60px;font-weight: 800;">And, here's a few of my projects.</h3>
 
-            <h3 class="item" style="margin-bottom:30px;margin-top:30px;font-weight: 800;">And, here's a few of my projects.</h3>
+          <section class="list">
             {% for project in data.projects %}
               <div class="item {% if project.featured %}{% unless hideHighlight %}featured{% endunless %}{% endif %}">
                 <a class="url" target="_blank" rel="noopener" href="{{ project.link }}">
@@ -37,11 +61,17 @@
               </div>
             {% endfor %}
           </section>
+
+          <p style="margin-top:60px;">
+            You can also visit the complete <a href="/blog">blog</a> archive if you are interested.
+          </p>
         </div>
       </div>
     </main>
 
     {% include footer.html %}
 
+    <script defer inline src="/static/js/determine-chrome.js"></script>
+    <script defer inline src="/static/js/ajanta-for-css.js"></script>
   </body>
 </html>

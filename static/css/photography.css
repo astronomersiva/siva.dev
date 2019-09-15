@@ -46,6 +46,8 @@ html.dark-mode {
 
 .photo-container {
   margin: 2%;
+  margin-left: 0;
+  margin-bottom: 0;
   position: relative;
 }
 

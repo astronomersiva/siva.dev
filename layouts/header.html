@@ -1,10 +1,8 @@
-{% unless post %}
-  <header class="header-home animated">
+<header class="header header-home animated">
+  <div class="wrapper-white">
     <h1 class="title">{{ data.config.title }}</h1>
     <h2 class="description">{{ data.config.about }}</h2>
 
     {% include social-links.html %}
-  </header>
-{% endunless %}
-
-{% include nav.html %}
+  </div>
+</header>

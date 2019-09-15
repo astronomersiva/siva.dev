@@ -6,14 +6,20 @@
   {% include head.html %}
 
   <body>
-    <div class="top-banner animated delay"></div>
+    {% include nav.html %}
 
-    <main>
-      <div class="wrapper-medium">
+    <div class="wrapper-full">
+      {% include header.html %}
+    </div>
+
+    <main id="main">
+      <div class="wrapper-large animated">
         <div class="page blog">
-          {% include header.html %}
+          <p>
+            Here's a list of all my blog posts that I have written over the years.
+          </p>
 
-          <section class="list animated">
+          <section class="list">
             {% assign articles = posts | sortByOrder %}
             {% assign year = "" %}
 
@@ -43,5 +49,7 @@
 
     {% include footer.html %}
 
+    <script defer inline src="/static/js/determine-chrome.js"></script>
+    <script defer inline src="/static/js/ajanta-for-css.js"></script>
   </body>
 </html>

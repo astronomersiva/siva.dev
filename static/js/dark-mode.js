@@ -43,9 +43,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
   let darkModeToggle = document.getElementById('dark-mode-toggle');
   applyThemeColor();
 
-  darkModeToggle.onclick = function() {
+  function handleDarkModeToggle() {
     let currentMode = localStorage.getItem('mode');
     localStorage.setItem('mode', currentMode === DARK_MODE ? LIGHT_MODE : DARK_MODE);
     applyMode();
+  }
+
+  darkModeToggle.onclick = function() {
+    handleDarkModeToggle();
+  }
+
+  darkModeToggle.onkeypress = function(event) {
+    if (event.keyCode === 13) {
+      handleDarkModeToggle();
+    }
   }
 })

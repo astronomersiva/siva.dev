@@ -1,5 +1,5 @@
 ---
-title: My Experiences in Building a Static Site Generator
+title: My Thoughts on Building a Static Site Generator
 date: January, 2019
 description: Look ma, I wrote a Static Site Generator!
 tags: Node.js, JavaScript

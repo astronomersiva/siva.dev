@@ -3,7 +3,7 @@
 {% assign webp_src = src | append: ".webp" %}
 {% assign placeholderSrc = imageSrcBase | append: "placeholder-" | append: data.photos[i].src %}
 {% assign description = data.photos[i].description %}
-<div class="photo-container" onclick="openModal('{{src}}', '{{webp_src}}', '{{description}}')">
+<div tabindex="0" class="photo-container" onclick="openModal('{{src}}', '{{webp_src}}', '{{description}}')" onkeypress="if (event.keyCode === 13) { openModal('{{src}}', '{{webp_src}}', '{{description}}') }">
   <div class="ajanta">
     <img
       inline
