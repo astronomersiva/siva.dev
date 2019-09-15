@@ -2,6 +2,16 @@
 <html lang="en">
   {% assign current = "index" %}
   {% include head.html %}
+  <noscript>
+    <style>
+      .header-home {
+        background-image: url(/static/images/hero.jpg);
+      }
+      .webp .header-home {
+        background-image: url(/static/images/hero.webp);
+      }
+    </style>
+  </noscript>
   <body>
     {% include nav.html %}
     <div class="wrapper-full animated">

@@ -4,7 +4,22 @@
   {% assign title = "Art" %}
 
   {% include head.html %}
-
+  <noscript>
+    <style>
+      .header-home {
+        background-image: url(/static/images/hero.jpg);
+      }
+      .webp .header-home {
+        background-image: url(/static/images/hero.webp);
+      }
+      .ajanta {
+        display: none;
+      }
+      .loading {
+        display: none;
+      }
+    </style>
+  </noscript>
   <body>
     {% include nav.html %}
 

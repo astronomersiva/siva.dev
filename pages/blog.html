@@ -4,7 +4,16 @@
   {% assign title = "Blog" %}
 
   {% include head.html %}
-
+  <noscript>
+    <style>
+      .header-home {
+        background-image: url(/static/images/hero.jpg);
+      }
+      .webp .header-home {
+        background-image: url(/static/images/hero.webp);
+      }
+    </style>
+  </noscript>
   <body>
     {% include nav.html %}
 
