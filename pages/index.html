@@ -63,8 +63,8 @@
 
           <section class="list">
             {% for project in data.projects %}
-              <div class="item {% if project.featured %}{% unless hideHighlight %}featured{% endunless %}{% endif %}">
-                <a class="url" target="_blank" rel="noopener" href="{{ project.link }}">
+              <div class="item" tabindex="0">
+                <a class="url" target="_blank" rel="noopener" href="{{ project.link }}" tabindex="-1">
                   <h3 class="title">{{ project.name }}</h3>
                   <p style="margin-bottom: 0;">{{project.description}}</p>
                 </a>
