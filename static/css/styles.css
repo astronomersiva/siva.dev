@@ -1098,6 +1098,14 @@ a.skip-main:focus, a.skip-main:active {
   margin: 7px auto;
 }
 
+.portrait-image {
+  text-align: center;
+
+  img {
+    max-height: 400px;
+  }
+}
+
 .caption {
   position: relative;
   top: 1rem;
