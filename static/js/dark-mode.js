@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let currentMode = localStorage.getItem('mode');
     localStorage.setItem('mode', currentMode === DARK_MODE ? LIGHT_MODE : DARK_MODE);
     applyMode();
+    document.activeElement.blur();
   }
 
   darkModeToggle.onclick = function() {
