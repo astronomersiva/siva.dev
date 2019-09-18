@@ -10,3 +10,8 @@
   - name: "ember-pickr"
     description: "Color Picker for EmberJS using pickr"
     link: "https://astronomersiva.github.io/ember-pickr/"
+  - name: "Rocket Spot"
+    internal: true
+    draft: true
+    description: "An app that provides orientation information based on your current location to spot rockets launched from the Satish Dhawan Space Center, Sriharikota."
+    link: "/rocket-spot"

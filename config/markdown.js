@@ -26,10 +26,13 @@ module.exports = {
           if (statement.type === 'container_lazy-image_open') {
             let tagContents = statement.info.replace(':::', '').trim();
             let attributeMap = getAttributes(tagContents);
-            let style = attributeMap.style;
-            let styleMarkup = style ? `style="${style}"` : '';
+            let style = attributeMap.style || '';
+            if (!attributeMap.caption) {
+              style = `${style};margin-bottom: 30px;`;
+            }
+
             return `
-              <div class="ajanta" ${styleMarkup}>
+              <div class="ajanta" style="${style}">
                 <img
                   inline
                   class="img-responsive center-block pixelated blur"
@@ -38,12 +41,14 @@ module.exports = {
                   alt="${attributeMap.alt}">
               
                 <img class="img-responsive center-block original">
+                ${attributeMap.caption ? `<figcaption style="margin-bottom: 30px;margin-top:10px;" class="caption">${attributeMap.caption}</figcaption>` : ''}
               </div>
               <noscript>
                 <img
                   class="img-responsive center-block"
                   src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"
                   alt="${attributeMap.alt}">
+                ${attributeMap.caption ? `<figcaption style="margin-bottom: 30px;margin-top:10px;" class="caption">${attributeMap.caption}</figcaption>` : ''}
               </noscript>
             `;
           }

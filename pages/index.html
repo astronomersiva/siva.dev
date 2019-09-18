@@ -63,12 +63,14 @@
 
           <section class="list">
             {% for project in data.projects %}
-              <div class="item" tabindex="0">
-                <a class="url" target="_blank" rel="noopener" href="{{ project.link }}" tabindex="-1">
-                  <h3 class="title">{{ project.name }}</h3>
-                  <p style="margin-bottom: 0;">{{project.description}}</p>
-                </a>
-              </div>
+              {% unless project.draft %}
+                <div class="item">
+                  <a class="url" {% unless project.internal %}target="_blank" rel="noopener"{% endunless %} href="{{ project.link }}">
+                    <h3 class="title">{{ project.name }}</h3>
+                    <p style="margin-bottom: 0;">{{project.description}}</p>
+                  </a>
+                </div>
+              {% endunless %}
             {% endfor %}
           </section>
 

@@ -9,7 +9,10 @@
 
   <div class="wrapper-full animated">
     {% assign bgColors = "f3f8ff, deecff, d6e6f2, ffe6eb, defcfc, ecfcff, c8f5ff" | split: ", " %}
-    <header class="header header-post" style="background:#{{bgColors | randomElement}}">
+    <header
+      class="header header-post"
+      style="background:{% if post.headerImage %}url({{post.headerImage}});background-size:cover;{% else %}#{{bgColors | randomElement}}{% endif %}"
+    >
       <h1 class="title">{{ post.title }}</h1>
 
       <span class="date">
@@ -24,7 +27,7 @@
           {% unless forloop.last == true %}·{% endunless %}
         {% endfor %}
       </div>
-    </header>
+    </headerclass="header>
   </div>
 
   <main id="main">
@@ -35,15 +38,17 @@
         {% endif %}
 
         {{post.html}}
-
-        {% include related.html %}
-
-        {% if post.showComments %}
-          {% include comments.html %}
-        {% endif %}
       </div>
     </div>
   </main>
+
+  <div class="wrapper-medium animated">
+    {% include related.html %}
+
+    {% if post.showComments %}
+      {% include comments.html %}
+    {% endif %}
+  </div>
 
   {% include footer.html %}
   <script defer inline src="/static/js/determine-chrome.js"></script>
