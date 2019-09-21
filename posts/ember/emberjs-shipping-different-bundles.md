@@ -22,7 +22,7 @@ One of the core concepts of this strategy is to have a build label(say, June_1_2
 
 <img data-src="/static/images/targets.png" src="" alt="Passing ENV to targets" class="old-lazy-load">
 <noscript>
-  <img src="/static/images/targets.png" alt="Passing ENV to targets">
+  <img loading="lazy" src="/static/images/targets.png" alt="Passing ENV to targets">
 </noscript>
 
 With the lightning approach, each of these builds will have a different build label(say, June_1_2018_1 for transpiled and June_1_2018_2 for untranspiled). With ember-cli-deploy, we can change these! We can change the label of the untranspiled build to `${label_of_transpiled_build}-modern`.

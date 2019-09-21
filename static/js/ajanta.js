@@ -1,4 +1,6 @@
 let ajantaImages = document.getElementsByClassName('ajanta');
+let htmlElement = document.getElementsByTagName('html')[0];
+
 for (let ajanta of ajantaImages) {
   let [pixelated] = ajanta.getElementsByClassName('pixelated');
   let [original] = ajanta.getElementsByClassName('original');
@@ -11,6 +13,11 @@ for (let ajanta of ajantaImages) {
 
   let src = pixelated.getAttribute('data-src');
   if (src) {
-    original.src = src;
+    let webpSrc = htmlElement.className.includes('webp') && pixelated.getAttribute('webp');
+    if (webpSrc) {
+      original.src = webpSrc;
+    } else {
+      original.src = src;
+    }
   }
 }

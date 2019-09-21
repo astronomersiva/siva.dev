@@ -61,7 +61,7 @@ bearing is displayed as 45.9 degrees.
 </div>
 <noscript>
   <div class="portrait-image">
-    <img src="/static/images/forward-bearing.jpg" alt="Forward Bearing">
+    <img loading="lazy" src="/static/images/forward-bearing.jpg" alt="Forward Bearing">
   </div>
 </noscript>
 
@@ -72,7 +72,7 @@ All we had to do after that was use a mobile compass to point to that bearing an
 </div>
 <noscript>
   <div class="portrait-image">
-    <img src="/static/images/gslv.jpg" alt="GSLV Launch">
+    <img loading="lazy" src="/static/images/gslv.jpg" alt="GSLV Launch">
   </div>
 </noscript>
 

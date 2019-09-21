@@ -45,6 +45,7 @@ module.exports = {
               </div>
               <noscript>
                 <img
+                  loading="lazy"
                   class="img-responsive center-block"
                   src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"
                   alt="${attributeMap.alt}">

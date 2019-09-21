@@ -1,7 +1,7 @@
-<nav class="nav wrapper-full animated" style="display: flex; justify-content: space-between;">
+<nav class="nav wrapper-full animated">
   <ul class="list">
     <li class="item">
-      <a class="link active" href="{{ site.url }}/">Siva<span class="fullname">subramanyam A</span></a>
+      <a class="link strong" href="{{ site.url }}/">Siva<span class="fullname">subramanyam A</span></a>
     </li>
     <li class="item">
       <a class="link skip-main" href="#main">Skip To Main Content</a>
@@ -17,11 +17,15 @@
     </li>
 
     <li class="item">
-      <a class="link {% if current == "blog" %}active{% endif %}" href="{{ site.url }}/blog">Blog</a>
+      <a class="link {% if current == "about" %}active{% endif %}" href="{{ site.url }}/about/">About</a>
     </li>
 
     <li class="item">
-      <a class="link {% if current == "art" %}active{% endif %}" href="{{ site.url }}/art">Art</a>
+      <a class="link {% if current == "blog" %}active{% endif %}" href="{{ site.url }}/blog/">Blog</a>
+    </li>
+
+    <li class="item">
+      <a class="link {% if current == "art" %}active{% endif %}" href="{{ site.url }}/art/">Art</a>
     </li>
 
     <li class="item dark-mode-toggle-container">

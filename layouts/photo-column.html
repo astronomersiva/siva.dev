@@ -21,6 +21,7 @@
     />
   </div>
   <noscript>
+    <!-- Do not use loading="lazy" here until intrinsicsize is supported. There's too much reflow now. -->
     <img
       class="img-responsive center-block"
       src="{{ src }}"

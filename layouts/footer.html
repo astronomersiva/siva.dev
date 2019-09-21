@@ -1,7 +1,9 @@
-<footer class="footer animated">
-  2014 - {{"now" | date: "%Y"}} © <a target="_blank" href="/">{{ data.config.name }}</a>
+<footer class="footer animated" style="{% if footer == "continuous" %}margin-top:0;{% endif %}">
+  <p class="m0">
+    2014 - {{"now" | date: "%Y"}} © <a target="_blank" href="/">{{ data.config.name }}</a>
+  </p>
 
-  <p class="extra">
+  <p>
     Crafted with <a class="link" target="_blank" rel="noopener" href="https://github.com/astronomersiva/lego">lego</a>, a custom built static site generator.
   </p>
 

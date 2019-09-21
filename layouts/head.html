@@ -68,6 +68,8 @@
   </noscript>
   {% if post %}
     <link rel="stylesheet" href="/static/css/github-gist.css">
+  {% endif %}
+  {% if post or current == "about" %}
     <link rel="stylesheet" href="/static/css/ajanta.css">
     <noscript>
       <style>
@@ -92,10 +94,17 @@
       </style>
     </noscript>
   {% endif %}
+  {% if current == "about" %}
+    <style>
+      .nav {
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  {% endif %}
 
   <script inline src="/static/js/determine-webp-support.js"></script>
 
-  {% if post %}
+  {% if post or current == "about" %}
     <script defer src="/static/js/ajanta.js"></script>
   {% endif %}
 </head>

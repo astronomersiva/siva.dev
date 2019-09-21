@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+{% assign current = "about" %}
+{% assign title = "About" %}
+{% assign footer = "continuous" %}
+{% include head.html %}
+<body>
+  {% include nav.html %}
+
+  <main id="main">
+    <div class="wrapper-full animated">
+      <div class="wrapper-large">
+        <div class="page home" style="margin-top: 100px;">
+          <h1 class="text-left">Hello! I'm Siva.</h1>
+
+          <p>
+            I love writing applications that are user-friendly, accessible and performant.
+            I currently work as a JavaScript Engineer at Zoho.
+            I primarily contribute to web apps built with EmberJS and React at work.
+            When not rolling out features or fixing bugs, I help in improving
+            the performance of our web apps by addressing memory leaks and
+            designing new patterns that could make our apps faster for our users.
+            I build and maintain several internal tools and frameworks that are used
+            by other developers as well. I also work on our deployment process
+            and do a bit of DevOps when needed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-large animated">
+      <div class="page home">
+        <div class="side-by-side">
+          <div class="toleft">
+            <div class="ajanta">
+              <img
+                inline
+                class="img-responsive center-block pixelated blur"
+                src="/static/images/lowres/about.jpg"
+                data-src="/static/images/about.jpg"
+                webp="/static/images/about.webp"
+                alt="At the Kudremukh National Park">
+
+              <img class="img-responsive center-block original">
+              <figcaption style="margin-bottom: 30px;margin-top:10px;" class="caption">
+                At the Kudremukh National Park
+              </figcaption>
+            </div>
+            <noscript>
+              <img
+                loading="lazy"
+                class="img-responsive center-block"
+                src="/static/images/about.jpg"
+                alt="At the Kudremukh National Park">
+              <figcaption style="margin-bottom: 30px;margin-top:10px;" class="caption">
+                At the Kudremukh National Park
+              </figcaption>
+            </noscript>
+          </div>
+
+          <div class="toright">
+            <p>
+              I am a seasoned trekker and love the sounds and smells of jungles.
+              I have done a few exploratory treks, opening up new routes in the
+              South Indian mountains. Over the last 2 years, I have been frequenting
+              the Himalayas and I absolutely love how magnificent those mountains are.
+              I make it point to go there at least twice in the winters just to experience
+              the raw beauty of the place without any tourists. The north eastern part
+              of India is my second favorite choice these days. Each of the
+              <a href="https://en.wikipedia.org/wiki/Northeast_India#Seven_Sister_States" target="_blank"
+                rel="noopener">
+                Seven Sisters</a>
+              is so different and it is almost like visiting individual countries.
+              India's diversity is huge and I would really recommend you to explore it :)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-large animated">
+      <div class="page home">
+
+        <div class="side-by-side">
+          <div class="toleft">
+            <div class="ajanta">
+              <img
+                inline
+                class="img-responsive center-block pixelated blur"
+                src="/static/images/lowres/cac.jpg"
+                data-src="/static/images/cac.jpg"
+                webp="/static/images/cac.webp"
+                alt="From one of CAC's outreach events">
+
+              <img class="img-responsive center-block original">
+              <figcaption style="margin-bottom: 30px;margin-top:10px;" class="caption">
+                From one of CAC's outreach events
+              </figcaption>
+            </div>
+            <noscript>
+              <img
+                loading="lazy"
+                class="img-responsive center-block"
+                src="/static/images/cac.jpg"
+                alt="From one of CAC's outreach events">
+              <figcaption style="margin-bottom: 30px;margin-top:10px;" class="caption">
+                From one of CAC's outreach events
+              </figcaption>
+            </noscript>
+          </div>
+
+          <div class="toright">
+            <p>
+              I am also an avid astronomer and run the
+              Chennai Astronomy Club with the help of other volunteers.
+              We mostly do overnight observation sessions(aka
+              <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Star_party">
+                Star Parties</a>
+              ) from places
+              far away from the city lights.
+              My targets of choice are usually nebulae and galaxies and the very
+              idea that I am looking at light that was emitted literally
+              millions of years ago is exhilarating!
+              We also do outreach events whenever time permits.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-full animated">
+      <div class="wrapper-large">
+        <div class="page home">
+          <p>Listed below is my CV.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-full cv-section animated">
+      <div class="wrapper-large">
+        <div class="page home" style="margin-top: 25px;">
+          <h2>
+            Member of Technical Staff, Zoho Corporation
+          </h2>
+          <small>05/2016 – Present</small>
+          <ul>
+            <li>
+              Implemented core features for the Indian edition of <em>Zoho Books</em>,
+              an online accounting software.
+            </li>
+            <li>
+              Devised a <a href="/ember-differential-bundles/">technique to do differential serving of bundles</a> in EmberJS.
+              This resulted in a reduction of 120kb in the initial bundle and an average of 300ms in
+              JS Parse/Compile time.
+            </li>
+            <li>
+              Optimised the <a href="/render-performance-improvements/">rendering performance</a> of our list pages by
+              implementing novel approaches in combination with occlusion that brought down the rendering
+              speed from ~1400ms to ~300ms.
+            </li>
+            <li>
+              Introduced a <a href="/eagerly-prefetch-route-models-ember/">strategy to eagerly make API calls</a>
+              based on users’ behaviour resulting in perceived speed improvements of several hundred milliseconds
+              on routes with slow API calls.
+            </li>
+            <li>
+              As a part of the Performance Team, spearheaded the discovery and fixing of several memory leaks in our
+              Ember applications. Later trained developers in ways to avoid them.
+            </li>
+            <li>
+              Established our Continuous Integration setup using GitLab CI that made it possible to ship
+              our changes in under 20 minutes. This used to take several hours earlier.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-full cv-section animated">
+      <div class="wrapper-large">
+        <div class="page home" style="margin-top: 25px;">
+          <h2>
+            Bachelor's in Computer Science and Engineering, RMK Engineering College
+          </h2>
+          <small>05/2012 – 04/2016</small>
+          <ul>
+            <li>
+              Won the national level <strong>Alan Turing Quiz</strong> organised by the
+              <strong>Computer Society of India</strong> for two consecutive years(2014 and 2015).
+            </li>
+            <li>
+              Won the second position in the <strong>Kerala Government Engineering Design National
+              Award</strong> instituted by the <strong>Indian Society of Technical Education</strong>(2015).
+            </li>
+            <li>
+              Won the district level round of <strong>Hon’ble Chief Minister’s Award
+              for Excellence in e-Governance</strong> for <em>Map My Problems</em>, a grievance redressal
+              system based on PHP, MongoDB and Javascript(2015).
+            </li>
+            <li>
+              Presented a paper titled <em>Smart Phone based Home Automation using Raspberry Pi
+              and SL4A</em> at the International Conference on Information Technology, New Delhi
+              organised by the <strong>Defence Research and Development Organisation</strong>(2015).
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  <script defer inline src="/static/js/determine-chrome.js"></script>
+</body>
+
+</html>

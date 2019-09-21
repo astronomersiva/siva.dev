@@ -11,8 +11,6 @@ html {
   --highlight: rgba(39, 243, 106, 0.15);
   --highlight-text: #1f1f1f;
   --transition: all 0.2s ease-in-out;
-  --banner: linear-gradient(180deg,  rgba(181,239,249,0.2) 15%, rgba(254,254,254,1) 90%);
-  --banner-mobile: linear-gradient(180deg,  rgba(181,239,249, 0.3) 0%, rgba(255,255,255,1) 80%);
   --fonts: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
 }
 
@@ -21,14 +19,12 @@ html.dark-mode {
   --color-heading: #e1e1e1;
   --color-heading-photo: #e1e1e1;
   --color-link: white;
-  --color-link-action: #6166DC;
+  --color-link-action: #bb86fc;
   --color-border: #3a3a3a;
   --color-border-darker: #696969;
   --color-bg: #121212;
   --highlight: #e06c75;
   --highlight-text: #272727;
-  --banner: none;
-  --banner-mobile: none;
 }
 
 .photos {
