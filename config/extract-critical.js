@@ -11,6 +11,6 @@ module.exports = {
   ],
   penthouse: {
     timeout: 150000,
-    forceInclude: ['.dark-mode > body', '.dark-mode>body']
+    forceInclude: ['.dark-mode>body', '.dark-mode .header-post']
   }
 };

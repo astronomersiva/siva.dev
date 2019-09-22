@@ -8,10 +8,11 @@
   {% include nav.html %}
 
   <div class="wrapper-full animated">
-    {% assign bgColors = "f3f8ff, deecff, d6e6f2, ffe6eb, defcfc, ecfcff, c8f5ff" | split: ", " %}
     <header
-      class="header header-post"
-      style="background:{% if post.headerImage %}url({{post.headerImage}});background-size:cover;{% else %}#{{bgColors | randomElement}}{% endif %}"
+      class="header header-post {% unless post.headerImage %}header-post-{{ post.order | modulo: 7 | plus: 1 }}{% endunless %}"
+      {% if post.headerImage %}
+        style="background:url({{post.headerImage}});background-size:cover;"
+      {% endif %}
     >
       <h1 class="title">{{ post.title }}</h1>
 
