@@ -2,7 +2,8 @@
   "name": "siva.dev",
   "scripts": {
     "start": "lego s",
-    "build": "lego"
+    "build": "lego",
+    "build:debug": "DEBUG=t lego && cp _headers build"
   },
   "browserslist": [
     "> 1%",
