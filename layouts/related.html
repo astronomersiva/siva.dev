@@ -9,7 +9,7 @@
           {% for tagInOtherPost in otherPost.tags %}
             {% if tagInOtherPost == tag %}
               {% if relatedPosts == 0 %}
-                <h4>Related Posts</h4>
+                <h4>Here are a few similar posts that you might like:</h4>
                 <ul>
               {% endif %}
               {% assign counter = relatedPosts | plus: 1 %}

@@ -34,7 +34,19 @@
     <div class="wrapper-medium animated">
       <div class="post">
         {% if post.image and post.headerImage %}
-        <img class="title-image" src="{{ post.image }}" alt="{{ post.title }}">
+          <img class="title-image" src="{{ post.image }}" alt="{{ post.title }}">
+        {% endif %}
+
+        {% assign currentYear = 2019 %}
+        {% assign postYear = post.date | date: '%Y' %}
+        {% assign postAge = currentYear | minus: postYear %}
+        {% if postAge >= 5 %}
+          <div class="outdated-warning">
+            <p>
+              This post is over five years old. The contents of this post
+              could be outdated especially if it's technical in nature. 
+            </p>
+          </div>
         {% endif %}
 
         {{post.html}}
@@ -43,6 +55,8 @@
   </main>
 
   <div class="wrapper-medium animated">
+    <hr class="post-separator text-center">
+
     {% include related.html %}
 
     {% if post.showComments %}

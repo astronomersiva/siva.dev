@@ -670,9 +670,9 @@ pre {
 
 /* animations */
 .animated {
-  animation: fade-in-down 0.3s;
+  /* animation: fade-in-down 0.3s;
   animation-delay: 0.2s;
-  animation-fill-mode: both;
+  animation-fill-mode: both; */
 }
 
 @keyframes fade-in-down {
@@ -1481,4 +1481,31 @@ svg.icon-moon {
     color: var(--color-caption);
     outline: none;
   }
+}
+
+.outdated-warning {
+  padding: 20px;
+  margin-bottom: 50px;
+  background: #f6ecbf;
+}
+
+.dark-mode .outdated-warning {
+  background: #42381d;
+  border: none;
+  p {
+    color: #e6ce8d;
+  }
+}
+
+.post-separator {
+  border: none;
+  background: none;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.post-separator::before {
+  content: '...';
+  letter-spacing: 2rem;
+  color: var(--color-text);
 }
