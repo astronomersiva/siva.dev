@@ -5,7 +5,6 @@ description: A guide on implementing Dark Mode using Local Storage and JavaScrip
 tags: JavaScript
 code: true
 order: 41
-featured: true
 showOnHomePage: true
 ---
 

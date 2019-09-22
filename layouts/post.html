@@ -42,7 +42,7 @@
         {% assign postYear = post.date | date: '%Y' %}
         {% assign postAge = currentYear | minus: postYear %}
         {% if postAge >= 5 %}
-          <div class="outdated-warning">
+          <div class="banner banner-outdated">
             <p>
               This post is over five years old. The contents of this post
               could be outdated especially if it's technical in nature. 
@@ -50,7 +50,30 @@
           </div>
         {% endif %}
 
+        {% if post.bannerType %}
+          <p>{{post.description}}</p>
+
+          {% include post-banners.html %}
+        {% endif %}
+
         {{post.html}}
+
+        {% include post-banners.html %}
+
+        {% if post.references %}
+          <br>
+          <br>
+
+          <small>
+            <p>
+              <em>References</em>
+            </p>
+            {% assign references = post.references | split: "," %}
+            {% for reference in references %}
+              <p>[{{forloop.index}}] <a target="_blank" rel="noopener" href="//{{reference}}">{{reference}}</a></p>
+            {% endfor %}
+          </small>
+        {% endif %}
       </div>
     </div>
   </main>

@@ -5,6 +5,7 @@ description: How Gulp can be (re)used for very large projects
 tags: Gulp, Node.js, Tooling
 code: true
 order: 20
+featured: true
 ---
 
 About a year back, I started to work on unifying the development, build and deployment process of several websites. All these websites had almost the same structure and dependencies and were using [Gulp](https://gulpjs.com/).

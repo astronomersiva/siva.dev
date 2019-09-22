@@ -952,30 +952,44 @@ pre {
 
 .header-post-1 {
   background: #f3f8ff;
+  border-top: 1px solid #deecff;
+  border-bottom: 1px solid #deecff;
 }
 
 .header-post-2 {
   background: #deecff;
+  border-top: 1px solid #cfe3ff;
+  border-bottom: 1px solid #cfe3ff;
 }
 
 .header-post-3 {
   background: #d6e6f2;
+  border-top: 1px solid #c2e2fb;
+  border-bottom: 1px solid #c2e2fb;
 }
 
 .header-post-4 {
   background: #ffe6eb;
+  border-top: 1px solid #ffd9e0;
+  border-bottom: 1px solid #ffd9e0;
 }
 
 .header-post-5 {
   background: #defcfc;
+  border-top: 1px solid #b5f3f3;
+  border-bottom: 1px solid #b5f3f3;
 }
 
 .header-post-6 {
   background: #ecfcff;
+  border-top: 1px solid #c8f5ff;
+  border-bottom: 1px solid #c8f5ff;
 }
 
 .header-post-7 {
   background: #c8f5ff;
+  border-top: 1px solid #a9eaf9;
+  border-bottom: 1px solid #a9eaf9;
 }
 
 .header-home>.wrapper-white>.title {
@@ -1352,6 +1366,10 @@ a.skip-main:focus, a.skip-main:active {
   background: #101219 !important;
 }
 
+.dark-mode header[class*="header-post-"] {
+  border: none !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1510,17 +1528,46 @@ svg.icon-moon {
   }
 }
 
-.outdated-warning {
+.banner {
   padding: 20px;
   margin-bottom: 50px;
+}
+
+.banner-outdated {
   background: #f6ecbf;
 }
 
-.dark-mode .outdated-warning {
-  background: #42381d;
-  border: none;
-  p {
-    color: #e6ce8d;
+.banner-playstore,
+.banner-vscode {
+  background: #f3f8ff;
+  border: 1px solid #deecff;
+  margin-top: 50px;
+  padding: 30px 20px;
+
+  a {
+    font-weight: bold;
+  }
+}
+
+.dark-mode {
+  .banner {
+    p {
+      color: #e6ce8d;
+    }
+
+    border: none;
+  }
+
+  .banner-outdated {
+    background: #42381d;
+  }
+
+  .banner-playstore,
+  .banner-vscode {
+    background: #233567;
+    a {
+      color: var(--color-link);
+    }
   }
 }
 

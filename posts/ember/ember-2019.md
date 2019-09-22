@@ -5,7 +5,6 @@ description: My thoughts on EmberJS after three years of working with it.
 tags: EmberJS
 code: true
 order: 41
-featured: true
 showComments: true
 ---
 

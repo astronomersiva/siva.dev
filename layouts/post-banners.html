@@ -1,0 +1,14 @@
+<div class="banner banner-{{post.bannerType}}">
+  {% assign playStoreBase = "https://play.google.com/store/apps/details?id=" %}
+  {% assign vscodeBase = "https://marketplace.visualstudio.com/items?itemName=" %}
+  {% if post.bannerType == 'playstore' %}
+    <a href="{{playStoreBase}}{{post.playStoreId}}" target="_blank" rel="noopener">
+      Download from the Play Store
+    </a>
+  {% endif %}
+  {% if post.bannerType == 'vscode' %}
+    <a href="{{vscodeBase}}{{post.vscodeId}}" target="_blank" rel="noopener">
+      Download from the VSCode Marketplace
+    </a>
+  {% endif %}
+</div>

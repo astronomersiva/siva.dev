@@ -1,12 +1,13 @@
 ---
 title: Rocket Spot
 date: September 17, 2019
-description: An app that provides orientation information based on your current location to spot rockets launched from Satish Dhawan Space Center, Sriharikota (SDSC-SHAR).
+description: Rocket Spot is an app that provides orientation information based on your current location to spot rockets launched from Satish Dhawan Space Center, Sriharikota (SDSC-SHAR).
 tags: JavaScript, React Native
 code: true
 order: 42
-featured: true
-draft: true
+bannerType: playstore
+playStoreId: com.messierlabs.rocketspot
+references: www.movable-type.co.uk/scripts/latlong.html,www.movable-type.co.uk/scripts/latlong.html
 ---
 
 The Indian Space Research Organization(ISRO) launches rockets from the island of
@@ -25,7 +26,7 @@ on their phones to find north.
 ### **Where is the launch pad?**
 
 Visitors at the Pulicat Bird Sanctuary who arrive there to spot rocket launches face a different issue.
-The island of Sriharikota and consequently, the launch pads are hidden by the dense vegetation on the island.
+The island of Sriharikota and consequently, the launch pads, are hidden by the dense vegetation on the island.
 Tall palm trees all over the island make spotting the launch pads impossible unless you know where exactly to
 look for. Coincidentally, the launch pad is almost at east when looking from the
 [viewpoint on the Pulicat lake](/seeing-indian-rocket-launches/).
@@ -100,10 +101,9 @@ The launch details are tracked in a Git repository on GitHub and all it takes to
 update the data is making a commit. Since the structure of the response JSON is rather
 trivial, it is a breeze to update it even while travelling. 
 
-<small>
+We used [React Native](https://facebook.github.io/react-native/) to build the app. As both of us
+have been building front-end applications for several years now, this was a breeze. There is also
+the advantage of being able to target multiple platforms(Android and iOS) using the same codebase.
 
-*References*
-
-[1] [https://www.movable-type.co.uk/scripts/latlong.html](https://www.movable-type.co.uk/scripts/latlong.html)
-
-</small>
+After almost a year of using it ourselves and sharing it with people that asked for it in Sriharikota
+and social media, I finally published it in the Play Store last week.
