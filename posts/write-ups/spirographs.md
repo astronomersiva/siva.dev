@@ -2,12 +2,13 @@
 title: Spirographs
 date: April 28, 2019
 description: When you realise that Math is beautiful.
-tags: General, Art
+tags: General, JavaScript, Art
 code: true
 order: 40
 featured: true
 showOnHomePage: true
 special: interactive
+relatedPosts: 43, 39, 38, 36
 ---
 
 A Spirograph is a toy that produces geometrical patterns. I am very sure that you would have

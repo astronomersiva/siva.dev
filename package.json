@@ -6,9 +6,10 @@
     "build:debug": "DEBUG=t lego && cp _headers build"
   },
   "browserslist": [
-    "> 1%",
-    "last 1 versions",
-    "not ie 11"
+    "Edge >= 16",
+    "Firefox >= 31",
+    "Chrome >= 49",
+    "Safari >= 9.1"
   ],
   "devDependencies": {},
   "dependencies": {

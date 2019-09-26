@@ -2,9 +2,10 @@
 title: De Jong Attractors
 date: February, 2019
 description: Generating art with mathematics using HTML canvas and JavaScript
-tags: JavaScript, Art
+tags: General, JavaScript, Art
 code: true
 order: 36
+relatedPosts: 43, 40, 39, 38
 ---
 
 ::: lazy-image src="/static/images/gen-art/lowres/de-jong-white.jpg" alt="De Jong Attractor" :::

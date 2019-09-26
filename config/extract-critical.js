@@ -11,6 +11,13 @@ module.exports = {
   ],
   penthouse: {
     timeout: 150000,
-    forceInclude: ['.dark-mode>body', '.dark-mode .header-post', '.dark-mode header[class*=header-post-]']
+    forceInclude: [
+      '.dark-mode>body',
+      '.dark-mode .header-post',
+      '.dark-mode header[class*=header-post-]',
+      '.dark-mode .header-home',
+      '.dark-mode .wrapper-white',
+      '.wrapper-white'
+    ]
   }
 };

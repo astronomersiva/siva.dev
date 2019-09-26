@@ -2,7 +2,7 @@
 title: Reducing rebuild time with Broccoli Caching Writer
 date: October, 2017
 description: How using proper configuration can cut unnecessary rebuild time
-tags: EmberJS, Tooling, Build
+tags: Tooling
 order: 19
 code: true
 ---

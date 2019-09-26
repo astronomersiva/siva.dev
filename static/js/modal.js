@@ -4,6 +4,12 @@ let modalDesc = document.querySelector('.modal-desc');
 
 const isWebpSupported = document.getElementsByTagName('html')[0].className.includes('webp');
 
+window.onhashchange = function() {
+  if (!location.hash) {
+    closeModal();
+  }
+}
+
 function openModal(imageSrc, webpSrc, description) {
   modalImage.src = isWebpSupported ? webpSrc : imageSrc;
   modalImage.alt = description;
@@ -11,6 +17,8 @@ function openModal(imageSrc, webpSrc, description) {
 
   modal.style.display = 'grid';
   document.body.style.overflowY = 'hidden';
+
+  window.location.hash = encodeURI(description);
 }
 
 function closeModal() {
@@ -20,11 +28,15 @@ function closeModal() {
 
   modal.style.display = 'none';
   document.body.style.overflowY = 'auto';
+
+  // TODO: feels a little hackish, leaves one extra entry in the forward direction
+  history.pushState('', document.title, window.location.pathname);
+  window.history.back();
 }
 
 document.onkeydown = function(evt) {
   evt = evt || window.event;
   if (evt.keyCode == 27) {
-    closeModal();
+    window.history.back();
   }
 };

@@ -2,11 +2,12 @@
 title: Identicons
 date: April, 2019
 description: Do you want to know how identicons work?
-tags: General
+tags: General, JavaScript
 code: true
 order: 39
 featured: true
 special: interactive
+relatedPosts: 43, 40, 38, 36
 ---
 
 We have seen them everywhere. From GitHub to Stack Overflow, identicons have been

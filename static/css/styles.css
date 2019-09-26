@@ -411,7 +411,7 @@ html {
   --color-link: black;
   --color-link-action: #6166DC;
   --color-spoiler: #fafae0;
-  --color-caption: #696969;
+  --color-caption: #444444;
   --color-border: #eee;
   --color-border-darker: #ededed;
   --color-bg: white;
@@ -429,17 +429,39 @@ html.dark-mode {
   --color-link: white;
   --color-link-action: #bb86fc;
   --color-spoiler: #fafae0;
-  --color-caption: #85cfcb;
-  --color-caption-alt: #7B90D6;
+  --color-caption: #7c8483;
   --color-border: #3a3a3a;
   --color-border-darker: #696969;
   --color-bg: #121212;
   --color-wrapper: rgba(0, 0, 0, 0.75);
   --color-bg-dark-mode: #191C26;
-  --color-bg-elements: #0e0e0e;
+  --color-bg-elements: #101219;
   --highlight: #e06c75;
   --highlight-text: #272727;
 }
+
+/* @font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-style: normal;
+  font-named-instance: "Regular";
+  font-display: swap;
+  src: url("/static/fonts/inter.3.10.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-style: italic;
+  font-named-instance: "Italic";
+  font-display: swap;
+  src: url("/static/fonts/inter.italic.3.10.woff2") format("woff2");
+}
+
+@supports (font-variation-settings: normal) {
+  html.inter {
+    --fonts: "Inter var", -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+  }
+} */
 
 body,
 html {
@@ -595,6 +617,7 @@ tt {
 tt {
   background: var(--highlight);
   color: var(--highlight-text);
+  overflow-wrap: break-word;
 }
 
 .dark-mode {
@@ -706,7 +729,7 @@ pre {
 }
 
 .blog>.list>.item {
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .home>.list>.item>.url,
@@ -896,7 +919,6 @@ pre {
 .dark-mode .footer {
   background: var(--color-bg-elements);
   border-top: none;
-  color: var(--color-caption-alt);
 }
 
 .footer .link {
@@ -931,7 +953,7 @@ pre {
   margin: 0 auto;
   text-align: center;
   position: relative;
-  z-index: 99;
+  z-index: 3;
   padding: 10% 0;
 }
 
@@ -940,6 +962,17 @@ pre {
   background-position-y: bottom;
   background-position-x: right;
   background-size: cover;
+}
+
+.dark-mode {
+  .header-home {
+    padding: 0;
+  }
+
+  .wrapper-white {
+    width: 90%;
+    padding: 13% 5%;
+  }
 }
 
 .header-post {
@@ -1011,16 +1044,22 @@ pre {
 
 .wrapper-white {
   background: var(--color-wrapper);
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
   padding: 3% 1%;
-  transition: 0.3s linear all;
+  backdrop-filter: blur(3px);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .wrapper-white {
-    width: 85%;
-    padding: 5% 3%;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .wrapper-white {
+    width: 70%;
+    padding: 5%;
   }
 
   .header-home>.wrapper-white>.title {
@@ -1058,6 +1097,7 @@ pre {
 .nav {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .dark-mode .nav {
@@ -1326,7 +1366,7 @@ a.skip-main:focus, a.skip-main:active {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 2;
 }
 
 .spoiler:hover:before {
@@ -1363,7 +1403,7 @@ a.skip-main:focus, a.skip-main:active {
 }
 
 .dark-mode .header-post {
-  background: #101219 !important;
+  background: #12141c !important;
 }
 
 .dark-mode header[class*="header-post-"] {
@@ -1382,6 +1422,10 @@ a.skip-main:focus, a.skip-main:active {
   font-weight: bold;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .m0 {
   margin: 0;
 }
@@ -1389,6 +1433,10 @@ a.skip-main:focus, a.skip-main:active {
 ::selection {
   background: var(--highlight);
   color: var(--color-text);
+}
+
+.dark-mode ::selection {
+  color: black;
 }
 
 .dark-mode-toggle-container svg {
@@ -1431,11 +1479,9 @@ svg.icon-moon {
 
   .enable-animations #dark-mode-toggle::after {
     content: '';
-    transition: .3s linear all;
+    transition: .4s linear all;
     position: absolute;
-    width: 100%;
     background: black;
-    height: 100px;
     top: 0;
     right: 0;
     border-radius: 50%;
@@ -1459,11 +1505,12 @@ svg.icon-moon {
   .enable-animations #dark-mode-toggle:focus::after,
   .enable-animations #dark-mode-toggle:hover::after {
     opacity: 1;
-    transform: scale(12);
+    transform: scale(13);
   }
 
   .dark-mode-star {
     opacity: 0;
+    margin-bottom: 0;
   }
 
   .enable-animations .dark-mode-star {

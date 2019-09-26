@@ -8,7 +8,7 @@ function applyThemeColor() {
   let meta = document.querySelector('meta[name="theme-color"]');
   if (meta) {
     if (currentMode === DARK_MODE) {
-      meta.setAttribute('content', '#191C26');
+      meta.setAttribute('content', '#12141c');
     } else {
       meta.setAttribute('content', '#f0fcfd');
     }

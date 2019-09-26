@@ -2,11 +2,12 @@
 title: Moiré Patterns
 date: March, 2019
 description: Do not see this if you are prone to motion sickness
-tags: General
+tags: General, JavaScript, Art
 code: true
 order: 38
 special: interactive
 featured: true
+relatedPosts: 43, 40, 39, 36
 ---
 
 I recently came across this [tweet](https://twitter.com/Rainmaker1973/status/1103631346633707523)
