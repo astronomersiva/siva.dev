@@ -34,18 +34,23 @@
 </div>
 
 <script>
+  let dotRotation = 0;
+  let dotTranslation = 0;
+
   function handleRotationForDots() {
     let input = document.getElementById('rotation');
     let topCanvas = document.getElementById('top');
+    dotRotation = input.value;
 
-    topCanvas.style.transform = `rotate(${input.value || 0}deg)`;
+    topCanvas.style.transform = `translate(${dotTranslation}%) rotate(${dotRotation}deg)`;
   }
 
   function handleTranslationForDots() {
     let input = document.getElementById('translation');
     let topCanvas = document.getElementById('top');
+    dotTranslation = input.value;
 
-    topCanvas.style.transform = `translate(${input.value}%)`;
+    topCanvas.style.transform = `translate(${dotTranslation}%) rotate(${dotRotation}deg)`;
   }
 
   (function() {

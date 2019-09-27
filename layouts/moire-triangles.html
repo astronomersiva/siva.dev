@@ -34,18 +34,23 @@
 </div>
 
 <script>
+  let triangleRotation = 0;
+  let triangleTranslation = 0;
+
   function handleRotationForTriangle() {
     let input = document.getElementById('rotation-triangle');
     let topCanvas = document.getElementById('top-triangle');
+    triangleRotation = input.value;
 
-    topCanvas.style.transform = `rotate(${input.value || 0}deg)`;
+    topCanvas.style.transform = `translate(${triangleTranslation}%) rotate(${triangleRotation}deg)`;
   }
 
   function handleTranslationForTriangle() {
     let input = document.getElementById('translation-triangle');
     let topCanvas = document.getElementById('top-triangle');
+    triangleTranslation = input.value;
 
-    topCanvas.style.transform = `translate(${input.value}%)`;
+    topCanvas.style.transform = `translate(${triangleTranslation}%) rotate(${triangleRotation}deg)`;
   }
 
   (function() {
