@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@astronomersiva/lego@2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@astronomersiva/lego/-/lego-2.3.0.tgz#235924b72456575d0dfb849e48594a82b66bd4a7"
-  integrity sha512-u4GodZxjksRlWS0IuKiOGCE80cNLqjh1ZUQKhlYHQrX7m3JSUBfjtYfoe46fMCkorW1gwQspIqnl5UDtuYdyXQ==
+"@astronomersiva/lego@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@astronomersiva/lego/-/lego-2.4.0.tgz#868bc70871c64f847b72d817ae55129de09cf7e0"
+  integrity sha512-lEEQmoy6/hR4IEi/v/V25WR6QdFEomWfxNxZxdwVB/nkgYAnqmpoVH1O59NqKtoDcFtr6sF/4j3tlInYHltH8Q==
   dependencies:
     "@astronomersiva/sitemap-static" "^1.0.1"
     "@parcel/watcher" "^2.0.0-alpha.3"
@@ -23,6 +23,7 @@
     imagemin-mozjpeg "^8.0.0"
     imagemin-pngquant "^8.0.0"
     inline-source "^7.1.0"
+    js-yaml "^3.13.1"
     liquid-node "^3.0.0"
     live-server "^1.2.0"
     markdown-it "^9.0.1"
@@ -39,7 +40,6 @@
     signale "^1.2.1"
     terser "^4.0.0"
     v8-compile-cache "^2.0.2"
-    yaml "^1.0.0-rc.8"
 
 "@astronomersiva/sitemap-static@^1.0.1":
   version "1.0.1"
@@ -48,13 +48,6 @@
   dependencies:
     findit "~2.0.0"
     minimist "1.2.0"
-
-"@babel/runtime@^7.4.5":
-  version "7.5.5"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
-  integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
-  dependencies:
-    regenerator-runtime "^0.13.2"
 
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
@@ -5873,11 +5866,6 @@ regenerator-runtime@^0.11.0:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
   integrity sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
 
-regenerator-runtime@^0.13.2:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
-  integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==
-
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/regex-not/-/regex-not-1.0.2.tgz#1f4ece27e00b0b65e0247a6810e6a85d83a5752c"
@@ -7128,13 +7116,6 @@ yallist@^3.0.0, yallist@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.3.tgz#b4b049e314be545e3ce802236d6cd22cd91c3de9"
   integrity sha512-S+Zk8DEWE6oKpV+vI3qWkaK+jSbIK86pCwe2IF/xwIpQ8jEuxpw9NyaGjmp9+BoJv5FV2piqCDcoCtStppiq2A==
-
-yaml@^1.0.0-rc.8:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.6.0.tgz#d8a985cfb26086dd73f91c637f6e6bc909fddd3c"
-  integrity sha512-iZfse3lwrJRoSlfs/9KQ9iIXxs9++RvBFVzAqbbBiFT+giYtyanevreF9r61ZTbGMgWQBxAua3FzJiniiJXWWw==
-  dependencies:
-    "@babel/runtime" "^7.4.5"
 
 yargs-parser@^10.0.0:
   version "10.1.0"
