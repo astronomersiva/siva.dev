@@ -71,7 +71,7 @@ This is how [lego](https://github.com/astronomersiva/lego/) was born.
 I decided to create a list of initial expectations that I wanted lego to be capable of.
 
 * **Support Liquid templates** - Even though the site was using Jinja2 templates, I decided to go for
-Liquid as it is way more expressive, has a better npm ecosystem and is very similar as well in terms
+Liquid as it has a better npm ecosystem and is very similar as well in terms
 of syntax.
 * **Support markdown posts**
 * **A capable task runner** - It should be capable of running tasks in parallel. For example, minifying CSS

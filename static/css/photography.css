@@ -68,6 +68,7 @@ html.dark-mode {
 .photo-overlay {
   width: 80%;
   height: 20%;
+  max-height: 75px;
 }
 
 .photo-container:hover {

@@ -7,7 +7,7 @@
   const images = document.querySelectorAll('.img-responsive');
   const config = {
     // If the image gets within 50px in the Y axis, start the download.
-    rootMargin: '50px 0px',
+    rootMargin: '100px 0px',
     threshold: 0.01
   };
 
@@ -55,7 +55,7 @@
       return;
     }
 
-    if (isWebpSupported) {
+    if (isWebpSupported && image.dataset.imgWebpSrc) {
       src = image.dataset.imgWebpSrc;
     }
 

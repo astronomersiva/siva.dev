@@ -11,7 +11,7 @@ window.onhashchange = function() {
 }
 
 function openModal(imageSrc, webpSrc, description) {
-  modalImage.src = isWebpSupported ? webpSrc : imageSrc;
+  modalImage.src = isWebpSupported && webpSrc ? webpSrc : imageSrc;
   modalImage.alt = description;
   modalDesc.textContent = description;
 

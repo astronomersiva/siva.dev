@@ -6,7 +6,7 @@
 .hljs {
   display: block;
   background: white;
-  padding: 0.5em;
+  padding: 1rem;
   color: #333333;
   overflow-x: auto;
 }
@@ -70,11 +70,11 @@
   text-decoration: underline;
 }
 
-.dark-mode {
+/* .dark-mode { */
   .hljs {
     display: block;
     overflow-x: auto;
-    padding: 0.5em;
+    padding: 2rem;
     color: #abb2bf;
     background: #282c34;
   }
@@ -151,4 +151,4 @@
   .hljs-tag {
     color: #5c6370;
   }
-}
+/* } */
