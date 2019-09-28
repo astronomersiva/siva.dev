@@ -908,12 +908,12 @@ pre {
 }
 
 .footer {
-  border-top: 1px solid var(--color-border-darker);
   padding: 40px 0;
   margin: 40px 0 0;
   font-size: 1.3rem;
   color: var(--color-caption);
   text-align: center;
+  background: #f8f8f8;
 }
 
 .dark-mode .footer {

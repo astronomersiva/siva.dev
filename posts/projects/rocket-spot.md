@@ -58,7 +58,7 @@ to try and address these. Overall, we had a few requirements:
 
 After a bit of brainstorming, we settled upon the following UI.
 
-::: lazy-image src="/static/images/lowres/rocket-spot-ui.png" alt="App Design" :::
+::: lazy-image src="/static/images/lowres/rocket-spot-ui.jpg" alt="App Design" :::
 
 It essentially has three components:
 
