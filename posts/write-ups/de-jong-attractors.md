@@ -10,7 +10,7 @@ relatedPosts: 43, 40, 39, 38
 
 ::: lazy-image src="/static/images/gen-art/lowres/de-jong-white.jpg" alt="De Jong Attractor" :::
 
-If you have been following me on [Twitter](https://twitter.com/astronomersiva), you would know that I have
+If you have been following me on [Twitter](https://twitter.com/sivaSupermanyam), you would know that I have
 started experimenting with Generative Art over the last few weeks. While I initially started by just playing
 with circles and arcs and mixing random values in their equations, I still managed to get some
 reasonable output with them.
