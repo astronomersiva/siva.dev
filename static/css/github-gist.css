@@ -152,3 +152,8 @@
     color: #5c6370;
   }
 /* } */
+
+.hljs ::selection {
+  background: #61aeee;
+  color: white;
+}

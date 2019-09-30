@@ -1,5 +1,5 @@
 module.exports = {
-  title: '@siva',
+  title: 'Sivasubramanyam A',
   description: 'Personal blog on code and travel by Sivasubramanyam A.',
   feed_url: 'https://siva.dev/rss.xml',
   site_url: 'https://siva.dev',

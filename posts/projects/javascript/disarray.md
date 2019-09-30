@@ -4,6 +4,7 @@ date: September 26, 2019
 description: An attempt at making Cubic Disarrays interactive.
 tags: General, Art
 code: true
+draft: true
 order: 43
 featured: true
 special: interactive

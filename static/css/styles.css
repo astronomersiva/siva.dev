@@ -415,7 +415,7 @@ html {
   --color-border: #eee;
   --color-border-darker: #ededed;
   --color-bg: white;
-  --color-wrapper: rgba(255, 255, 255, 0.75);
+  --color-wrapper: rgba(255, 255, 255, 0.6);
   --color-bg-dark-mode: #121212;
   --highlight: rgba(39, 243, 106, 0.15);
   --highlight-text: #1f1f1f;
@@ -516,6 +516,10 @@ h3 {
 
 h4 {
   font-size: 1.6rem;
+}
+
+.light-heading {
+  font-weight: 400;
 }
 
 a {
@@ -838,6 +842,13 @@ pre {
   box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 10px 30px rgba(0,0,0,0.08);
 }
 
+@media screen and (max-width: 800px) {
+  .home>.list>.item:hover,
+  .home>.list>.item:focus {
+    transform: translateX(10px);
+  }
+}
+
 .dark-mode .home>.list>.item {
   border-color: #272c3c;
 }
@@ -1047,7 +1058,7 @@ pre {
   width: 40%;
   margin: 0 auto;
   padding: 3% 1%;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(1.5px);
 }
 
 @media screen and (max-width: 1200px) {
@@ -1058,7 +1069,7 @@ pre {
 
 @media screen and (max-width: 950px) {
   .wrapper-white {
-    width: 70%;
+    width: 55%;
     padding: 5%;
   }
 
@@ -1551,7 +1562,7 @@ svg.icon-moon {
 }
 
 .cv-section:nth-of-type(2n) {
-  background: #fff7c1;
+  background: #fbfcda;
 }
 
 .cv-section:nth-of-type(2n+1) {
