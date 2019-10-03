@@ -45,9 +45,9 @@
               target="_blank">email</a>.
           </p>
 
-          <h3 class="item featured-entries-intro" style="margin-top: 60px;font-weight: 800;padding-bottom: 30px;margin-bottom: 0;">Here are some of my featured blog posts.</h3>
-
           <section class="list">
+            <h3 class="featured-entries-intro" style="margin-top: 40px;font-weight: 800;padding-bottom: 30px;margin-bottom: 0;">Here are some of my featured blog posts.</h3>
+
             {% assign articles = posts | sortByOrder %}
             {% assign hideHighlight = true %}
 
@@ -61,9 +61,9 @@
             {% endfor %}
           </section>
 
-          <h3 class="item featured-entries-intro" style="padding-bottom: 30px;margin-bottom: 0;margin-top: 80px;font-weight: 800;">And, here's a few of my projects.</h3>
-
           <section class="list">
+            <h3 class="featured-entries-intro" style="padding-bottom: 30px;margin-bottom: 0;margin-top: 60px;font-weight: 800;">And, here's a few of my projects.</h3>
+
             {% for project in data.projects %}
               {% unless project.draft %}
                 <div class="item">

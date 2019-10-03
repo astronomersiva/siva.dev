@@ -17,7 +17,8 @@ module.exports = {
       '.dark-mode header[class*=header-post-]',
       '.dark-mode .header-home',
       '.dark-mode .wrapper-white',
-      '.wrapper-white'
+      '.wrapper-white',
+      'html.dark-mode'
     ]
   }
 };

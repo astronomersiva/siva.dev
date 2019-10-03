@@ -1,4 +1,4 @@
-<div class="item {% if post.featured %}{% unless hideHighlight %}featured{% endunless %}{% endif %}">
+<article class="item {% if post.featured %}{% unless hideHighlight %}featured{% endunless %}{% endif %}">
   <a class="url" href="/{{ post.path }}/">
     <aside class="date">{{ post.date | date: "%b %Y" }}</aside>
     <h3 class="title">
@@ -9,4 +9,4 @@
     </h3>
     <p style="margin-bottom: 0;">{{post.description}}</p>
   </a>
-</div>
+</article>

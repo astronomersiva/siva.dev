@@ -975,6 +975,13 @@ pre {
   background-size: cover;
 }
 
+@media screen and (max-width: 479px) {
+  .header-home {
+    background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCABLADIDASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAABQADBAYHAgEI/8QAMBAAAgIBAgUCBAQHAAAAAAAAAQIAAwQFEQYSEyExIlEUMkGhFSMkYTM0UlRxgZH/xAAZAQACAwEAAAAAAAAAAAAAAAACBAEDBQD/xAAkEQACAgEEAAcBAAAAAAAAAAAAAQIRAwQSEyEUIjEyUVJhof/aAAwDAQACEQMRAD8Aq+VwhqTE9QNBuRwpfR3dDvPpvKw6bKy3Iv8AyUDieorzCqsTdw6lzdUYuXSRirsx9NHar51AjeRjhRtzjaGdZqzCxO2y/tK/bRf5ZW2mjCNmTkaTqhiypAfMa6a7yXRh2XOFXzD2n8L3392IAhtKPqBFSl7Sr9MRS+Dgt9vmEUHfj+Q+HL8G7W5PNUVBAlH4hxrbWbkvAh8Wpcdi3LOW0zGuPqJP+5jY2sbtm7lvIqRl+TpGY7n83cSONDvsYLa3p/xNSytPx8dewBgW8gMenWDH4aly9DNyaSMfcyvYPB+O4DDIKtC6cNnHX05XaeWJkWN+WvLH6sPOuABc7Q25vtyK4rHHqMRr8Ls/uvvFJ40W/b+J94oO5fYs2v6/0dCsW9LwjjNaqjfvOsbT0G3r3Mkk1UtynvEJZE+h+GJx7IdyPd8xnC4UIb1sdlO0epoNh9J7QeVoLhTfYPrw5IrxNvqZO+GdTufEIY2MrjfYTnmZy06AvwZ/rMUsHwJikc5Ph0C9OfE6/IV2I+hhF8TGsYsiBtvaANXRbs6vonkJ87SVoxswr7BZZzg+5lTXVpjC+KJiY2NbayqACPpOno6a8q7KI3kZePXb3IVn9oO1PPur3CqCoG4Jg9snpBNCqoRc0dxcG9WW2i3mqPkSq42uWZVy0WUEqe3NLTXRfXgN8M5U7dhCacV2CmpegZA7DfzFKUfxXc/qDFI4/wBJ5PwoGi6pm6nWLK7SbRDKZWTWrGy8Ld42Jgfh9Fo0mx6QEYDyJnXEWo5hyrP1Fnn3jO3c6QtLJsimzYtGv62YVy8lGc9x3jPG+Wy0pVjX7WeNgZjem52UtqOt9gb33hHUM7Je6pnucn3JhLF5rK5ajy1RpencQjTNOrry0Bu87y86LxKmZiKwXf8AYTDci17aqTYxY9vM1vgmqtNPUqoHpleWMastwzldFtGoIR/K/aKMB228xRWhq2f/2Q==');
+    background-position-y: center;
+  }
+}
+
 .dark-mode {
   .header-home {
     padding: 0;
@@ -1084,6 +1091,17 @@ pre {
 
   .header-post>.title {
     font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header-home {
+    padding: 0;
+  }
+
+  .wrapper-white {
+    width: 90%;
+    padding: 13% 5%;
   }
 }
 
@@ -1206,9 +1224,10 @@ a.skip-main:focus, a.skip-main:active {
 .featured>.url>.title::before {
   content: '★';
   position: absolute;
-  left: -20px;
+  left: -25px;
   top: 3px;
   font-size: 70%;
+  color: var(--color-caption);
 }
 
 .twitter-tweet {
