@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
+  {% include "head.html" %}
   <noscript>
     <style>
       .header-home {
@@ -12,10 +12,10 @@
     </style>
   </noscript>
   <body>
-    {% include nav.html %}
+    {% include "nav.html" %}
 
     <div class="wrapper-full">
-      {% include header.html %}
+      {% include "header.html" %}
     </div>
 
     <main id="main">
@@ -30,7 +30,7 @@
       </div>
     </main>
 
-    {% include footer.html %}
+    {% include "footer.html" %}
 
     <script defer inline src="/static/js/determine-chrome.js"></script>
     <script defer inline src="/static/js/ajanta-for-css.js"></script>

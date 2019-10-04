@@ -110,7 +110,7 @@ This is the directory structure that I eventually settled on.
 While each file in `posts` will be generated in `build/post/index.html` by default, it is possible to
 override this by providing a `url` field in the file's front-matter. I also like to have my posts
 organised by topic in the repo but want them to be built to the same path so `lego.js` lets to provide
-a `skipDirsInPostUrls` option at the project level that lets to skip directory names in the generated URLs.
+a `flatUrls` option at the project level that lets to skip directory names in the generated URLs.
 
 For example,
 ```

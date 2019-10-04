@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% assign current = "art" %}
-  {% assign title = "Art" %}
+  {% set current = "art" %}
+  {% set title = "Art" %}
 
-  {% include head.html %}
+  {% include "head.html" %}
   <noscript>
     <style>
       .header-home {
@@ -21,10 +21,10 @@
     </style>
   </noscript>
   <body>
-    {% include nav.html %}
+    {% include "nav.html" %}
 
     <div class="wrapper-full">
-      {% include header.html %}
+      {% include "header.html" %}
     </div>
     <main id="main">
       <div class="wrapper-large animated">
@@ -44,24 +44,24 @@
           </p>
 
           <section class="list">
-            {% assign no_of_photos = data.photos.size %}
+            {% set no_of_photos = data.photos | length %}
 
             <!-- range in liquid is inclusive of the last digit -->
-            {% assign no_of_photos_for_looping = no_of_photos | minus: 1 %}
+            {% set no_of_photos_for_looping = no_of_photos %}
 
-            {% assign photos_in_first_col = no_of_photos | divided_by: 2 | ceil %}
-            {% assign photos_in_second_col = no_of_photos | minus: photos_in_first_col %}
+            {% set photos_in_first_col = (no_of_photos / 2) | ceil %}
+            {% set photos_in_second_col = no_of_photos - photos_in_first_col %}
 
             <div class="photo-column">
-              {% assign endindex = photos_in_first_col | minus: 1 %}
-              {% for i in (0..endindex) %}
+              {% set endindex = photos_in_first_col %}
+              {% for i in range(0, endindex) %}
                 {% include "photo-column.html" %}
               {% endfor %}
             </div>
             <div class="photo-column">
-              {% assign startindex = photos_in_first_col %}
-              {% assign endindex = photos_in_first_col | plus: photos_in_second_col | minus: 1 %}
-              {% for i in (startindex..endindex) %}
+              {% set startindex = photos_in_first_col %}
+              {% set endindex = photos_in_first_col + photos_in_second_col %}
+              {% for i in range(startindex, endindex) %}
                 {% include "photo-column.html" %}
               {% endfor %}
             </div>
@@ -76,7 +76,7 @@
       <h4 class="modal-desc"></h4>
     </div>
 
-    {% include footer.html %}
+    {% include "footer.html" %}
 
     <script inline defer src="/static/js/modal.js"></script>
     <script inline defer src="/static/js/intersection-lazy-loader.js"></script>

@@ -3,10 +3,10 @@
     {% if post.special %}
       <small class="special-post">{{post.special}}</small>
     {% endif %}
-    <h3 class="title" {% unless post.special %}style="margin-top:20px;"{% endunless %}>
+    <h3 class="title" {% if not post.special %}style="margin-top:20px;"{% endif %}>
       {{ post.title }}
     </h3>
-    <p class="date no-margins text-muted"><small>{{ post.date | date: "%b %Y" }}</small></p>
+    <p class="date no-margins text-muted"><small>{{ post.date | date("MMM YYYY") }}</small></p>
     <p style="margin-bottom: 0;">{{post.description}}</p>
   </a>
 </article>

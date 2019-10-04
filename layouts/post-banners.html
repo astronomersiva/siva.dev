@@ -1,6 +1,6 @@
 <div class="banner banner-{{post.bannerType}}">
-  {% assign playStoreBase = "https://play.google.com/store/apps/details?id=" %}
-  {% assign vscodeBase = "https://marketplace.visualstudio.com/items?itemName=" %}
+  {% set playStoreBase = "https://play.google.com/store/apps/details?id=" %}
+  {% set vscodeBase = "https://marketplace.visualstudio.com/items?itemName=" %}
   {% if post.bannerType == 'playstore' %}
     <a href="{{playStoreBase}}{{post.playStoreId}}" target="_blank" rel="noopener">
       Download from the Play Store
