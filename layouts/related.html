@@ -2,9 +2,9 @@
   <div class="related">
     <h4>Here are a few similar posts that you might like:</h4>
     <ul>
-      {% assign relatedPosts = post.relatedPosts | split: ", " %}
+      {% set relatedPosts = post.relatedPosts | split(", ") %}
       {% for relatedPost in relatedPosts %}
-        {% assign allPosts = posts | sortByOrder %}
+        {% set allPosts = posts | sortByOrder %}
         {% for otherPost in allPosts %}
           {% if otherPost.order == relatedPost %}
             <li>
@@ -19,21 +19,21 @@
   </div>
 {% else %}
   <div class="related">
-    {% assign relatedPosts = 0 %}
-    {% assign counter = 0 %}
+    {% set relatedPosts = 0 %}
+    {% set counter = 0 %}
     {% for tag in post.tags %}
-      {% assign allPosts = posts | sortByOrder %}
+      {% set allPosts = posts | sortByOrder %}
       {% for otherPost in allPosts %}
         {% if otherPost.path != post.path %}
-          {% unless otherPost.hidden %}
+          {% if not otherPost.hidden %}
             {% for tagInOtherPost in otherPost.tags %}
               {% if tagInOtherPost == tag %}
                 {% if relatedPosts == 0 %}
                   <h4>Here are a few similar posts that you might like:</h4>
                   <ul>
                 {% endif %}
-                {% assign counter = relatedPosts | plus: 1 %}
-                {% assign relatedPosts = counter %}
+                {% set counter = relatedPosts + 1 %}
+                {% set relatedPosts = counter %}
                 <li>
                   <a href="/{{otherPost.path}}/">
                     {{ otherPost.title }}
@@ -41,7 +41,7 @@
                 </li>
               {% endif %}
             {% endfor %}
-          {% endunless %}
+          {% endif %}
         {% endif %}
       {% endfor %}
     {% endfor %}

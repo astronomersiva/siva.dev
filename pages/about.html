@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-{% assign current = "about" %}
-{% assign title = "About" %}
-{% assign footer = "continuous" %}
-{% include head.html %}
+{% set current = "about" %}
+{% set title = "About" %}
+{% set footer = "continuous" %}
+{% include "head.html" %}
 <body>
-  {% include nav.html %}
+  {% include "nav.html" %}
 
   <main id="main">
     <div class="wrapper-full animated">
@@ -217,7 +217,7 @@
     </div>
   </main>
 
-  {% include footer.html %}
+  {% include "footer.html" %}
 
   <script defer inline src="/static/js/determine-chrome.js"></script>
 </body>

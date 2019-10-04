@@ -16,7 +16,7 @@ module.exports = {
   name: 'siva.dev',
   url: 'https://siva.dev/',
   author: 'Sivasubramanyam A',
-  skipDirsInPostUrls: true,
+  flatUrls: true,
   inlineSource: true,
   server: {
     port: 1194,

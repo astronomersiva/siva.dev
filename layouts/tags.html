@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
+  {% include "head.html" %}
   <noscript>
     <style>
       .header-home {
@@ -12,10 +12,10 @@
     </style>
   </noscript>
 <body>
-  {% include nav.html %}
+  {% include "nav.html" %}
 
   <div class="wrapper-full">
-    {% include header.html %}
+    {% include "header.html" %}
   </div>
 
   <main id="main">
@@ -23,36 +23,36 @@
       <div class="page blog">
         <p>Here's a list of all my blog articles that have been tagged under <span style="font-weight: 800;">{{tag}}</span>.</p>
         <section class="list">
-          {% assign featuredArticles = posts | sortByOrder %}
+          {% set featuredArticles = posts | sortByOrder %}
 
           {% for post in featuredArticles %}
             {% if post.featured %}
               {% for postTag in post.tags %}
                 {% if postTag == tag %}
-                  {% include blog-post.html %}
+                  {% include "blog-post.html" %}
                 {% endif %}
               {% endfor %}
             {% endif %}
           {% endfor %}
 
-          {% assign otherArticles = posts | sortByOrder %}
+          {% set otherArticles = posts | sortByOrder %}
           {% for post in otherArticles %}
-            {% unless post.featured %}
-              {% unless post.hidden %}
+            {% if not post.featured %}
+              {% if not post.hidden %}
                 {% for postTag in post.tags %}
                   {% if postTag == tag %}
-                    {% include blog-post.html %}
+                    {% include "blog-post.html" %}
                   {% endif %}
                 {% endfor %}
-              {% endunless %}
-            {% endunless %}
+              {% endif %}
+            {% endif %}
           {% endfor %}
 
         </section>
       </div>
     </div>
   </main>
-  {% include footer.html %}
+  {% include "footer.html" %}
 
   <script defer inline src="/static/js/determine-chrome.js"></script>
   <script defer inline src="/static/js/ajanta-for-css.js"></script>

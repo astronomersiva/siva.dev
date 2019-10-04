@@ -1,6 +1,6 @@
-<article class="item {% if post.featured %}{% unless hideHighlight %}featured{% endunless %}{% endif %}">
+<article class="item {% if post.featured %}{% if not hideHighlight %}featured{% endif %}{% endif %}">
   <a class="url" href="/{{ post.path }}/">
-    <aside class="date">{{ post.date | date: "%b %Y" }}</aside>
+    <aside class="date">{{ post.date | date("MMM YYYY") }}</aside>
     <h3 class="title">
       {{ post.title }}
       {% if post.special %}

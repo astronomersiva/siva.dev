@@ -2,8 +2,8 @@
   <script inline src="/static/js/dark-mode.js"></script>
   <!-- <script inline src="/static/js/determine-font.js"></script> -->
 
-  {% include ga.html %}
-  {% include favicon.html %}
+  {% include "ga.html" %}
+  {% include "favicon.html" %}
 
   <link rel="prefetch" href="/">
   <link rel="prefetch" href="/about/">
@@ -11,14 +11,14 @@
   <link rel="prefetch" href="/art/">
 
   {% if current == 'index' %}
-    {% assign articles = posts | sortByOrder %}
+    {% set articles = posts | sortByOrder %}
     {% for article in articles %}
-      {% assign post = article %}
-      {% unless article.hidden %}
+      {% set post = article %}
+      {% if not article.hidden %}
         {% if article.showOnHomePage %}
           <link rel="prefetch" href="/{{ post.path }}/">
         {% endif %}
-      {% endunless %}
+      {% endif %}
     {% endfor %}
   {% endif %}
 
@@ -47,9 +47,9 @@
   <meta name="theme-color" content="#f0fcfd">
   <meta name="description" content="{% if description %}{{ description }}{% else %}{{ data.config.description }}{% endif %}">
   <meta name="author" content="{{ data.config.name }}">
-  {% unless post.headerImage %}
+  {% if not post.headerImage %}
     <meta property="og:image" content="{{ data.config.url }}static/images/og-image.png">
-  {% endunless %}
+  {% endif %}
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:creator" content="@sivaSupermanyam" />

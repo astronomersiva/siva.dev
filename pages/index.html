@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% assign current = "index" %}
-  {% include head.html %}
+  {% set current = "index" %}
+  {% include "head.html" %}
   <noscript>
     <style>
       .header-home {
@@ -13,9 +13,9 @@
     </style>
   </noscript>
   <body>
-    {% include nav.html %}
+    {% include "nav.html" %}
     <div class="wrapper-full animated">
-      {% include header.html %}
+      {% include "header.html" %}
     </div>
 
     <main id="main">
@@ -48,16 +48,16 @@
           <section class="list">
             <h3 class="featured-entries-intro" style="margin-top: 40px;font-weight: 800;padding-bottom: 30px;margin-bottom: 0;">Here are some of my featured blog posts.</h3>
 
-            {% assign articles = posts | sortByOrder %}
-            {% assign hideHighlight = true %}
+            {% set articles = posts | sortByOrder %}
+            {% set hideHighlight = true %}
 
             {% for article in articles %}
-              {% assign post = article %}
-              {% unless article.hidden %}
+              {% set post = article %}
+              {% if not article.hidden %}
                 {% if article.showOnHomePage %}
-                  {% include blog-post-grid.html %}
+                  {% include "blog-post-grid.html" %}
                 {% endif %}
-              {% endunless %}
+              {% endif %}
             {% endfor %}
           </section>
 
@@ -65,14 +65,14 @@
             <h3 class="featured-entries-intro" style="padding-bottom: 30px;margin-bottom: 0;margin-top: 60px;font-weight: 800;">And, here's a few of my projects.</h3>
 
             {% for project in data.projects %}
-              {% unless project.draft %}
+              {% if not project.draft %}
                 <div class="item">
-                  <a class="url" {% unless project.internal %}target="_blank" rel="noopener"{% endunless %} href="{{ project.link }}">
+                  <a class="url" {% if not project.internal %}target="_blank" rel="noopener"{% endif %} href="{{ project.link }}">
                     <h3 class="title">{{ project.name }}</h3>
                     <p style="margin-bottom: 0;">{{project.description}}</p>
                   </a>
                 </div>
-              {% endunless %}
+              {% endif %}
             {% endfor %}
           </section>
 
@@ -83,7 +83,7 @@
       </div>
     </main>
 
-    {% include footer.html %}
+    {% include "footer.html" %}
 
     <script defer inline src="/static/js/determine-chrome.js"></script>
     <script defer inline src="/static/js/ajanta-for-css.js"></script>

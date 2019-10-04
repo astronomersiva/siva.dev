@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% assign title = post.title %}
-  {% assign description = post.description %}
+  {% set title = post.title %}
+  {% set description = post.description %}
 
-  {% include head.html %}
+  {% include "head.html" %}
 <body>
-  {% include nav.html %}
+  {% include "nav.html" %}
 
   <div class="wrapper-full animated">
     <header
-      class="header header-post {% unless post.headerImage %}header-post-{{ post.order | modulo: 7 | plus: 1 }}{% endunless %}"
+      class="header header-post {% if not post.headerImage %}header-post-{{ (post.order % 7) + 1 }}{% endif %}"
       {% if post.headerImage %}
         style="background:url({{post.headerImage}});background-size:cover;"
       {% endif %}
@@ -17,15 +17,15 @@
       <h1 class="title">{{ post.title }}</h1>
 
       <span class="date">
-        <time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
-        · {% include read-time.html %}
+        <time datetime="{{ post.date | date("DD-MM-YYYY") }}">{{ post.date | date("MMMM DD, YYYY") }}</time>
+        · {% include "read-time.html" %}
       </span>
 
       <div class="post-tags">
         Tagged
         {% for tag in post.tags %}
-          <a class="item" href="{{ site.url }}/tags/{{ tag | downcase }}">{{ tag }}</a>
-          {% unless forloop.last == true %}·{% endunless %}
+          <a class="item" href="{{ site.url }}/tags/{{ tag | lower }}">{{ tag }}</a>
+          {% if not forloop.last == true %}·{% endif %}
         {% endfor %}
       </div>
     </header>
@@ -38,9 +38,9 @@
           <img class="title-image" src="{{ post.image }}" alt="{{ post.title }}">
         {% endif %}
 
-        {% assign currentYear = 2019 %}
-        {% assign postYear = post.date | date: '%Y' %}
-        {% assign postAge = currentYear | minus: postYear %}
+        {% set currentYear = 2019 %}
+        {% set postYear = post.date | date("YYYY") %}
+        {% set postAge = currentYear - postYear %}
         {% if postAge >= 5 %}
           <div class="banner banner-outdated">
             <p>
@@ -53,12 +53,12 @@
         {% if post.bannerType %}
           <p>{{post.description}}</p>
 
-          {% include post-banners.html %}
+          {% include "post-banners.html" %}
         {% endif %}
 
         {{post.html}}
 
-        {% include post-banners.html %}
+        {% include "post-banners.html" %}
 
         {% if post.references %}
           <br>
@@ -68,9 +68,9 @@
             <p>
               <em>References</em>
             </p>
-            {% assign references = post.references | split: "," %}
+            {% set references = post.references | split(",") %}
             {% for reference in references %}
-              <p>[{{forloop.index}}] <a target="_blank" rel="noopener" href="//{{reference}}">{{reference}}</a></p>
+              <p>[{{loop.index}}] <a target="_blank" rel="noopener" href="//{{reference}}">{{reference}}</a></p>
             {% endfor %}
           </small>
         {% endif %}
@@ -81,14 +81,14 @@
   <div class="wrapper-medium animated">
     <hr class="post-separator text-center">
 
-    {% include related.html %}
+    {% include "related.html" %}
 
     {% if post.showComments %}
-      {% include comments.html %}
+      {% include "comments.html" %}
     {% endif %}
   </div>
 
-  {% include footer.html %}
+  {% include "footer.html" %}
   <script defer inline src="/static/js/determine-chrome.js"></script>
   <script defer inline src="/static/js/ajanta-without-blur.js"></script>
 </body>
