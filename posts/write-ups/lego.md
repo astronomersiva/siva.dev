@@ -101,6 +101,8 @@ should have a list of all posts tagged `javascript`.
   A production build that does all the above optimisations takes about 35 seconds without a cache
   and less than 10 seconds with an existing cache.
 
+**Update: lego is now 8.7x faster than Jekyll! My site starts up in <600ms and production builds take 20 seconds.**
+
 ### **Project directory structure**
 
 This is the directory structure that I eventually settled on.

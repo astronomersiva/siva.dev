@@ -1,4 +1,4 @@
-<div class="banner banner-{{post.bannerType}}">
+<div class="banner {% if post.bannerType %}banner-{{post.bannerType}}{% endif %}">
   {% set playStoreBase = "https://play.google.com/store/apps/details?id=" %}
   {% set vscodeBase = "https://marketplace.visualstudio.com/items?itemName=" %}
   {% if post.bannerType == 'playstore' %}
