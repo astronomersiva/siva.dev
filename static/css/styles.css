@@ -1660,3 +1660,20 @@ svg.icon-moon {
   letter-spacing: 2rem;
   color: var(--color-text);
 }
+
+@media screen and
+  (prefers-reduced-motion: reduce), 
+  (update: slow) {
+  *,
+  *::after,
+  *::before {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .home>.list>.item:hover,
+  .home>.list>.item:focus {
+    transform: none;
+  }
+}
