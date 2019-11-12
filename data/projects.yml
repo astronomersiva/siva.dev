@@ -8,9 +8,12 @@
     description: "ember-line-graph is a tiny(1.74kb gzipped), zero-dependency ember-addon to draw line-charts."
     link: "https://astronomersiva.github.io/ember-line-graph/"
   - name: "ember-pickr"
-    description: "Color Picker for EmberJS using pickr"
+    description: "A tiny, jQuery-less color picker for EmberJS"
     link: "https://astronomersiva.github.io/ember-pickr/"
   - name: "Rocket Spot"
     internal: true
     description: "Get orientation information based on your current location to spot rockets launched from Sriharikota."
     link: "/rocket-spot"
+  - name: "ember-keynote"
+    description: "A Real Time Application built with Ember and Socket.IO to do live presentations."
+    link: "https://github.com/astronomersiva/ember-keynote/"
