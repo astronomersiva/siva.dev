@@ -654,12 +654,14 @@ pre {
 .wrapper-normal,
 .wrapper-medium,
 .wrapper-large,
-.wrapper-full {
+.wrapper-xlarge,
+.wrapper-screen {
   width: 96%;
   margin: 0 auto;
 }
 
-.wrapper-full {
+.wrapper-xlarge,
+.wrapper-screen {
   width: 100%;
 }
 
@@ -691,8 +693,12 @@ pre {
   max-width: 960px;
 }
 
-.wrapper-full {
+.wrapper-xlarge {
   max-width: 1440px;
+}
+
+.wrapper-screen {
+  max-width: 100%;
 }
 
 /* animations */
@@ -1003,43 +1009,43 @@ pre {
 
 .header-post-1 {
   background: #f3f8ff;
-  border-top: 1px solid #deecff;
+  border: 1px solid #deecff;
   border-bottom: 1px solid #deecff;
 }
 
 .header-post-2 {
   background: #deecff;
-  border-top: 1px solid #cfe3ff;
+  border: 1px solid #cfe3ff;
   border-bottom: 1px solid #cfe3ff;
 }
 
 .header-post-3 {
   background: #d6e6f2;
-  border-top: 1px solid #c2e2fb;
+  border: 1px solid #c2e2fb;
   border-bottom: 1px solid #c2e2fb;
 }
 
 .header-post-4 {
   background: #ffe6eb;
-  border-top: 1px solid #ffd9e0;
+  border: 1px solid #ffd9e0;
   border-bottom: 1px solid #ffd9e0;
 }
 
 .header-post-5 {
   background: #defcfc;
-  border-top: 1px solid #b5f3f3;
+  border: 1px solid #b5f3f3;
   border-bottom: 1px solid #b5f3f3;
 }
 
 .header-post-6 {
   background: #ecfcff;
-  border-top: 1px solid #c8f5ff;
+  border: 1px solid #c8f5ff;
   border-bottom: 1px solid #c8f5ff;
 }
 
 .header-post-7 {
   background: #c8f5ff;
-  border-top: 1px solid #a9eaf9;
+  border: 1px solid #a9eaf9;
   border-bottom: 1px solid #a9eaf9;
 }
 
@@ -1129,7 +1135,7 @@ pre {
   overflow: hidden;
 }
 
-.dark-mode .nav {
+.dark-mode .nav-wrapper {
   background: var(--color-bg-elements);
 }
 

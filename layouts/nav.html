@@ -1,45 +1,47 @@
-<nav class="nav wrapper-full animated">
-  <ul class="list">
-    <li class="item">
-      <a class="link strong" href="/">Siva<span class="fullname">subramanyam A</span></a>
-    </li>
-    <li class="item">
-      <a class="link skip-main" href="#main">Skip To Main Content</a>
-    </li>
-  </ul>
-  <ul class="list">
-    <li class="item" aria-hidden="true">
-      <p class="dark-mode-star">★</p>
-    </li>
+<nav class="nav-wrapper wrapper-screen animated">
+  <div class="wrapper-xlarge nav">
+    <ul class="list">
+      <li class="item">
+        <a class="link strong" href="/">Siva<span class="fullname">subramanyam A</span></a>
+      </li>
+      <li class="item">
+        <a class="link skip-main" href="#main">Skip To Main Content</a>
+      </li>
+    </ul>
+    <ul class="list">
+      <li class="item" aria-hidden="true">
+        <p class="dark-mode-star">★</p>
+      </li>
 
-    <li class="item">
-      <a class="link {% if current == "index" %}active{% endif %}" href="/">Home</a>
-    </li>
+      <li class="item">
+        <a class="link {% if current == "index" %}active{% endif %}" href="/">Home</a>
+      </li>
 
-    <li class="item">
-      <a class="link {% if current == "about" %}active{% endif %}" href="/about/">About</a>
-    </li>
+      <li class="item">
+        <a class="link {% if current == "about" %}active{% endif %}" href="/about/">About</a>
+      </li>
 
-    <li class="item">
-      <a class="link {% if current == "blog" %}active{% endif %}" href="/blog/">Blog</a>
-    </li>
+      <li class="item">
+        <a class="link {% if current == "blog" %}active{% endif %}" href="/blog/">Blog</a>
+      </li>
 
-    <li class="item">
-      <a class="link {% if current == "art" %}active{% endif %}" href="/art/">Art</a>
-    </li>
+      <li class="item">
+        <a class="link {% if current == "art" %}active{% endif %}" href="/art/">Art</a>
+      </li>
 
-    <li class="item dark-mode-toggle-container">
-      <a class="link" role="button" tabindex="0" title="Toggle Dark Mode" id="dark-mode-toggle">
-        <svg title="Toggle Dark Mode" class="icon icon-moon">
-          <use xlink:href="#icon-moon"></use>
-        </svg>
+      <li class="item dark-mode-toggle-container">
+        <a class="link" role="button" tabindex="0" title="Toggle Dark Mode" id="dark-mode-toggle">
+          <svg title="Toggle Dark Mode" class="icon icon-moon">
+            <use xlink:href="#icon-moon"></use>
+          </svg>
 
-        <div class="magic"></div>
+          <div class="magic"></div>
 
-        <svg title="Toggle Dark Mode" class="icon icon-sun">
-          <use xlink:href="#icon-sun"></use>
-        </svg>
-      </a>
-    </li>
-  </ul>
+          <svg title="Toggle Dark Mode" class="icon icon-sun">
+            <use xlink:href="#icon-sun"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
