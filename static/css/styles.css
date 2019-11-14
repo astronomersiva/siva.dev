@@ -1100,6 +1100,12 @@ pre {
   }
 }
 
+@media screen and (min-width: 2100px) {
+  .header-post {
+    padding: 5% 2.5%;
+  }
+}
+
 @media screen and (max-width: 479px) {
   .header-home {
     padding: 0;
