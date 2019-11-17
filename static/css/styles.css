@@ -1143,6 +1143,7 @@ pre {
 
 .dark-mode .nav-wrapper {
   background: var(--color-bg-elements);
+  box-shadow: none;
 }
 
 .nav>.list {
@@ -1601,7 +1602,7 @@ svg.icon-moon {
 }
 
 .dark-mode .cv-section {
-  background: #17223b;
+  background: var(--color-bg-elements);
 
   a:link,
   a:visited {
