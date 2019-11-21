@@ -46,7 +46,20 @@
           </p>
 
           <section class="list">
-            <h3 class="featured-entries-intro" style="margin-top: 40px;font-weight: 800;padding-bottom: 30px;margin-bottom: 0;">Here are some of my featured blog posts.</h3>
+            <h3 class="featured-entries-intro" style="margin-top: 40px;font-weight: 800;padding-bottom: 30px;margin-bottom: 0;">
+              Here are some of my blog posts and talks.
+            </h3>
+            
+            <article class="item">
+              <a class="url" href="https://youtu.be/Lm6Iw4XtsEU?t=300">
+                <small class="special-post">TALK</small>
+                <h3 class="title">
+                  Building Real Time Applications with Ember
+                </h3>
+                <p class="date no-margins text-muted"><small>NOV 2019</small></p>
+                <p style="margin-bottom: 0;">When I live-coded a game with EmberJS and WebSockets.</p>
+              </a>
+            </article>
 
             {% set articles = posts | sortByOrder %}
             {% set hideHighlight = true %}
@@ -60,6 +73,10 @@
               {% endif %}
             {% endfor %}
           </section>
+
+          <p style="margin-top:60px;">
+            You can also visit the complete <a href="/blog">blog</a> archive if you are interested.
+          </p>
 
           <section class="list">
             <h3 class="featured-entries-intro" style="padding-bottom: 30px;margin-bottom: 0;margin-top: 60px;font-weight: 800;">And, here's a few of my projects.</h3>
@@ -75,10 +92,6 @@
               {% endif %}
             {% endfor %}
           </section>
-
-          <p style="margin-top:60px;">
-            You can also visit the complete <a href="/blog">blog</a> archive if you are interested.
-          </p>
         </div>
       </div>
     </main>
