@@ -18,7 +18,7 @@ about the CPU cores, hardware concurrency and memory among others. In this blog,
 
 The [effectiveType property on the NetworkInformation interface](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/effectiveType)
 is an **experimental technology** that currently works only on Chrome, Opera, Android Webview, and, Chrome, Opera and Firefox on Android.
-It's value is a string containing one of `slow-2g`, `2g`, `3g`, or `4g`. Based on this value, it's possible to dynamically change the assets
+Its value is a string containing one of `slow-2g`, `2g`, `3g`, or `4g`. Based on this value, it's possible to dynamically change the assets
 that are fetched. Let's see how this can be used to load different versions of the same image.
 
 First, let's write an Ember component that displays an `img`. This would be the template.
