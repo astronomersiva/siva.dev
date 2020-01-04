@@ -34,6 +34,10 @@ function applyMode() {
     html.classList.remove(DARK_MODE);
   }
 
+  if (typeof lazyLoadBackground === 'function') {
+    lazyLoadBackground();
+  }
+
   applyThemeColor();
 }
 

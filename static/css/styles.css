@@ -415,7 +415,7 @@ html {
   --color-border: #eee;
   --color-border-darker: #ededed;
   --color-bg: white;
-  --color-wrapper: rgba(255, 255, 255, 0.6);
+  --color-wrapper: rgba(255, 255, 255, 0.8);
   --color-bg-dark-mode: #121212;
   --highlight: rgba(39, 243, 106, 0.15);
   --highlight-text: #1f1f1f;
@@ -628,6 +628,10 @@ tt {
   :not(pre) > code,
   tt {
     font-weight: bold;
+  }
+
+  img {
+    filter: brightness(.75);
   }
 }
 
@@ -975,28 +979,15 @@ pre {
 }
 
 .header-home {
-  background: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAYADIDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAUGAwQHCP/EACYQAAICAgIBAwQDAAAAAAAAAAECAAMEEQUGIRIxQQcTMlEUIiP/xAAYAQEBAQEBAAAAAAAAAAAAAAACBAMAAf/EABwRAAICAwEBAAAAAAAAAAAAAAABAhEDEhMhUf/aAAwDAQACEQMRAD8AtJ+o3Gf5Hfhx518Sf4jsXHcufTi3Bn+VnlLFzram9WvUJZemdnPF85Xcw9KMdGJZbYfKPS2R+J1IfIs0SCZD3dktyqA2IhdWG9iaNd/IWlmapwB59psCyTy8halJscKv7JnOu79wFCHF49wznwWEr3euxZ2VlWYtJeutDppSyzsdttm/ZkuXO15Eaj9M75OS7sxY7J2YmoWO/wAjEm2Yy4t1ZVGjb4ijqAuf+t+oiW84km7Lt1WzI65WyNYLkPsG86k03asl63VVQb9vERFSR27OYdhw7crMttdgCx2dSGOH9sDWtxEnnjjdnqyyMf8AET5IiImeiF1kf//Z');
+  background: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHhAAAQQCAwEAAAAAAAAAAAAAAQACBBEFIRVRcZL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8AyJ2OkMYx3JyyG3Qsb97U8w5IO8pM+giJMqz/2Q==');
   background-position-y: bottom;
   background-position-x: right;
   background-size: cover;
+  padding: 8% 0;
 }
 
-@media screen and (max-width: 479px) {
-  .header-home {
-    background-image: url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCABLADIDASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAABQADBAYHAgEI/8QAMBAAAgIBAgUCBAQHAAAAAAAAAQIAAwQFEQYSEyExIlEUMkGhFSMkYTM0UlRxgZH/xAAZAQACAwEAAAAAAAAAAAAAAAACBAEDBQD/xAAkEQACAgEEAAcBAAAAAAAAAAAAAQIRAwQSEyEUIjEyUVJhof/aAAwDAQACEQMRAD8Aq+VwhqTE9QNBuRwpfR3dDvPpvKw6bKy3Iv8AyUDieorzCqsTdw6lzdUYuXSRirsx9NHar51AjeRjhRtzjaGdZqzCxO2y/tK/bRf5ZW2mjCNmTkaTqhiypAfMa6a7yXRh2XOFXzD2n8L3392IAhtKPqBFSl7Sr9MRS+Dgt9vmEUHfj+Q+HL8G7W5PNUVBAlH4hxrbWbkvAh8Wpcdi3LOW0zGuPqJP+5jY2sbtm7lvIqRl+TpGY7n83cSONDvsYLa3p/xNSytPx8dewBgW8gMenWDH4aly9DNyaSMfcyvYPB+O4DDIKtC6cNnHX05XaeWJkWN+WvLH6sPOuABc7Q25vtyK4rHHqMRr8Ls/uvvFJ40W/b+J94oO5fYs2v6/0dCsW9LwjjNaqjfvOsbT0G3r3Mkk1UtynvEJZE+h+GJx7IdyPd8xnC4UIb1sdlO0epoNh9J7QeVoLhTfYPrw5IrxNvqZO+GdTufEIY2MrjfYTnmZy06AvwZ/rMUsHwJikc5Ph0C9OfE6/IV2I+hhF8TGsYsiBtvaANXRbs6vonkJ87SVoxswr7BZZzg+5lTXVpjC+KJiY2NbayqACPpOno6a8q7KI3kZePXb3IVn9oO1PPur3CqCoG4Jg9snpBNCqoRc0dxcG9WW2i3mqPkSq42uWZVy0WUEqe3NLTXRfXgN8M5U7dhCacV2CmpegZA7DfzFKUfxXc/qDFI4/wBJ5PwoGi6pm6nWLK7SbRDKZWTWrGy8Ld42Jgfh9Fo0mx6QEYDyJnXEWo5hyrP1Fnn3jO3c6QtLJsimzYtGv62YVy8lGc9x3jPG+Wy0pVjX7WeNgZjem52UtqOt9gb33hHUM7Je6pnucn3JhLF5rK5ajy1RpencQjTNOrry0Bu87y86LxKmZiKwXf8AYTDci17aqTYxY9vM1vgmqtNPUqoHpleWMastwzldFtGoIR/K/aKMB228xRWhq2f/2Q==');
-    background-position-y: center;
-  }
-}
-
-.dark-mode {
-  .header-home {
-    padding: 0;
-  }
-
-  .wrapper-white {
-    width: 90%;
-    padding: 13% 5%;
-  }
+.dark-mode .header-home {
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHhAAAQQCAwEAAAAAAAAAAAAAAQACBBEFIRVRcZL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8AyJ2OkMYx3JyyG3Qsb97U8w5IO8pM+giJMqz/2Q==');
 }
 
 .header-post {
@@ -1057,6 +1048,7 @@ pre {
 .header-home>.wrapper-white>.description {
   font-size: 1.85rem;
   font-style: normal;
+  font-weight: 600;
   color: var(--color-caption);
   margin: 0 auto 30px;
   line-height: 1.7;
@@ -1445,7 +1437,7 @@ a.skip-main:focus, a.skip-main:active {
   }
 }
 
-.dark-mode .header-post {
+.dark-mode .header-post:not(.header-home) {
   background: #12141c !important;
 }
 
