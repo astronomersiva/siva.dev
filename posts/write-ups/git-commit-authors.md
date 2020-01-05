@@ -5,7 +5,6 @@ description: No more wrong commit authors
 tags: General, Workflow
 code: true
 order: 44
-featured: true
 ---
 
 If you are somebody like me who has both personal and work projects in your development setup, you will probably be setting up the commit author each time you clone a repo.

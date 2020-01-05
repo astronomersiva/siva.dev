@@ -6,7 +6,6 @@ tags: Node.js, JavaScript
 code: true
 order: 35
 featured: true
-showOnHomePage: true
 ---
 
 
