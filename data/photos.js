@@ -1,7 +1,17 @@
 module.exports = [
   {
-    src: 'ladakh-ducks.jpg',
-    description: 'Semi-Frozen Ladakh'
+    src: 'paro.jpg',
+    description: 'Paro Dzong, Bhutan',
+    nowebp: true
+  }, {
+    src: 'drugkyel.jpg',
+    description: 'Drugkyel Dzong, Bhutan'
+  }, {
+    src: 'mobile.jpg',
+    description: 'Amber Palace, Jaipur'
+  }, {
+    src: 'khuri.jpg',
+    description: 'Khuri Desert, Rajasthan'
   }, {
     src: 'taj.jpg',
     description: 'Taj Mahal'
@@ -28,12 +38,13 @@ module.exports = [
     src: 'kathmandu.jpg',
     description: 'Bhaktapur, Nepal'
   }, {
-    src: 'khuri.jpg',
-    description: 'Khuri Desert, Rajasthan'
+    src: 'ladakh-ducks.jpg',
+    description: 'Semi-Frozen Ladakh'
   }, {
-    src: 'mobile.jpg',
-    description: 'Amber Palace, Jaipur'
-  }, {
+  //   src: 'punakha.jpg',
+  //   description: 'Richly decorated corridors at Punakha Dzong, Bhutan',
+  //   nowebp: true
+  // }, {
   //   src: 'annapurna.jpg',
   //   description: 'Sunrise, ABC, Nepal'
   // }, {
