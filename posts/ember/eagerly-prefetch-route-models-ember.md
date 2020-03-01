@@ -11,7 +11,6 @@ code: true
 tags: EmberJS
 order: 31
 featured: true
-showOnHomePage: true
 ---
 
 **There is a 200-300ms interval between a user hovering on a link and actually clicking it.**
