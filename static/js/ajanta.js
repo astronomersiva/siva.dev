@@ -25,7 +25,9 @@ for (let ajanta of ajantaImages) {
     if (canResize && !window.location.hostname.includes('127.0.0.1')) {
       resizeServer = 'https://cdn.sivasubramanyam.me/unsafe';
       resizeServer = `${resizeServer}/${window.innerWidth < 700 ? '700x' : '1400x'}`;
-      resizeServer = `${resizeServer}/filters:no_upscale()${isWebpAvailable ? ':format(webp)' : ''}/${window.location.hostname}`;
+      let hostName = window.location.hostname;
+      hostName = hostName.startsWith('https') ? hostName : `https://${hostName}`;
+      resizeServer = `${resizeServer}/filters:no_upscale()${isWebpAvailable ? ':format(webp)' : ''}/${hostName}`;
     }
 
     original.src = `${resizeServer}${src}`;
