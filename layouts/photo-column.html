@@ -1,16 +1,12 @@
 {% set imageSrcBase = "/static/images/photography/" %}
 {% set src = imageSrcBase + data.photos[i].src %}
-{% set webp_src = src + ".webp" %}
 {% set placeholderSrc = imageSrcBase + "placeholder-" + data.photos[i].src %}
 {% set description = data.photos[i].description %}
-<div tabindex="0" class="photo-container" onclick="openModal('{{src}}', '{% if not data.photos[i].nowebp %}{{webp_src}}{% endif %}', '{{description}}')" onkeypress="if (event.keyCode === 13) { openModal('{{src}}', '{{webp_src}}', '{{description}}') }">
+<div tabindex="0" class="photo-container" onclick="openModal('{{src}}', '{{description}}')" onkeypress="if (event.keyCode === 13) { openModal('{{src}}', '{{description}}') }">
   <div class="ajanta">
     <img
       inline
       data-img-src="{{ src }}"
-      {% if not data.photos[i].nowebp %}
-        data-img-webp-src="{{ webp_src }}"
-      {% endif %}
       class="img-responsive center-block pixelated blur"
       src="{{ placeholderSrc }}"
       alt="{{description}}"

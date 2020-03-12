@@ -2,18 +2,21 @@ let modal = document.querySelector('.modal');
 let modalImage = document.querySelector('.modal-image');
 let modalDesc = document.querySelector('.modal-desc');
 
-const isWebpSupported = document.getElementsByTagName('html')[0].className.includes('webp');
-
 window.onhashchange = function() {
   if (!location.hash) {
     closeModal();
   }
 }
 
-function openModal(imageSrc, webpSrc, description) {
-  modalImage.src = isWebpSupported && webpSrc ? webpSrc : imageSrc;
+function openModal(imageSrc, description) {
+  modalImage.src = getCDNUrl(imageSrc);
   modalImage.alt = description;
   modalDesc.textContent = description;
+
+  modalImage.onerror = function() {
+    modalImage.src = imageSrc;
+    modalImage.onerror = null;
+  }
 
   modal.style.display = 'grid';
   document.body.style.overflowY = 'hidden';

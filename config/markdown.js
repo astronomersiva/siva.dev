@@ -37,7 +37,7 @@ module.exports = {
                   inline
                   class="img-responsive center-block pixelated blur"
                   src="${attributeMap.src}"
-                  data-src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"
+                  data-img-src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"
                   alt="${attributeMap.alt}">
               
                 <img class="img-responsive center-block original">
