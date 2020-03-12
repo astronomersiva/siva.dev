@@ -143,6 +143,7 @@ function getCDNUrl(src) {
     img.classList.add('img-responsive--handled');
 
     lazyLoadedImage.src = skipCDN ? src : getCDNUrl(src);
+    lazyLoadedImage.setAttribute('alt', img.getAttribute('alt'));
     lazyLoadedImage.classList.add('ajanta-show');
   }
 })();

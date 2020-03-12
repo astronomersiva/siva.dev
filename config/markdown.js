@@ -39,8 +39,8 @@ module.exports = {
                   src="${attributeMap.src}"
                   data-img-src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"
                   alt="${attributeMap.alt}">
-              
-                <img class="img-responsive center-block original">
+
+                <img class="img-responsive center-block original" alt="${attributeMap.alt}">
                 ${attributeMap.caption ? `<figcaption style="margin-bottom: 30px;margin-top:10px;" class="caption">${attributeMap.caption}</figcaption>` : ''}
               </div>
               <noscript>
