@@ -29,11 +29,11 @@
   {% if post %}
     <link rel="preload" href="/static/css/github-gist.css" as="style">
     <link rel="preload" href="/static/css/ajanta.css" as="style">
-    <link rel="preload" href="/static/js/ajanta.js" as="script">
+    <link rel="preload" href="/static/js/intersection-lazy-loader.js" as="script">
   {% else %}
     <link rel="prefetch" href="/static/css/github-gist.css" as="style">
     <link rel="prefetch" href="/static/css/ajanta.css" as="style">
-    <link rel="prefetch" href="/static/js/ajanta.js" as="script">
+    <link rel="prefetch" href="/static/js/intersection-lazy-loader.js" as="script">
   {% endif %}
 
   <meta charset="utf-8">
@@ -109,7 +109,7 @@
   <script inline src="/static/js/determine-webp-support.js"></script>
 
   {% if post or current == "about" %}
-    <script defer src="/static/js/ajanta.js"></script>
+    <script defer src="/static/js/intersection-lazy-loader.js"></script>
   {% endif %}
 
   <script defer src="/static/js/instantpage.js"></script>

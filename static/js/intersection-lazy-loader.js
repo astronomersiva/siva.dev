@@ -1,12 +1,24 @@
+const isWebpSupported = document.getElementsByTagName('html')[0].className.includes('webp');
+
+function getCDNUrl(src) {
+  let resizeServer = '';
+  if (!window.location.hostname.includes('127.0.0.1')) {
+    resizeServer = 'https://cdn.sivasubramanyam.me/unsafe';
+    resizeServer = `${resizeServer}/${window.innerWidth < 700 ? '700x' : '1400x'}`;
+    let hostName = window.location.hostname;
+    hostName = hostName.startsWith('https') ? hostName : `https://${hostName}`;
+    resizeServer = `${resizeServer}/filters:no_upscale()${isWebpSupported ? ':format(webp)' : ''}/${hostName}`;
+  }
+
+  return `${resizeServer}${src}`;
+}
+
 // Based on https://github.com/deanhume/lazy-observer-load/blob/master/lazy-load.js
 
 (() => {
   // Get all of the images that are marked up to lazy load
-  const isWebpSupported = document.getElementsByTagName('html')[0].className.includes('webp');
-
   const images = document.querySelectorAll('.img-responsive');
   const config = {
-    // If the image gets within 50px in the Y axis, start the download.
     rootMargin: '100px 0px',
     threshold: 0.01
   };
@@ -39,9 +51,13 @@
   function fetchImage(url) {
     return new Promise((resolve, reject) => {
       const image = new Image();
-      image.src = url;
+      image.src = getCDNUrl(url);
       image.onload = resolve;
-      image.onerror = reject;
+      image.onerror = function() {
+        image.src = url;
+        image.onerror = null;
+        image.onload = reject;
+      };
     });
   }
 
@@ -55,11 +71,9 @@
       return;
     }
 
-    if (isWebpSupported && image.dataset.imgWebpSrc) {
-      src = image.dataset.imgWebpSrc;
-    }
-
-    return fetchImage(src).then(() => { applyImage(image, src); });
+    return fetchImage(src)
+      .then(() => { applyImage(image, src); })
+      .catch(() => { applyImage(image, src, true); });
   }
 
   /**
@@ -92,7 +106,7 @@
   function onIntersection(entries) {
     // Disconnect if we've already loaded all of the images
     if (imageCount === 0) {
-      observer.disconnect();
+      disconnect();
     }
 
     // Loop through the entries
@@ -114,19 +128,21 @@
    * @param {object} img 
    * @param {string} src 
    */
-  function applyImage(img, src) {
+  function applyImage(img, src, skipCDN) {
     img.classList.add('ajanta-hide');
 
     let lazyLoadedImage = img.nextElementSibling;
     let loadingIndicator = lazyLoadedImage.dataset.loaded;
     let loadingIndicatorDiv = document.querySelector(`[data-loading="${loadingIndicator}"]`)
-    loadingIndicatorDiv.style.opacity = 0;
-    loadingIndicatorDiv.style.animationPlayState = 'paused';
+    if (loadingIndicatorDiv) {
+      loadingIndicatorDiv.style.opacity = 0;
+      loadingIndicatorDiv.style.animationPlayState = 'paused';
+    }
 
     // Prevent this from being lazy loaded a second time.
     img.classList.add('img-responsive--handled');
 
-    lazyLoadedImage.src = src;
+    lazyLoadedImage.src = skipCDN ? src : getCDNUrl(src);
     lazyLoadedImage.classList.add('ajanta-show');
   }
 })();
