@@ -38,7 +38,9 @@ module.exports = {
                   class="img-responsive center-block pixelated blur"
                   src="${attributeMap.src}"
                   data-img-src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"
-                  alt="${attributeMap.alt}">
+                  alt="${attributeMap.alt}"
+                  aria-hidden="true"
+                >
 
                 <img class="img-responsive center-block original" alt="${attributeMap.alt}">
                 ${attributeMap.caption ? `<figcaption style="margin-bottom: 30px;margin-top:10px;" class="caption">${attributeMap.caption}</figcaption>` : ''}
@@ -48,7 +50,8 @@ module.exports = {
                   loading="lazy"
                   class="img-responsive center-block"
                   src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"
-                  alt="${attributeMap.alt}">
+                  alt="${attributeMap.alt}"
+                >
                 ${attributeMap.caption ? `<figcaption style="margin-bottom: 30px;margin-top:10px;" class="caption">${attributeMap.caption}</figcaption>` : ''}
               </noscript>
             `;
