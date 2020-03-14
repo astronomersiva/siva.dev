@@ -28,4 +28,4 @@ function lazyLoadBackground() {
   }
 }
 
-lazyLoadBackground();
+window.addEventListener('load', lazyLoadBackground);

@@ -15,7 +15,7 @@ function getCDNUrl(src) {
 
 // Based on https://github.com/deanhume/lazy-observer-load/blob/master/lazy-load.js
 
-(() => {
+window.addEventListener('load', function() {
   // Get all of the images that are marked up to lazy load
   const images = document.querySelectorAll('.img-responsive');
   const config = {
@@ -146,4 +146,4 @@ function getCDNUrl(src) {
     lazyLoadedImage.setAttribute('alt', img.getAttribute('alt'));
     lazyLoadedImage.classList.add('ajanta-show');
   }
-})();
+});
