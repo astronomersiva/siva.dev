@@ -32,6 +32,9 @@ module.exports = {
       output: { quote_style: 3 }
     }
   },
+  sitemap: {
+    addTrailingSlash: true
+  },
   md,
   critical,
   rss,
