@@ -16,7 +16,7 @@
     "@astronomersiva/lego": "3",
     "dotenv": "^8.2.0",
     "postcss-cssnext": "^3.1.0",
-    "postcss-nested": "^4.1.2",
+    "postcss-nested": "^4.2.1",
     "precss": "^4.0.0"
   },
   "resolutions": {
