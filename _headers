@@ -14,5 +14,3 @@
   Cache-Control: public, max-age=31536000
 /*.mp4
   Cache-Control: public, max-age=31536000
-/index.html
-  test-siva: works

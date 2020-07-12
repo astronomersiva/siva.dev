@@ -7,6 +7,13 @@ function lazyLoadBackground() {
   let htmlEl = document.getElementsByTagName('html')[0];
   let heroDiv = document.getElementsByClassName('header-home')[0];
   if (heroDiv) {
+    let isLoaded = heroDiv.getAttribute('data-lazyloaded');
+    if (isLoaded) {
+      return;
+    }
+
+    heroDiv.setAttribute('data-lazyloaded', true);
+
     if (htmlEl.className.includes('webp')) {
       hero = heroWebp;
     }

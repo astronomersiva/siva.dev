@@ -3,7 +3,8 @@
   "scripts": {
     "start": "lego s",
     "build": "lego",
-    "build:debug": "DEBUG=t lego && cp _headers build"
+    "build:debug": "DEBUG=t lego && yarn build:serverpush",
+    "build:serverpush": "node construct-preload.js && cp _headers build"
   },
   "browserslist": [
     "Edge >= 16",
