@@ -990,6 +990,16 @@ pre {
   background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAHhAAAQQCAwEAAAAAAAAAAAAAAQACBBEFIRVRcZL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8AyJ2OkMYx3JyyG3Qsb97U8w5IO8pM+giJMqz/2Q==');
 }
 
+@media screen and (max-width: 479px) {
+  .header-home {
+    background: #d6e6f2;
+  }
+
+  .dark-mode .header-home {
+    background: #12141c;
+  }
+}
+
 .header-post {
   line-height: 4rem;
 }
@@ -1104,6 +1114,7 @@ pre {
   }
 
   .wrapper-white {
+    background: none;
     width: 90%;
     padding: 13% 5%;
   }

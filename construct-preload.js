@@ -5,8 +5,7 @@ const _headers = fs.readFileSync(HEADERS).toString();
 const assetMap = JSON.parse(fs.readFileSync('./build/static/assetMap.json'));
 
 let revisionedHero = assetMap['/static/images/bhutan.jpg'];
-let revisionedHeroMobile = assetMap['/static/images/bhutan-mobile.jpg'];
-let linkHeader = `Link: <${revisionedHero}>; rel=preload; as=image, <${revisionedHeroMobile}>; rel=preload; as=image`;
+let linkHeader = `Link: <${revisionedHero}>; rel=preload; as=image`;
 
 let serverPushHeader = `/\n  ${linkHeader}\n/blog/\n  ${linkHeader}\n/art/\n  ${linkHeader}`;
 
