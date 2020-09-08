@@ -15,7 +15,7 @@ async function showDiff() {
   requestAnimationFrame(showDiff);
 }
 
-async function drawToCanvas(canvas, postMessage) {
+async function drawToCanvas(canvas, postMessage, assetMap) {
   postMessage(1);
 
   context = canvas.getContext('2d');
@@ -38,7 +38,8 @@ async function drawToCanvas(canvas, postMessage) {
   for (let n = 2; n <= 10; n++) {
     postMessage(n);
 
-    let response = await fetch(`/static/images/night-mode/examples/${n}.jpg`);
+    let imgSrc = assetMap[`/static/images/night-mode/examples/${n}.jpg`] || `/static/images/night-mode/examples/${n}.jpg`;
+    let response = await fetch(imgSrc);
     let fileBlob = response.blob();
 
     let promises = [fileBlob, sleep(1000)];

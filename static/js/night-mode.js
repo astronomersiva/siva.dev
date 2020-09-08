@@ -47,9 +47,20 @@ let stackContainer = document.getElementById('stack-container');
 stackContainer.style.height = `${stackContainer.clientWidth}px`;
 stackContainer.style.background = '#333';
 
-function stackImages(button) {
+async function stackImages(button) {
   button.disabled = true;
   button.innerText = 'Stacking Images';
+
+  let assetMapJson;
+  try {
+    let assetMap = await fetch('/static/assetMap.json');
+    assetMapJson = await assetMap.json();
+  } catch(err) {
+    assetMapJson = {
+      '/static/js/night-mode-worker.js': '/static/js/night-mode-worker.js',
+      '/static/js/night-mode-stack.js': '/static/js/night-mode-stack.js',
+    }
+  }
 
   let canvas = document.querySelector('#canvas');
   let stackContainer = document.getElementById('stack-container');
@@ -57,9 +68,9 @@ function stackImages(button) {
   canvas.height = stackContainer.clientWidth;
 
   if (canvas.transferControlToOffscreen) {
-    let worker = new Worker('/static/js/night-mode-worker.js');
+    let worker = new Worker(assetMapJson['/static/js/night-mode-worker.js']);
     let offscreen = canvas.transferControlToOffscreen();
-    worker.postMessage({ canvas: offscreen }, [offscreen]);
+    worker.postMessage({ canvas: offscreen, assetMap: assetMapJson }, [offscreen]);
 
     worker.onmessage = function(event) {
       updateProgress(event.data);
@@ -70,9 +81,9 @@ function stackImages(button) {
     }
 
     let stack = document.createElement('script');
-    stack.setAttribute('src', '/static/js/night-mode-stack.js');
+    stack.setAttribute('src', assetMapJson['/static/js/night-mode-stack.js']);
     stack.onload = function() {
-      drawToCanvas(canvas, postMessage);
+      drawToCanvas(canvas, postMessage, assetMapJson);
     }
 
     document.body.appendChild(stack);
