@@ -32,7 +32,7 @@
   </div>
 
   <main id="main">
-    <div class="wrapper-medium animated">
+    <div class="{% if post.wide %}wrapper-large{% else %}wrapper-medium{% endif %} animated">
       <div class="post">
         {% if post.image and post.headerImage %}
           <img class="title-image" src="{{ post.image }}" alt="{{ post.title }}">

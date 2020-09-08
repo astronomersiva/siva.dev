@@ -548,6 +548,38 @@ p {
   letter-spacing: 0.4px;
 }
 
+details {
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+details:focus {
+  outline-color: var(--color-border);
+}
+
+details > summary:focus {
+  outline-color: var(--color-border);
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::before {
+  content: '+';
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 2rem;
+}
+
+details[open] > summary::before {
+  content: '-';
+}
+
 @media screen and (max-width: 400px) {
   p {
     letter-spacing: 0.2px;
@@ -1692,4 +1724,32 @@ svg.icon-moon {
   .home>.list>.item:focus {
     transform: none;
   }
+}
+
+button {
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  text-align: center;
+  transition:  all 0.2s;
+  cursor: pointer;
+  background: #ed3330;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover,
+button[disabled] {
+  background: #a0100e;
+}
+
+.dark-mode button,
+.dark-mode button:hover {
+  color: var(--highlight-text);
+  background: var(--highlight);
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
