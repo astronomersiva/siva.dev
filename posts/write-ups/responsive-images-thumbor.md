@@ -4,8 +4,6 @@ date: March 1, 2020
 description: How this site loads images based on the user's screen resolution.
 tags: General, JavaScript
 order: 47
-featured: true
-showOnHomePage: true
 relatedPosts: 32, 14, 41, 35
 ---
 

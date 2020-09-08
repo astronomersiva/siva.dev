@@ -31,8 +31,10 @@ module.exports = {
               style = `${style};margin-bottom: 30px;`;
             }
 
+            let classNames = attributeMap.classNames || '';
+
             return `
-              <div class="ajanta" style="${style}">
+              <div class="ajanta ${classNames}" style="${style}">
                 <img
                   inline
                   class="img-responsive center-block pixelated blur"
@@ -48,7 +50,7 @@ module.exports = {
               <noscript>
                 <img
                   loading="lazy"
-                  class="img-responsive center-block"
+                  class="img-responsive center-block ${classNames}"
                   src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"
                   alt="${attributeMap.alt}"
                 >
