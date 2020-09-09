@@ -92,9 +92,12 @@ a graph, you will get a curve like this.
 
 You might recollect from high school statistics that the mean, median, and mode are all equal and located
 at the center of the distribution. If we take multiple photos and plot the values for the pixel `P`, we will
-get a similar graph. If we just find their average value, we should be eliminating noise! The algorithm might
-look something like this.
+get a similar graph. If we just find their average value, we should be eliminating noise! If this is confusing, think of it this way. The center point(`0`) is the actual signal
+value. Noise can be `-1`, `+1.2`, `+1`, `-1.1`, `+1.1`. When you average these, you will get
+`(-1 + 1.2 + 1 - 1.1 + 1.1) / 5 = 0.24` which is very close to `0`, the actual value of the signal.
+The more values you average, the closer you get to the real signal.
 
+The algorithm might look something like this for photographs.
 
 ```
   image1: width 100, height 100
@@ -181,7 +184,7 @@ softer than normal. Well, this is where other factors come into play.
 ::: lazy-image src="/static/images/night-mode/lowres/processing.jpg" dSrc="/static/images/night-mode/processing.jpg" alt="Phone capturing a photo in night mode" :::
 
 Your phone is not just stacking images when you see this screen. Unless the phone was properly mounted
-on a tripod, it would have moved because of unsteady stands or winds. When you average these photos that
+on a tripod, it would have moved because of unsteady hands or winds. When you average these photos that
 have movement, you will end up with a soft/blurry looking photo. How do you solve this?
 
 The answer to this is registration. Before the images are stacked, a few objects are chosen in the image.
