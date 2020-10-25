@@ -4,6 +4,8 @@ date: July, 2014
 description: Apparently, IRCTC does not know what CAPTCHA is.
 tags: General, IRCTC
 order: 2
+hidden: true
+draft: true
 ---
 
 Update: IRCTC has fixed this now.
