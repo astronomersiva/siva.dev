@@ -2,7 +2,8 @@ const isWebpSupported = document.getElementsByTagName('html')[0].className.inclu
 
 function getCDNUrl(src) {
   let resizeServer = '';
-  if (!window.location.hostname.includes('127.0.0.1')) {
+  let canResize = false;
+  if (!window.location.hostname.includes('127.0.0.1') && canResize) {
     resizeServer = 'https://cdn.sivasubramanyam.me/unsafe';
     resizeServer = `${resizeServer}/${window.innerWidth < 700 ? '700x' : '1400x'}`;
     let hostName = window.location.hostname;

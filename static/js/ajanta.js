@@ -19,7 +19,8 @@ for (let ajanta of ajantaImages) {
   }
 
   if (src) {
-    let canResize = !pixelated.hasAttribute('data-skip-cdn');
+    // let canResize = !pixelated.hasAttribute('data-skip-cdn');
+    let canResize = false;
     let isWebpAvailable = htmlElement.className.includes('webp');
     let resizeServer = '';
     if (canResize && !window.location.hostname.includes('127.0.0.1')) {
