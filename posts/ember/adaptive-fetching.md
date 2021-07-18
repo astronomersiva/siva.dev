@@ -6,7 +6,6 @@ tags: EmberJS
 code: true
 order: 45
 featured: true
-showOnHomePage: true
 ---
 
 During the recent Chrome Dev Summit, [Addy Osmani announced react-adaptive-hooks](https://twitter.com/addyosmani/status/1194158823948177408),
