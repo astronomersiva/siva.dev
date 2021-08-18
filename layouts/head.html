@@ -68,16 +68,17 @@
   <meta name="theme-color" content="#f0fcfd">
   <meta name="description" content="{% if description %}{{ description }}{% else %}{{ data.config.description }}{% endif %}">
   <meta name="author" content="{{ data.config.name }}">
-  {% if not post.headerImage %}
-    <meta property="og:image" content="{{ data.config.url }}static/images/og-image.png">
-  {% endif %}
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:creator" content="@sivaSupermanyam" />
-  <meta property="og:url" content="{{ data.config.url }}" />
+  <meta property="og:url" content="{{ data.config.url }}{{ post.path }}" />
   <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}Sivasubramanyam A" />
   <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ data.config.description }}{% endif %}" />
-  <meta property="og:image" content="{{ data.config.url }}static/images/og-image.png" />
+  {% if post.path %}
+    <meta property="og:image" content="{{ data.config.ogurl }}{{ title }}.png?desc={{ description }}&link={{ post.path }}" />
+  {% else %}
+    <meta property="og:image" content="{{ data.config.url }}static/images/og-image.png" />
+  {% endif %}
 
   <link rel="alternate" type="application/rss+xml" title="{{ data.config.title }}" href="{{ data.config.url }}rss.xml" />
 
