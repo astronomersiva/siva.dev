@@ -1243,6 +1243,13 @@ ul.notes-list {
   display: inline;
 }
 
+a.note-link {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 a.skip-main {
   left: -999px;
   position: absolute;
@@ -1581,6 +1588,7 @@ svg.icon-moon {
 @media screen and (max-width: 799px) {
   .dark-mode-star {
     opacity: 0;
+    margin: 0;
   }
 }
 
@@ -1623,6 +1631,7 @@ svg.icon-moon {
   .dark-mode-star {
     opacity: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   .enable-animations .dark-mode-star {
@@ -1637,10 +1646,10 @@ svg.icon-moon {
 
   @keyframes twinkle {
     0% {
-      transform: scale(.8) translateX(2px);
+      transform: scale(.85);
     }
     100% {
-      transform: scale(1) translateX(0px);
+      transform: scale(1);
     }
   }
 }
