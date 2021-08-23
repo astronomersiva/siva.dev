@@ -1,5 +1,15 @@
 module.exports = [
   {
+    src: 'm27.jpg',
+    description: 'M27, the Dumbbell Nebula',
+    nowebp: true
+  }, {
+    src: 'eagle.jpg',
+    description: 'Eagle Nebula',
+  }, {
+    src: 'western-veil.jpg',
+    description: 'Western Veil Nebula'
+  }, {
     src: 'paro.jpg',
     description: 'Paro Dzong, Bhutan',
     nowebp: true

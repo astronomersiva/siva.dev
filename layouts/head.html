@@ -75,7 +75,7 @@
   <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}Sivasubramanyam A" />
   <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ data.config.description }}{% endif %}" />
   {% if post.path %}
-    <meta property="og:image" content="{{ data.config.ogurl }}{{ title }}.png?desc={{ description }}&link={{ post.path }}" />
+    <meta property="og:image" content="{{ data.config.ogurl }}{{ title | urlencode }}.png?desc={{ description | urlencode }}&link={{ post.path | urlencode }}" />
   {% else %}
     <meta property="og:image" content="{{ data.config.url }}static/images/og-image.png" />
   {% endif %}
