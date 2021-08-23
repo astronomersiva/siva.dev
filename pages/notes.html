@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% set current = "notes" %}
+
+  {% include "head.html" %}
+  <body>
+    {% include "nav.html" %}
+
+    <main id="main">
+      <div class="wrapper-large animated">
+        <div class="page notes">
+          <h1>Notes &amp; Learnings</h1>
+
+          <h2>...and, anything too short to be a blog post.</h2>
+
+          <ul class="notes-list">
+            {% for note in data.notes | reverse %}
+              <li class="note">
+                {% if note.title %}
+                  <h3 id="{{ note.id }}">{{ note.title }}</h3>
+
+                  {% if note.content %}
+                    <p class="mb-0">{{ note.content }}</p>
+                  {% endif %}
+                {% elif note.content %}
+                  <h3>{{ note.content }}</h3>
+                {% endif %}
+
+                {% if note.link %}
+                  <p>
+                    <a href="{{ note.link }}" target="_blank" rel="noopener">
+                      <svg title="Link" class="icon icon-link">
+                        <use xlink:href="#icon-link"></use>
+                      </svg>
+                      {{ note.link }}
+                    </a>
+                  </p>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    {% include "footer.html" %}
+
+    <script defer inline src="/static/js/determine-chrome.js"></script>
+  </body>
+</html>

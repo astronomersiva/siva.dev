@@ -907,6 +907,27 @@ pre {
   margin-bottom: 6rem;
 }
 
+.notes > h1 {
+  text-align: left;
+  font-size: 5rem;
+  text-decoration: underline;
+  margin-bottom: 3rem;
+}
+
+.notes > h2 {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 6rem;
+  transform: translateX(25%);
+  font-weight: 100;
+}
+
+@media screen and (max-width: 620px) {
+  .notes > h2 {
+    transform: none;
+  }
+}
+
 .post>.title {
   text-align: center;
   margin-bottom: 3rem;
@@ -1207,6 +1228,19 @@ pre {
 
 .nav ul > li {
   margin-bottom: 0;
+}
+
+ul.notes-list {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.note {
+  margin-bottom: 50px;
+}
+
+.note > h3 {
+  display: inline;
 }
 
 a.skip-main {
@@ -1752,4 +1786,18 @@ button[disabled] {
 button[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+svg.icon-link {
+  fill: none;
+  stroke: currentColor;
+  vertical-align: bottom;
 }
