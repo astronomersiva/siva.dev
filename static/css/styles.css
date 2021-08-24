@@ -917,7 +917,7 @@ pre {
 .notes > h2 {
   text-align: left;
   font-size: 2rem;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
   transform: translateX(25%);
   font-weight: 100;
 }
@@ -1232,11 +1232,14 @@ pre {
 
 ul.notes-list {
   padding-left: 0;
-  list-style-position: inside;
+  /* list-style-position: inside; */
+  list-style: none;
 }
 
 .note {
   margin-bottom: 50px;
+  padding: 30px;
+  border: 1px solid #eaeaea;
 }
 
 .note > h3 {
@@ -1809,4 +1812,14 @@ svg.icon-link {
   fill: none;
   stroke: currentColor;
   vertical-align: bottom;
+}
+
+a.note-id {
+  text-decoration: none;
+  display: none;
+  font-weight: 400;
+}
+
+.note:hover > h3 > a {
+  display: inline;
 }

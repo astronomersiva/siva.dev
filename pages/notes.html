@@ -17,7 +17,11 @@
             {% for note in data.notes | reverse %}
               <li class="note">
                 {% if note.title %}
-                  <h3 id="{{ note.id }}">{{ note.title }}</h3>
+                  <h3 id="{{ note.id }}">
+                    {{ note.title }}
+
+                    <a href="#{{ note.id }}" class="note-id">#</a>
+                  </h3>
 
                   {% if note.content %}
                     <p class="mb-0">{{ note.content }}</p>
