@@ -15,13 +15,13 @@
 
           <ul class="notes-list">
             {% for note in data.notes | reverse %}
-              <li class="note">
+              <li class="note" id="{{ note.id }}">
                 {% if note.title %}
                   <div class="note-time">
                     <time datetime="{{ note.date | date("DD-MM-YYYY") }}">{{ note.date | date("MMMM DD, YYYY") }}</time>
                   </div>
 
-                  <h3 id="{{ note.id }}">
+                  <h3>
                     {{ note.title }}
 
                     <a href="#{{ note.id }}" class="note-id">#</a>
