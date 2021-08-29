@@ -8,12 +8,20 @@ const notes = [
       The solution is to pass the function as a template literal or configure the transpiler \
       to use the latest ecma version(`"target": "es2018"`). \
     ',
-    id: 'puppeteer-async'
+    id: 'puppeteer-async',
+    date: 'August 24, 2021'
   }, {
     title: 'Choosing the right gear for planetary astrophotography',
     content: 'Try and hit a focal ratio of `5 x pixel size`. You may need a Barlow to hit this number.',
     link: 'https://www.cloudynights.com/topic/700833-why-does-the-f-num-5x-pixel-size-apply-for-colour-cameras/',
-    id: 'planetary-cam'
+    id: 'planetary-cam',
+    date: 'August 24, 2021'
+  }, {
+    title: 'Why does sunlight come from the north in shaded relief maps?',
+    content: 'How maps work around the shortcomings of human perception.',
+    link: 'https://ramblemaps.com/why-does-sunlight-come-from-north',
+    id: 'sunlight-maps',
+    date: 'August 29, 2021'
   }
 ];
 

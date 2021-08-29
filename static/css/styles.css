@@ -1242,6 +1242,11 @@ ul.notes-list {
   border: 1px solid #eaeaea;
 }
 
+.note-time {
+  text-align: right;
+  font-size: 1.3rem;
+}
+
 .note > h3 {
   display: inline;
 }

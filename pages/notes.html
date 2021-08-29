@@ -17,6 +17,10 @@
             {% for note in data.notes | reverse %}
               <li class="note">
                 {% if note.title %}
+                  <div class="note-time">
+                    <time datetime="{{ note.date | date("DD-MM-YYYY") }}">{{ note.date | date("MMMM DD, YYYY") }}</time>
+                  </div>
+
                   <h3 id="{{ note.id }}">
                     {{ note.title }}
 
@@ -26,8 +30,6 @@
                   {% if note.content %}
                     <p class="mb-0">{{ note.content }}</p>
                   {% endif %}
-                {% elif note.content %}
-                  <h3>{{ note.content }}</h3>
                 {% endif %}
 
                 {% if note.link %}
