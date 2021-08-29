@@ -2,7 +2,7 @@
 
 ### Hello
 
-This is the source of my [website](https://siva.dev).
+This is the source of my [website](https://siva.dev/).
 
 I initially set this up during my college days(~2013) and much of the layout
 and styles haven't changed since then.
@@ -23,4 +23,4 @@ about the setup which you can read if you are interested.
 
 I do a lot of experimentation with this site and some successful
 ones have been made as separate projects that you can check out
-on my GitHub profile. Some have even made it to my workplace :P
+on my GitHub profile. Some have even made it to my workplace.
