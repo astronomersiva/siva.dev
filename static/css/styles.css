@@ -687,6 +687,10 @@ pre {
   }
 }
 
+.hljs {
+  border: none;
+}
+
 .wrapper-normal,
 .wrapper-medium,
 .wrapper-large,
@@ -979,6 +983,66 @@ pre {
   max-height: 120px;
   display: block;
   margin: 0 auto;
+}
+
+.post.wrapper-large,
+.post.wrapper-medium {
+  width: 100%;
+  max-width: initial;
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(65ch, 85%)
+    1fr;
+}
+
+.post.wrapper-large > *,
+.post.wrapper-medium > * {
+  grid-column: 2;
+}
+
+.wrapper-large > .hljs,
+.wrapper-medium > .hljs,
+.wrapper-large .halfbleed,
+.wrapper-medium .halfbleed,
+.wrapper-large .fullbleed,
+.wrapper-medium .fullbleed {
+  grid-column: 1 / 4;
+}
+
+.wrapper-large > .hljs,
+.wrapper-medium > .hljs,
+.wrapper-large .halfbleed,
+.wrapper-medium .halfbleed {
+  width: 70%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.wrapper-large .fullbleed,
+.wrapper-medium .fullbleed {
+  width: 100%;
+}
+
+.wrapper-large .nobleed,
+.wrapper-medium .nobleed {
+  grid-column: 2;
+  width: inherit;
+}
+
+@media screen and (max-width: 1050px) {
+  .wrapper-large > .hljs,
+  .wrapper-medium > .hljs,
+  .wrapper-large .halfbleed,
+  .wrapper-medium .halfbleed {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .wrapper-large .nobleed,
+  .wrapper-medium .nobleed {
+    grid-column: 1 / 4;
+  }
 }
 
 .footer {

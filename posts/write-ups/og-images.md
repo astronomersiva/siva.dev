@@ -10,7 +10,7 @@ relatedPosts: 47
 This site is built using [lego](/lego), a static site generator. It used a single
 image for all pages in this site as the `og:image`.
 
-<img src="/static/images/og-image.png" class="img-responsive center-block">
+::: lazy-image src="/static/images/lowres/og-image.png" alt="Text that says 'Hello World!', Personal site of Sivasubramanyam A" classNames="nobleed" :::
 
 I decided to change this image for each post so that there is some additional context
 in the social media previews when a link is shared. While generating these images
