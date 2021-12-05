@@ -22,6 +22,16 @@ const notes = [
     link: 'https://ramblemaps.com/why-does-sunlight-come-from-north',
     id: 'sunlight-maps',
     date: 'August 29, 2021'
+  }, {
+    title: 'Hysteresis Effect',
+    link: 'https://github.com/dotnet/runtime/issues/51935?WT.mc_id=-blog-scottha#issuecomment-832140430',
+    date: 'September 29, 2021',
+    id: 'hysterisis-effect'
+  }, {
+    title: 'The Geosophy Newsletter by Devyani Khare',
+    link: 'https://www.devayanikh.com/geosophy',
+    date: 'December 5, 2021',
+    id: 'geosophy-newsletter'
   }
 ];
 
@@ -30,7 +40,7 @@ const formattedNotes = notes.map(note => {
   return {
     ...note,
     title: note.title && note.title.replace(regex, '<code>$1</code>'),
-    content: note.content.replace(regex, '<code>$1</code>'),
+    content: (note.content || '').replace(regex, '<code>$1</code>'),
   };
 });
 
