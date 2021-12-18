@@ -32,6 +32,12 @@ const notes = [
     link: 'https://www.devayanikh.com/geosophy',
     date: 'December 5, 2021',
     id: 'geosophy-newsletter'
+  }, {
+    link: 'https://www.sikkimproject.org/category/archive/',
+    content: 'The aim of Sikkim Project: The Land and its People is to highlight the physical beauty of the land and to explore how nature and its positioning played a significant role in the formation of identities of different communities.', 
+    title: 'Sikkim Project Archives',
+    date: 'December 18, 2021',
+    id: 'sikkim-project'
   }
 ];
 
