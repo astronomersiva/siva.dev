@@ -38,6 +38,31 @@ const notes = [
     title: 'Sikkim Project Archives',
     date: 'December 18, 2021',
     id: 'sikkim-project'
+  }, {
+    link: 'https://stackoverflow.blog/2021/12/27/dont-push-that-button-exploring-the-software-that-flies-spacex-starships/',
+    title: 'Don\'t push that button! Exploring the software that flies SpaceX\'s ships',
+    date: 'December 27, 2021',
+    id: 'spacex'
+  }, {
+    link: 'https://twitter.com/shuding_/status/1475916082875666441',
+    content: 'A nice thread on how the globe on Vercel\`s homepage was built.',
+    title: '5kB WebGL globe lib.',
+    date: 'December 29, 2021',
+    id: 'globe-lib'
+  }, {
+    link: 'https://github.blog/2020-12-21-how-we-built-the-github-globe/',
+    title: 'How we built the GitHub globe',
+    date: 'December 29, 2021',
+    id: 'github-globe'
+  }, {
+    content: 'If Ilex aquifolium finds its leaves being nibbled by deer, it switches genes on to make them spiky when they regrow. So on taller Holly trees, the upper leaves(which are out of reach) have smooth edges, while the lower leaves are prickly.',
+    title: 'The prickly question of holly leaves',
+    date: 'December 31, 2021',
+    id: 'holly-leaves',
+    links: [
+      'https://twitter.com/LeifBersweden/status/1476609093297131522',
+      'https://naturenet.net/blogs/2009/01/12/the-prickly-question-of-holly-leaves/',
+    ]
   }
 ];
 

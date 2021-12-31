@@ -35,11 +35,21 @@
                 {% if note.link %}
                   <p>
                     <a href="{{ note.link }}" target="_blank" rel="noopener" class="note-link">
-                      <svg title="Link" class="icon icon-link">
-                        <use xlink:href="#icon-link"></use>
-                      </svg>
                       {{ note.link }}
                     </a>
+                  </p>
+                {% endif %}
+                {% if note.links %}
+                  <p>
+                    <ol>
+                      {% for link in note.links %}
+                        <li>
+                          <a href="{{ link }}" target="_blank" rel="noopener" class="note-link">
+                            {{ link }}
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ol>
                   </p>
                 {% endif %}
               </li>
