@@ -17,8 +17,17 @@
             {% for note in data.notes | reverse %}
               <li class="note" id="{{ note.id }}">
                 {% if note.title %}
-                  <div class="note-time">
-                    <time datetime="{{ note.date | date("DD-MM-YYYY") }}">{{ note.date | date("MMMM DD, YYYY") }}</time>
+                  <div>
+                    <div class="note-tags">
+                      {% for tag in note.tags %}
+                        <small class="note-tag">
+                          {{ tag }} {% if not loop.last == true %}·{% endif %}
+                        </small>
+                      {% endfor %}
+                    </div>
+                    <!-- <div class="note-time">
+                      <time datetime="{{ note.date | date("DD-MM-YYYY") }}">{{ note.date | date("MMMM DD, YYYY") }}</time>
+                    </div> -->
                   </div>
 
                   <h3>
