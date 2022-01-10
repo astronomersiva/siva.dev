@@ -1242,6 +1242,10 @@ ul.notes-list {
   border: 1px solid var(--color-border);
 }
 
+.note code {
+  font-size: 90%;
+}
+
 .note:target {
   box-shadow: 0 4px 6px rgba(0,0,0,0.05), 0 10px 20px rgba(0,0,0,0.05);
 }
@@ -1677,6 +1681,10 @@ svg.icon-moon {
 
 .text-muted {
   color: var(--color-caption);
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 .cv-section {
