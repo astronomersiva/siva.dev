@@ -99,7 +99,7 @@ koi for 300 rupees at an ornamental fish store.
 
 Here's how the pond looks now:
 
-::: video src="../static/images/pond.mp4" :::
+::: video classNames="halfbleed" src="../static/images/pond.mp4" :::
 
 Here are some other things that I learnt over these few months:
 

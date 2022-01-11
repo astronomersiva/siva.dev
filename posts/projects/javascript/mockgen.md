@@ -20,4 +20,4 @@ It took me about two and a half hours to code this and I finally [released](http
 
 As of now, I have only configured it for a few devices that me and my friends use and will add more if requirements arise. Feel free to [file an isse](https://github.com/astronomersiva/mockgen/issues/new), [fork it](https://github.com/astronomersiva/mockgen#fork-destination-box) or submit a PR!
 
-::: video src="../static/images/mockgen.mp4" :::
+::: video classNames="halfbleed" src="../static/images/mockgen.mp4" :::
