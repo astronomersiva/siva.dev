@@ -79,6 +79,12 @@ const notes = [
     date: 'January 10, 2022',
     id: 'android-keyboard',
     tags: ['Code', 'JavaScript', 'Android']
+  }, {
+    link: 'https://hacks.mozilla.org/2021/08/mdns-autocomplete-search/',
+    title: `How MDN’s autocomplete search works`,
+    date: 'January 11, 2022',
+    id: 'mdn-autocomplete',
+    tags: ['Code', 'JavaScript']
   }
 ];
 

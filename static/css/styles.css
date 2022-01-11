@@ -414,6 +414,7 @@ html {
   --color-caption: #444444;
   --color-border: #eee;
   --color-border-darker: #ededed;
+  --color-border-selected: #2ac1af;
   --color-bg: white;
   --color-wrapper: rgba(255, 255, 255, 0.8);
   --color-bg-dark-mode: #121212;
@@ -917,9 +918,13 @@ pre {
 .notes > h2 {
   text-align: left;
   font-size: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
   transform: translateX(25%);
   font-weight: 100;
+}
+
+.notes > .tags {
+  margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 620px) {
@@ -1232,7 +1237,10 @@ pre {
 
 ul.notes-list {
   padding-left: 0;
-  /* list-style-position: inside; */
+  list-style: none;
+}
+
+.list-none {
   list-style: none;
 }
 
@@ -1240,6 +1248,48 @@ ul.notes-list {
   margin-bottom: 50px;
   padding: 30px;
   border: 1px solid var(--color-border);
+}
+
+.notes-tags {
+  padding-left: 0;
+}
+
+.notes-tag {
+  display: inline-block;
+  padding: 5px 8px;
+  margin: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.7;
+  transition: 0.2s linear border-color;
+}
+
+.notes-tag svg {
+  opacity: 0.7;
+}
+
+.notes-tag.active {
+  border-color: var(--color-border-selected);
+  opacity: 1;
+}
+
+.notes-tag.active svg {
+  opacity: 1;
+}
+
+.icon.icon-note-state {
+  vertical-align: middle;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease-in-out;
+  transform-origin: center;
+}
+
+.notes-tag.active .icon-note-state {
+  transform: rotate(45deg);
 }
 
 .note code {
@@ -1512,29 +1562,6 @@ a.skip-main:focus, a.skip-main:active {
 .spoiler:hover:before {
   display: none;
 }
-
-/* commenting this out till I find a more subtle way */
-/* @media screen and (min-width: 900px) {
-  a:not([href*='siva.dev']):not([href^='#']):not([href^='/']):after {
-    content: '↗️';
-    font-style: normal;
-    font-size: 70%;
-  }
-  
-  .social-links > a:not([href*='siva.dev']):not([href^='#']):not([href^='/']):after {
-    content: '';
-  }
-  
-  .item > a:not([href*='siva.dev']):not([href^='#']):not([href^='/']):after {
-    content: '';
-  }
-  
-  .item > a:not([href*='siva.dev']):not([href^='#']):not([href^='/']) > h3:after {
-    content: '↗️';
-    font-style: normal;
-    font-size: 70%;
-  }
-} */
 
 @media screen and (max-width: 800px) {
   .page {
