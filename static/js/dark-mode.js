@@ -48,6 +48,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   applyThemeColor();
 
   function handleDarkModeToggle() {
+    let audio = new Audio('/static/audio/switch.wav');
+    audio.oncanplay = function() {
+      audio.play();
+    }
+
     let currentMode = localStorage.getItem('mode');
     localStorage.setItem('mode', currentMode === DARK_MODE ? LIGHT_MODE : DARK_MODE);
     applyMode();

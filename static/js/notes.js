@@ -1,4 +1,9 @@
 function toggleTag(tag) {
+  let audio = new Audio('/static/audio/tap.wav');
+  audio.oncanplay = function() {
+    audio.play();
+  };
+
   let tagElement = document.querySelector(`[data-tag="${tag}"]`);
   tagElement.classList.contains('active') ? tagElement.classList.remove('active') : tagElement.classList.add('active');
 
