@@ -13,9 +13,22 @@
 
           <h2>...and, anything too short to be a blog post.</h2>
 
+          <div class="tags">
+            <ul class="list-none notes-tags">
+              {% for tag in data.noteTags %}
+                <li data-tag="{{tag}}" class="notes-tag active" role="button" onclick="toggleTag('{{tag}}')">
+                  <svg title="" class="icon icon-note-state">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg>
+                  {{ tag }}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+
           <ul class="notes-list">
             {% for note in data.notes | reverse %}
-              <li class="note" id="{{ note.id }}">
+              <li class="note" id="{{ note.id }}" data-tags="{% for tag in note.tags %}{{ tag }}|{% endfor %}">
                 {% if note.title %}
                   <div>
                     <div class="note-tags">
@@ -71,5 +84,6 @@
     {% include "footer.html" %}
 
     <script defer inline src="/static/js/determine-chrome.js"></script>
+    <script defer inline src="/static/js/notes.js"></script>
   </body>
 </html>
