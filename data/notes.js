@@ -85,6 +85,12 @@ const notes = [
     date: 'January 11, 2022',
     id: 'mdn-autocomplete',
     tags: ['Code', 'JavaScript']
+  }, {
+    link: 'https://www.youtube.com/watch?v=dz6aFfme_hg',
+    title: 'Stephanie Eckles – Minimal CSS Solutions to (Previously) Complex Problems | CSSCafe',
+    date: 'January 12, 2022',
+    id: 'csscafe',
+    tags: ['CSS', 'Code']
   }
 ];
 

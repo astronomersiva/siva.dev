@@ -37,14 +37,16 @@
                           {{ tag }} {% if not loop.last == true %}·{% endif %}
                         </small>
                       {% endfor %}
+                      <small> | <time datetime="{{ note.date | date("DD-MM-YYYY") }}">{{ note.date | date("MMMM DD, YYYY") }}</time></small>
                     </div>
-                    <!-- <div class="note-time">
-                      <time datetime="{{ note.date | date("DD-MM-YYYY") }}">{{ note.date | date("MMMM DD, YYYY") }}</time>
-                    </div> -->
                   </div>
 
                   <h3>
-                    {{ note.title }}
+                    {% if note.content %}
+                      {{ note.title }}
+                    {% else %}
+                      <a href="{{ note.link }}" target="_blank" rel="noopener">{{ note.title }}</a>
+                    {% endif %}
 
                     <a href="#{{ note.id }}" class="note-id">#</a>
                   </h3>
@@ -55,11 +57,13 @@
                 {% endif %}
 
                 {% if note.link %}
-                  <p>
-                    <a href="{{ note.link }}" target="_blank" rel="noopener" class="note-link">
-                      {{ note.link }}
-                    </a>
-                  </p>
+                  {% if note.content %}
+                    <p>
+                      <a href="{{ note.link }}" target="_blank" rel="noopener" class="note-link">
+                        {{ note.link }}
+                      </a>
+                    </p>
+                  {% endif %}
                 {% endif %}
                 {% if note.links %}
                   <p>

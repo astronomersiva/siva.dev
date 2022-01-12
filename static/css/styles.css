@@ -1248,6 +1248,7 @@ ul.notes-list {
   margin-bottom: 50px;
   padding: 30px;
   border: 1px solid var(--color-border);
+  border-radius: 5px;
 }
 
 .notes-tags {
