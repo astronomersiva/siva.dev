@@ -91,6 +91,12 @@ const notes = [
     date: 'January 12, 2022',
     id: 'csscafe',
     tags: ['CSS', 'Code']
+  }, {
+    link: 'https://wiki.csswg.org/ideas/mistakes',
+    title: 'Incomplete List of Mistakes in the Design of CSS',
+    date: 'January 18, 2022',
+    id: 'css-mistakes',
+    tags: ['CSS', 'Code']
   }
 ];
 
