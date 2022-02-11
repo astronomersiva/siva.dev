@@ -97,6 +97,13 @@ const notes = [
     date: 'January 18, 2022',
     id: 'css-mistakes',
     tags: ['CSS', 'Code']
+  }, {
+    link: 'https://github.com/astronomersiva/chrome-issue-reproduction',
+    title: 'The weirdest Chrome bug I\'ve ever seen',
+    content: 'Reverse input/textarea after selecting their contents with the mouse.',
+    date: 'February 12, 2022',
+    id: 'chrome-issue',
+    tags: ['Code']
   }
 ];
 
