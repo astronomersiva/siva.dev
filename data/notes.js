@@ -104,6 +104,18 @@ const notes = [
     date: 'February 12, 2022',
     id: 'chrome-issue',
     tags: ['Code']
+  }, {
+    link: 'https://addyosmani.com/blog/preload-hero-images/',
+    title: 'Preload late-discovered Hero images faster',
+    date: 'February 16, 2022',
+    id: 'preload-hero-images',
+    tags: ['Code']
+  }, {
+    link: 'https://twitter.com/DanHollick/status/1468958644364402702',
+    title: 'WCAG 3 will use a new color contrast method called APCA',
+    date: 'February 21, 2022',
+    id: 'apca',
+    tags: ['Code']
   }
 ];
 
