@@ -116,6 +116,18 @@ const notes = [
     date: 'February 21, 2022',
     id: 'apca',
     tags: ['Code']
+  }, {
+    link: 'https://blog.kobadoo.com/2022/02/the-only-flag-of-world-that-is-shredded.html',
+    title: 'The only flag of the world that is shredded',
+    date: 'February 25, 2022',
+    id: 'shredded-flag',
+    tags: ['General']
+  }, {
+    link: 'https://journals.openedition.org/emscat/2647',
+    title: 'An archaeological survey of the Nubra Region',
+    date: 'March 1, 2022',
+    id: 'nubra-archaeology',
+    tags: ['General']
   }
 ];
 
