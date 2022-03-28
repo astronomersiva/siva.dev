@@ -15,6 +15,7 @@ module.exports = {
       '.dark-mode>body',
       '.dark-mode .header-post',
       '.dark-mode header[class*=header-post-]',
+      '.dark-mode .header-post:not(.header-home)',
       '.dark-mode .header-home',
       '.dark-mode .wrapper-white',
       '.dark-mode-star',
