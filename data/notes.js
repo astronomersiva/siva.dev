@@ -134,6 +134,12 @@ const notes = [
     date: 'March 7, 2022',
     id: 'siachen-glacier',
     tags: ['General']
+  }, {
+    link: 'https://twitter.com/AaronJCorcoran/status/1509954726137249795',
+    title: 'Darwin\'s Hawkmoth responds to bat ultrasound at sonar-jamming rates',
+    date: 'April 3, 2022',
+    id: 'darwin-hawkmoth',
+    tags: ['General']
   }
 ];
 
