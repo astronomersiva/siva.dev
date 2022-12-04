@@ -23,5 +23,8 @@
   },
   "resolutions": {
     "penthouse": "^2.0.0"
+  },
+  "volta": {
+    "node": "14.21.1"
   }
 }
