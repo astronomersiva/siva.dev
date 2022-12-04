@@ -15,7 +15,8 @@
   "devDependencies": {},
   "dependencies": {
     "@astronomersiva/lego": "^3.2.0",
-    "dotenv": "^8.2.0",
+    "@supabase/supabase-js": "^2.1.1",
+    "dotenv": "^16.0.3",
     "postcss-cssnext": "^3.1.0",
     "postcss-nested": "^4.1.2",
     "precss": "^4.0.0"

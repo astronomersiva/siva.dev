@@ -1,14 +1,18 @@
-const notes = require('./notes');
+async function getNoteTags() {
+  let notes = await require('./notes');
 
-let tags = notes.reduce((acc, note) => {
-  note.tags.forEach(tag => {
-    if (acc.indexOf(tag) === -1) {
-      acc.push(tag);
-    }
-  });
-  return acc;
-}, []);
+  let tags = notes.reduce((acc, note) => {
+    note.tags.forEach(tag => {
+      if (acc.indexOf(tag) === -1) {
+        acc.push(tag);
+      }
+    });
+    return acc;
+  }, []);
 
-tags = tags.sort();
+  tags = tags.sort();
 
-module.exports = tags;
+  return tags;
+};
+
+module.exports = getNoteTags();
