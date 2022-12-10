@@ -1,0 +1,1 @@
+let isMacLike=/(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);if(!isMacLike){document.getElementsByTagName("html")[0].classList.add("inter")}

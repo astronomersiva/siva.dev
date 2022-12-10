@@ -1,0 +1,1 @@
+let isWebp=()=>document.createElement("canvas").toDataURL("image/webp").startsWith("data:image/webp");if(isWebp()){document.getElementsByTagName("html")[0].classList.add("webp")}

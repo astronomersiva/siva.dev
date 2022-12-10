@@ -1,0 +1,1 @@
+let isChrome=!!window.chrome;if(isChrome){document.getElementsByTagName("html")[0].classList.add("enable-animations")}

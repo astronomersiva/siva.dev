@@ -1,0 +1,1 @@
+onmessage=function(a){let s=a.data.canvas,t=a.data.assetMap,e=t["/static/js/night-mode-stack.js"];importScripts(e),drawToCanvas(s,postMessage,t)};
