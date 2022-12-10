@@ -10,7 +10,7 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 async function loadNotes() {
   let { data: dynamicNotes, error } = await supabase
     .from('notes')
-    .select('date, link, title, content, tags, id')
+    .select('date, link, links, title, content, tags, id')
     .order('date', { ascending: true });
 
   if (error) {
@@ -20,6 +20,10 @@ async function loadNotes() {
   dynamicNotes.forEach((note) => {
     // split and convert to capitalized words
     note.tags = note.tags.split(',').map((tag) => tag.trim().split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' '));
+    // todo: refactor old code to use links instead of link
+    if (note.links) {
+      note.links = note.links.split(',').map((link) => link.trim());
+    }
     // change timestamp to Month Day, Year
     note.date = new Date(note.date).toLocaleDateString('en-US', {
       month: 'long',
