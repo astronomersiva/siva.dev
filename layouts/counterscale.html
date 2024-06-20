@@ -1,0 +1,14 @@
+{% if not isDevelopment %}
+  <script>
+    (function () {
+        window.counterscale = {
+            q: [["set", "siteId", "siva.dev"], ["trackPageview"]],
+        };
+    })();
+  </script>
+  <script
+    id="counterscale-script"
+    src="https://counterscale.sivaa.workers.dev/tracker.js"
+    defer
+  ></script>
+{% endif %}

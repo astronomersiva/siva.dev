@@ -22,9 +22,11 @@
     "precss": "^4.0.0"
   },
   "resolutions": {
-    "penthouse": "^2.0.0"
+    "penthouse": "^2.0.0",
+    "sharp": "^0.28.3"
   },
   "volta": {
-    "node": "14.21.1"
+    "node": "14.21.1",
+    "yarn": "1.22.22"
   }
 }
