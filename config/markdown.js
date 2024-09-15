@@ -34,7 +34,7 @@ module.exports = {
             let classNames = attributeMap.classNames || '';
 
             return `
-              <div class="ajanta ${classNames}" style="${style}">
+              <div class="ajanta halfbleed ${classNames}" style="${style}">
                 <img
                   inline
                   class="img-responsive center-block pixelated blur"
@@ -50,7 +50,7 @@ module.exports = {
               <noscript>
                 <img
                   loading="lazy"
-                  class="img-responsive center-block ${classNames}"
+                  class="img-responsive center-block halfbleed ${classNames}"
                   src="${attributeMap.dSrc || attributeMap.src.replace('lowres/', '')}"
                   alt="${attributeMap.alt}"
                 >
@@ -83,8 +83,8 @@ module.exports = {
                 muted
                 playsinline
                 src="${attributeMap.src}"
+                class="${attributeMap.classNames || ''}"
                 type="video/mp4"
-                style="max-width: 100%;"
               >
               </video>
             `;

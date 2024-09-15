@@ -313,7 +313,7 @@ thanks to this.
 Here is a gif that demonstrates the improvement of lego's performance to start a development server
 over time:
 
-::: video src="../static/images/lego-flamegraph.mp4" :::
+::: video classNames="halfbleed" src="../static/images/lego-flamegraph.mp4" :::
 
 ### **Can I contribute?**
 
