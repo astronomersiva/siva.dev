@@ -5,53 +5,12 @@
 
   {% include "favicon.html" %}
 
-  {% if current == "index" %}
-    <link rel="prefetch" href="/about/">
-    <link rel="prefetch" href="/blog/">
-    <link rel="prefetch" href="/art/">
-  {% endif %}
-
-  {% if current == "about" %}
-    <link rel="prefetch" href="/">
-    <link rel="prefetch" href="/blog/">
-    <link rel="prefetch" href="/art/">
-  {% endif %}
-
-  {% if current == "blog" %}
-    <link rel="prefetch" href="/">
-    <link rel="prefetch" href="/about/">
-    <link rel="prefetch" href="/art/">
-  {% endif %}
-
-  {% if current == "art" %}
-    <link rel="prefetch" href="/">
-    <link rel="prefetch" href="/about/">
-    <link rel="prefetch" href="/blog/">
-  {% endif %}
-
-
-  {% if current == 'index' %}
-    {% set articles = posts | sortByOrder %}
-    {% for article in articles %}
-      {% set post = article %}
-      {% if not article.hidden %}
-        {% if article.showOnHomePage %}
-          <link rel="prefetch" href="/{{ post.path }}/">
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-
   <link rel="preload" href="/static/css/styles.css" as="style">
 
   {% if post %}
     <link rel="preload" href="/static/css/github-gist.css" as="style">
     <link rel="preload" href="/static/css/ajanta.css" as="style">
     <link rel="preload" href="/static/js/intersection-lazy-loader.js" as="script">
-  {% else %}
-    <link rel="prefetch" href="/static/css/github-gist.css" as="style">
-    <link rel="prefetch" href="/static/css/ajanta.css" as="style">
-    <link rel="prefetch" href="/static/js/intersection-lazy-loader.js" as="script">
   {% endif %}
 
   <link rel="prefetch" href="/static/audio/switch.wav" as="audio">
@@ -134,5 +93,5 @@
     <script defer src="/static/js/intersection-lazy-loader.js"></script>
   {% endif %}
 
-  <script defer src="/static/js/instantpage.js"></script>
+  <script defer src="/static/js/instntpage.js"></script>
 </head>
