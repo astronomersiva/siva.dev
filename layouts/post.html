@@ -32,49 +32,47 @@
   </div>
 
   <main id="main">
-    <div class="{% if post.wide %}wrapper-large{% else %}wrapper-medium{% endif %} animated">
-      <div class="post">
-        {% if post.image and post.headerImage %}
-          <img class="title-image" src="{{ post.image }}" alt="{{ post.title }}">
-        {% endif %}
+    <div class="{% if post.wide %}wrapper-large{% else %}wrapper-medium{% endif %} animated post">
+      {% if post.image and post.headerImage %}
+        <img class="title-image" src="{{ post.image }}" alt="{{ post.title }}">
+      {% endif %}
 
-        {% set currentYear = 2019 %}
-        {% set postYear = post.date | date("YYYY") %}
-        {% set postAge = currentYear - postYear %}
-        {% if postAge >= 5 %}
-          <div class="banner banner-outdated">
-            <p>
-              This post is over five years old. The contents of this post
-              could be outdated especially if it's technical in nature. 
-            </p>
-          </div>
-        {% endif %}
+      {% set currentYear = 2019 %}
+      {% set postYear = post.date | date("YYYY") %}
+      {% set postAge = currentYear - postYear %}
+      {% if postAge >= 5 %}
+        <div class="banner banner-outdated">
+          <p>
+            This post is over five years old. The contents of this post
+            could be outdated especially if it's technical in nature. 
+          </p>
+        </div>
+      {% endif %}
 
-        {% if post.bannerType %}
-          <p>{{post.description}}</p>
-
-          {% include "post-banners.html" %}
-        {% endif %}
-
-        {{post.html}}
+      {% if post.bannerType %}
+        <p>{{post.description}}</p>
 
         {% include "post-banners.html" %}
+      {% endif %}
 
-        {% if post.references %}
-          <br>
-          <br>
+      {{post.html}}
 
-          <small>
-            <p>
-              <em>References</em>
-            </p>
-            {% set references = post.references | split(",") %}
-            {% for reference in references %}
-              <p>[{{loop.index}}] <a target="_blank" rel="noopener" href="//{{reference}}">{{reference}}</a></p>
-            {% endfor %}
-          </small>
-        {% endif %}
-      </div>
+      {% include "post-banners.html" %}
+
+      {% if post.references %}
+        <br>
+        <br>
+
+        <small>
+          <p>
+            <em>References</em>
+          </p>
+          {% set references = post.references | split(",") %}
+          {% for reference in references %}
+            <p>[{{loop.index}}] <a target="_blank" rel="noopener" href="//{{reference}}">{{reference}}</a></p>
+          {% endfor %}
+        </small>
+      {% endif %}
     </div>
   </main>
 
