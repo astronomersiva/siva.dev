@@ -45,7 +45,11 @@
                     {% if note.content %}
                       {{ note.title }}
                     {% else %}
-                      <a href="{{ note.link }}" target="_blank" rel="noopener">{{ note.title }}</a>
+                      {% if note.link %}
+                        <a href="{{ note.link }}" target="_blank" rel="noopener">{{ note.title }}</a>
+                      {% else %}
+                        {{ note.title }}
+                      {% endif %}
                     {% endif %}
 
                     <a href="#{{ note.id }}" class="note-id">#</a>
