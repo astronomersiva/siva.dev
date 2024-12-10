@@ -3,9 +3,13 @@ require('dotenv').config();
 const staticNotes = require('./_static-notes.js');
 const { createClient } = require('@supabase/supabase-js');
 
+const MarkdownRenderer = require('@astronomersiva/lego/lib/utils/MarkdownRenderer');
+
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_KEY;
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+const mdRenderer = new MarkdownRenderer();
 
 async function loadNotes() {
   let { data: dynamicNotes, error } = await supabase
@@ -37,10 +41,12 @@ async function loadNotes() {
 
   const regex = /`([a-zA-Z0-9\.\-\_\(\)\:\'\"\s]+)`/g;
   const formattedNotes = notes.map(note => {
+    let content = mdRenderer.renderMarkdown(note.content || '').html;
+
     return {
       ...note,
+      content,
       title: note.title && note.title.replace(regex, '<code>$1</code>'),
-      content: (note.content || '').replace(regex, '<code>$1</code>'),
     };
   });
 

@@ -6,7 +6,6 @@ tags: EmberJS
 code: true
 order: 37
 featured: true
-showOnHomePage: true
 special: talk
 ---
 

@@ -140,5 +140,5 @@ module.exports = [
     date: 'April 3, 2022',
     id: 'darwin-hawkmoth',
     tags: ['General']
-  }
+  },
 ];
